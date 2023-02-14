@@ -10,5 +10,9 @@
   "devDependencies": {
     "nuxt": "^3.2.0",
     "sass": "^1.58.1"
+  },
+  "dependencies": {
+    "@unhead/ssr": "^1.0.21",
+    "unhead": "^1.0.21"
   }
 }
