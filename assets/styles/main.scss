@@ -67,6 +67,9 @@ h3, .font-large {
   background-color: $clr-shade;
 }
 
+.feature--margin {
+  margin-bottom: 4rem;
+}
 .feature__title {
   font-weight: $bold-weight;
 }
@@ -75,6 +78,9 @@ h3, .font-large {
 }
 .feature__signature {
   margin-top: 2.25rem;
+}
+.feature__content {
+  flex: 1 0;
 }
 
 /*-------------------------*\
