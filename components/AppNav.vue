@@ -1,9 +1,9 @@
 <template>
   <nav class="nav">
     <ul class="flex-container flex-container--just-right nav__list">
-      <li class="nav__list-item"><NuxtLink class="nav__list-link font-small" to="/" title="">Home</NuxtLink></li>
-      <li class="nav__list-item"><NuxtLink class="nav__list-link font-small" to="/projects/" title="">My Work</NuxtLink></li>
-      <li class="nav__list-item"><NuxtLink class="nav__list-link font-small" to="/contact/" title="">Contact</NuxtLink></li>
+      <li v-for="page, key in pages" :key="key" class="nav__list-item">
+        <NuxtLink class="nav__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>
@@ -12,6 +12,21 @@
   // const route = useRoute()
   // When accessing /posts/1, route.params.id will be 1
   // console.log(route.params.id)
+</script>
+
+<script>
+  export default {
+    data() {
+      return {
+        pages: [
+          { title: 'Home', altTitle: 'Homepage', url: '/' },
+          { title: 'What I Do', altTitle: 'Services', url: '/services/' },
+          { title: 'My Work', altTitle: 'Portfolio', url: '/portfolio/' },
+          { title: 'Contact', altTitle: 'Get in Touch', url: '/contact/' }
+        ]
+      }
+    }
+  }
 </script>
 
 <style scoped lang="scss">

@@ -46,3 +46,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+picture {
+  display: block;
+  width: 100%;
+}
+img {
+  display: block;
+  max-width: 100%;
+  pointer-events: none;
+  width: 100%;
+}

@@ -3,11 +3,11 @@
 \*-------------------------*/
 
 $clr-primary: #36175e;
+$clr-primary-dark: darken($clr-primary, 5%);
+$clr-primary-light: lighten($clr-primary, 20%);
 $clr-secondary: #e87e04;
 $clr-white: #fff;
 $clr-shade: #f3f2f5;
-
-$clr-primary-dark: darken($clr-primary, 5%);
 
 /*-------------------------*\
     #MISC.
