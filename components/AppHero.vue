@@ -11,7 +11,7 @@
           <p class="hero__tagline font-medium">I'm a web designer, web developer, and data scientist. I use insights from data to creatively solve problems.</p>
           <div class="hero__actions">
             <AppButton to="/projects/" title="My Work" class="button--solid" />
-            <AppButton to="/contact/" title="Get in Touch" />
+            <AppButton to="/contact/" title="Get in Touch" class="button--white" />
           </div>
         </div>
       </div>

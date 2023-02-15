@@ -17,18 +17,17 @@ import AppButton from '../components/AppButton.vue';
 
     <section class="section section--shade">
       <div class="inner">
-        <div class="feature feature--margin flex-container">
-          <div class="feature__content">
-            <h2 class="feature__title">My Work</h2>
-            <div class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quia.</div>
-          </div>
-          <div class="feature__action">
-            <AppButton to="/projects/" title="View all projects" class="button--solid" />
-          </div>
+        <div class="feature feature--margin feature--center">
+          <h2 class="feature__title">My Work</h2>
+          <div class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quia.</div>
         </div>
 
         <div class="flex-container flex-container--gutter">
           <AppProject v-for="project, key in projects" :key="key" :project="project" />
+        </div>
+
+        <div class="page-action page-action--center">
+          <AppButton to="/projects/" title="Wait, there is more" />
         </div>
       </div>
     </section>

@@ -5,8 +5,8 @@
     </picture>
     <div class="cta__overlay">
       <div class="inner">
-        <h2 class="cta__title">Let's work together</h2>
-        <p class="cta__tagline">What sort of clients I want to work with?</p>
+        <h2 class="cta__title">Sounds like your type of work?</h2>
+        <p class="cta__tagline">I'm working with clients who seek unique digital user experiences.</p>
         <div class="cta__action">
           <AppButton to="/contact/" title="Get in Touch" class="button--solid" />
         </div>

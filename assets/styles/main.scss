@@ -18,6 +18,9 @@ a {
   text-decoration-color: rgba($clr-secondary, 0.3);
   text-underline-offset: 6px;
 }
+a:hover, a:focus {
+  text-decoration-color: $clr-secondary;
+}
 
 .inner {
   margin: 0 auto;
@@ -54,6 +57,9 @@ h3, .font-large {
 .font-small {
   font-size: 0.8em;
 }
+.font-xs {
+  font-size: 0.7em;
+}
 
 /*-------------------------*\
     #TEMPLATE
@@ -70,6 +76,9 @@ h3, .font-large {
 .feature--margin {
   margin-bottom: 4rem;
 }
+.feature--center {
+  text-align: center;
+}
 .feature__title {
   font-weight: $bold-weight;
 }
@@ -81,6 +90,13 @@ h3, .font-large {
 }
 .feature__content {
   flex: 1 0;
+}
+
+.page-action {
+  margin-top: 4rem;
+}
+.page-action--center {
+  text-align: center;
 }
 
 /*-------------------------*\

@@ -1,6 +1,6 @@
 <template>
   <NuxtLink to="/" title="Go to homepage" class="logo">
-    Studio _
+    ChrisPrusakiewicz
   </NuxtLink>
 </template>
 

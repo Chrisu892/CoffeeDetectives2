@@ -17,9 +17,13 @@
   .button {
     border: solid 2px $clr-secondary;
     border-radius: 50px;
+    color: $clr-secondary;
     display: inline-block;
     font-weight: $bold-weight;
     text-decoration: none;
+  }
+  .button--white {
+    color: $clr-white;
   }
   .button--solid {
     background-color: $clr-secondary;
