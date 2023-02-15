@@ -7,8 +7,15 @@
 </template>
 
 <script setup lang="ts">
-  import { createHead } from "unhead"
+  import { createHead, useHead } from "unhead"
   const head = createHead()
+
+  useHead({
+    link: [{
+      rel: 'stylesheet',
+      href: 'https://use.typekit.net/sct2yvn.css'
+    }]
+  })
 </script>
 
 <style>

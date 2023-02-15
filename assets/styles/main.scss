@@ -1,3 +1,99 @@
+@import 'reset';
+
+/*-------------------------*\
+    #GLOBAL
+\*-------------------------*/
+
 body {
-  background: $clr-primary;
+  background-color: $clr-primary;
+  font: normal 22px/1.8 "poppins", Helvetica Neue, Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline dashed 2px $clr-secondary;
+  text-decoration-color: rgba($clr-secondary, 0.3);
+  text-underline-offset: 6px;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 2rem;
+}
+
+/*-------------------------*\
+    #FONTS
+\*-------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $bold-weight;
+}
+h1, .font-xxl {
+  font-size: 3.5em;
+  line-height: 1.1;
+}
+h2, .font-xl {
+  font-size: 3em;
+  line-height: 1.2;
+}
+h3, .font-large {
+  font-size: 2.5em;
+  line-height: 1.3;
+}
+.h4, .font-medium {
+  font-size: 1.325em;
+  line-height: 1.4;
+}
+.h5, .font-regular {
+  font-size: 1em;
+}
+.font-small {
+  font-size: 0.8em;
+}
+
+/*-------------------------*\
+    #TEMPLATE
+\*-------------------------*/
+
+.section {
+  background-color: $clr-white;
+  padding: 6rem 0;
+}
+.section--shade {
+  background-color: $clr-shade;
+}
+
+.feature__title {
+  font-weight: $bold-weight;
+}
+.feature__text {
+  margin-top: 1.5rem;
+}
+.feature__signature {
+  margin-top: 2.25rem;
+}
+
+/*-------------------------*\
+    #FLEX CONTAINER
+\*-------------------------*/
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+.flex-container--gutter {
+  gap: 2rem;
+}
+.flex-container--align-center {
+  align-items: center;
+}
+.flex-container--just-right {
+  justify-content: flex-end;
+}
+.flex-container--just-left {
+  justify-content: flex-start;
 }

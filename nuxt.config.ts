@@ -5,13 +5,13 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/styles/_colours.scss" as *;'
+          additionalData: '@use "@/assets/styles/_variables.scss" as *;'
         }
       }
     }
   },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' },
+    // pageTransition: { name: 'page', mode: 'out-in' },
     // layoutTransition: { name: 'slide', mode: 'out-in'}
-  }
+  },
 })
