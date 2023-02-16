@@ -1,11 +1,14 @@
 <template>
-  <nav class="nav">
-    <ul class="flex-container flex-container--just-right nav__list">
-      <li v-for="page, key in pages" :key="key" class="nav__list-item">
-        <NuxtLink class="nav__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
-      </li>
-    </ul>
-  </nav>
+  <div>
+    <AppNavToggle />
+    <nav class="nav">
+      <ul class="flex-container flex-container--just-right nav__list">
+        <li v-for="page, key in pages" :key="key" class="nav__list-item">
+          <NuxtLink class="nav__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script setup>
@@ -19,9 +22,9 @@
     data() {
       return {
         pages: [
-          { title: 'Home', altTitle: 'Homepage', url: '/' },
           { title: 'What I Do', altTitle: 'Services', url: '/services/' },
-          { title: 'My Work', altTitle: 'Portfolio', url: '/portfolio/' },
+          { title: 'My Work', altTitle: 'Portfolio', url: '/projects/' },
+          { title: 'About Me', altTitle: 'About Me', url: '/about/' },
           { title: 'Contact', altTitle: 'Get in Touch', url: '/contact/' }
         ]
       }
@@ -44,5 +47,56 @@
   .nav__list-link:hover {
     opacity: 1;
     text-decoration-color: $clr-secondary;
+  }
+
+  @media screen and (max-width: 930px) {
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($clr-primary, 0.8);
+
+      &::before {
+        content: 'Menu';
+        top: 10%;
+        left: 10%;
+        color: $clr-white;
+        font-size: $font-large;
+        position: absolute;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+    .nav__list {
+      border: solid 1px rgba($clr-white, 0.2);
+      border-radius: $border-radius;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      bottom: 20%;
+      right: 10%;
+      background-color: $clr-primary;
+      min-height: 600px;
+      overflow-y: auto;
+      flex-direction: column;
+    }
+    .nav__list-item {
+      flex: 1;
+      width: 100%;
+
+      &:not(:first-child) {
+        border-top: solid 1px rgba($clr-white, 0.2);
+        margin-left: 0;
+      }
+    }
+    .nav__list-link {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
   }
 </style>

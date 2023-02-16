@@ -59,7 +59,7 @@
       return {
         pages: [
           { title: 'What I Do', url: '/services/' },
-          { title: 'My Work', url: '/portfolio/' },
+          { title: 'My Work', url: '/projects/' },
           { title: 'Contact', url: '/contact/' }
         ],
         services: [

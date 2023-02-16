@@ -22,9 +22,6 @@
     z-index: 3;
   }
   .header__logo {
-    flex: 25% 0;
-  }
-  .header__nav {
-    flex: 75% 0;
+    flex: 1;
   }
 </style>

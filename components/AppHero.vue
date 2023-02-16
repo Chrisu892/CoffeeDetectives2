@@ -1,6 +1,10 @@
 <template>
   <section class="hero">
-    <picture>
+    <video v-if="isHome" preload="true" muted autoplay loop playsinline poster="/video/poster.jpg" class="hero__video">
+      <source src="/video/hero-video.mov" />
+      Your web browser does not support video tag.
+    </video>
+    <picture v-else>
       <img class="hero__background" src="/images/millenium-bridge.jpg" alt="" />
     </picture>
     <div class="hero__overlay">
@@ -19,11 +23,30 @@
   </section>
 </template>
 
+<script>
+  export default {
+    computed: {
+      isHome() {
+        return this.$route.fullPath === '/'
+      }
+    }
+  }
+</script>
+
 <style scoped lang="scss">
   .hero {
     background-color: $clr-primary;
     overflow: hidden;
     position: relative;
+  }
+  .hero__video {
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
   }
   .hero__background {
     position: absolute;

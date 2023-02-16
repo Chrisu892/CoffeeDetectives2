@@ -1,5 +1,6 @@
 <template>
   <article class="project">
+    <div v-if="project.isNew" class="project__badge"><span>New</span></div>
     <a v-if="isExternal" class="project__thumbnail" :href="project.url" :title="title" target="_blank" :style="{ background: brandColour }">
       <div class="project__thumbnail-desktop">
         <picture>
@@ -80,6 +81,42 @@
     flex: 50% 0;
     flex: calc(50% - 1rem) 0;
   }
+  .project__badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    color: $clr-white;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $bold-weight;
+    transform: rotate(-5deg);
+    text-transform: uppercase;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $clr-secondary;
+      z-index: 1;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    span {
+      position: relative;
+      top: 2px;
+      z-index: 2;
+    }
+  }
   .project__thumbnail {
     display: block;
     overflow: hidden;
@@ -95,6 +132,8 @@
     border-radius: $border-radius;
     overflow: hidden;
     position: absolute;
+    transition: transform 350ms ease-in-out;
+    will-change: transform;
   }
   .project__thumbnail-desktop {
     border-top-width: 1.5rem;
@@ -105,6 +144,9 @@
     transform: translate(-50%, -50%);
     width: 74%;
   }
+  .project:hover .project__thumbnail-desktop {
+    transform: translate(-55%, -50%);
+  }
   .project__thumbnail-mobile {
     border-top-width: 1rem;
     border-radius: 15px;
@@ -113,6 +155,9 @@
     position: absolute;
     top: 25%;
     width: 25%;
+  }
+  .project:hover .project__thumbnail-mobile {
+    transform: translate(5%, 0%);
   }
   .project__thumbnail-image {
     position: absolute;

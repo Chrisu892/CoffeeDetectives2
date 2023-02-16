@@ -1,4 +1,16 @@
 /*-------------------------*\
+    #FONTS
+\*-------------------------*/
+
+$font-xxl: 3.5em;
+$font-xl: 3em;
+$font-large: 2.5em;
+$font-medium: 1.2em;
+$font-regular: 0.94em;
+$font-small: 0.78em;
+$font-xs: 0.72em;
+
+/*-------------------------*\
     #COLOURS
 \*-------------------------*/
 
@@ -8,6 +20,7 @@ $clr-primary-light: lighten($clr-primary, 20%);
 $clr-secondary: #e87e04;
 $clr-white: #fff;
 $clr-shade: #f3f2f5;
+$clr-dark: #010101;
 
 /*-------------------------*\
     #MISC.
