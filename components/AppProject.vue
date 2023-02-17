@@ -93,7 +93,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font: $font-header;
     font-weight: $bold-weight;
+    letter-spacing: 1px;
     transform: rotate(-5deg);
     text-transform: uppercase;
 

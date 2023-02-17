@@ -11,7 +11,7 @@
               </p>
             </div>
             <div class="feature__action">
-              <AppButton to="/about-me/" title="About Me" />
+              <AppButton to="/about/" title="About Me" />
             </div>
           </div>
         </div>

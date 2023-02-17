@@ -19,8 +19,11 @@
     border-radius: 50px;
     color: $clr-secondary;
     display: inline-block;
+    font: $font-header;
     font-weight: $bold-weight;
+    letter-spacing: 1px;
     text-decoration: none;
+    text-transform: uppercase;
   }
   .button--white {
     color: $clr-white;

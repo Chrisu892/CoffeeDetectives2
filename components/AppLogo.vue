@@ -3,7 +3,7 @@
     <div class="logo__graphic">
       <span class="logo__graphic__text">CP</span>
     </div>
-    <div class="logo__text">ChrisPrusakiewicz</div>
+    <div class="logo__text">Chris P</div>
   </NuxtLink>
 </template>
 
@@ -25,7 +25,7 @@
     height: 44px;
     justify-content: center;
     letter-spacing: 1px;
-    margin-right: 0.8rem;
+    margin-right: 0.6rem;
     overflow: hidden;
     width: 44px;
     -webkit-text-stroke: 1px $clr-secondary;
@@ -33,8 +33,8 @@
   .logo__graphic__text {
     display: inline-block;
     position: relative;
-    top: 5px;
-    transform: scale(2.125);
+    top: 0;
+    transform: scale(3.25);
   }
   .logo__text {
     padding-top: 5px;

@@ -9,8 +9,8 @@ import AppButton from '../components/AppButton.vue';
     <section class="section section--shade">
       <div class="inner inner--narrow">
         <div class="feature feature--margin feature--center">
-          <h2 class="feature__title">My Work</h2>
-          <div class="feature__text">I am passionate about writing code and creating digital products. That's why I am committed to delivering projects that often exceed clients' expectations. But don't take my word for it and check out my portfolio.</div>
+          <h2 class="feature__title">Previous Work</h2>
+          <div class="feature__text">I am passionate about writing code and creating digital products, that's why I am committed to delivering projects that often exceed clients' expectations.</div>
         </div>
       </div>
       <div class="inner">
@@ -22,6 +22,17 @@ import AppButton from '../components/AppButton.vue';
         </div>
       </div>
     </section>
+
+    <!-- <section class="section section--shade section--padding-bottom">
+      <div class="inner inner--narrow">
+        <div class="feature feature--center feature--margin">
+          <h2 class="feature__title font-regular">My Technology Stack</h2>
+        </div>
+        <div class="flex-container">
+          <AppTech v-for="tech, key in technology" :key="key" :tech="tech" />
+        </div>
+      </div>
+    </section> -->
 
     <AppCTA />
   </div>
@@ -37,6 +48,15 @@ import AppButton from '../components/AppButton.vue';
           { title: 'Haystax', summary: 'Web design and development for inclusive farm experience.', url: '/projects/haystax/', isNew: false, images: { header: '/images/projects/haystax/header.jpg', desktopPreview: '/images/projects/haystax/screenshot-desktop.jpg', mobilePreview: '/images/projects/haystax/screenshot-mobile.jpg' }, brandColour: '#56345c' },
           { title: 'Bryan James Recruitment', summary: 'Web design and development for a financial headhunter.', url: 'https://www.bryanjamesrecruitment.co.uk/', isNew: false, images: { header: '/images/projects/bryan-james-recruitment/header.jpg', desktopPreview: '/images/projects/bryan-james-recruitment/screenshot-desktop.jpg', mobilePreview: '/images/projects/bryan-james-recruitment/screenshot-mobile.jpg' }, brandColour: '#9d302a' },
           { title: 'Ginny D', summary: 'E-commerce website for a bespoke jewellery designer.', url: 'https://www.ginnyd.co.uk/', isNew: false, images: { header: '/images/projects/ginny-d/header.jpg', desktopPreview: '/images/projects/ginny-d/screenshot-desktop.jpg', mobilePreview: '/images/projects/ginny-d/screenshot-mobile.jpg' }, brandColour: '#ff0099' }
+        ],
+        technology: [
+          { title: 'PHP', images: { thumbnail: '/images/tech/php.svg' } },
+          { title: 'HTML5', images: { thumbnail: '/images/tech/html5.png'} },
+          { title: 'CSS3', images: { thumbnail: '/images/tech/css3.png' } },
+          { title: 'SASS', images: { thumbnail: '/images/tech/sass.png'} },
+          { title: 'MySQL', images: { thumbnail: '/images/tech/mysql.png' } },
+          { title: 'JavaScript', images: { thumbnail: '/images/tech/javascript.png' } },
+          { title: 'Nuxt.js', images: { thumbnail: '/images/tech/nuxtjs.png' } }
         ]
       }
     }
