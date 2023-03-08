@@ -1,9 +1,6 @@
 <template>
   <NuxtLink to="/" title="Go to homepage" class="logo">
-    <div class="logo__graphic">
-      <span class="logo__graphic__text">CP</span>
-    </div>
-    <div class="logo__text">Chris P</div>
+    Coffee Bean Trails
   </NuxtLink>
 </template>
 

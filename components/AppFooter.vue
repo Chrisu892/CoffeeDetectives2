@@ -5,15 +5,11 @@
         <div class="footer__col footer__col--first">
           <AppLogo />
           <div class="footer__detail footer__detail--first font-small">
-            Reach your potential and accelerate your growth with a bespoke, data-driven digital solutions. I'm based in Gateshead but I work with clients in the North East, United Kingdom, and Europe.
+            We are independent reviewers of coffee and coffee shops helping you to find a coffee bean trail to the best coffee shops in the North East.
           </div>
           <div class="footer__detail font-small">
             <PhEnvelope />
-            <a href="mailto:chris.prusakiewicz@gmail.com" title="Send email to Chris" target="_blank">chris.prusakiewicz@gmail.com</a>
-          </div>
-          <div class="footer__detail font-small">
-            <PhPhone />
-            <a href="tel:07446034447" title="Call Chris" target="_blank">+44 (0) 7446 034 447</a>
+            <a href="mailto:hello@coffeebeantrails.co.uk" title="Send email to Coffee Bean Trails" target="_blank">hello@coffeebeantrails.co.uk</a>
           </div>
           <AppSocials />
         </div>
@@ -26,9 +22,17 @@
           </ul>
         </div>
         <div class="footer__col footer__col--align-right">
-          <h2 class="footer__title font-regular">What I Do</h2>
+          <h2 class="footer__title font-regular">Coffee Shops</h2>
           <ul class="footer__list">
-            <li v-for="page, key in services" :key="key" class="footer__list-item">
+            <li v-for="page, key in coffeeShops" :key="key" class="footer__list-item">
+              <NuxtLink class="footer__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--align-right">
+          <h2 class="footer__title font-regular">Destinations</h2>
+          <ul class="footer__list">
+            <li v-for="page, key in destinations" :key="key" class="footer__list-item">
               <NuxtLink class="footer__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
             </li>
           </ul>
@@ -37,12 +41,8 @@
     </div>
     <div class="copyright font-xs">
       <div class="inner flex-container">
-        <div class="copyright__text">
-          &copy; Copyright 2023 <a href="" title="" target="" rel="">Chris Prusakiewicz</a>
-        </div>
-        <div clas="copyright__text">
-          Read <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink>
-        </div>
+        <p class="copyright__text">&copy; Copyright 2023 <a href="" title="" target="" rel="">Coffee Bean Trails</a>.</p>
+        <p clas="copyright__text">Read our <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink>. Website by <a href="https://www.chrisprusakiewicz.com/" title="Visit Chris Prusakiewicz's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a></p>
       </div>
     </div>
   </footer>
@@ -58,17 +58,27 @@
     data() {
       return {
         pages: [
-          { title: 'What I Do', url: '/services/' },
-          { title: 'My Work', url: '/projects/' },
+          { title: 'Find a Coffee', url: '/coffee-shops/' },
+          { title: 'Destinations', url: '/destinations/' },
+          { title: 'Blog', url: '/blog/' },
+          { title: 'About', url: '/about/' },
           { title: 'Contact', url: '/contact/' }
         ],
-        services: [
-          { title: 'Mobile & Web Design', url: '/services/mobile-and-web-design/' },
-          { title: 'Web Development', url: '/services/web-development' },
-          { title: 'Search Engine Optimisation', url: '/services/search-engine-optimisation' },
-          { title: 'Data Analytics', url: '/services/data-analytics/' },
-          { title: 'Training & Consulting', url: '/services/training-and-consulting/' },
-          { title: 'CV & Conver Letters', url: '/services/cv-and-cover-letters/' }
+        coffeeShops: [
+          { title: 'Cafe Nero (Eldon Sq)', url: '/coffee-shops/cafe-nero-eldon-sq/' },
+          { title: 'Waterstones (Newcastle)', url: '/coffee-shops/waterstones-newcastle/' },
+          { title: 'Luther\'s (Newcastle University)', url: '/coffee-shops/luthers-newcastle-university/' },
+          { title: 'Habita (Northumbria University)', url: '/coffee-shops/habita-northumbria-university/' },
+          { title: 'Vicolo (Tyneside Cinema)', url: '/coffee-shops/vicolo-tyneside-cinema/' },
+          { title: 'View all', url: '/coffee-shops/' }
+        ],
+        destinations: [
+          { title: 'Newcastle upon Tyne', url: '/destinations/newcastle-upon-tyne/' },
+          { title: 'Tynemouth', url: '/destinations/tynemouth/' },
+          { title: 'Whitley Bay', url: '/destinations/whitley-bay/' },
+          { title: 'South Shields', url: '/destinations/south-shields/' },
+          { title: 'Gateshead', url: '/destinations/gateshead/' },
+          { title: 'View all', url: '/destinations/' }
         ]
       }
     }
@@ -77,24 +87,19 @@
 
 <style scoped lang="scss">
   .footer {
-    background: linear-gradient(180deg, $clr-primary 0%, $clr-primary-dark 100%);
-    color: $clr-white;
+    background-color: $clr-secondary;
+    color: $clr-white-transparent-75;
     padding-top: 5rem;
   }
   .footer__container {
     padding-bottom: 5rem;
   }
   .footer__col {
-    flex: 30% 0;
-    flex: calc(30% - 1rem) 0;
+    flex: 25% 0;
+    flex: calc(25% - 1.5rem) 0;
 
     &--align-right {
       text-align: right;
-    }
-
-    &--first {
-      flex: 40% 0;
-      flex: calc(40% - 2rem) 0;
     }
   }
   .footer__title {
@@ -111,10 +116,10 @@
   }
   .footer__list-link {
     color: $clr-white;
-    opacity: 0.8;
+    text-decoration-color: $clr-white-transparent-20;
 
     &:hover {
-      opacity: 1;
+      text-decoration-color: $clr-white;
     }
   }
   .footer__detail {
@@ -128,15 +133,15 @@
 
     a {
       color: $clr-white;
-      opacity: 0.8;
+      text-decoration-color: $clr-white-transparent-20;
 
       &:hover {
-        opacity: 1;
+        text-decoration-color: $clr-white;
       }
     }
 
     svg {
-      color: $clr-secondary;
+      color: $clr-primary;
       display: inline-block;
       height: 24px;
       margin-right: 10px;
@@ -147,10 +152,15 @@
   .copyright {
     border-top: solid 1px $clr-white;
     border-top-color: rgba($clr-white, 0.1);
-    padding: 1.2rem 0 0.8rem;
+    padding: 1.2rem 0;
 
     a {
       color: $clr-white;
+      text-decoration-color: $clr-white-transparent-20;
+
+      &:hover {
+        text-decoration-color: $clr-white;
+      }
     }
   }
   .copyright__text:nth-child(1) {

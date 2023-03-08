@@ -2,7 +2,7 @@
     #FONTS
 \*-------------------------*/
 
-$font-header: normal 18px/1.5 poppins, Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-header: normal 18px/1.5 quicksand, Helvetica Neue, Helvetica, Arial, sans-serif;
 $font-body: normal 22px/1.8 quicksand, Helvetica Neue, Arial, sans-serif;
 $font-cursive: "brush-script-std", sans-serif;
 
@@ -18,13 +18,20 @@ $font-xs: 0.72em;
     #COLOURS
 \*-------------------------*/
 
-$clr-primary: #36175e;
+$clr-primary: #b78338;
 $clr-primary-dark: darken($clr-primary, 5%);
 $clr-primary-light: lighten($clr-primary, 20%);
-$clr-secondary: #e87e04;
+
+$clr-secondary: #915c4c;
+$clr-secondary-dark: darken($clr-secondary, 10%);
+
+$clr-third: #40686a;
+
 $clr-white: #fff;
-$clr-shade: #f3f2f5;
-$clr-dark: #010101;
+$clr-white-transparent-75: rgba(#fff, 0.75);
+$clr-white-transparent-20: rgba(#fff, 0.2);
+$clr-shade: #d3d3d3;
+$clr-dark: #2f1812;
 
 /*-------------------------*\
     #MISC.

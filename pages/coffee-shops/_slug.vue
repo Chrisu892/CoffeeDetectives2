@@ -1,3 +1,3 @@
 <template>
-  
+  Coffee Shop
 </template>

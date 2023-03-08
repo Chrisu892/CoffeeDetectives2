@@ -2,27 +2,25 @@
   <ul class="flex-container socials">
     <li v-for="social, key in socials" class="social__item">
       <a class="social__link" :href="social.url" :title="`View ${social.title} (opens in a new tab)`" target="_blank" rel="nofollow noopener">
-        <PhLinkedinLogo v-if="social.title == 'LinkedIn'" />
         <PhTwitterLogo v-if="social.title == 'Twitter'" />
-        <PhBehanceLogo v-if="social.title == 'Behance'" />
+        <PhInstagramLogo v-if="social.title == 'Instagram'" />
       </a>
     </li>
   </ul>
 </template>
 
 <script>
-  import { PhLinkedinLogo, PhTwitterLogo, PhBehanceLogo } from 'phosphor-vue'
+  import { PhLinkedinLogo, PhTwitterLogo, PhBehanceLogo, PhInstagramLogo } from 'phosphor-vue'
 
   export default {
     components: {
-      PhLinkedinLogo, PhTwitterLogo, PhBehanceLogo
+      PhLinkedinLogo, PhTwitterLogo, PhBehanceLogo, PhInstagramLogo
     },
     data() {
       return {
         socials: [
-          { title: 'LinkedIn', url: 'https://www.linkedin.com/in/chris-prusakiewicz' },
-          { title: 'Twitter', url: 'https://www.twitter.com/ChrisPru' },
-          { title: 'Behance', url: 'https://www.behance.com/ChrisPru' }
+          { title: 'Instagram', url: 'https://www.instagram.com/' },
+          { title: 'Twitter', url: 'https://www.twitter.com/' },
         ]
       }
     }
@@ -38,8 +36,8 @@
   }
   .social__link {
     align-items: center;
-    background-color: $clr-secondary;
-    border-radius: 100%;
+    background-color: $clr-secondary-dark;
+    border-radius: 30px 20px;
     color: $clr-white;
     display: inline-flex;
     height: 44px;
@@ -56,7 +54,7 @@
       width: 100%;
       height: 100%;
       background-color: darken($clr-secondary, 5%);
-      border-radius: 100%;
+      border-radius: 30px 20px;
       transform: translateY(100%);
       transition: transform 250ms ease-in-out;
       z-index: 1;

@@ -1,6 +1,7 @@
 <template>
   <div>
     <AppNavToggle />
+    
     <nav class="nav">
       <ul class="flex-container flex-container--just-right nav__list">
         <li v-for="page, key in pages" :key="key" class="nav__list-item">
@@ -22,9 +23,10 @@
     data() {
       return {
         pages: [
-          { title: 'What I Do', altTitle: 'Services', url: '/services/' },
-          { title: 'My Work', altTitle: 'Portfolio', url: '/projects/' },
-          { title: 'About Me', altTitle: 'About Me', url: '/about/' },
+          { title: 'Find a Coffee', altTitle: 'Find a Coffee', url: '/coffee-shops/' },
+          { title: 'Destinations', altTitle: 'Destinations', url: '/destinations/' },
+          { title: 'Blog', altTitle: 'Blog', url: '/blog/' },
+          { title: 'About', altTitle: 'About', url: '/about/' },
           { title: 'Contact', altTitle: 'Get in Touch', url: '/contact/' }
         ]
       }

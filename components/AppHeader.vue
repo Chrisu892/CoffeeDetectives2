@@ -13,13 +13,9 @@
 
 <style scoped lang="scss">
   .header {
-    background-color: rgba($clr-primary, 0.1);
-    padding: 2rem 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
+    background-color: $clr-secondary;
+    border-bottom: solid 1px $clr-secondary-dark;
+    padding: 1.25rem 0;
   }
   .header__logo {
     flex: 1;

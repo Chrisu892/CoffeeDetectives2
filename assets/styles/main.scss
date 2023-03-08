@@ -5,7 +5,7 @@
 \*-------------------------*/
 
 body {
-  background-color: $clr-primary;
+  background-color: $clr-shade;
   font: $font-body;
   overflow-x: hidden;
   overflow-y: auto;
@@ -14,8 +14,8 @@ body {
 
 a {
   color: $clr-secondary;
-  text-decoration: underline dashed 2px $clr-secondary;
-  text-decoration-color: rgba($clr-secondary, 0.3);
+  text-decoration: underline dashed 1px $clr-secondary;
+  text-decoration-color: rgba($clr-secondary, 0.2);
   text-underline-offset: 6px;
 }
 a:hover, a:focus {
