@@ -4,11 +4,13 @@
     #GLOBAL
 \*-------------------------*/
 
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 body {
   background-color: $clr-shade;
   font: $font-body;
-  overflow-x: hidden;
-  overflow-y: auto;
   height: 100%;
 }
 
@@ -72,6 +74,7 @@ h3, .font-large {
 
 .section {
   background-color: $clr-white;
+  border-radius: $border-radius $border-radius 0 0;
   padding: 8rem 0;
   padding: clamp(3rem, 8vw, 6rem) 0;
 

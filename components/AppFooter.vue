@@ -9,7 +9,7 @@
           </div>
           <div class="footer__detail font-small">
             <PhEnvelope />
-            <a href="mailto:hello@coffeebeantrails.co.uk" title="Send email to Coffee Bean Trails" target="_blank">hello@coffeebeantrails.co.uk</a>
+            <a :href="`mailto:${settings.site_email}`" :title="`Send email to ${settings.site_name}`" target="_blank">{{ settings.site_email }}</a>
           </div>
           <AppSocials />
         </div>
@@ -22,7 +22,7 @@
           </ul>
         </div>
         <div class="footer__col footer__col--align-right">
-          <h2 class="footer__title font-regular">Coffee Shops</h2>
+          <h2 class="footer__title font-regular">Recently Reviewed</h2>
           <ul class="footer__list">
             <li v-for="page, key in coffeeShops" :key="key" class="footer__list-item">
               <NuxtLink class="footer__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
@@ -41,7 +41,7 @@
     </div>
     <div class="copyright font-xs">
       <div class="inner flex-container">
-        <p class="copyright__text">&copy; Copyright 2023 <a href="" title="" target="" rel="">Coffee Bean Trails</a>.</p>
+        <p class="copyright__text">&copy; Copyright 2023 <NuxtLink to="/" title="Go to Homepage">{{ settings.site_name }}</NuxtLink></p>
         <p clas="copyright__text">Read our <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink>. Website by <a href="https://www.chrisprusakiewicz.com/" title="Visit Chris Prusakiewicz's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a></p>
       </div>
     </div>
@@ -65,11 +65,11 @@
           { title: 'Contact', url: '/contact/' }
         ],
         coffeeShops: [
-          { title: 'Cafe Nero (Eldon Sq)', url: '/coffee-shops/cafe-nero-eldon-sq/' },
-          { title: 'Waterstones (Newcastle)', url: '/coffee-shops/waterstones-newcastle/' },
-          { title: 'Luther\'s (Newcastle University)', url: '/coffee-shops/luthers-newcastle-university/' },
-          { title: 'Habita (Northumbria University)', url: '/coffee-shops/habita-northumbria-university/' },
-          { title: 'Vicolo (Tyneside Cinema)', url: '/coffee-shops/vicolo-tyneside-cinema/' },
+          { title: 'Cafe Nero', url: '/coffee-shops/cafe-nero-eldon-sq/' },
+          { title: 'Waterstones', url: '/coffee-shops/waterstones-newcastle/' },
+          { title: 'Luther\'s', url: '/coffee-shops/luthers-newcastle-university/' },
+          { title: 'Habita', url: '/coffee-shops/habita-northumbria-university/' },
+          { title: 'Vicolo', url: '/coffee-shops/vicolo-tyneside-cinema/' },
           { title: 'View all', url: '/coffee-shops/' }
         ],
         destinations: [
@@ -79,7 +79,11 @@
           { title: 'South Shields', url: '/destinations/south-shields/' },
           { title: 'Gateshead', url: '/destinations/gateshead/' },
           { title: 'View all', url: '/destinations/' }
-        ]
+        ],
+        settings: {
+          site_name: 'The Coffee Detectives',
+          site_email: 'hello@thecoffeedetectives.co.uk'
+        }
       }
     }
   }

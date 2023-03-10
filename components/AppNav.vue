@@ -23,11 +23,11 @@
     data() {
       return {
         pages: [
-          { title: 'Find a Coffee', altTitle: 'Find a Coffee', url: '/coffee-shops/' },
+          { title: 'Reviews', altTitle: 'Reviews', url: '/reviews/' },
           { title: 'Destinations', altTitle: 'Destinations', url: '/destinations/' },
           { title: 'Blog', altTitle: 'Blog', url: '/blog/' },
           { title: 'About', altTitle: 'About', url: '/about/' },
-          { title: 'Contact', altTitle: 'Get in Touch', url: '/contact/' }
+          { title: 'Get Listed', altTitle: 'Get Listed', url: '/get-listed/' }
         ]
       }
     }

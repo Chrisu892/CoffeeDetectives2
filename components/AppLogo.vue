@@ -1,6 +1,6 @@
 <template>
   <NuxtLink to="/" title="Go to homepage" class="logo">
-    Coffee Bean Trails
+    The Coffee Detectives
   </NuxtLink>
 </template>
 
