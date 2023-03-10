@@ -20,6 +20,7 @@
 
 <style scoped lang="scss">
   .masthead__overlay {
-    padding: 10% 0;
+    padding: 10rem 0;
+    padding-top: calc(10rem + 80px);
   }
 </style>

@@ -62,6 +62,7 @@
           { title: 'Destinations', url: '/destinations/' },
           { title: 'Blog', url: '/blog/' },
           { title: 'About', url: '/about/' },
+          { title: 'Get Listed', url: '/get-listed/' },
           { title: 'Contact', url: '/contact/' }
         ],
         coffeeShops: [

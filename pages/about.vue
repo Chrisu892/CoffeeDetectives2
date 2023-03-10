@@ -23,18 +23,20 @@
         <div class="feature feature--margin">
           <h2 class="feature__title">What makes us different?</h2>
         </div>
-        <p><strong>Our Mission</strong></p>
-        <p>We want to help coffee shop owners to connect with their customers.</p>
-        <p>We want to help people find the coffee shops with best coffee roasts.</p>
-        <p>We want to make it easy to plan a day out studying, working or meeting with other people.</p>
-        <p>We want to create a network of coffee shops and a community of customers.</p>
-        <p>We want to help coffee shop owners to provide the best customer service.</p>
-        <p><strong>Our Values</strong></p>
-        <p>Our reviews are always anonymous and genuine, written by real coffee lovers.</p>
-        <p>We only review places that have been visited by one of our coffee detectives.</p>
-        <p>We strive for authenticity, genuity, and honesty so that people can trust our reviews.</p>
-        <p><strong>Our Promise</strong></p>
-        <p>We will never write anything to undermine the...</p>
+        <div class="page-content">
+          <p><strong>Our Mission</strong></p>
+          <p>We want to help coffee shop owners to connect with their customers.</p>
+          <p>We want to help people find the coffee shops with best coffee roasts.</p>
+          <p>We want to make it easy to plan a day out studying, working or meeting with other people.</p>
+          <p>We want to create a network of coffee shops and a community of customers.</p>
+          <p>We want to help coffee shop owners to provide the best customer service.</p>
+          <p><strong>Our Values</strong></p>
+          <p>Our reviews are always anonymous and genuine, written by real coffee lovers.</p>
+          <p>We only review places that have been visited by one of our coffee detectives.</p>
+          <p>We strive for authenticity, genuity, and honesty so that people can trust our reviews.</p>
+          <p><strong>Our Promise</strong></p>
+          <p>We will never write anything to undermine the...</p>
+        </div>
       </div>
     </section>
 

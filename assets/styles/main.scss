@@ -9,7 +9,7 @@ html, body {
   overflow-y: auto;
 }
 body {
-  background-color: $clr-shade;
+  background-color: $clr-secondary;
   font: $font-body;
   height: 100%;
 }
@@ -35,7 +35,7 @@ a:hover, a:focus {
 }
 
 /*-------------------------*\
-    #FONTS
+    #TYPOGRAPHY
 \*-------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,11 +86,15 @@ h3, .font-large {
   }
 }
 
-.feature--margin {
-  margin-bottom: 4rem;
-}
-.feature--center {
-  text-align: center;
+.feature {
+
+  &--margin {
+    margin-bottom: 4rem;
+  }
+
+  &--center {
+    text-align: center;
+  }
 }
 .feature__title {
   color: $clr-primary;
@@ -120,9 +124,41 @@ h3, .font-large {
 
 .page-action {
   margin-top: 4rem;
+
+  &--center {
+    text-align: center;
+  }
 }
-.page-action--center {
-  text-align: center;
+
+.page-content {
+
+  p:not(:last-child), li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  
+  b, strong {
+    font-weight: $bold-weight;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+
+  li {
+    padding-left: 2rem;
+    position: relative;
+  
+    &::before {
+      content: '';
+      top: 13px;
+      left: 0;
+      height: 14px;
+      width: 14px;
+      background-color: $clr-primary;
+      border-radius: 5px 10px;
+      position: absolute;
+    }
+  }
 }
 
 /*-------------------------*\
