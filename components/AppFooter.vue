@@ -58,19 +58,19 @@
     data() {
       return {
         pages: [
-          { title: 'Find a Coffee', url: '/coffee-shops/' },
+          { title: 'Reviews', url: '/reviews/' },
           { title: 'Destinations', url: '/destinations/' },
           { title: 'Blog', url: '/blog/' },
           { title: 'About', url: '/about/' },
           { title: 'Contact', url: '/contact/' }
         ],
         coffeeShops: [
-          { title: 'Cafe Nero', url: '/coffee-shops/cafe-nero-eldon-sq/' },
-          { title: 'Waterstones', url: '/coffee-shops/waterstones-newcastle/' },
-          { title: 'Luther\'s', url: '/coffee-shops/luthers-newcastle-university/' },
-          { title: 'Habita', url: '/coffee-shops/habita-northumbria-university/' },
-          { title: 'Vicolo', url: '/coffee-shops/vicolo-tyneside-cinema/' },
-          { title: 'View all', url: '/coffee-shops/' }
+          { title: 'Cafe Nero', url: '/reviews/cafe-nero-eldon-sq/' },
+          { title: 'Waterstones', url: '/reviews/waterstones-newcastle/' },
+          { title: 'Luther\'s', url: '/reviews/luthers-newcastle-university/' },
+          { title: 'Habita', url: '/reviews/habita-northumbria-university/' },
+          { title: 'Vicolo', url: '/reviews/vicolo-tyneside-cinema/' },
+          { title: 'View all', url: '/reviews/' }
         ],
         destinations: [
           { title: 'Newcastle upon Tyne', url: '/destinations/newcastle-upon-tyne/' },
