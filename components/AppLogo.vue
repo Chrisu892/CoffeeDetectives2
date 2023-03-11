@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/" title="Go to homepage" class="logo">
+  <NuxtLink to="/" title="Go to homepage" class="logo font-medium">
     The Coffee Detectives
   </NuxtLink>
 </template>
@@ -9,7 +9,7 @@
     align-items: center;
     color: $clr-white;
     display: inline-flex;
-    font-weight: $bold-weight;
+    font-family: $font-cursive;
     letter-spacing: 0.5px;
     line-height: 1;
     text-decoration: none;

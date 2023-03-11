@@ -1,5 +1,5 @@
 <template>
-  <AppMasthead title="Destinations" tagline="" />
+  <AppMasthead title="Destinations" tagline="Find the best coffee experience in your area" />
   <section class="section">
     <div class="inner">
       <div class="page-content">

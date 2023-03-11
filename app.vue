@@ -12,8 +12,15 @@
 
   useHead({
     link: [{
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com'
+    }, {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
+      crossorigin: 'anonymous'
+    }, {
       rel: 'stylesheet',
-      href: 'https://use.typekit.net/sct2yvn.css'
+      href: 'https://fonts.googleapis.com/css2?family=Gloock&family=Red+Hat+Display&family=Satisfy&display=swap'
     }]
   })
 </script>

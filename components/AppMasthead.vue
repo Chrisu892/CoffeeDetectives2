@@ -19,8 +19,14 @@
 </script>
 
 <style scoped lang="scss">
+  .masthead {
+    color: $clr-white;
+  }
   .masthead__overlay {
     padding: 10rem 0;
     padding-top: calc(10rem + 80px);
+  }
+  .masthead__tagline {
+    margin-top: 1.5rem;
   }
 </style>
