@@ -2,8 +2,10 @@
   <section id="masthead" class="masthead">
     <div class="masthead__overlay">
       <div class="inner">
-        <h1 class="masthead__title">{{ title }}</h1>
-        <p class="masthead__tagline">{{ tagline }}</p>
+        <div class="masthead__content">
+          <h1 class="masthead__title">{{ title }}</h1>
+          <p class="masthead__tagline">{{ tagline }}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -20,11 +22,18 @@
 
 <style scoped lang="scss">
   .masthead {
-    color: $clr-white;
+    background: url('/images/newcastle-gateshead.jpeg') center center/cover no-repeat;
   }
   .masthead__overlay {
+    background-color: $clr-secondary-transparent-75;
     padding: 10rem 0;
     padding-top: calc(10rem + 80px);
+  }
+  .masthead__content {
+    color: $clr-white;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
   }
   .masthead__tagline {
     margin-top: 1.5rem;

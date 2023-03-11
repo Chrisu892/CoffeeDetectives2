@@ -2,6 +2,7 @@
 <template>
   <main id="main">
     <AppMasthead title="The Coffee Detectives" tagline="Independent reviewers of coffee shops helping you to find a coffee bean trail and connect you with other coffee lovers." />
+    <AppSearch />
     <section class="section">
       <div class="inner">
         <div class="page-content">

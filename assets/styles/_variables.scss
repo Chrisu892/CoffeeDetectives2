@@ -24,6 +24,7 @@ $clr-primary-light: lighten($clr-primary, 20%);
 
 $clr-secondary: #915c4c;
 $clr-secondary-dark: darken($clr-secondary, 10%);
+$clr-secondary-transparent-75: rgba($clr-secondary, 0.75);
 
 $clr-third: #40686a;
 

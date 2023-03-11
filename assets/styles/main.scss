@@ -9,7 +9,7 @@ html, body {
   overflow-y: auto;
 }
 body {
-  background-color: $clr-secondary;
+  background-color: $clr-white;
   font: $font-body;
   height: 100%;
 }
@@ -26,12 +26,50 @@ a:hover, a:focus {
 
 .inner {
   margin: 0 auto;
-  max-width: 1280px;
-  padding: 0 3rem;
+  max-width: 1320px;
+  padding: 0 2rem;
 
   &--narrow {
     max-width: 1024px;
   }
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+
+  &--gutter {
+    gap: 1rem;
+  }
+}
+
+input {
+  border: solid 1px $clr-secondary;
+  border-radius: $border-radius;
+  font-size: $font-regular;
+  padding: 1rem;
+  width: 100%;
+}
+
+select {
+  border: solid 1px $clr-secondary;
+  border-radius: $border-radius;
+  font-size: $font-regular;
+  padding: 1rem;
+  width: 100%;
+}
+
+.button {
+  background-color: $clr-primary;
+  border: solid 1px $clr-primary;
+  border-radius: $border-radius;
+  color: $clr-white;
+  cursor: pointer;
+  font-size: $font-regular;
+  font-weight: $bold-weight;
+  padding: 1.05rem;
+  max-width: 220px;
+  width: 100%;
 }
 
 /*-------------------------*\
