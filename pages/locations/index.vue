@@ -3,9 +3,9 @@
   <section class="section">
     <div class="inner">
       <div class="flex-container flex-container--gutter">
-        <AppLocation v-for="(destination, key) in destinations" :key="key" :destination="destination" />
-        <AppGetListed title="" text="" action="" />
+        <AppLocationListing v-for="(destination, key) in destinations" :key="key" :destination="destination" />
       </div>
+      <AppGetListed title="" text="" action="" />
     </div>
   </section>
   <section class="section section--shade">
@@ -29,26 +29,28 @@
     data() {
       return {
         destinations: [
-          { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/' },
-          { title: 'Gateshead', url: '/locations/gateshead' },
-          { title: 'Sunderland', url: '/locations/sunderland/' },
-          { title: 'Tynemouth', url: '/locations/tynemouth/' },
-          { title: 'South Shields', url: '/locations/south-shields' },
-          { title: 'Gosforth', url: '/locations/gosforth/' },
-          { title: 'Newburn', url: '/locations/newburn/' },
-          { title: 'Longbenton', url: '/locations/seaton-valley/' },
-          { title: 'Boldon', url: '/locations/boldon/' },
-          { title: 'Hebburn', url: '/locations/hebburn/' },
-          { title: 'Felling', url: '/locations/felling/' },
-          { title: 'Whickham', url: '/locations/whickham/' },
-          { title: 'Blydon', url: '/locations/blydon/' },
-          { title: 'Ryton', url: '/locations/ryton/' },
-          { title: 'Washington', url: '/locations/washington/' },
-          { title: 'Haughton-le-Spring', url: '/locations/haughton-le-spring/' },
-          { title: 'Hetton', url: '/locations/hetton/' },
-          { title: 'Castle Ward', url: '/locations/castle-ward' },
-          { title: 'Chester-le-Street', url: '/locations/chester-le-street' },
-          { title: 'Easington', url: '/locations/easington/' }
+          { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Gateshead', url: '/locations/gateshead', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Sunderland', url: '/locations/sunderland/', images: { thumbnail: '/images/locations/fallback.jpeg'} },
+          { title: 'Tynemouth', url: '/locations/tynemouth/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'South Shields', url: '/locations/south-shields/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Whitley Bay', url: '/locations/whitley-bay/', images: { thumbnail: '/images/locations/whitley-bay-promenade-in-england-north-east.jpeg' } },
+          { title: 'North Shields', url: '/locations/north-shields/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Gosforth', url: '/locations/gosforth/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Newburn', url: '/locations/newburn/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Longbenton', url: '/locations/seaton-valley/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Boldon', url: '/locations/boldon/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Hebburn', url: '/locations/hebburn/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Felling', url: '/locations/felling/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Whickham', url: '/locations/whickham/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Blydon', url: '/locations/blydon/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Ryton', url: '/locations/ryton/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Washington', url: '/locations/washington/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Haughton-le-Spring', url: '/locations/haughton-le-spring/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Hetton', url: '/locations/hetton/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Castle Ward', url: '/locations/castle-ward', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Chester-le-Street', url: '/locations/chester-le-street', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+          { title: 'Easington', url: '/locations/easington/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
         ]
       }
     }

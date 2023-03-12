@@ -5,15 +5,15 @@
     <section class="section">
       <div class="inner">
         <div class="feature feature--margin">
-          <h2 class="feature__title">We are independent reviewers of coffee and coffee shops in Tyne and Wear</h2>
-          <p class="feature__text">Our reviewers are people like you, the conesseurs of coffee who love finding new places to try different coffee roasts. We love finding new places and writing reviews about our experiences to help other people find the best place to relax with a cup of coffee in Newcastle upon Tyne, Gateshead, Tynemouth, Whitley Bay, South Shields.</p>
+          <h2 class="feature__title">We are independent reviewers of cafes</h2>
+          <p class="feature__text">Our reviewers are people like you, the coffee lovers who explore new places and try different coffee roasts. We love finding new places and write reviews about our experiences to help other people find the a place to enjoy a cup of coffee while reading a book, studying, working or catching up with friends and family. So far, we have listed 34 cafes in 12 locations across Tyne and Wear.</p>
         </div>
         <div class="page-content">
-          <p><strong>How it works?</strong></p>
+          <h3>How it works?</h3>
           <p>Coffee brewers</p>
-          <p>We often visit and occassionally write a comprehensive review about a coffee shop. When we publish a review, the coffee shop will automatically get listed on our website for free (althogh we would appreciate your paid membership). However, if you're a coffee shop owner and would like one of us to visit you and leave a review, you can get listed from just a £1.00 per month (T&C apply). We won't let you know when someone will visit you. The whole premise of this platform is to make our work secret, so that you will never know when one of us is enjoying a coffee in your coffee shop and writing a review. You can get notified when review is added.</p>
+          <p>Our coffee detectives explore, visit and occassionally write a comprehensive review about their expriences at a cafe. We do this becuase we believe in authenticity, something that traditional review websites fail to provide. When one of our coffee detectives publish a review, the cafe will automatically get listed on our website for free (although we would appreciate your paid membership). If you're the owner of your own cafe and would like one of our coffee detectives to visit you and write a review, you can get listed from just a £3 per month (T&C apply). However, we won't let you know when someone will visit you. The whole premise of this platform is to make our work a secret, so that you will never know when one of us is at your cafe. Once the review is published, you will get notified by email.</p>
           <p><strong>Coffee detectives</strong></p>
-          <p>Anyone can become a coffee detective. We value inclusiveness and would love to read about experiences from a wide range of coffee lovers. To become a coffee detective, you will need to create a membership account from just a £1.00 per month. This will give you access to tools and guidance on all you need to know to become a coffee detective. The fun part is that you can visit any coffee shop, whenever you like, and write a review in a secret, so that no one know that you are one of us. However, all reviews must meet our rules and guidelines. You can read more about them on our terms and conditions pages.</p>
+          <p>Do you have what it takes to become a coffee detective? Do you like coffee and write about your experiences? We value diversity and inclusivity and would love to read about experiences from a wide range of coffee lovers. To become a coffee detective, you will need to create a membership account from just a £1 per month. This will give you access to tools and guidance on all you need to know to become a coffee detective. The fun part is that you can visit any cafe in Tyne and Wear, whenever you like, order a coffee, have some food, observe, talk to people, and take either written or mental notes so that you can later write a comprehensive review for other people to read. However, to get published, all reviews must meet our rules and guidelines. You can read more about them in your member area.</p>
         </div>
       </div>
     </section>
@@ -25,17 +25,20 @@
         </div>
         <div class="page-content">
           <p><strong>Our Mission</strong></p>
-          <p>We want to help coffee shop owners to connect with their customers.</p>
-          <p>We want to help people find the coffee shops with best coffee roasts.</p>
-          <p>We want to make it easy to plan a day out studying, working or meeting with other people.</p>
-          <p>We want to create a network of coffee shops and a community of customers.</p>
-          <p>We want to help coffee shop owners to provide the best customer service.</p>
+          <ul>
+            <li>We want to help owners of cafes to connect with their customers.</li>
+            <li>We want to help people to find cafes with the best coffee.</li>
+            <li>We want to make planing a day out studying, working or meeting with other people easier.</li>
+            <li>We want to create a network of cafes and a community of coffee lovers.</li>
+            <li>We want to help cafe owners to provide the best customer service.</li>
+            <li>Conventional review websites fail to provide authentic reviews that are often fake or unfair.</li>
+          </ul>
           <p><strong>Our Values</strong></p>
-          <p>Our reviews are always anonymous and genuine, written by real coffee lovers.</p>
-          <p>We only review places that have been visited by one of our coffee detectives.</p>
-          <p>We strive for authenticity, genuity, and honesty so that people can trust our reviews.</p>
-          <p><strong>Our Promise</strong></p>
-          <p>We will never write anything to undermine the...</p>
+          <ul>
+            <li>Our reviews are always anonymous and authentic, written by real coffee lovers.</li>
+            <li>We only review places that have been visited by one of our coffee detectives.</li>
+            <li>We strive for authenticity, genuity, and honesty so that people can trust our reviews.</li>
+          </ul>
         </div>
       </div>
     </section>

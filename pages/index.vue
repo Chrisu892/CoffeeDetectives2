@@ -2,7 +2,7 @@
 <template>
   <main id="main">
     <AppMasthead title="The Coffee Detectives" tagline="We are independent reviewers of establishments that serve coffee, helping the citizens of Tyne and Wear find a place for a coffee break and help local businesses connect with their customers" />
-    <AppSearch />
+    <AppSearch title="Find a perfect cafe for your coffee break, study session or cath up in Tyne and Wear" />
     <section class="section">
       <div class="inner">
         <div class="page-content">

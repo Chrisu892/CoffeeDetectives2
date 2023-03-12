@@ -2,7 +2,7 @@
   <section class="search">
     <div class="inner">
       <form class="search__form" method="post">
-        <h2 class="search__form__title font-regular">Find a perfect place for your coffee break, study session or meeting in Tyne and Wear</h2>
+        <h2 class="search__form__title font-regular">{{ title }}</h2>
         
         <div class="flex-container flex-container--gutter flex-container--align-bottom">
           <div class="search__form__field">
@@ -41,6 +41,14 @@
     </div>
   </section>
 </template>
+
+<script>
+  export default {
+    props: {
+      title: String,
+    }
+  }
+</script>
 
 <style scoped lang="scss">
   .search {
