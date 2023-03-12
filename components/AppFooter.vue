@@ -5,7 +5,7 @@
         <div class="footer__col footer__col--first">
           <AppLogo />
           <div class="footer__detail footer__detail--first font-small">
-            We are independent reviewers of coffee and coffee shops helping you to find a coffee bean trail to the best coffee shops in the North East.
+            We are independent reviewers of coffee and coffee shops helping you to find a coffee bean trail to the best coffee shops in Tyne and Wear.
           </div>
           <div class="footer__detail font-small">
             <PhEnvelope />

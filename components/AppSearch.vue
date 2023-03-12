@@ -2,8 +2,8 @@
   <section class="search">
     <div class="inner">
       <form class="search__form" method="post">
-        <h2 class="search__form__title font-regular">Find a perfect place for your coffee break, study session or meeting</h2>
-        <div class="container container--gutter">
+        <h2 class="search__form__title font-regular">Find a perfect place for your coffee break, study session or meeting in Tyne and Wear</h2>
+        <div class="flex-container flex-container--gutter">
           <div class="search__form__field">
             <label class="search__form__label" for="query">Place or Location</label>
             <input class="search__form__input" id="query" type="text" placeholder="Where are you going?" required />

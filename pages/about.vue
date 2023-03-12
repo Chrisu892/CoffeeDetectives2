@@ -5,7 +5,7 @@
     <section class="section">
       <div class="inner">
         <div class="feature feature--margin">
-          <h2 class="feature__title">We are independent reviewers of coffee and coffee shops in the North East</h2>
+          <h2 class="feature__title">We are independent reviewers of coffee and coffee shops in Tyne and Wear</h2>
           <p class="feature__text">Our reviewers are people like you, the conesseurs of coffee who love finding new places to try different coffee roasts. We love finding new places and writing reviews about our experiences to help other people find the best place to relax with a cup of coffee in Newcastle upon Tyne, Gateshead, Tynemouth, Whitley Bay, South Shields.</p>
         </div>
         <div class="page-content">
