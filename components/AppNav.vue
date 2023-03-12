@@ -24,7 +24,7 @@
       return {
         pages: [
           { title: 'Reviews', altTitle: 'Reviews', url: '/reviews/' },
-          { title: 'Destinations', altTitle: 'Destinations', url: '/destinations/' },
+          { title: 'Locations', altTitle: 'Locations', url: '/locations/' },
           { title: 'Blog', altTitle: 'Blog', url: '/blog/' },
           { title: 'About', altTitle: 'About', url: '/about/' },
           { title: 'Get Listed', altTitle: 'Get Listed', url: '/get-listed/' }

@@ -5,7 +5,7 @@
         <div class="footer__col footer__col--first">
           <AppLogo />
           <div class="footer__detail footer__detail--first font-small">
-            We are independent reviewers of coffee and coffee shops helping you to find a coffee bean trail to the best coffee shops in Tyne and Wear.
+            We review establishments that serve coffee, helping the citizens of Tyne and Wear find a place for a coffee break and help local businesses connect with their customers.
           </div>
           <div class="footer__detail font-small">
             <PhEnvelope />
@@ -22,15 +22,15 @@
           </ul>
         </div>
         <div class="footer__col footer__col--align-right">
-          <h2 class="footer__title font-regular">Recently Reviewed</h2>
+          <h2 class="footer__title font-regular">New Reviews</h2>
           <ul class="footer__list">
-            <li v-for="page, key in coffeeShops" :key="key" class="footer__list-item">
+            <li v-for="page, key in reviews" :key="key" class="footer__list-item">
               <NuxtLink class="footer__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
             </li>
           </ul>
         </div>
         <div class="footer__col footer__col--align-right">
-          <h2 class="footer__title font-regular">Destinations</h2>
+          <h2 class="footer__title font-regular">Locations</h2>
           <ul class="footer__list">
             <li v-for="page, key in destinations" :key="key" class="footer__list-item">
               <NuxtLink class="footer__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
@@ -59,27 +59,28 @@
       return {
         pages: [
           { title: 'Reviews', url: '/reviews/' },
-          { title: 'Destinations', url: '/destinations/' },
+          { title: 'Locations', url: '/locations/' },
           { title: 'Blog', url: '/blog/' },
           { title: 'About', url: '/about/' },
           { title: 'Get Listed', url: '/get-listed/' },
           { title: 'Contact', url: '/contact/' }
         ],
-        coffeeShops: [
+        reviews: [
+          { title: 'Flat Caps Cafe', url: '/reviews/flat-caps-cafe/' },
           { title: 'Cafe Nero', url: '/reviews/cafe-nero-eldon-sq/' },
-          { title: 'Waterstones', url: '/reviews/waterstones-newcastle/' },
-          { title: 'Luther\'s', url: '/reviews/luthers-newcastle-university/' },
-          { title: 'Habita', url: '/reviews/habita-northumbria-university/' },
+          { title: 'Waterstones Cafe', url: '/reviews/waterstones-newcastle/' },
+          { title: 'Luther\'s NSU Bar', url: '/reviews/luthers-newcastle-university/' },
+          { title: 'Habita NUSU Bar', url: '/reviews/habita-northumbria-university/' },
           { title: 'Vicolo', url: '/reviews/vicolo-tyneside-cinema/' },
           { title: 'View all', url: '/reviews/' }
         ],
         destinations: [
-          { title: 'Newcastle upon Tyne', url: '/destinations/newcastle-upon-tyne/' },
-          { title: 'Tynemouth', url: '/destinations/tynemouth/' },
-          { title: 'Whitley Bay', url: '/destinations/whitley-bay/' },
-          { title: 'South Shields', url: '/destinations/south-shields/' },
-          { title: 'Gateshead', url: '/destinations/gateshead/' },
-          { title: 'View all', url: '/destinations/' }
+          { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/' },
+          { title: 'Tynemouth', url: '/locations/tynemouth/' },
+          { title: 'Whitley Bay', url: '/locations/whitley-bay/' },
+          { title: 'South Shields', url: '/locations/south-shields/' },
+          { title: 'Gateshead', url: '/locations/gateshead/' },
+          { title: 'View all', url: '/locations/' }
         ],
         settings: {
           site_name: 'The Coffee Detectives',

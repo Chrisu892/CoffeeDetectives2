@@ -32,7 +32,7 @@
   .masthead__content {
     color: $clr-white;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1024px;
     text-align: center;
   }
   .masthead__tagline {

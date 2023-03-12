@@ -1,5 +1,8 @@
 <template>
-  <NuxtLink class="button" :to="to" :title="title">
+  <button v-if="btnType == 'button'" class="button" :title="title">
+    <span class="button__inner">{{ title }}</span>
+  </button>
+  <NuxtLink v-else class="button" :to="to" :title="`Go to ${title} page`">
     <span class="button__inner">{{ title }}</span>
   </NuxtLink>
 </template>
@@ -7,37 +10,31 @@
 <script>
   export default {
     props: {
+      title: {
+        type: String,
+        required: true
+      },
       to: String,
-      title: String,
+      btnType: String,
     }
   }
 </script>
 
 <style scoped lang="scss">
   .button {
-    border: solid 2px $clr-secondary;
-    border-radius: 50px;
-    color: $clr-secondary;
+    appearance: none;
+    background-color: $clr-primary;
+    border: solid 1px $clr-primary;
+    border-radius: $border-radius;
+    color: $clr-white;
+    cursor: pointer;
     display: inline-block;
-    font: $font-header;
+    font-size: $font-regular;
     font-weight: $bold-weight;
-    letter-spacing: 1px;
+    padding: 1rem;
+    max-width: 220px;
+    text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-  }
-  .button--white {
-    color: $clr-white;
-  }
-  .button--solid {
-    background-color: $clr-secondary;
-    color: $clr-white;
-    transition: background-color 350ms ease-in-out;
-  }
-  .button--solid:hover {
-    background-color: darken($clr-secondary, 5%);
-  }
-  .button__inner {
-    display: block;
-    padding: 0.875rem 2.25rem 0.625rem;
+    width: 100%;
   }
 </style>

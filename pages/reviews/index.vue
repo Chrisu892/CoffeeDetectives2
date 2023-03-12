@@ -1,5 +1,5 @@
 <template>
-  <AppMasthead title="Reviews" tagline="Our independent reviews of coffee and coffee shops in the North East" />
+  <AppMasthead title="Reviews" tagline="Our independent reviews of establishments that serve coffee in Tyne and Wear" />
   <section class="section">
     <div class="inner">
       <div class="page-content">

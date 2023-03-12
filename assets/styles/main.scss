@@ -50,19 +50,6 @@ select {
   width: 100%;
 }
 
-.button {
-  background-color: $clr-primary;
-  border: solid 1px $clr-primary;
-  border-radius: $border-radius;
-  color: $clr-white;
-  cursor: pointer;
-  font-size: $font-regular;
-  font-weight: $bold-weight;
-  padding: 1.05rem;
-  max-width: 220px;
-  width: 100%;
-}
-
 /*-------------------------*\
     #TYPOGRAPHY
 \*-------------------------*/
@@ -203,6 +190,9 @@ h3, .font-large {
 }
 .flex-container--align-center {
   align-items: center;
+}
+.flex-container--align-bottom {
+  align-items: flex-end; 
 }
 .flex-container--just-right {
   justify-content: flex-end;

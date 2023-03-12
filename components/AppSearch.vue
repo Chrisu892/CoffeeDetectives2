@@ -3,11 +3,13 @@
     <div class="inner">
       <form class="search__form" method="post">
         <h2 class="search__form__title font-regular">Find a perfect place for your coffee break, study session or meeting in Tyne and Wear</h2>
-        <div class="flex-container flex-container--gutter">
+        
+        <div class="flex-container flex-container--gutter flex-container--align-bottom">
           <div class="search__form__field">
             <label class="search__form__label" for="query">Place or Location</label>
             <input class="search__form__input" id="query" type="text" placeholder="Where are you going?" required />
           </div>
+
           <div class="search__form__field">
             <label class="search__form__label" for="coffee">Coffee Blend</label>
             <select class="search__form__select" id="coffee" required>
@@ -16,6 +18,7 @@
               <option value="rich">Rich</option>
             </select>
           </div>
+
           <div class="search__form__field">
             <label class="search__form__label" for="amenities">Amenities</label>
             <select class="search__form__select" id="amenities" required>
@@ -29,8 +32,9 @@
               <option value="long_table">Long Table</option>
             </select>
           </div>
+
           <div class="search__form__field">
-            <button class="button search__form__button" type="submit">Search</button>
+            <AppButton btnType="button" title="Search" />
           </div>
         </div>
       </form>
