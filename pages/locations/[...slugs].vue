@@ -1,10 +1,47 @@
 <template>
   <main id="main">
-    <AppMap />
-    <section class="section">
+    <section class="masthead">
+      <picture>
+        <img class="masthead__background" src="/images/newcastle-gateshead.jpeg" alt="Image of Newcastle and Gatehsead Quayside" />
+      </picture>
+      <div class="masthead__overlay">
+        <div class="inner">
+          <div class="flex-container">
+            <div class="masthead__content">
+              <h1 class="masthead__title font-xl">{{ route.params.slugs[0] }}</h1>
+              <p class="masthead__tagline font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci iure officia obcaecati recusandae doloremque sint molestiae aperiam ea quisquam ducimus.</p>
+              <div class="masthead__actions">
+                <AppButton to="#explore" title="Find a Cafe" />
+              </div>
+            </div>
+            <div class="masthead__aside">
+              <LocationFeaturedCafe />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="explore">
       <div class="inner">
-        <div class="feature feature--margin">
-          <h2 class="feature__title">{{ route.params.slugs[0] }}</h2>
+        <div class="flex-container">
+          <div class="filters">
+            <div class="filters__wrap">
+              Filters...
+            </div>
+          </div>
+          <div class="listings">
+            <AppCafeListing v-for="(cafe, key) in cafes" :key="key" :cafe="cafe" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--shade">
+      <div class="inner">
+        <div class="feature">
+          <h2 class="feature__title font-large">About {{ route.params.slugs[0] }}</h2>
+          <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, mollitia consequatur hic consectetur enim incidunt vitae officia aliquam fugiat illum doloremque ea quos itaque natus, alias facere quae nobis expedita accusantium cumque voluptatibus dolore? Aspernatur, voluptatem tempora quod eum iste cumque porro similique vel. Architecto inventore quibusdam nobis expedita reprehenderit? Praesentium magni fugiat excepturi esse dolores beatae incidunt tempora aliquam provident itaque libero obcaecati consectetur minima, explicabo dicta impedit eligendi illum ex! Minima eaque ab, cum facere pariatur laboriosam, veritatis doloremque sed porro voluptates a ratione, aperiam nisi? Ex tempora ipsa officiis accusantium voluptatem voluptate, sed inventore nostrum recusandae sapiente!</p>
         </div>
       </div>
     </section>
@@ -14,3 +51,74 @@
 <script setup>
   const route = useRoute()
 </script>
+
+<script>
+  export default {
+    data() {
+      return {
+        cafes: [
+          { title: 'Flat Caps Cafe', url: '/locations/newcastle-upon-tyne/flat-caps-cafe/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Cafe Nero (Eldon Sq)', url: '/locations/newcastle-upon-tyne/cafe-nero-eldon-sq/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Waterstones Cafe', url: '/locations/newcastle-upon-tyne/waterstones-cafe/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Luther\'s NSU', url: '/locations/newcastle-upon-tyne/luthers-nsu-bar/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+        ]
+      }
+    }
+  }
+</script>
+
+<style scoped lang="scss">
+  .masthead {
+    overflow: hidden;
+    position: relative;
+  }
+  .masthead__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .masthead__overlay {
+    background-color: $clr-secondary-transparent-75;
+    position: relative;
+    z-index: 1;
+  }
+  .masthead__content {
+    color: $clr-white;
+    flex: 40% 0;
+    padding: 12rem 0;
+    padding-top: calc(12rem + 80px);
+  }
+  .masthead__tagline {
+    margin-top: 1.5rem;
+  }
+  .masthead__actions {
+    margin-top: 1.5rem;
+  }
+  .masthead__aside {
+    align-items: center;
+    display: inline-flex;
+    flex: 1 0;
+    justify-content: flex-end;
+    padding-top: 80px;
+  }
+
+  .filters {
+    flex: 320px 0;
+  }
+  .filters__wrap {
+    background-color: $clr-white;
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    position: sticky;
+    top: 3rem;
+  }
+
+  .listings {
+    flex: 1 0;
+    margin-left: 1.5rem;
+  }
+</style>
