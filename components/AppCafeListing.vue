@@ -40,9 +40,9 @@
     background-color: $clr-shade;
     border-radius: $border-radius 0 0 $border-radius;
     display: block;
-    flex: 40% 0;
+    flex: 30% 0;
     overflow: hidden;
-    padding-top: 30%;
+    padding-top: 20%;
     position: relative;
   }
   .cafe__thumbnail-image {

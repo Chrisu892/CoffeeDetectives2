@@ -8,7 +8,7 @@
         <div class="inner">
           <div class="flex-container">
             <div class="masthead__content">
-              <h1 class="masthead__title font-xl">{{ route.params.slugs[0] }}</h1>
+              <h1 class="masthead__title font-xl">Location</h1>
               <p class="masthead__tagline font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci iure officia obcaecati recusandae doloremque sint molestiae aperiam ea quisquam ducimus.</p>
               <div class="masthead__actions">
                 <AppButton to="#explore" title="Find a Cafe" />
@@ -40,7 +40,7 @@
     <section class="section section--shade">
       <div class="inner">
         <div class="feature">
-          <h2 class="feature__title font-large">About {{ route.params.slugs[0] }}</h2>
+          <h2 class="feature__title font-large">About</h2>
           <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, mollitia consequatur hic consectetur enim incidunt vitae officia aliquam fugiat illum doloremque ea quos itaque natus, alias facere quae nobis expedita accusantium cumque voluptatibus dolore? Aspernatur, voluptatem tempora quod eum iste cumque porro similique vel. Architecto inventore quibusdam nobis expedita reprehenderit? Praesentium magni fugiat excepturi esse dolores beatae incidunt tempora aliquam provident itaque libero obcaecati consectetur minima, explicabo dicta impedit eligendi illum ex! Minima eaque ab, cum facere pariatur laboriosam, veritatis doloremque sed porro voluptates a ratione, aperiam nisi? Ex tempora ipsa officiis accusantium voluptatem voluptate, sed inventore nostrum recusandae sapiente!</p>
         </div>
       </div>
@@ -48,9 +48,9 @@
   </main>
 </template>
 
-<script setup>
+<!-- <script setup>
   const route = useRoute()
-</script>
+</script> -->
 
 <script>
   export default {
