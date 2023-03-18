@@ -5,8 +5,7 @@
 \*-------------------------*/
 
 html, body {
-  overflow-x: hidden;
-  overflow-y: auto;
+  
 }
 body {
   background-color: $clr-white;
@@ -38,7 +37,7 @@ input[type="text"],
 input[type="number"] {
   border: solid 1px $clr-secondary;
   border-radius: $border-radius;
-  font-size: $font-regular;
+  font-size: 1rem;
   padding: 1rem;
   width: 100%;
 }
@@ -46,7 +45,7 @@ input[type="number"] {
 select {
   border: solid 1px $clr-secondary;
   border-radius: $border-radius;
-  font-size: $font-regular;
+  font-size: 1rem;
   padding: 1rem;
   width: 100%;
 }
@@ -187,7 +186,7 @@ h3, .font-large {
   flex-flow: row wrap;
 }
 .flex-container--gutter {
-  gap: 2rem;
+  gap: 1rem;
 }
 .flex-container--align-center {
   align-items: center;

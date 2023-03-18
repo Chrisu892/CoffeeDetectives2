@@ -34,6 +34,7 @@ $clr-white: #fff;
 $clr-white-transparent-75: rgba(#fff, 0.75);
 $clr-white-transparent-20: rgba(#fff, 0.2);
 $clr-shade: #d3d3d3;
+$clr-shade-lighten-10: lighten($clr-shade, 10%);
 $clr-dark: #2f1812;
 
 /*-------------------------*\

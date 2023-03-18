@@ -9,15 +9,11 @@
     </div>
 
     <div class="filters__group">
-      <FilterMultiSelectList title="Coffee Blends" :list="blends.options" />
+      <FilterMultiSelectList title="Coffee Blends" :list="blends" />
     </div>
 
     <div class="filters__group">
-      <FilterMultiSelectList title="Food Served" :list="foodServed" />
-    </div>
-
-    <div class="filters__group">
-      <FilterMultiSelectList title="Cuisine Served" :list="cuisineServed" />
+      <FilterMultiSelectList title="Cuisine" :list="cuisine" />
     </div>
 
     <div class="filters__group">
@@ -42,44 +38,55 @@
           min: '8',
           max: '20'
         },
-        blends: [
-          { title: 'Arabica' },
-          { title: 'Robusta' },
-          { title: 'Espresso' },
-          { title: 'Mocha' },
-          { title: 'Colombian' },
-          { title: 'Ethiopian' },
-          { title: 'Speciality' }
-        ],
-        foodServed: [
-          { title: 'Sandwiches' },
-          { title: 'Salads'},
-          { title: 'Pastries' },
-          { title: 'Baked Goods' },
-          { title: 'Pancakes' },
-          { title: 'Waffles' },
-          { title: 'Omelets' },
-        ],
-        cuisineServed: [
-          { title: 'French' },
-          { title: 'Italian' },
-          { title: 'Middle Eastern' }
-        ],
-        dietaryRequirements: [
-          { title: 'Gluten-Free' },
-          { title: 'Vegeterian' },
-          { title: 'Vegan' }
-        ],
-        amenities: [
-          { title: 'Free Wi-Fi' },
-          { title: 'Outdoor Seating' },
-          { title: 'Power Outlets' },
-          { title: 'Restrooms' },
-          { title: 'Books and Magazines' },
-          { title: 'Live Music or Entertainment' },
-          { title: 'Loyalty programs' },
-          { title: 'Catering' }
-        ]
+        blends: [{
+          options: [
+            { title: 'Arabica' },
+            { title: 'Robusta' },
+            { title: 'Espresso' },
+            { title: 'Mocha' },
+            { title: 'Colombian' },
+            { title: 'Ethiopian' },
+            { title: 'Speciality' }
+          ]
+        }],
+        cuisine: [{
+          title: 'Food Served',
+          options: [
+            { title: 'Sandwiches' },
+            { title: 'Salads'},
+            { title: 'Pastries' },
+            { title: 'Baked Goods' },
+            { title: 'Pancakes' },
+            { title: 'Waffles' },
+            { title: 'Omelets' },
+          ]
+        }, {
+          title: 'Cuisine Served',
+          options: [
+            { title: 'French' },
+            { title: 'Italian' },
+            { title: 'Middle Eastern' }
+          ]
+        }],
+        dietaryRequirements: [{
+          options: [
+            { title: 'Gluten-Free' },
+            { title: 'Vegeterian' },
+            { title: 'Vegan' }
+          ]
+        }],
+        amenities: [{
+          options: [
+            { title: 'Free Wi-Fi' },
+            { title: 'Outdoor Seating' },
+            { title: 'Power Outlets' },
+            { title: 'Restrooms' },
+            { title: 'Books and Magazines' },
+            { title: 'Live Music or Entertainment' },
+            { title: 'Loyalty programs' },
+            { title: 'Catering' }
+          ]
+        }]
       }
     }
   }
@@ -87,14 +94,15 @@
 
 <style scoped lang="scss">
   .filters {
-    display: flex;
-    flex-flow: row;
+    position: sticky;
+    top: 1rem;
   }
   .filters__group {
-    border: solid 1px $clr-shade;
-    border-radius: $border-radius;
     flex: 14.28% 0;
     flex: calc(14.28% - 5rem);
-    padding: 0.5rem;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
   }
 </style>

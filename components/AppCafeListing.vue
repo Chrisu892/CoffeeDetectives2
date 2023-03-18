@@ -40,7 +40,8 @@
   }
   .cafe--grid {
     flex: 33.333% 0;
-    flex: calc(33.333% - 1.35rem) 0;
+    flex: calc(33.333% - 0.68rem) 0;
+    flex-flow: column;
   }
   .cafe__thumbnail {
     background-color: $clr-shade;
@@ -50,6 +51,10 @@
     overflow: hidden;
     padding-top: 22%;
     position: relative;
+  }
+  .cafe--grid .cafe__thumbnail {
+    border-radius: $border-radius $border-radius 0 0;
+    padding-top: 70%;
   }
   .cafe__thumbnail-image {
     position: absolute;

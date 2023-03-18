@@ -15,7 +15,7 @@
               </div>
             </div>
             <div class="masthead__aside">
-              <LocationFeaturedCafe />
+              <!-- <LocationFeaturedCafe /> -->
             </div>
           </div>
         </div>
@@ -24,15 +24,21 @@
 
     <section class="section" id="explore">
       <div class="inner">
-        <div class="filters">
-          <LocationFilters />
-          <LocationGridToggle @click="toggle('grid')" />
-          <LocationListToggle @click="toggle('list')" />
-          <LocationMapToggle @click="toggle('map')" />
-        </div>
-        <div class="flex-container flex-container--gutter listings">
-          <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="(cafe, key) in cafes" :key="key" :cafe="cafe" :view="view" />
-          <LocationMapView v-if="view == 'map'" />
+        <div class="flex-container flex-container--gutter">
+          <div class="filters">
+            <LocationFilters />
+          </div>
+          <div class="listings">
+            <div class="listings__actions">
+              <LocationListToggle @click="toggle('list')" />
+              <LocationGridToggle @click="toggle('grid')" />
+              <LocationMapToggle @click="toggle('map')" />
+            </div>
+            <div class="flex-container flex-container--gutter">
+              <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="(cafe, key) in cafes" :key="key" :cafe="cafe" :view="view" />
+              <LocationMapView v-if="view == 'map'" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -96,9 +102,9 @@
   }
   .masthead__content {
     color: $clr-white;
-    flex: 40% 0;
-    padding: 12rem 0;
-    padding-top: calc(12rem + 80px);
+    flex: 60% 0;
+    padding: 6rem 0;
+    padding-top: calc(6rem + 80px);
   }
   .masthead__tagline {
     margin-top: 1.5rem;
@@ -115,9 +121,21 @@
   }
 
   .filters {
-
+    flex: 240px 0;
   }
+
   .listings {
-    margin-top: 1rem;
+    flex: 1 0;
+    align-items: flex-start;
+  }
+  .listings__actions {
+    background-color: $clr-shade-lighten-10;
+    border-radius: $border-radius;
+    padding: 0.2rem;
+    display: flex;
+    gap: 0.2rem;
+    flex: 100% 0;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
   }
 </style>
