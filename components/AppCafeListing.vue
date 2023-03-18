@@ -1,5 +1,5 @@
 <template>
-  <article class="cafe">
+  <article class="cafe" :class="`cafe--${view}`">
     <NuxtLink class="cafe__thumbnail" :to="cafe.url" :title="`Read more about ${cafe.title}`">
       <img class="cafe__thumbnail-image" :src="cafe.images.thumbnail" :alt="cafe.title" />
     </NuxtLink>
@@ -18,6 +18,10 @@
       cafe: {
         type: Object,
         required: true
+      },
+      view: {
+        type: String,
+        default: 'list'
       }
     }
   }
@@ -30,11 +34,13 @@
     border-radius: $border-radius;
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
-
-    &:not(:first-child) {
-      margin-top: 1.5rem;
-    }
+  }
+  .cafe--list {
+    flex: 100% 0;
+  }
+  .cafe--grid {
+    flex: 33.333% 0;
+    flex: calc(33.333% - 1.35rem) 0;
   }
   .cafe__thumbnail {
     background-color: $clr-shade;
@@ -42,7 +48,7 @@
     display: block;
     flex: 30% 0;
     overflow: hidden;
-    padding-top: 20%;
+    padding-top: 22%;
     position: relative;
   }
   .cafe__thumbnail-image {

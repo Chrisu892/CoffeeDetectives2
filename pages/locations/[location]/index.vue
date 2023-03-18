@@ -24,15 +24,15 @@
 
     <section class="section" id="explore">
       <div class="inner">
-        <div class="flex-container">
-          <div class="filters">
-            <div class="filters__wrap">
-              Filters...
-            </div>
-          </div>
-          <div class="listings">
-            <AppCafeListing v-for="(cafe, key) in cafes" :key="key" :cafe="cafe" />
-          </div>
+        <div class="filters">
+          <LocationFilters />
+          <LocationGridToggle @click="toggle('grid')" />
+          <LocationListToggle @click="toggle('list')" />
+          <LocationMapToggle @click="toggle('map')" />
+        </div>
+        <div class="flex-container flex-container--gutter listings">
+          <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="(cafe, key) in cafes" :key="key" :cafe="cafe" :view="view" />
+          <LocationMapView v-if="view == 'map'" />
         </div>
       </div>
     </section>
@@ -56,12 +56,21 @@
   export default {
     data() {
       return {
+        view: 'list',
         cafes: [
-          { title: 'Flat Caps Cafe', url: '/locations/newcastle-upon-tyne/flat-caps-cafe/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'Cafe Nero (Eldon Sq)', url: '/locations/newcastle-upon-tyne/cafe-nero-eldon-sq/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'Waterstones Cafe', url: '/locations/newcastle-upon-tyne/waterstones-cafe/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'Luther\'s NSU', url: '/locations/newcastle-upon-tyne/luthers-nsu-bar/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Flat Caps Cafe', url: '/reviews/flat-caps-cafe/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Cafe Nero', url: '/reviews/cafe-nero-eldon-sq/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Waterstones Cafe', url: '/reviews/waterstones-newcastle/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Luther\'s NSU Bar', url: '/reviews/luthers-newcastle-university/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Habita NUSU Bar', url: '/reviews/habita-northumbria-university/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Vicolo', url: '/reviews/vicolo-tyneside-cinema/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'The Hooch', url: '/reviews/the-hooch/', images: { thumbnail: '/images/cafes/fallback.jpeg' } }
         ]
+      }
+    },
+    methods: {
+      toggle(view) {
+        this.view = view
       }
     }
   }
@@ -106,19 +115,9 @@
   }
 
   .filters {
-    flex: 320px 0;
-  }
-  .filters__wrap {
-    background-color: $clr-white;
-    border: solid 1px $clr-shade;
-    border-radius: $border-radius;
-    padding: 1.5rem;
-    position: sticky;
-    top: 3rem;
-  }
 
+  }
   .listings {
-    flex: 1 0;
-    margin-left: 1.5rem;
+    margin-top: 1rem;
   }
 </style>

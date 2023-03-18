@@ -26,7 +26,7 @@ a:hover, a:focus {
 
 .inner {
   margin: 0 auto;
-  max-width: 1320px;
+  max-width: 1480px;
   padding: 0 2rem;
 
   &--narrow {
@@ -34,7 +34,8 @@ a:hover, a:focus {
   }
 }
 
-input {
+input[type="text"],
+input[type="number"] {
   border: solid 1px $clr-secondary;
   border-radius: $border-radius;
   font-size: $font-regular;
