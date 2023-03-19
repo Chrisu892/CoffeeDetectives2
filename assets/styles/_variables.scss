@@ -2,17 +2,17 @@
     #FONTS
 \*-------------------------*/
 
-$font-header: normal 18px/1.5 'Gloock', Helvetica Neue, Helvetica, Arial, sans-serif;
-$font-body: normal 22px/1.8 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
+$font-header: normal 20px/1.3 'Gloock', Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-body: normal 18px/1.5 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
 $font-cursive: 'Satisfy', cursive;
 
-$font-xxl: 3.5em;
-$font-xl: 3em;
-$font-large: 2.5em;
-$font-medium: 1.2em;
-$font-regular: 0.94em;
-$font-small: 0.78em;
-$font-xs: 0.72em;
+$font-xxl: 4em;
+$font-xl: 3.725em;
+$font-large: 2.875em;
+$font-medium: 1.275em;
+$font-regular: 1em;
+$font-small: 0.88em;
+$font-xs: 0.8em;
 
 /*-------------------------*\
     #COLOURS
@@ -35,7 +35,9 @@ $clr-white-transparent-75: rgba(#fff, 0.75);
 $clr-white-transparent-20: rgba(#fff, 0.2);
 $clr-shade: #d3d3d3;
 $clr-shade-lighten-10: lighten($clr-shade, 10%);
+$clr-shade-darken-10: darken($clr-shade, 10%);
 $clr-dark: #2f1812;
+$clr-text: #444;
 
 /*-------------------------*\
     #MISC.

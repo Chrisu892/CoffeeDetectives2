@@ -3,8 +3,8 @@
     <div class="masthead__overlay">
       <div class="inner">
         <div class="masthead__content">
-          <h1 class="masthead__title">{{ title }}</h1>
-          <p class="masthead__tagline">{{ tagline }}</p>
+          <h1 class="masthead__title font-xl">{{ title }}</h1>
+          <p class="masthead__tagline font-medium">{{ tagline }}</p>
         </div>
       </div>
     </div>

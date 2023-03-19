@@ -3,7 +3,7 @@
   <section class="section">
     <div class="inner">
       <div class="flex-container flex-container--gutter">
-        <AppLocationListing v-for="(destination, key) in destinations" :key="key" :destination="destination" />
+        <AppLocationListing v-for="(location, key) in locations" :key="key" :location="location" />
       </div>
       <AppGetListed title="" text="" action="" />
     </div>
@@ -28,7 +28,7 @@
   export default {
     data() {
       return {
-        destinations: [
+        locations: [
           { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
           { title: 'Gateshead', url: '/locations/gateshead', images: { thumbnail: '/images/locations/fallback.jpeg' } },
           { title: 'Sunderland', url: '/locations/sunderland/', images: { thumbnail: '/images/locations/fallback.jpeg'} },

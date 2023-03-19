@@ -46,7 +46,7 @@
     <section class="section section--shade">
       <div class="inner">
         <div class="feature">
-          <h2 class="feature__title font-large">About</h2>
+          <h2 class="feature__title font-large">About [Location Name]</h2>
           <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, mollitia consequatur hic consectetur enim incidunt vitae officia aliquam fugiat illum doloremque ea quos itaque natus, alias facere quae nobis expedita accusantium cumque voluptatibus dolore? Aspernatur, voluptatem tempora quod eum iste cumque porro similique vel. Architecto inventore quibusdam nobis expedita reprehenderit? Praesentium magni fugiat excepturi esse dolores beatae incidunt tempora aliquam provident itaque libero obcaecati consectetur minima, explicabo dicta impedit eligendi illum ex! Minima eaque ab, cum facere pariatur laboriosam, veritatis doloremque sed porro voluptates a ratione, aperiam nisi? Ex tempora ipsa officiis accusantium voluptatem voluptate, sed inventore nostrum recusandae sapiente!</p>
         </div>
       </div>
@@ -70,7 +70,8 @@
           { title: 'Luther\'s NSU Bar', url: '/reviews/luthers-newcastle-university/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
           { title: 'Habita NUSU Bar', url: '/reviews/habita-northumbria-university/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
           { title: 'Vicolo', url: '/reviews/vicolo-tyneside-cinema/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'The Hooch', url: '/reviews/the-hooch/', images: { thumbnail: '/images/cafes/fallback.jpeg' } }
+          { title: 'The Hooch', url: '/reviews/the-hooch/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'The Black Sheep Coffee', url: '/reviews/the-black-sheep-coffee/', images: { thumbnail: '/images/cafes/fallback.jpeg' } }
         ]
       }
     },

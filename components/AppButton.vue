@@ -31,8 +31,8 @@
     display: inline-block;
     font-size: $font-regular;
     font-weight: $bold-weight;
-    padding: 1rem;
-    max-width: 220px;
+    max-width: 200px;
+    padding: 0.875rem 1.75rem;
     text-align: center;
     text-decoration: none;
     width: 100%;

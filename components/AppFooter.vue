@@ -4,10 +4,10 @@
       <div class="flex-container flex-container--gutter footer__container">
         <div class="footer__col footer__col--first">
           <AppLogo />
-          <div class="footer__detail footer__detail--first font-small">
+          <div class="footer__detail footer__detail--first">
             We review establishments that serve coffee, helping the citizens of Tyne and Wear find a place for a coffee break and help local businesses connect with their customers.
           </div>
-          <div class="footer__detail font-small">
+          <div class="footer__detail">
             <PhEnvelope />
             <a :href="`mailto:${settings.site_email}`" :title="`Send email to ${settings.site_name}`" target="_blank">{{ settings.site_email }}</a>
           </div>
@@ -17,7 +17,7 @@
           <h2 class="footer__title font-regular">Explore</h2>
           <ul class="footer__list">
             <li v-for="page, key in pages" :key="key" class="footer__list-item">
-              <NuxtLink class="footer__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
+              <NuxtLink class="footer__list-link" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
             </li>
           </ul>
         </div>
@@ -25,7 +25,7 @@
           <h2 class="footer__title font-regular">New Reviews</h2>
           <ul class="footer__list">
             <li v-for="page, key in reviews" :key="key" class="footer__list-item">
-              <NuxtLink class="footer__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
+              <NuxtLink class="footer__list-link" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
             </li>
           </ul>
         </div>
@@ -33,16 +33,16 @@
           <h2 class="footer__title font-regular">Locations</h2>
           <ul class="footer__list">
             <li v-for="page, key in destinations" :key="key" class="footer__list-item">
-              <NuxtLink class="footer__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
+              <NuxtLink class="footer__list-link" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="copyright font-xs">
+    <div class="copyright">
       <div class="inner flex-container">
-        <p class="copyright__text">&copy; Copyright 2023 <NuxtLink to="/" title="Go to Homepage">{{ settings.site_name }}</NuxtLink></p>
-        <p clas="copyright__text">Read our <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink>. Website by <a href="https://www.chrisprusakiewicz.com/" title="Visit Chris Prusakiewicz's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a></p>
+        <p class="copyright__text font-small">&copy; Copyright 2023 <NuxtLink to="/" title="Go to Homepage">{{ settings.site_name }}</NuxtLink></p>
+        <p clas="copyright__text font-small">Read our <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink>. Website by <a href="https://www.chrisprusakiewicz.com/" title="Visit Chris Prusakiewicz's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a></p>
       </div>
     </div>
   </footer>
@@ -110,6 +110,7 @@
   }
   .footer__title {
     margin-bottom: 1.5rem;
+    letter-spacing: 1px;
 
     span::before {
       content: '';

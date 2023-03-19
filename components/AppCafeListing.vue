@@ -7,7 +7,8 @@
       <h3 class="cafe__title font-medium">
         <NuxtLink :to="cafe.url" :title="`Read more about ${cafe.title}`">{{ cafe.title }}</NuxtLink>
       </h3>
-      <p class="cafe__tagline font-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, tempore.</p>
+      <p class="cafe__amenities font-small">Free Wi-Fi <span>|</span> Restrooms <span>|</span> Loyality Programs</p>
+      <p class="cafe__abstract font-regular">Set amidst the industrial-era buildings on the way to motorway, the cafe offers a decent selection of coffee blends and plenty of snacks.</p>
     </div>
   </article>
 </template>
@@ -47,7 +48,7 @@
     background-color: $clr-shade;
     border-radius: $border-radius 0 0 $border-radius;
     display: block;
-    flex: 30% 0;
+    flex: 26% 0;
     overflow: hidden;
     padding-top: 22%;
     position: relative;
@@ -68,7 +69,17 @@
     flex: 60% 0;
     padding: 1.5rem;
   }
-  .cafe__tagline {
-    margin-top: 1rem;
+  .cafe__amenities {
+    color: $clr-shade-darken-10;
+    margin-top: 0.75rem;
+
+    span {
+      color: $clr-shade;
+      display: inline-block;
+      margin: 0 0.3rem;
+    }
+  }
+  .cafe__abstract {
+    margin-top: 0.3rem;
   }
 </style>
