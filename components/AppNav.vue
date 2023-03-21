@@ -23,7 +23,7 @@
     data() {
       return {
         pages: [
-          { title: 'Reviews', altTitle: 'Reviews', url: '/reviews/' },
+          { title: 'Cafes', altTitle: 'Cafes', url: '/cafes/' },
           { title: 'Locations', altTitle: 'Locations', url: '/locations/' },
           { title: 'Blog', altTitle: 'Blog', url: '/blog/' },
           { title: 'About', altTitle: 'About', url: '/about/' },
@@ -39,16 +39,16 @@
     margin-left: 3rem;
   }
   .nav__list-link {
-    color: $clr-white;
+    color: $clr-text;
     font-weight: $bold-weight;
     letter-spacing: 1px;
     opacity: 0.8;
     text-transform: uppercase;
-    text-decoration-color: $clr-white-transparent-20;
+    text-decoration-color: $clr-text-transparent-75;
     transition: opacity 350ms ease-in-out;
   }
   .nav__list-link:hover {
     opacity: 1;
-    text-decoration-color: $clr-white;
+    text-decoration-color: $clr-text;
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="inner">
-      <div class="flex-container flex-container--gutter">
+      <div class="flex-container flex-container--gutter flex-container--align-center">
         <div class="section__col">
           <div class="feature">
             <h2 class="feature__title font-large">About Us</h2>

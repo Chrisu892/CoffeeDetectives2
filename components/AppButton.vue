@@ -36,5 +36,10 @@
     text-align: center;
     text-decoration: none;
     width: 100%;
+
+    &--outlined {
+      background-color: transparent;
+      color: $clr-primary;
+    }
   }
 </style>

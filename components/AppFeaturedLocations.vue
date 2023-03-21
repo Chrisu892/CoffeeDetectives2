@@ -7,15 +7,25 @@
           <NuxtLink to="/locations/">View All</NuxtLink>
         </div>
       </div>
-      <div class="grid-container">
-        <AppLocationListing v-for="location, key in locations" :key="key" :location="location" />
-      </div>
+      <Splide :options="options">
+        <SplideSlide v-for="chunk, key in locationChunks" :key="key">
+          <div class="grid-container">
+            <AppLocationListing v-for="location, key in chunk" :key="key" :location="location" />
+          </div>
+        </SplideSlide>
+      </Splide>
     </div>
   </section>
 </template>
 
 <script>
+  import { Splide, SplideSlide } from '@splidejs/vue-splide'
+  import '@splidejs/vue-splide/css'
+
   export default {
+    components: {
+      Splide, SplideSlide
+    },
     props: {
       title: {
         type: String,
@@ -29,7 +39,28 @@
         type: Array,
         required: true
       }
+    },
+    computed: {
+      locationChunks() {
+        const chunkSize = 5
+        let chunks = []
+        
+        for (let i = 0; i < this.locations.length; i += chunkSize) {
+          chunks.push(this.locations.slice(i, i + chunkSize))
+        }
+
+        return chunks
+      }
     }
+  }
+</script>
+
+<script setup>
+  const options = {
+    rewind: false,
+    gap: '2rem',
+    perMove: 1,
+    perPage: 1
   }
 </script>
 
@@ -37,41 +68,14 @@
   .grid-container {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .location {
     padding-top: 50%;
-  }
-  .location:nth-child(1) {
-    grid-column: 1/3;
-    grid-row: 1/4;
-  }
-  .location:nth-child(2) {
-    grid-column: 3/4;
-    grid-row: 1/4;
-  }
-  .location:nth-child(3) {
-    grid-column: 4/5;
-    grid-row: 1/4;
-  }
-  .location:nth-child(4) {
-    grid-column: 5/6;
-    grid-row: 1/4;
-  }
-  .location:nth-child(5) {
-    grid-column: 1/2;
-    grid-row: 4/7;
-  }
-  .location:nth-child(6) {
-    grid-column: 2/3;
-    grid-row: 4/7;
-  }
-  .location:nth-child(7) {
-    grid-column: 3/4;
-    grid-row: 4/7;
-  }
-  .location:nth-child(8) {
-    grid-column: 4/6;
-    grid-row: 4/7;
+
+    &:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
   }
 </style>

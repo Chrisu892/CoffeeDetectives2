@@ -25,7 +25,7 @@ a:hover, a:focus {
 
 .inner {
   margin: 0 auto;
-  max-width: 1480px;
+  max-width: 1420px;
   padding: 0 2rem;
 
   &--narrow {
@@ -90,8 +90,7 @@ h3, .font-large {
 
 .section {
   background-color: $clr-white;
-  padding: 8rem 0;
-  padding: clamp(3rem, 8vw, 6rem) 0;
+  padding: 4rem 0;
 
   &--shade {
     background-color: $clr-shade;

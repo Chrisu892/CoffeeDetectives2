@@ -26,8 +26,7 @@
   }
   .masthead__overlay {
     background-color: $clr-secondary-transparent-75;
-    padding: 10rem 0;
-    padding-top: calc(10rem + 80px);
+    padding: 8rem;
   }
   .masthead__content {
     color: $clr-white;

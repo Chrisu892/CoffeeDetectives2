@@ -13,6 +13,10 @@
     letter-spacing: 0.5px;
     line-height: 1;
     text-decoration: none;
+
+    &--rev {
+      color: $clr-text;
+    }
   }
   .logo__graphic {
     align-items: center;

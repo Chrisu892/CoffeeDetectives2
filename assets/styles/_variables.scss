@@ -38,6 +38,7 @@ $clr-shade-lighten-10: lighten($clr-shade, 10%);
 $clr-shade-darken-10: darken($clr-shade, 10%);
 $clr-dark: #2f1812;
 $clr-text: #444;
+$clr-text-transparent-75: rgba($clr-text, 0.75);
 
 /*-------------------------*\
     #MISC.
