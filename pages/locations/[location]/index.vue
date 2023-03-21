@@ -64,14 +64,14 @@
       return {
         view: 'list',
         cafes: [
-          { title: 'Flat Caps Cafe', url: '/reviews/flat-caps-cafe/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'Cafe Nero', url: '/reviews/cafe-nero-eldon-sq/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'Waterstones Cafe', url: '/reviews/waterstones-newcastle/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'Luther\'s NSU Bar', url: '/reviews/luthers-newcastle-university/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'Habita NUSU Bar', url: '/reviews/habita-northumbria-university/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'Vicolo', url: '/reviews/vicolo-tyneside-cinema/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'The Hooch', url: '/reviews/the-hooch/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
-          { title: 'The Black Sheep Coffee', url: '/reviews/the-black-sheep-coffee/', images: { thumbnail: '/images/cafes/fallback.jpeg' } }
+          { title: 'Flat Caps Cafe', url: '/cafes/flat-caps-cafe/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Cafe Nero', url: '/cafes/cafe-nero-eldon-sq/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Waterstones Cafe', url: '/cafes/waterstones-newcastle/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Luther\'s NSU Bar', url: '/cafes/luthers-newcastle-university/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Habita NUSU Bar', url: '/cafes/habita-northumbria-university/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'Vicolo', url: '/cafes/vicolo-tyneside-cinema/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'The Hooch', url: '/cafes/the-hooch/', images: { thumbnail: '/images/cafes/fallback.jpeg' } },
+          { title: 'The Black Sheep Coffee', url: '/cafes/the-black-sheep-coffee/', images: { thumbnail: '/images/cafes/fallback.jpeg' } }
         ]
       }
     },

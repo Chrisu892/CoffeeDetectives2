@@ -100,6 +100,10 @@ h3, .font-large {
     padding-top: 0;
   }
 }
+.section__title {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
 
 .feature {
 
@@ -185,7 +189,7 @@ h3, .font-large {
   flex-flow: row wrap;
 }
 .flex-container--gutter {
-  gap: 1rem;
+  gap: 2rem;
 }
 .flex-container--align-center {
   align-items: center;

@@ -1,9 +1,11 @@
 <template>
-  <NuxtLink class="location" :to="location.url" title="">
+  <NuxtLink class="location" :class="{ 'location--slider': slider }" :to="location.url" title="">
     <img class="location__image" :src="location.images.thumbnail" :alt="`Image of ${location.title}`" />
     <div class="location__overlay">
-      <div class="location__caption font-regular">Explore</div>
-      <h3 class="location__title font-medium">{{ location.title }}</h3>
+      <div class="location__content">
+        <div class="location__caption font-regular">Explore</div>
+        <h3 class="location__title font-medium">{{ location.title }}</h3>
+      </div>
     </div>
   </NuxtLink>
 </template>
@@ -14,6 +16,10 @@
       location: {
         type: Object,
         required: true
+      },
+      slider: {
+        type: Boolean,
+        default: false
       }
     }
   }
@@ -22,13 +28,17 @@
 <style scoped lang="scss">
   .location {
     flex: 33.333% 0;
-    flex: calc(33.333% - 1em) 0;
+    flex: calc(33.333% - 1.5rem) 0;
     background-color: $clr-shade;
     border-radius: $border-radius;
     display: block;
     overflow: hidden;
     padding-top: 22%;
     position: relative;
+  }
+  .location--slider {
+    padding-top: 64%;
+    width: 100%;
   }
   .location__image {
     position: absolute;
@@ -54,6 +64,10 @@
   }
   .location:hover .location__overlay {
     background-color: $clr-secondary-transparent-75;
+  }
+  .location__content {
+    max-width: 300px;
+    margin: 0 auto;
   }
   .location__caption {
     font-family: $font-cursive;
