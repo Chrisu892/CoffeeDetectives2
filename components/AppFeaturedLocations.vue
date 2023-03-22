@@ -2,7 +2,7 @@
   <section class="section section--shade">
     <div class="inner">
       <div class="flex-container">
-        <div class="section__title">{{ title }}</div>
+        <div class="section__title font-medium">{{ title }}</div>
         <div class="section__action">
           <NuxtLink to="/locations/">View All</NuxtLink>
         </div>

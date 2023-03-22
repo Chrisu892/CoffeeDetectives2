@@ -8,8 +8,7 @@
         <div class="inner">
           <div class="flex-container">
             <div class="masthead__content">
-              <h1 class="masthead__title font-xl">Location</h1>
-              <p class="masthead__tagline font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci iure officia obcaecati recusandae doloremque sint molestiae aperiam ea quisquam ducimus.</p>
+              <h1 class="masthead__title font-xl">Cafes in [location]</h1>
               <div class="masthead__actions">
                 <AppButton to="#explore" title="Find a Cafe" />
               </div>
@@ -53,10 +52,6 @@
     </section>
   </main>
 </template>
-
-<!-- <script setup>
-  const route = useRoute()
-</script> -->
 
 <script>
   export default {
