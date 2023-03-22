@@ -24,18 +24,17 @@
   .button {
     appearance: none;
     background-color: $clr-primary;
-    border: solid 1px $clr-primary;
-    border-radius: $border-radius;
+    border: solid 2px $clr-primary;
+    border-radius: 50px;
     color: $clr-white;
     cursor: pointer;
     display: inline-block;
     font-size: $font-regular;
     font-weight: $bold-weight;
-    max-width: 200px;
-    padding: 0.875rem 1.75rem;
+    letter-spacing: 0.5px;
+    padding: 0.475rem 1.725rem;
     text-align: center;
     text-decoration: none;
-    width: 100%;
 
     &--outlined {
       background-color: transparent;

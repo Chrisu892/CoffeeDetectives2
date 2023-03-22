@@ -13,9 +13,14 @@
 
 <style scoped lang="scss">
   .header {
-    padding: 2rem 0;
+    padding: 1.25rem 0;
   }
   .header__logo {
+    display: flex;
+    align-items: center;
+  }
+  .header__nav {
     flex: 1;
+    margin-left: 4rem;
   }
 </style>

@@ -2,53 +2,181 @@
   <div>
     <AppNavToggle />
     
-    <nav class="nav">
+    <nav class="flex-container flex-container--space-between flex-container--align-center nav">
+      <ul class="flex-container nav__list">
+        <li v-for="page, key in pages.primary" :key="key" class="nav__list-item">
+          <NuxtLink class="nav__list-link font-regular" :to="page.url" :title="`Go to ${page.title} page`">
+            {{ page.title }}
+            <ph-caret-down v-if="page.children" />
+          </NuxtLink>
+          <div v-if="page.children" class="__nav__group">
+            <ul class="nav__group" :class="`nav__group--${page.columnCount}`">
+              <li v-for="page, key in page.children" :key="key" class="nav__group__item">
+                <NuxtLink class="nav__group__link font-small" :to="page.url">{{ page.title }}</NuxtLink>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
       <ul class="flex-container flex-container--just-right nav__list">
-        <li v-for="page, key in pages" :key="key" class="nav__list-item">
-          <NuxtLink class="nav__list-link font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
+        <li v-for="page, key in pages.secondary" :key="key" class="nav__list-item">
+          <!-- <NuxtLink class="nav__list-link nav__list-link--button font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink> -->
+          <AppButton :to="page.url" :title="page.title" class="button--outlined" />
         </li>
       </ul>
     </nav>
   </div>
 </template>
 
-<script setup>
-  // const route = useRoute()
-  // When accessing /posts/1, route.params.id will be 1
-  // console.log(route.params.id)
-</script>
-
 <script>
+  import { PhCaretDown } from 'phosphor-vue';
+
   export default {
+    components: {
+      PhCaretDown
+    },
     data() {
       return {
-        pages: [
-          { title: 'Cafes', altTitle: 'Cafes', url: '/cafes/' },
-          { title: 'Locations', altTitle: 'Locations', url: '/locations/' },
-          { title: 'Blog', altTitle: 'Blog', url: '/blog/' },
-          { title: 'About', altTitle: 'About', url: '/about/' },
-          { title: 'Get Listed', altTitle: 'Get Listed', url: '/get-listed/' }
-        ]
+        pages: {
+          primary: [{
+            title: 'Cafes',
+            altTitle: 'Cafes',
+            url: '/cafes/',
+            columnCount: 2,
+            children: [
+              { title: 'Cafes with Free Wi-Fi', url: '/amenities/cafes-with-free-wifi/' },
+              { title: 'Cafes with Outdoor Sitting', url: '/amenities/cafes-with-outdoor-sitting/' },
+              { title: 'Cafes with Power Outlets', url: '/amenities/cafes-with-power-outlets/' },
+              { title: 'Cafes with Restrooms', url: '/amenities/cafes-with-restrooms/' },
+              { title: 'Cafes with Books & Magazines', url: '/amenities/cafes-with-books-magazines' },
+              { title: 'Cafes with Live Music', url: '/amenities/cafes-with-live-music/' },
+              { title: 'Cafes with Loyalty Programs', url: '/amenities/cafes-with-loyalty-programs/' }
+            ]
+          },{ 
+            title: 'Locations',
+            altTitle: 'Locations',
+            url: '/locations/',
+            columnCount: 3,
+            children: [
+              { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Gateshead', url: '/locations/gateshead', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Sunderland', url: '/locations/sunderland/', images: { thumbnail: '/images/locations/fallback.jpeg'} },
+              { title: 'Tynemouth', url: '/locations/tynemouth/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'South Shields', url: '/locations/south-shields/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Whitley Bay', url: '/locations/whitley-bay/', images: { thumbnail: '/images/locations/whitley-bay-promenade-in-england-north-east.jpeg' } },
+              { title: 'North Shields', url: '/locations/north-shields/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Gosforth', url: '/locations/gosforth/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Newburn', url: '/locations/newburn/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Longbenton', url: '/locations/seaton-valley/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Boldon', url: '/locations/boldon/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Hebburn', url: '/locations/hebburn/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Felling', url: '/locations/felling/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Whickham', url: '/locations/whickham/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Blydon', url: '/locations/blydon/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Ryton', url: '/locations/ryton/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Washington', url: '/locations/washington/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Haughton-le-Spring', url: '/locations/haughton-le-spring/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Hetton', url: '/locations/hetton/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Castle Ward', url: '/locations/castle-ward', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Chester-le-Street', url: '/locations/chester-le-street', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+              { title: 'Easington', url: '/locations/easington/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
+            ]
+          }, {
+            title: 'Blog',
+            altTitle: 'Blog', 
+            url: '/blog/',
+            columnCount: 1
+          },{ 
+            title: 'About Us', 
+            altTitle: 'About Us', 
+            url: '/about-us/',
+            columnCount: 1
+          }],
+          secondary: [{
+            title: 'Get Listed',
+            altTitle: 'Get Listed',
+            url: '/get-listed/',
+            columnCount: 1
+          }]
+        }
       }
     }
   }
 </script>
 
 <style scoped lang="scss">
-  .nav__list-item:not(:first-child) {
-    margin-left: 3rem;
+  .nav__list-item {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 0.5rem;
+    }
   }
   .nav__list-link {
     color: $clr-text;
+    display: inline-block;
     font-weight: $bold-weight;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     opacity: 0.8;
-    text-transform: uppercase;
+    padding: 0.475rem 1.725rem;
     text-decoration-color: $clr-text-transparent-75;
     transition: opacity 350ms ease-in-out;
   }
   .nav__list-link:hover {
     opacity: 1;
     text-decoration-color: $clr-text;
+  }
+
+  .__nav__group {
+    padding-top: 0.5rem;
+    position: absolute;
+    left: 0;
+    top: auto;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    transition: opacity 350ms ease-in-out,
+      visibility 350ms ease-in-out,
+      transform 350ms ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 4rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: $clr-secondary;
+      transform: rotate(45deg);
+    }
+  }
+  .nav__list-item:hover .__nav__group {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav__group {
+    background-color: $clr-secondary;
+    border-radius: $border-radius;
+    color: $clr-white;
+    min-width: 660px;
+    padding: 1rem 1.5rem 1.5rem;
+
+    &--2 {
+      column-count: 2;
+      column-gap: 2rem;
+    }
+    &--3 {
+      column-count: 3;
+      column-gap: 2rem;
+    }
+  }
+  .nav__group__item {
+    padding-top: 0.5rem;
+  }
+  .nav__group__link {
+    color: inherit;
+    text-decoration-color: inherit;
   }
 </style>
