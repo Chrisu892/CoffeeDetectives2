@@ -21,7 +21,7 @@
       crossorigin: 'anonymous'
     }, {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Gloock&family=Red+Hat+Display&family=Satisfy&display=swap'
+      href: 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Gloock&family=Red+Hat+Display:wght@400;500&display=swap'
     }]
   })
 </script>

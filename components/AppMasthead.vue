@@ -3,8 +3,8 @@
     <div class="masthead__overlay">
       <div class="inner">
         <div class="masthead__content">
-          <h1 class="masthead__title font-xl">{{ title }}</h1>
-          <p class="masthead__tagline font-medium">{{ tagline }}</p>
+          <h1 class="masthead__title font-large">{{ title }}</h1>
+          <p class="masthead__tagline font-regular">{{ tagline }}</p>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
   }
   .masthead__overlay {
     background-color: $clr-secondary-transparent-75;
-    padding: 8rem;
+    padding: 10rem;
   }
   .masthead__content {
     color: $clr-white;
@@ -35,6 +35,6 @@
     text-align: center;
   }
   .masthead__tagline {
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
   }
 </style>

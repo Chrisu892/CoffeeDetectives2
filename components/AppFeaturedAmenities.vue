@@ -1,7 +1,12 @@
 <template>
   <section class="section">
     <div class="inner">
-      <div class="section__title font-medium">Browse by Amenity</div>
+      <div class="flex-container">
+        <h2 class="section__title font-medium">Browse by Amenity</h2>
+        <div class="section__action">
+          <NuxtLink to="/amenities/">View All</NuxtLink>
+        </div>
+      </div>
       <div class="flex-container flex-container--gutter">
         <NuxtLink class="amenity" v-for="amenity, key in amenities" :key="key" :to="amenity.url">
           <div class="amenity__content">

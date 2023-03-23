@@ -2,7 +2,10 @@
   <section class="search">
     <div class="inner">
       <form class="search__form" method="post">
-        <p class="search__form__title font-medium"><strong>{{ title }}</strong></p>
+        <div class="search__form__text">
+          <p v-if="title" class="search__form__title font-medium"><strong>{{ title }}</strong></p>
+          <p v-if="tagline" class="search__form__tagline font-regular">{{ tagline }}</p>
+        </div>
         
         <div class="flex-container flex-container--gutter flex-container--align-bottom">
           <div class="search__form__field">
@@ -30,6 +33,7 @@
   export default {
     props: {
       title: String,
+      tagline: String,
     },
     data() {
       return {
@@ -89,9 +93,12 @@
     margin-top: -4rem;
     padding: 2rem;
   }
-  .search__form__title {
-    margin-bottom: 1.5rem;
+  .search__form__text {
+    margin-bottom: 2rem;
     text-align: center;
+  }
+  .search__form__tagline {
+    margin-top: 0.5rem;
   }
   .search__form__field {
     flex: 1 0;

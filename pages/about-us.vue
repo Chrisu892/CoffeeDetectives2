@@ -24,16 +24,17 @@
           <h2 class="feature__title">What makes us different?</h2>
         </div>
         <div class="page-content">
-          <p><strong>Our Mission</strong></p>
+          <h3>Our Mission</h3>
           <ul>
-            <li>We want to help owners of cafes to connect with their customers.</li>
-            <li>We want to help people to find cafes with the best coffee.</li>
-            <li>We want to make planing a day out studying, working or meeting with other people easier.</li>
-            <li>We want to create a network of cafes and a community of coffee lovers.</li>
-            <li>We want to help cafe owners to provide the best customer service.</li>
-            <li>Conventional review websites fail to provide authentic reviews that are often fake or unfair.</li>
+            <li>We want to help owners of cafes to connect with their customers and promote their business.</li>
+            <li>We want to make it easier to find a cafe in Tyne and Wear. Whether for a studying session, working, or meeting with other people.</li>
+            <li>We want to create a network of cafes and a community of coffee lovers in the area.</li>
+            <li>We want to help cafe owners to promote their business easier.</li>
+            <li>We predict that with the advancement of Artificial Intelligence (AI) and chatbots, distinguishing between human and AI generated reviews will be more difficult. We want to make sure that honest and authentic reviews are unbiased, written by people, not AI.</li>
+            <li>Money from the subscriptions are keeping our platform running, and as we grow, we plan to provide a number of grants and support to independent cafes.</li>
+            <li>In the future, our mission is to run an annual coffee awards in [number] of different categories.</li>
           </ul>
-          <p><strong>Our Values</strong></p>
+          <h3>Our Values</h3>
           <ul>
             <li>Our reviews are always anonymous and authentic, written by real coffee lovers.</li>
             <li>We only review places that have been visited by one of our coffee detectives.</li>
