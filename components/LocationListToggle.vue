@@ -1,7 +1,5 @@
 <template>
-  <button class="toggle font-medium" type="button">
-    <ph-list-dashes />
-  </button>
+  <NuxtLink class="toggle font-medium" to="?view=list"><ph-list-dashes /></NuxtLink>
 </template>
 
 <script>

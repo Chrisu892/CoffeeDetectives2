@@ -1,7 +1,5 @@
 <template>
-  <button class="toggle font-medium" type="button">
-    <ph-map-pin-line />
-  </button>
+  <NuxtLink class="toggle font-medium" to="?view=map"><ph-map-pin-line /></NuxtLink>
 </template>
 
 <script>

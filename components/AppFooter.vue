@@ -61,7 +61,7 @@
           { title: 'Reviews', url: '/reviews/' },
           { title: 'Locations', url: '/locations/' },
           { title: 'Blog', url: '/blog/' },
-          { title: 'About', url: '/about/' },
+          { title: 'About', url: '/about-us/' },
           { title: 'Get Listed', url: '/get-listed/' },
           { title: 'Become a Detective', url: '/become-a-detective/' },
           { title: 'Contact', url: '/contact/' }

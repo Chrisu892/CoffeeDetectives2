@@ -65,8 +65,8 @@
           max: 5
         },
         openingHours: {
-          min: '8',
-          max: '20'
+          min: 8,
+          max: 20
         },
         blends: [{
           options: [

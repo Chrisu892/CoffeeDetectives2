@@ -1,7 +1,5 @@
 <template>
-  <button class="toggle font-medium" type="button">
-    <ph-squares-four />
-  </button>
+  <NuxtLink class="toggle font-medium" to="?view=grid"><ph-squares-four /></NuxtLink>
 </template>
 
 <script>

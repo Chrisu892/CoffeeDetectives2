@@ -19,9 +19,12 @@
       </div>
 
       <div class="cafe__section">
-        <p class="cafe__abstract">{{ cafe.abstract }}</p>
+        <p class="cafe__abstract font-small">{{ cafe.abstract }}</p>
         <div class="cafe__amenities font-xs">
-          <div v-for="amenity, key in cafe.amenities" :key="key" class="cafe__amenity" :class="{ 'cafe__amenity--unique': amenity.unique }">{{ amenity.title }}</div>
+          <div v-for="amenity, key in cafe.amenities" :key="key" class="cafe__amenity" :class="{ 'cafe__amenity--unique': amenity.unique }">
+            <PhStar v-if="amenity.unique" />
+            {{ amenity.title }}
+          </div>
           <div class="cafe__amenity">+ 4 more</div>
         </div>
 
@@ -80,20 +83,24 @@
   }
 
   .cafe__thumbnail {
+    background-color: $clr-shade-lighten-10;
+    border-radius: 50px $border-radius $border-radius;
     position: relative;
+  }
+  .cafe--list .cafe__thumbnail {
+    flex: 31.5% 0;
   }
   .cafe__thumbnail-link {
     background-color: $clr-shade;
-    border-radius: $border-radius;
+    border-radius: 50px $border-radius $border-radius;
     display: block;
-    margin-bottom: 0.75rem;
     overflow: hidden;
     padding-top: 70%;
     position: relative;
   }
-  .cafe--grid .cafe__thumbnail-link {
-    border-radius: 50px $border-radius $border-radius;
-    padding-top: 70%;
+  .cafe--list .cafe__thumbnail-link {
+    height: 100%;
+    margin-bottom: 0;
   }
   .cafe__thumbnail-image {
     position: absolute;
@@ -111,6 +118,14 @@
     padding-top: 22%;
     background-color: $clr-shade;
     border-radius: 100%;
+  }
+
+  .cafe__content {
+    margin-top: 0.75rem;
+  }
+  .cafe--list .cafe__content {
+    flex: 1 0;
+    padding: 1rem 0 1rem 1rem;
   }
 
   .cafe__section--flex {
@@ -157,14 +172,19 @@
     }
   }
   .cafe__amenity {
-    display: inline-block;
+    align-items: center;
     border: solid 1px $clr-shade-lighten-10;
     border-radius: $border-radius;
+    display: inline-flex;
     padding: 0.001rem 0.5rem;
     white-space: nowrap;
 
     &:not(:first-child) {
       margin-left: 0.425rem;
+    }
+
+    svg {
+      margin-right: 0.3rem;
     }
 
     &--unique {
@@ -177,7 +197,19 @@
     margin-top: 0.75rem;
     padding: 0.125rem 0 0 2rem;
     position: relative;
-    line-height: 1.3;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 1.5rem;
+      background: linear-gradient(90deg, transparent, $clr-white);
+    }
   }
   .cafe__detail-icon {
     align-items: center;
