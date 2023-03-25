@@ -42,6 +42,6 @@
     rewind: true,
     gap: '2rem',
     perMove: 1,
-    perPage: 4
+    perPage: 3
   }
 </script>

@@ -4,9 +4,9 @@
     #GLOBAL
 \*-------------------------*/
 
-html, body {
-  overflow-x: hidden;
-}
+// html, body {
+//   overflow-x: hidden;
+// }
 body {
   background-color: $clr-white;
   font: $font-body;
@@ -38,8 +38,15 @@ input[type="number"] {
   border: solid 1px $clr-secondary;
   border-radius: $border-radius;
   font-size: 1rem;
+  font: $font-body;
   padding: 1rem;
   width: 100%;
+}
+
+button {
+  border: 0;
+  font: $font-body;
+  font-size: $font-regular;
 }
 
 select {
@@ -74,8 +81,9 @@ h3, .font-large {
   font-size: $font-medium;
   line-height: 1.4;
 }
-.h5, .font-regular {
+.h5, p, .font-regular {
   font-size: $font-regular;
+  line-height: 1.6;
 }
 .font-small {
   font-size: $font-small;

@@ -91,10 +91,10 @@
     background-color: $clr-secondary;
     border-radius: $border-radius;
     margin-top: -4rem;
-    padding: 2rem;
+    padding: 1.5rem;
   }
   .search__form__text {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-align: center;
   }
   .search__form__tagline {
