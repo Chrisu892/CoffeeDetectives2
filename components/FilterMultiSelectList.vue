@@ -1,12 +1,12 @@
 <template>
   <div class="filter" :class="{ 'filter--active': active }">
     <button class="filter__toggle font-small" @click="toggle()">
-      <div class="filter__title">{{ title }}</div>
+      <h3 class="filter__title font-regular">{{ title }}</h3>
       <div class="filter__icon"><ph-caret-down /></div>
     </button>
     <div class="__filter__group">
       <div v-for="group, key in list" :key="key" class="filter__group">
-        <div v-if="group.title" class="filter__subtitle font-small">{{ group.title }}</div>
+        <h4 v-if="group.title" class="filter__subtitle font-small">{{ group.title }}</h4>
         <ul class="filter__list font-small">
           <li v-for="option, key in group.options" :key="key" class="filter__item">
             <label class="filter__label" :for="option.title">
@@ -58,7 +58,7 @@
     cursor: pointer;
     display: flex;
     flex-flow: row wrap;
-    padding: 0.975rem 0.875rem 0.875rem;
+    padding: 0.775rem 0.875rem 0.675rem;
     width: 100%;
     text-align: left;
 

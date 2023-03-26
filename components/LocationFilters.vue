@@ -5,11 +5,11 @@
     </div>
 
     <div class="filters__group">
-      <FilterRangeInput title="Price Range" :min="priceRange.min" :max="priceRange.max" />
+      <FilterRangeInput title="Price Range" :range="priceRange.range" />
     </div>
 
     <div class="filters__group">
-      <FilterRangeInput title="Opening Hours" :min="openingHours.min" :max="openingHours.max" />
+      <FilterRangeInput title="Opening Hours" :range="openingHours.range" />
     </div>
 
     <div class="filters__group">
@@ -61,12 +61,16 @@
           ]
         }],
         priceRange: {
-          min: 1,
-          max: 5
+          range: {
+            min: 1,
+            max: 5
+          }
         },
         openingHours: {
-          min: 8,
-          max: 20
+          range: {
+            min: 8,
+            max: 20
+          }
         },
         blends: [{
           options: [

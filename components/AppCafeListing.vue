@@ -67,6 +67,8 @@
 
 <style scoped lang="scss">
   .cafe {
+    border: solid 1px $clr-shade-lighten-10;
+    border-radius: 50px $border-radius $border-radius;
     display: flex;
     flex-flow: row wrap;
 
@@ -125,7 +127,8 @@
   }
   .cafe--list .cafe__content {
     flex: 1 0;
-    padding: 1rem 0 1rem 1rem;
+    margin-top: 0;
+    padding: 1rem;
   }
 
   .cafe__section--flex {

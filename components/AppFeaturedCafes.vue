@@ -39,7 +39,7 @@
 
 <script setup>
   const options = {
-    rewind: true,
+    rewind: false,
     gap: '2rem',
     perMove: 1,
     perPage: 3

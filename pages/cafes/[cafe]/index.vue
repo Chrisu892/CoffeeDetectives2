@@ -2,24 +2,26 @@
   <main id="main">
     <section id="masthead" class="masthead">
       <div class="inner masthead__inner">
-        <div class="flex-container flex-container--align-center">
+        <div class="flex-container flex-container--gutter flex-container--align-center">
           <div class="masthead__content">
             <ul class="masthead__breadcrumbs">
               <li class="masthead__breadcrumb-item font-small"><NuxtLink to="/">Home</NuxtLink> ></li>
               <li class="masthead__breadcrumb-item font-small"><NuxtLink to="/cafes/">Cafes</NuxtLink></li>
             </ul>
-            <h1 class="masthead__title font-xl">[Ridicoulosly Long Cafe Name]</h1>
-            <p class="masthead__location font-regular">[Location Name]</p>
-            <p class="masthead__tagline font-regular">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error provident expedita accusamus id distinctio dolore aliquid ex labore dicta voluptas reprehenderit atque est, magni, velit perspiciatis. Iste nisi harum rem.</p>
+            <h1 class="masthead__title font-xl">{{ cafe.title }}</h1>
+            <p class="masthead__location font-regular">{{ cafe.address }}</p>
+            <p class="masthead__tagline font-regular">{{ cafe.abstract }}</p>
             <div class="masthead__action">
               <AppButton to="#reviews" title="Read Reviews" />
-              <AppButton to="/get-listed?cafe=1" title="Claim Yours" class="button--outlined" />
+              <AppButton v-if="!cafe.owner" to="/get-listed?cafe=1" title="Claim Yours" class="button--outlined" />
             </div>
           </div>
           <div class="masthead__gallery">
-            <div class="gallery">
-              Gallery
-            </div>
+            <Splide :options="options">
+              <SplideSlide v-for="image, key in cafe.images.gallery" :key="key">
+                  <img class="masthead__gallery-image" :src="image" :title="`${cafe.title} gallery image`" />
+              </SplideSlide>
+            </Splide>
           </div>
         </div>
       </div>
@@ -27,7 +29,7 @@
 
     <section id="reviews" class="section">
       <div class="inner">
-        <div class="section__title font-medium">About [Cafe Name]</div>
+        <h2 class="section__title font-medium">About {{ cafe.title }}</h2>
         <div class="page-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
       </div>
     </section>
@@ -35,7 +37,7 @@
     <section id="features" class="section">
       <div class="inner">
         <div class="flex-container">
-          <div class="section__title font-medium">[Cafe Name] at Glance</div>
+          <h2 class="section__title font-medium">{{ cafe.title }} at Glance</h2>
         </div>
         <div class="page-content">Amenities, Coffee Blends, Cuisine, etc.</div>
       </div>
@@ -44,7 +46,7 @@
     <section id="evens" class="section">
       <div class="inner">
         <div class="flex-container">
-          <div class="section__title font-medium">Events at [Cafe Name]</div>
+          <h2 class="section__title font-medium">Events at {{ cafe.title }}</h2>
         </div>
       </div>
     </section>
@@ -52,20 +54,44 @@
     <section id="map" class="section">
       <div class="inner">
         <div class="flex-container">
-          <div class="section__title font-medium">How to get to [Cafe Name]</div>
+          <h2 class="section__title font-medium">How to get to {{ cafe.title }}</h2>
         </div>
         <AppMap />
       </div>
     </section>
 
-    <AppFeaturedCafes title="Similar Cafes in [Location Name]" :cafes="cafes" />
+    <AppFeaturedCafes :title="`Similar Cafes in ${cafe.location}`" :cafes="cafes" />
   </main>
 </template>
 
 <script>
+  import { Splide, SplideSlide } from '@splidejs/vue-splide'
+  import '@splidejs/vue-splide/css'
+
   export default {
     data() {
       return {
+        cafe: {
+          title: 'Flat Caps Cafe',
+          abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
+          rating: 4.91, 
+          owner: false, // @todo: create an object containing details about cafe owner
+          amenities: [
+            { title: 'Speciality Coffee', unique: true }, 
+            { title: 'Unique Decor', unique: true }, 
+            { title: 'Hot Food' }
+          ], 
+          location: 'Newcastle upon Tyne',
+          address: 'Example Street, Newcastle upon Tyne, NE1 2LA',
+          images: { 
+            thumbnail: '/images/cafes/fallback.jpeg',
+            gallery: [
+              '/images/cafes/gallery-fallback-1.jpeg',
+              '/images/cafes/gallery-fallback-2.jpeg',
+              '/images/cafes/gallery-fallback-3.jpeg'
+            ]
+          }
+        },
         cafes: [
           { 
             title: 'Flat Caps Cafe',
@@ -190,6 +216,15 @@
   }
 </script>
 
+<script setup>
+  const options = {
+    rewind: false,
+    gap: '1rem',
+    perMove: 1,
+    perPage: 1
+  }
+</script>
+
 <style scoped lang="scss">
   .masthead {
     background-color: #ffffff;
@@ -241,12 +276,15 @@
   }
 
   .masthead__gallery {
-    flex: 1 0;
-  }
-  .gallery {
-    background-color: $clr-shade;
     border-radius: $border-radius;
-    padding-top: 65%;
+    flex: 1 0;
+    overflow: hidden;
+  }
+  .masthead__gallery-image {
+    border-radius: $border-radius;
     width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
   }
 </style>

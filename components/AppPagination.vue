@@ -20,25 +20,21 @@
 
 <style scoped lang="scss">
   .pagination {
-    background-color: $clr-shade-lighten-10;
-    border-radius: $border-radius;
-    padding: 0.2rem;
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
-    width: 100%;
   }
-  .pagination__item {
-    margin-left: 0.2rem;
+  .pagination__item:not(:first-child) {
+    margin-left: 0.5rem;
   }
   .pagination__link {
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    background-color: $clr-white;
-    border: solid 1px $clr-secondary;
+    border: solid 1px $clr-shade;
     border-radius: $border-radius;
-    height: 54px;
-    width: 54px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 44px;
+    justify-content: center;
+    width: 44px;
   }
 </style>

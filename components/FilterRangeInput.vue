@@ -1,18 +1,18 @@
 <template>
   <div class="range" :class="{ 'range--active': active }">
     <button class="range__toggle font-small" @click="toggle()">
-      <div class="range__title">{{ title }}</div>
+      <h3 class="range__title font-regular">{{ title }}</h3>
       <div class="range__icon"><ph-caret-down /></div>
     </button>
     <div class="__range__group">
       <div class="range__group">
         <div class="range__field">
           <label class="range__label font-small" for="min_price">From:</label>
-          <input class="range__input" id="min_price" type="number" :value="min" />
+          <input class="range__input" id="min_price" type="number" :value="range.min" />
         </div>
         <div class="range__field">
           <label class="range__label font-small" for="max_price">To:</label>
-          <input class="range__input" id="max_price" type="number" :value="max" />
+          <input class="range__input" id="max_price" type="number" :value="range.max" />
         </div>
       </div>
     </div>
@@ -36,12 +36,8 @@
         type: String,
         required: true
       },
-      min: {
-        type: Number,
-        required: true
-      },
-      max: {
-        type: Number,
+      range: {
+        type: Object,
         required: true
       }
     },
@@ -65,7 +61,7 @@
     cursor: pointer;
     display: flex;
     flex-flow: row wrap;
-    padding: 0.975rem 0.875rem 0.875rem;
+    padding: 0.775rem 0.875rem 0.675rem;
     width: 100%;
     text-align: left;
 
