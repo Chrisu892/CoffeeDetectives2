@@ -1,25 +1,6 @@
 <template>
   <main id="main">
-    <section class="masthead">
-      <picture>
-        <img class="masthead__background" src="/images/newcastle-gateshead.jpeg" alt="Image of Newcastle and Gatehsead Quayside" />
-      </picture>
-      <div class="masthead__overlay">
-        <div class="inner">
-          <div class="flex-container">
-            <div class="masthead__content">
-              <h1 class="masthead__title font-xl">Cafes in [location]</h1>
-              <div class="masthead__actions">
-                <AppButton to="#explore" title="Find a Cafe" />
-              </div>
-            </div>
-            <div class="masthead__aside">
-              <!-- <LocationFeaturedCafe /> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <AppMasthead title="Cafes in [location]" />
 
     <section class="section" id="explore">
       <div class="inner">
@@ -209,7 +190,6 @@
     color: $clr-white;
     flex: 60% 0;
     padding: 6rem 0;
-    padding-top: calc(6rem + 80px);
   }
   .masthead__tagline {
     margin-top: 1.5rem;

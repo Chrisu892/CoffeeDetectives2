@@ -1,8 +1,8 @@
 
 <template>
   <main id="main">
-    <AppMasthead title="Find a cafe for a perfect coffee break, study session or place to catch up" tagline="We are independent reviewers of cafes, helping coffee lovers to find a perfect place for a coffee break and connect local businesses with their customers in Tyne and Wear." />
-    <AppSearch title="Find a perfect cafe for your coffee break, study session or cath up" tagline="Browse over [number] of cafes across Tyne and Wear" />
+    <AppMasthead title="Find a cafe for a perfect coffee break, study session or place to catch up" tagline="We are independent reviewers of cafes, helping coffee lovers to find a perfect place for a coffee break and connect local businesses with their customers in Tyne and Wear." class="masthead--homepage" />
+    <AppSearch title="Browse over [number] of cafes across Tyne and Wear" />
     <AppFeaturedAmenities :amenities="amenities" />
     <AppFeaturedLocations :locations="locations" />
     <AppFeaturedCafes :cafes="cafes" />
