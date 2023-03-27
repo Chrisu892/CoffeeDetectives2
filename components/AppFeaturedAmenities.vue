@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section section--padding">
     <div class="inner">
       <div class="flex-container">
         <h2 class="section__title font-medium">Browse by Amenity</h2>

@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section section--padding">
     <div class="inner">
       <div class="flex-container flex-container--gutter flex-container--align-center">
         <div class="section__col">
@@ -39,7 +39,7 @@
     position: relative;
   }
   .page-circle {
-    background-color: $clr-shade;
+    background-color: $clr-shade-lighten-10;
     border-radius: 100%;
     position: absolute;
 

@@ -1,6 +1,7 @@
 <template>
   <AppMasthead title="Get Listed" tagline="Connect with your customers and get authentic reviews" />
-  <section class="section">
+  
+  <section class="section section--padding">
     <div class="inner">
       <div class="feature feature--margin">
         <h2 class="feature__title">Why to get listed?</h2>
@@ -12,7 +13,8 @@
       </div>
     </div>
   </section>
-  <section class="section section--shade">
+  
+  <section class="section section--padding section--shade">
     <div class="inner">
       <div class="page-content">
         <p>What we need for this page:</p>

@@ -1,13 +1,15 @@
 <template>
   <AppMasthead title="Blog" tagline="Periodical news and updates about what we do, with ocassional tips on where to find a good coffee" />
-  <section class="section">
+  
+  <section class="section section--padding">
     <div class="inner">
       <div class="flex-container flex-container--gutter">
         <AppArticleListing v-for="(article, key) in articles" :key="key" :article="article" />
       </div>
     </div>
   </section>
-  <section class="section section--shade">
+
+  <section v-if="false" class="section section--shade">
     <div class="inner">
       <div class="page-content">
         <p>What we need for this page:</p>

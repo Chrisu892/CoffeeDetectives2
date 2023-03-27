@@ -1,7 +1,8 @@
 <template>
   <main id="main">
     <AppMasthead title="Contact Us" tagline="Do you have questions? Do you want to find our more about us? Don't hesitate to contact us!" />
-    <section class="section">
+    
+    <section class="section section--padding">
       <div class="inner">
         <div class="page-content">
           <p>What do we need for this page?</p>

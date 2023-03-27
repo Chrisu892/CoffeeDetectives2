@@ -2,7 +2,7 @@
   <main id="main">
     <AppMasthead title="About Us" tagline="About the Coffee Detectives and our mission" />
 
-    <section class="section">
+    <section class="section section--padding">
       <div class="inner">
         <div class="feature feature--margin">
           <h2 class="feature__title">We are independent reviewers of cafes</h2>
@@ -18,7 +18,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--padding section--shade">
       <div class="inner">
         <div class="feature feature--margin">
           <h2 class="feature__title">What makes us different?</h2>
@@ -44,7 +44,7 @@
       </div>
     </section>
 
-    <section class="section section--shade">
+    <section class="section section--padding">
       <div class="inner">
         <div class="container">
           <div class="container__col">

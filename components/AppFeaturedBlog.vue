@@ -1,5 +1,5 @@
 <template>
-  <section class="section section--shade">
+  <section class="section section--padding section--shade">
     <div class="inner">
       <div class="flex-container">
         <h2 class="section__title font-medium">{{ title }}</h2>

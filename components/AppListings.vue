@@ -1,11 +1,7 @@
 <template>
   <div class="listings">
-    <div class="listings__filter">
-      <AppListingsFilters :filters="filters" />
-    </div>
-    <div class="listings__content">
-      <AppListingsContent :content="listings" />
-    </div>
+    <AppListingsFilters :filters="filters" />
+    <AppListingsContent :content="listings" />
   </div>
 </template>
 
@@ -23,17 +19,3 @@
     }
   }
 </script>
-
-<style scoped lang="scss">
-  .listings {
-    display: flex;
-    flex-flow: row;
-    gap: 2rem;
-  }
-  .listings__filter {
-    flex: 300px 0;
-  }
-  .listings__content {
-    flex: 1 0;
-  }
-</style>

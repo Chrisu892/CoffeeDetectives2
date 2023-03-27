@@ -20,10 +20,15 @@
 
 <style scoped lang="scss">
   .filters {
+    background-color: $clr-white;
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 0;
     position: sticky;
-    top: 2rem;
+    top: 0;
+    z-index: 10;
   }
-  .filters__group:not(:first-child) {
-    margin-top: 1rem;
+  .filters__group {
+    flex: 1 0;
   }
 </style>

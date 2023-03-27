@@ -1,7 +1,7 @@
 <template>
   <div class="range" :class="{ 'range--active': active }">
-    <button class="range__toggle font-small" @click="toggle()">
-      <h3 class="range__title font-regular">{{ title }}</h3>
+    <button class="range__toggle" @click="toggle()">
+      <div class="range__title font-regular">{{ title }}</div>
       <div class="range__icon"><ph-caret-down /></div>
     </button>
     <div class="__range__group">
@@ -12,7 +12,7 @@
         </div>
         <div class="range__field">
           <label class="range__label font-small" for="max_price">To:</label>
-          <input class="range__input" id="max_price" type="number" :value="range.max" />
+          <input class="range__input font-small" id="max_price" type="number" :value="range.max" />
         </div>
       </div>
     </div>
@@ -51,61 +51,67 @@
 
 <style scoped lang="scss">
   .range {
+    border: solid 1px $clr-shade-lighten-10;
+    border-radius: $border-radius;
     position: relative;
+
+    &--active {
+      border-color: $clr-shade;
+      border-bottom: 0;
+      border-radius: $border-radius $border-radius 0 0;
+    }
+
+    &:hover {
+      border-color: $clr-shade;
+    }
   }
   .range__toggle {
     align-items: center;
     background-color: $clr-white;
-    border: solid 1px $clr-shade;
     border-radius: $border-radius;
     cursor: pointer;
     display: flex;
     flex-flow: row wrap;
-    padding: 0.775rem 0.875rem 0.675rem;
+    padding: 0.5rem 0.75rem;
     width: 100%;
     text-align: left;
-
-    &:hover {
-      background-color: $clr-shade;
-    }
-  }
-  .range--active .range__toggle {
-    border-radius: $border-radius $border-radius 0 0;
   }
   .range__title {
     flex: 1;
   }
   .range__icon {
-    align-items: center;
-    background-color: $clr-primary;
-    border-radius: 100%;
-    color: $clr-white;
-    display: inline-flex;
-    height: 28px;
-    justify-content: center;
-    width: 28px;
+    color: $clr-primary;
+    margin-left: 0.5rem;
+    transform: translateY(2px) scale(1);
   }
   .range--active .range__icon {
-    transform: scale(-1);
+    transform: translateY(-3px) scale(-1);
   }
 
   .__range__group {
-    background-color: $clr-white;
-    border: solid 1px $clr-shade;
-    border-top: 0;
-    border-radius: 0 0 $border-radius $border-radius;
-    padding: 0.975rem 0.875rem;
-    width: 100%;
     display: none;
+    position: absolute;
+    top: auto;
+    left: -1px;
+    right: -1px;
   }
   .range--active .__range__group {
     display: block;
   }
   .range__group {
+    background-color: $clr-white;
+    border: solid 1px $clr-shade;
+    border-top: 0;
+    border-radius: 0 0 $border-radius $border-radius;
     display: flex;
     flex-flow: row wrap;
+    gap: 1rem;
+    padding: 0 0.5rem 0.5rem;
   }
   .range__field {
-    flex: 50% 0;
+    flex: 1 0;
+  }
+  .range__input {
+    padding: 0.5rem;
   }
 </style>

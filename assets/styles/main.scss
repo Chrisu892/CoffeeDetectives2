@@ -15,9 +15,7 @@ body {
 
 a {
   color: $clr-secondary;
-  text-decoration: underline dashed 1px $clr-secondary;
-  text-decoration-color: rgba($clr-secondary, 0.2);
-  text-underline-offset: 6px;
+  text-decoration: none;
 }
 a:hover, a:focus {
   text-decoration-color: $clr-secondary;
@@ -98,13 +96,12 @@ h3, .font-large {
 
 .section {
   background-color: $clr-white;
-  padding: 4rem 0;
 
-  &--shade {
-    background-color: $clr-shade;
+  &--padding {
+    padding: 3rem 0;
   }
-  &--padding-bottom {
-    padding-top: 0;
+  &--shade {
+    background-color: $clr-shade-lighten-10;
   }
 }
 .section__title {

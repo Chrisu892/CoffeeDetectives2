@@ -1,38 +1,38 @@
 <template>
   <div class="content">
     <div class="content__header">
-      <div class="content__summary">
-        Showing [x] cafes in [location/amenities/etc].
-      </div>
+      <div class="content__count font-small">Found [x] cafes in [location name].</div>
       <div class="content__actions">
-        <NuxtLink class="content__toggle" to="?view=list"><PhListDashes /></NuxtLink>
-        <NuxtLink class="content__toggle" to="?view=grid"><PhSquaresFour /></NuxtLink>
-        <NuxtLink class="content__toggle" to="?view=map"><PhMapPinLine /></NuxtLink>
+        <NuxtLink class="content__toggle" to="?view=list"><PhRows />List</NuxtLink>
+        <NuxtLink class="content__toggle" to="?view=grid"><PhSquaresFour />Grid</NuxtLink>
+        <NuxtLink class="content__toggle" to="?view=map"><PhMapPin />Map</NuxtLink>
       </div>
     </div>
+
     <div class="content__main">
-      <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="listing, key in content" :key="key" :cafe="listing" :view="view" />
-      <LocationMapView v-if="view == 'map'" />
+      <div class="content__container">
+        <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="listing, key in content" :key="key" :cafe="listing" :view="view" />
+        <LocationMapView v-if="view == 'map'" />
+      </div>
     </div>
-    <div class="content__footer">
+
+    <!-- <div class="content__footer">
       <div class="content__summary">
         Showing [x] cafes in [location/amenities/etc].
       </div>
       <div class="content__actions">
         <AppPagination />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-  import { PhSquaresFour, PhListDashes, PhMapPinLine } from 'phosphor-vue'
+  import { PhSquaresFour, PhRows, PhMapPin } from 'phosphor-vue'
 
   export default {
     components: {
-      PhSquaresFour,
-      PhListDashes,
-      PhMapPinLine
+      PhSquaresFour, PhRows, PhMapPin
     },
     props: {
       content: {
@@ -51,36 +51,38 @@
 <style scoped lang="scss">
   .content__header {
     align-items: center;
+    color: $clr-shade-darken-10;
     display: flex;
-    padding-bottom: 1rem;
-    text-align: right;
+    padding: 0.125rem 0;
   }
-  .content__actions {
+  .content__count {
     flex: 1 0;
   }
   .content__toggle {
     align-items: center;
-    border: solid 1px $clr-shade;
     border-radius: $border-radius;
-    cursor: pointer;
     display: inline-flex;
-    height: 44px;
-    justify-content: center;
-    width: 44px;
+    font-weight: $bold-weight;
+    margin-left: 1rem;
+    padding: 0.25rem 0.5rem;
 
-    &:not(:first-child) {
-      margin-left: 0.5rem;
+    &:hover {
+      background-color: $clr-shade-lighten-10;
+    }
+
+    svg {
+      margin: 1px 0.25rem 0;
+      height: 20px;
+      width: 20px;
     }
   }
   .content__main {
+    padding: 1.5rem 0;
+  }
+  .content__container {
     display: flex;
     flex-flow: row wrap;
     gap: 2rem;
-  }
-  .content__footer {
-    align-items: center;
-    display: flex;
-    flex-flow: row;
-    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 </style>

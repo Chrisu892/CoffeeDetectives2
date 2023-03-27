@@ -1,6 +1,7 @@
 <template>
   <AppMasthead title="Locations" tagline="Find the best coffee experience in your area" />
-  <section class="section">
+  
+  <section class="section section--padding">
     <div class="inner">
       <div class="flex-container flex-container--gutter">
         <AppLocationListing v-for="(location, key) in locations" :key="key" :location="location" />
@@ -8,7 +9,7 @@
       <AppGetListed title="" text="" action="" />
     </div>
   </section>
-  <section class="section section--shade">
+  <section v-if="false" class="section section--shade">
     <div class="inner">
       <div class="page-content">
         <p>What we need for this page:</p>

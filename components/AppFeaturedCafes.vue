@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section section--padding">
     <div class="inner">
       <div class="flex-container">
         <h2 class="section__title font-medium">{{ title }}</h2>
@@ -9,7 +9,7 @@
       </div>
       <Splide :options="options">
         <SplideSlide v-for="cafe, key in cafes" :key="key">
-          <AppCafeListing :cafe="cafe" view="grid" />
+          <AppCafeListing :cafe="cafe" view="grid" class="cafe--extra-margin" />
         </SplideSlide>
       </Splide>
     </div>

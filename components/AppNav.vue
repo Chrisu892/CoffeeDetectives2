@@ -132,7 +132,7 @@
     position: absolute;
     left: 0;
     top: auto;
-    z-index: 10;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
     transform: translateY(1rem);

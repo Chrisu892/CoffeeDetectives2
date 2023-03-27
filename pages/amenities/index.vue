@@ -1,12 +1,7 @@
 <template>
   <main id="main">
-    <AppMasthead title="Amenities" tagline="Find a cafe that suits you" />
-
-    <div class="section">
-      <div class="inner">
-        <AppListings :filters="filters" :listings="listings" />
-      </div>
-    </div>
+    <AppMasthead title="Amenities" tagline="Find a cafe that meets your needs" />
+    <AppFeaturedCafes v-for="amenity, key in amenities" :key="key" :title="amenity.title" :cafes="cafes" />
   </main>
 </template>
 
@@ -14,67 +9,26 @@
   export default {
     data() {
       return {
-        filters: [{
-          title: 'Price Range',
-          type: 'range',
-          range: {
-            min: 1,
-            max: 5
-          }
-        }, {
-          title: 'Opening Times',
-          type: 'range',
-          range: {
-            min: 8,
-            max: 20
-          }
-        }, {
-          title: 'Coffee Blends',
-          type: 'multiselect',
-          options: [
-            { title: 'Arabica' },
-            { title: 'Robusta' },
-            { title: 'Espresso' },
-            { title: 'Mocha' },
-            { title: 'Colombian' },
-            { title: 'Ethiopian' },
-            { title: 'Speciality' }
-          ]
-        }, {
-          title: 'Food Served',
-          type: 'multiselect',
-          options: [
-            { title: 'Sandwiches' },
-            { title: 'Salads'},
-            { title: 'Pastries' },
-            { title: 'Baked Goods' },
-            { title: 'Pancakes' },
-            { title: 'Waffles' },
-            { title: 'Omelets' },
-          ]
-        }, {
-          title: 'Cuisine Served',
-          type: 'multiselect',
-          options: [
-            { title: 'French' },
-            { title: 'Italian' },
-            { title: 'Middle Eastern' }
-          ]
-        }, {
-          title: 'Amenities',
-          type: 'multiselect',
-          options: [
-            { title: 'Free Wi-Fi' },
-            { title: 'Outdoor Seating' },
-            { title: 'Power Outlets' },
-            { title: 'Restrooms' },
-            { title: 'Books and Magazines' },
-            { title: 'Live Music' },
-            { title: 'Loyalty programs' },
-            { title: 'Catering' }
-          ]
-        }],
-        listings: [
+        amenities: [
+          { title: 'Cafes with Free Wi-Fi', url: '/amenities/cafes-with-free-wifi/' },
+          { title: 'Cafes with Outdoor Sitting', url: '/amenities/cafes-with-outdoor-sitting/' },
+          { title: 'Cafes with Power Outlets', url: '/amenities/cafes-with-power-outlets/' },
+          { title: 'Cafes with Restrooms', url: '/amenities/cafes-with-restrooms/' },
+          { title: 'Cafes with Books & Magazines', url: '/amenities/cafes-with-books-magazines/' },
+          { title: 'Cafes with Live Music', url: '/amenities/cafes-with-live-music/' },
+          { title: 'Cafes with Live Events', url: '/amenities/cafes-with-live-events/' },
+          { title: 'Cafes with Loyality Programs', url: '/amenities/cafes-with-loyality-programs/' },
+          { title: 'Cafes with Catering', url: '/amenities/cafes-with-catering/' },
+          { title: 'Cafes with Elevator', url: '/amenities/cafes-with-elevator/' },
+          { title: 'Wheelchair Accessible Cafes', url: '/amenities/cafes-wheelchair-accessible/' },
+          { title: 'Pet-friendly Cafes', url: '/amenities/pet-friendly-cafes/' },
+          { title: 'Children-friendly Cafes', url: '/amenities/children-friendly-cafes/' },
+          { title: 'Cafes with Unique Decor', url: '/amenities/cafes-with-unique-decor/' },
+          { title: 'Cafes with Unique View', url: '/amenities/cafes-with-unique-view/' },
+          { title: 'Cafes with Catering', url: '/amenities/cafes-with-catering/' },
+          { title: 'Cafes with Hot Food', url: '/amenities/cafes-with-hot-food/' }
+        ],
+        cafes: [
           { 
             title: 'Flat Caps Cafe',
             url: '/cafes/flat-caps-cafe/',
@@ -192,8 +146,15 @@
               thumbnail: '/images/cafes/fallback.jpeg' 
             } 
           }
-        ]
+        ],
       }
     }
   }
 </script>
+
+<style scoped lang="scss">
+  .listings {
+    display: flex;
+    flex-flow: row wrap;
+  }
+</style>

@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <AppMasthead title="Cafes in Tyne and Wear" tagline="Find a cafe that suit you" />
+    <AppPlainMasthead title="Cafes in Tyne and Wear" />
 
     <div class="section">
       <div class="inner">

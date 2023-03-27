@@ -1,13 +1,11 @@
 <template>
   <main id="main">
+    <AppPlainMasthead />
+
     <section id="masthead" class="masthead">
       <div class="inner masthead__inner">
         <div class="flex-container flex-container--gutter flex-container--align-center">
           <div class="masthead__content">
-            <ul class="masthead__breadcrumbs">
-              <li class="masthead__breadcrumb-item font-small"><NuxtLink to="/">Home</NuxtLink> ></li>
-              <li class="masthead__breadcrumb-item font-small"><NuxtLink to="/cafes/">Cafes</NuxtLink></li>
-            </ul>
             <h1 class="masthead__title font-xl">{{ cafe.title }}</h1>
             <p class="masthead__location font-regular">{{ cafe.address }}</p>
             <p class="masthead__tagline font-regular">{{ cafe.abstract }}</p>
@@ -27,14 +25,14 @@
       </div>
     </section>
 
-    <section id="reviews" class="section">
+    <section id="reviews" class="section section--padding">
       <div class="inner">
         <h2 class="section__title font-medium">About {{ cafe.title }}</h2>
         <div class="page-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
       </div>
     </section>
 
-    <section id="features" class="section">
+    <section id="features" class="section section--padding">
       <div class="inner">
         <div class="flex-container">
           <h2 class="section__title font-medium">{{ cafe.title }} at Glance</h2>
@@ -43,7 +41,7 @@
       </div>
     </section>
 
-    <section id="evens" class="section">
+    <section id="evens" class="section section--padding">
       <div class="inner">
         <div class="flex-container">
           <h2 class="section__title font-medium">Events at {{ cafe.title }}</h2>
@@ -51,7 +49,7 @@
       </div>
     </section>
 
-    <section id="map" class="section">
+    <section id="map" class="section section--padding">
       <div class="inner">
         <div class="flex-container">
           <h2 class="section__title font-medium">How to get to {{ cafe.title }}</h2>
