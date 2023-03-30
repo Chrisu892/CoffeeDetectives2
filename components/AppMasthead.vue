@@ -25,7 +25,7 @@
     background: url('/images/newcastle-gateshead.jpeg') center center/cover no-repeat;
   }
   .masthead__overlay {
-    background-color: $clr-secondary-transparent-75;
+    background-color: $clr-secondary;
     padding: 6rem 0;
   }
   .masthead--homepage .masthead__overlay {

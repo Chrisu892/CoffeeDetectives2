@@ -1,39 +1,31 @@
 <template>
-  <section class="search">
-    <div class="inner">
-      <form class="search__form" method="post">
-        <div class="search__form__text">
-          <p v-if="title" class="search__form__title font-medium"><strong>{{ title }}</strong></p>
-          <p v-if="tagline" class="search__form__tagline font-regular">{{ tagline }}</p>
-        </div>
-        
-        <div class="flex-container flex-container--gutter flex-container--align-bottom">
-          <div class="search__form__field">
-            <AppSearchField title="Place or Location" placeholder="Where are you going?" :search="locations" />
-          </div>
-
-          <div class="search__form__field">
-            <AppSearchField title="Coffee Blend" placeholder="What's your favourite coffee blend?" :search="coffeeBlends" />
-          </div>
-
-          <div class="search__form__field">
-            <AppSearchField title="Amenities" placeholder="What do you need?" :search="amenities" />
-          </div>
-
-          <div class="search__form__field">
-            <AppButton btnType="button" title="Search" />
-          </div>
-        </div>
-      </form>
+  <form class="search" method="post">
+    <p v-if="title" class="search__title font-medium"><strong>{{ title }}</strong></p>
+    
+    <div class="search__container">
+      <div class="search__field">
+        <AppSearchField title="Place or Location" :search="locations" placeholder="Where are you going?" />
+      </div>
+      <div class="search__field">
+        <AppSearchField title="Coffee Blend" :search="coffeeBlends" />
+      </div>
+      <div class="search__field">
+        <AppSearchField title="Amenities" :search="amenities" />
+      </div>
+      <div class="search__action">
+        <AppButton btnType="button" title="Search" />
+      </div>
     </div>
-  </section>
+  </form>
 </template>
 
 <script>
   export default {
     props: {
-      title: String,
-      tagline: String,
+      title: {
+        type: String,
+        default: 'Find a cafe in Tyne & Wear'
+      }
     },
     data() {
       return {
@@ -85,32 +77,26 @@
 
 <style scoped lang="scss">
   .search {
-    color: $clr-white;
-  }
-  .search__form {
-    background-color: $clr-secondary;
+    background-color: $clr-third;
     border-radius: $border-radius;
-    margin-top: -4rem;
-    padding: 1.5rem;
+    color: $clr-white;
+    padding: 2rem;
+    position: relative;
+    transform: translateY(4rem);
+    z-index: 10;
   }
-  .search__form__text {
+  .search__title {
     margin-bottom: 1.5rem;
     text-align: center;
   }
-  .search__form__tagline {
-    margin-top: 0.5rem;
+  .search__container {
+    align-items: flex-end;
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    margin-top: 0.75rem;
   }
-  .search__form__field {
+  .search__field {
     flex: 1 0;
-
-    &:last-child {
-      max-width: 150px;
-    }
-  }
-  .search__form__label {
-    display: block;
-  }
-  .search__form__button {
-    margin-top: 2.4rem;
   }
 </style>

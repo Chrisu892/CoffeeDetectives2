@@ -1,5 +1,5 @@
 <template>
-  <AppMasthead title="Locations" tagline="Find the best coffee experience in your area" />
+  <AppPlainMasthead title="Cafes" />
   
   <section class="section section--padding">
     <div class="inner">

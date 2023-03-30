@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <AppPlainMasthead />
+    <AppPlainMasthead title="" />
 
     <div class="section">
       <div class="inner">

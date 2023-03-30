@@ -1,8 +1,8 @@
 <template>
   <header class="header">
-    <div class="inner flex-container">
+    <div class="inner header__container">
       <div class="header__logo">
-        <AppLogo class="logo--rev" />
+        <AppLogo />
       </div>
       <div class="header__nav">
         <AppNav />
@@ -13,7 +13,17 @@
 
 <style scoped lang="scss">
   .header {
-    padding: 1.25rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 2rem 0;
+  }
+  .header__container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
   }
   .header__logo {
     display: flex;

@@ -19,10 +19,11 @@
         </li>
       </ul>
       <ul class="flex-container flex-container--just-right nav__list">
-        <li v-for="page, key in pages.secondary" :key="key" class="nav__list-item">
-          <!-- <NuxtLink class="nav__list-link nav__list-link--button font-small" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink> -->
-          <AppButton :to="page.url" :title="page.title" class="button--outlined" />
-        </li>
+        <template v-for="page, key in pages.secondary">
+          <li v-if="page.status == 'live'" :key="key" class="nav__list-item">
+            <AppButton :to="page.url" :title="page.title" class="button--outlined-rev" />
+          </li>
+        </template>
       </ul>
     </nav>
   </div>
@@ -93,10 +94,17 @@
             columnCount: 1
           }],
           secondary: [{
+            title: 'Nominate',
+            altTitle: 'Nominate',
+            url: '/nominate/',
+            columnCount: 1,
+            status: 'draft'
+          }, {
             title: 'Get Listed',
             altTitle: 'Get Listed',
             url: '/get-listed/',
-            columnCount: 1
+            columnCount: 1,
+            status: 'live'
           }]
         }
       }
@@ -113,17 +121,15 @@
     }
   }
   .nav__list-link {
-    color: $clr-text;
+    color: $clr-white;
     display: inline-block;
     font-weight: $bold-weight;
     letter-spacing: 0.5px;
-    opacity: 0.8;
     padding: 0.475rem 1.725rem;
-    text-decoration-color: $clr-text-transparent-75;
+    text-decoration-color: $clr-text;
     transition: opacity 350ms ease-in-out;
   }
   .nav__list-link:hover {
-    opacity: 1;
     text-decoration-color: $clr-text;
   }
 

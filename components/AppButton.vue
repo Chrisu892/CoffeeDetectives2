@@ -25,14 +25,13 @@
     appearance: none;
     background-color: $clr-primary;
     border: solid 2px $clr-primary;
-    border-radius: 50px;
-    color: $clr-white;
+    border-radius: $border-radius;
+    color: $clr-secondary;
     cursor: pointer;
     display: inline-block;
     font-size: $font-regular;
     font-weight: $bold-weight;
-    letter-spacing: 0.5px;
-    padding: 0.475rem 1.725rem;
+    padding: 0.675rem 1.325rem;
     text-align: center;
     text-decoration: none;
 

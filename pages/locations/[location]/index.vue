@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <AppPlainMasthead title="Cafes in Tyne and Wear" />
+    <AppPlainMasthead title="Cafes" />
 
     <div class="section">
       <div class="inner">

@@ -23,7 +23,7 @@
       },
       placeholder: {
         type: String,
-        required: true
+        default: ''
       }
     },
     data() {
@@ -59,6 +59,10 @@
   .search-field {
     position: relative;
   }
+  .search-field__label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
   .search-field--active .search-field__input {
     border-radius: $border-radius $border-radius 0 0;
   }
@@ -83,6 +87,6 @@
   .search-field__autocomplete__item {
     color: $clr-text;
     padding: 0.4rem 0.975rem;
-    border-top: solid 1px $clr-shade-lighten-10;
+    border-top: solid 1px $clr-shade;
   }
 </style>

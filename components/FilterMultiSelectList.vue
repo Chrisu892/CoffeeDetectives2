@@ -48,7 +48,7 @@
 
 <style scoped lang="scss">
   .filter {
-    border: solid 1px $clr-shade-lighten-10;
+    border: solid 1px $clr-shade;
     border-radius: $border-radius;
     position: relative;
 
@@ -112,7 +112,7 @@
     padding: 0 0.25rem;
 
     &:hover {
-      background-color: $clr-shade-lighten-10;
+      background-color: $clr-shade;
     }
   }
 </style>

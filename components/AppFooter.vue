@@ -95,7 +95,7 @@
 <style scoped lang="scss">
   .footer {
     background-color: $clr-secondary;
-    color: $clr-white-transparent-75;
+    color: $clr-white;
     padding-top: 5rem;
   }
   .footer__container {
@@ -124,7 +124,7 @@
   }
   .footer__list-link {
     color: $clr-white;
-    text-decoration-color: $clr-white-transparent-20;
+    text-decoration-color: $clr-white;
 
     &:hover {
       text-decoration-color: $clr-white;
@@ -141,7 +141,7 @@
 
     a {
       color: $clr-white;
-      text-decoration-color: $clr-white-transparent-20;
+      text-decoration-color: $clr-white;
 
       &:hover {
         text-decoration-color: $clr-white;
@@ -164,7 +164,7 @@
 
     a {
       color: $clr-white;
-      text-decoration-color: $clr-white-transparent-20;
+      text-decoration-color: $clr-white;
 
       &:hover {
         text-decoration-color: $clr-white;

@@ -51,7 +51,7 @@
 <style scoped lang="scss">
   .content__header {
     align-items: center;
-    color: $clr-shade-darken-10;
+    color: $clr-shade;
     display: flex;
     padding: 0.125rem 0;
   }
@@ -67,7 +67,7 @@
     padding: 0.25rem 0.5rem;
 
     &:hover {
-      background-color: $clr-shade-lighten-10;
+      background-color: $clr-shade;
     }
 
     svg {

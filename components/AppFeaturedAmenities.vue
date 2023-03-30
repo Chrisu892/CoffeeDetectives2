@@ -46,10 +46,14 @@
 </script>
 
 <style scoped lang="scss">
+  .section--padding {
+    padding-top: 8rem;
+  }
   .amenity {
     align-items: center;
-    border: solid 1px $clr-primary;
+    background-color: $clr-shade;
     border-radius: $border-radius;
+    color: $clr-primary;
     display: flex;
     flex: 14.28% 0;
     flex: calc(14.28% - 1.75rem) 0;

@@ -39,7 +39,7 @@
     position: relative;
   }
   .page-circle {
-    background-color: $clr-shade-lighten-10;
+    background-color: $clr-shade;
     border-radius: 100%;
     position: absolute;
 

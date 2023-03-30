@@ -16,12 +16,10 @@
           :title="crumb.title"
           itemprop="item"
           :content="crumb.path"
-          class="breadcrumb__link">
+          class="breadcrumb__link font-small">
           <span itemprop="name">{{ crumb.title }}</span>
         </NuxtLink>
-        <div v-else class="breadcrumb__link">
-          {{ crumb.title }}
-        </div>
+        <div v-else class="breadcrumb__link font-small">{{ crumb.title }}</div>
         <PhCaretRight v-if="idx + 1 < crumbs.length" />
         <meta itemprop="position" content="1" />
       </li>
@@ -35,28 +33,10 @@
     components: {
       PhCaretRight
     },
-    computed: {
-      crumbs() {
-        const fullPath = this.$route.fullPath
-        const params = fullPath.substring(1).split('/')
-        const crumbs = [];
-
-        let path = ''
-
-        params.forEach((param, idx) => {
-          if (param != '') {
-            path = `${path}/${param}`
-
-            let pageTitle = param.replace(/-/g, ' ')
-
-            crumbs.push({
-              title: pageTitle,
-              path: path + '/'
-            })
-          }
-        })
-
-        return crumbs
+    props: {
+      crumbs: {
+        type: Object,
+        required: true
       }
     }
   }
@@ -91,9 +71,11 @@
     transform: translateY(-50%);
   }
   .breadcrumb__link {
-    font-size: 0.8em;
     display: inline-block;
     letter-spacing: 1px;
     text-transform: uppercase;
+  }
+  .breadcrumb__title {
+    font: $font-body;
   }
 </style>

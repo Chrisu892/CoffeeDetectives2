@@ -1,5 +1,5 @@
 <template>
-  <AppMasthead title="Blog" tagline="Periodical news and updates about what we do, with ocassional tips on where to find a good coffee" />
+  <AppPlainMasthead title="Latest news and updates from our Coffee Detectives" />
   
   <section class="section section--padding">
     <div class="inner">

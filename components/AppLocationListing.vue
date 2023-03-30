@@ -49,7 +49,7 @@
     object-fit: cover;
   }
   .location__overlay {
-    background-color: $clr-secondary-transparent-50;
+    background-color: $clr-secondary;
     position: absolute;
     top: 0;
     left: 0;
@@ -63,7 +63,7 @@
     transition: background-color 350ms ease-in-out;
   }
   .location:hover .location__overlay {
-    background-color: $clr-secondary-transparent-75;
+    background-color: $clr-secondary;
   }
   .location__content {
     max-width: 300px;

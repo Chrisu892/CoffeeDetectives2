@@ -8,7 +8,7 @@
 //   overflow-x: hidden;
 // }
 body {
-  background-color: $clr-white;
+  background-color: darken($clr-primary, 5%);
   font: $font-body;
   height: 100%;
 }
@@ -33,11 +33,11 @@ a:hover, a:focus {
 
 input[type="text"],
 input[type="number"] {
-  border: solid 1px $clr-secondary;
+  border: solid 2px $clr-white;
   border-radius: $border-radius;
-  font-size: 1rem;
+  font-size: $font-regular;
   font: $font-body;
-  padding: 1rem;
+  padding: 0.675rem;
   width: 100%;
 }
 
@@ -101,7 +101,14 @@ h3, .font-large {
     padding: 3rem 0;
   }
   &--shade {
-    background-color: $clr-shade-lighten-10;
+    background-color: $clr-shade;
+  }
+  &--primary {
+    background-color: $clr-primary;
+    color: $clr-white;
+  }
+  &--secondary {
+    background-color: $clr-secondary;
   }
 }
 .section__title {
@@ -126,7 +133,7 @@ h3, .font-large {
 
   @supports (background-clip: text) or (-webkit-background-clip: text) {
     background: $clr-primary;
-    background: linear-gradient(90deg, $clr-primary-light 0%, $clr-primary 100%);
+    background: linear-gradient(90deg, $clr-primary 0%, $clr-primary 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

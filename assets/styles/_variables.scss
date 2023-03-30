@@ -7,8 +7,8 @@ $font-body: normal 18px/1.4 'Red Hat Display', Helvetica Neue, Arial, sans-serif
 $font-cursive: 'DM Serif Display', serif;
 
 $font-xxl: 3em;
-$font-xl: 2.725em;
-$font-large: 1.575em;
+$font-xl: 2.225em;
+$font-large: 1.475em;
 $font-medium: 1.275em;
 $font-regular: 1em;
 $font-small: 0.88em;
@@ -18,27 +18,12 @@ $font-xs: 0.8em;
     #COLOURS
 \*-------------------------*/
 
-$clr-primary: #b78338;
-$clr-primary-dark: darken($clr-primary, 5%);
-$clr-primary-light: lighten($clr-primary, 20%);
-
-$clr-secondary: #915c4c;
-$clr-secondary-dark: darken($clr-secondary, 10%);
-$clr-secondary-transparent-25: rgba($clr-secondary, 0.25);
-$clr-secondary-transparent-50: rgba($clr-secondary, 0.50);
-$clr-secondary-transparent-75: rgba($clr-secondary, 0.75);
-
-$clr-third: #40686a;
-
+$clr-primary: #eecb99;
+$clr-secondary: #4b3009;
+$clr-third: #1e5836;
 $clr-white: #fff;
-$clr-white-transparent-75: rgba(#fff, 0.75);
-$clr-white-transparent-20: rgba(#fff, 0.2);
-$clr-shade: #d3d3d3;
-$clr-shade-lighten-10: lighten($clr-shade, 10%);
-$clr-shade-darken-10: darken($clr-shade, 10%);
-$clr-dark: #2f1812;
 $clr-text: #444;
-$clr-text-transparent-75: rgba($clr-text, 0.75);
+$clr-shade: #efefef;
 
 /*-------------------------*\
     #MISC.
@@ -46,4 +31,4 @@ $clr-text-transparent-75: rgba($clr-text, 0.75);
 
 $bold-weight: 700;
 $medium-weight: 500;
-$border-radius: 10px;
+$border-radius: 5px;

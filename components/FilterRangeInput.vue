@@ -51,7 +51,7 @@
 
 <style scoped lang="scss">
   .range {
-    border: solid 1px $clr-shade-lighten-10;
+    border: solid 1px $clr-shade;
     border-radius: $border-radius;
     position: relative;
 

@@ -148,7 +148,7 @@
   .cafe__rating {
     align-items: center;
     border: 0;
-    background-color: $clr-shade-lighten-10;
+    background-color: $clr-shade;
     border-radius: $border-radius;
     cursor: pointer;
     display: inline-flex;
@@ -182,7 +182,7 @@
   }
   .cafe__amenity {
     align-items: center;
-    border: solid 1px $clr-shade-lighten-10;
+    border: solid 1px $clr-shade;
     border-radius: $border-radius;
     display: inline-flex;
     padding: 0.001rem 0.5rem;
@@ -197,7 +197,7 @@
     }
 
     &--unique {
-      background-color: $clr-shade-lighten-10;
+      background-color: $clr-shade;
     }
   }
   .cafe__detail {
@@ -229,7 +229,7 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-color: $clr-shade-lighten-10;
+    background-color: $clr-shade;
     height: 1.65rem;
     width: 1.65rem;
   }

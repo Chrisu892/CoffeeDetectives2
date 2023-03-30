@@ -1,8 +1,8 @@
 <template>
   <section class="newsletter">
     <div class="inner inner--narrow">
-      <div class="flex-container flex-container--align-center">
-        <div class="flex-container flex-container--align-center newsletter__content">
+      <div class="newsletter__container">
+        <div class="newsletter__content">
           <div class="newsletter__content__icon">
             <PhNewspaper />
           </div>
@@ -31,11 +31,31 @@
 
 <style scoped lang="scss">
   .newsletter {
-    background-color: $clr-primary;
+    background: url('/images/coffee-beans.jpeg') center center/cover no-repeat;
     padding: 1.5rem 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $clr-primary;
+      opacity: 0.8;
+    }
+  }
+  .newsletter__container {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    z-index: 1;
   }
   .newsletter__content {
     color: $clr-white;
+    display: flex;
+    align-items: center;
     flex: 1;
   }
   .newsletter__content__icon {

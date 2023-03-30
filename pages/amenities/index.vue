@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <AppMasthead title="Amenities" tagline="Find a cafe that meets your needs" />
+    <AppPlainMasthead title="" />
     <AppFeaturedCafes v-for="amenity, key in amenities" :key="key" :title="amenity.title" :cafes="cafes" />
   </main>
 </template>
