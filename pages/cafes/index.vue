@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <AppPlainMasthead title="Cafes in Tyne and Wear" />
+    <AppPlainMasthead :title="page.title" />
 
     <div class="section">
       <div class="inner">
@@ -10,7 +10,7 @@
   </main>
 </template>
 
-<script>
+<script lang="ts">
   export default {
     data() {
       return {
@@ -282,4 +282,10 @@
       }
     }
   }
+</script>
+
+<script setup lang="ts">
+  const { page } = useContent()
+
+  useContentHead(page)
 </script>

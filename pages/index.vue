@@ -1,7 +1,7 @@
 
 <template>
   <main id="main">
-    <HomeHero />
+    <HomeHero :title="page.title" :tagline="page.tagline" />
     <HomeIntro />
     <HomeAmenities :amenities="amenities" />
     <HomeFeaturedLocations :locations="locations" />
@@ -11,18 +11,59 @@
   </main>
 </template>
 
-<script>
+<script lang="ts">
   export default {
     data() {
       return {
         amenities: [
-          { title: 'Free Wi-Fi', url: '/amenities/free-wifi/' },
-          { title: 'Outdoor Sitting', url: '/amenities/outdoor-sitting/' },
-          { title: 'Power Outlets', url: '/amenities/power-outlets/' },
-          { title: 'Restrooms', url: '/amenities/restrooms/' },
-          { title: 'Books & Magazines', url: '/amenities/books-magazines/' },
-          { title: 'Live Music', url: '/amenities/live-music/' },
-          { title: 'Loyalty Programs', url: '/amenities/loyalty-programs/' }
+          { 
+            title: 'Free Wi-Fi', 
+            url: '/amenities/free-wifi/',
+            description: '',
+            icon: ''
+          },
+          { 
+            title: 'Outdoor Sitting', 
+            url: '/amenities/outdoor-sitting/',
+            description: '',
+            icon: ''
+          },
+          { 
+            title: 'Power Outlets', 
+            url: '/amenities/power-outlets/',
+            description: '',
+            icon: ''
+          },
+          { 
+            title: 'Restrooms', 
+            url: '/amenities/restrooms/',
+            description: '',
+            icon: ''
+          },
+          { 
+            title: 'Books & Magazines', 
+            url: '/amenities/books-magazines/',
+            description: '',
+            icon: ''
+          },
+          { 
+            title: 'Live Events', 
+            url: '/amenities/live-events/',
+            description: '',
+            icon: ''
+          },
+          { 
+            title: 'Loyalty Programs', 
+            url: '/amenities/loyalty-programs/',
+            description: '',
+            icon: ''
+          },
+          { 
+            title: 'Unique Decor',
+            url: '/amenities/unique-decor/',
+            description: '',
+            icon: ''
+          }
         ],
         locations: [
           { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
@@ -178,4 +219,10 @@
       }
     }
   }
+</script>
+
+<script setup lang="ts">
+  const { page } = useContent()
+
+  useContentHead(page)
 </script>

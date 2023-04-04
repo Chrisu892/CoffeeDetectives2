@@ -2,8 +2,8 @@
   <section class="hero">
       <div class="inner">
         <div class="hero__content">
-          <h1 class="hero__title font-regular">{{ caption }}</h1>
-          <p class="hero__tagline font-xl">{{ title }}</p>
+          <h1 class="hero__title font-regular">{{ title }}</h1>
+          <p class="hero__tagline font-xl">{{ tagline }}</p>
         </div>
         <div class="hero__search">
           <AppSearch title="Browse over [x] cafes in Tyne & Wear" />
@@ -15,11 +15,11 @@
 <script>
   export default {
     props: {
-      caption: {
+      title: {
         type: String,
         default: 'Tyne & Wear Coffee Finder and Reviews'
       },
-      title: {
+      tagline: {
         type: String,
         default: 'Find a cafe for your relaxing coffee break, study session or place to catch up'
       }

@@ -14,4 +14,10 @@ export default defineNuxtConfig({
     // pageTransition: { name: 'page', mode: 'out-in' },
     // layoutTransition: { name: 'slide', mode: 'out-in'}
   },
+  modules: [
+    '@nuxt/content'
+  ],
+  content: {
+    documentDriven: true
+  }
 })

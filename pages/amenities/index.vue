@@ -1,11 +1,11 @@
 <template>
   <main id="main">
-    <AppPlainMasthead title="" />
+    <AppPlainMasthead :title="page.title" />
     <AppFeaturedCafes v-for="amenity, key in amenities" :key="key" :title="amenity.title" :cafes="cafes" />
   </main>
 </template>
 
-<script>
+<script lang="ts">
   export default {
     data() {
       return {
@@ -150,6 +150,12 @@
       }
     }
   }
+</script>
+
+<script setup lang="ts">
+  const { page } = useContent()
+
+  useContentHead(page)
 </script>
 
 <style scoped lang="scss">
