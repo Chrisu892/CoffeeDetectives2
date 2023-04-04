@@ -1,5 +1,5 @@
 <template>
-  <section class="section section--padding">
+  <section class="section cafes">
     <div class="inner">
       <div class="flex-container">
         <h2 class="section__title font-medium">{{ title }}</h2>
@@ -45,3 +45,10 @@
     perPage: 3
   }
 </script>
+
+<style scoped lang="scss">
+  .cafes {
+    background-color: $clr-shade;
+    padding: 4rem 0;
+  }
+</style>

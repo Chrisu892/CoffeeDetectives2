@@ -8,7 +8,7 @@
 //   overflow-x: hidden;
 // }
 body {
-  background-color: darken($clr-primary, 5%);
+  background-color: $clr-white;
   font: $font-body;
   height: 100%;
 }
@@ -27,7 +27,7 @@ a:hover, a:focus {
   padding: 0 2rem;
 
   &--narrow {
-    max-width: 1024px;
+    max-width: 1120px;
   }
 }
 
@@ -94,6 +94,47 @@ h3, .font-large {
     #TEMPLATE
 \*-------------------------*/
 
+// SPLIDE
+
+.splide {
+  padding-bottom: 4rem;
+}
+.splide__arrows {
+  bottom: 0;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  left: 0;
+  position: absolute;
+}
+.splide__arrow {
+  position: relative !important;
+  top: 0 !important;
+  transform: initial !important;
+
+  &--prev {
+    left: 0 !important;
+  }
+  &--next {
+    right: 0 !important;
+  }
+}
+.splide__pagination {
+  justify-content: flex-end !important;
+  padding: 0 !important;
+}
+.splide__pagination__page {
+  background: $clr-primary !important;
+  height: 14px !important;
+  width: 14px !important;
+
+  &.is-active {
+    background: $clr-secondary !important;
+  }
+}
+
+// SECTION
+
 .section {
   background-color: $clr-white;
 
@@ -111,10 +152,18 @@ h3, .font-large {
     background-color: $clr-secondary;
   }
 }
+.section__container {
+  @include flex-grid;
+}
 .section__title {
   flex: 1;
   margin-bottom: 1.5rem;
 }
+.section__action {
+  text-align: right;
+}
+
+// FEATURE
 
 .feature {
 
@@ -151,6 +200,8 @@ h3, .font-large {
 .feature__content {
   flex: 1 0;
 }
+
+// PAGE TEMPLATE
 
 .page-action {
   margin-top: 4rem;

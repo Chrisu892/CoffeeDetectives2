@@ -2,8 +2,8 @@
   <section class="hero">
       <div class="inner">
         <div class="hero__content">
-          <h1 class="hero__title font-regular">Find a Cafe in Tyne and Wear</h1>
-          <p class="hero__tagline font-xl">Search for a perfect coffee break, study session or place to catch up</p>
+          <h1 class="hero__title font-regular">{{ caption }}</h1>
+          <p class="hero__tagline font-xl">{{ title }}</p>
         </div>
         <div class="hero__search">
           <AppSearch title="Browse over [x] cafes in Tyne & Wear" />
@@ -14,6 +14,16 @@
 
 <script>
   export default {
+    props: {
+      caption: {
+        type: String,
+        default: 'Tyne & Wear Coffee Finder and Reviews'
+      },
+      title: {
+        type: String,
+        default: 'Find a cafe for your relaxing coffee break, study session or place to catch up'
+      }
+    }
   }
 </script>
 
@@ -43,7 +53,7 @@
     z-index: 1;
   }
   .hero__title {
-    opacity: 0.8;
+    opacity: 0.725;
   }
   .hero__tagline {
     margin-top: 1.25rem;

@@ -78,11 +78,12 @@
 <style scoped lang="scss">
   .search {
     background-color: $clr-third;
-    border-radius: $border-radius;
+    border-radius: 40px;
+    box-shadow: 0 0 15px 5px rgba($clr-text, 0.3);
     color: $clr-white;
     padding: 2rem;
     position: relative;
-    transform: translateY(4rem);
+    transform: translateY(5rem);
     z-index: 10;
   }
   .search__title {

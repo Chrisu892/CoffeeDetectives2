@@ -1,5 +1,5 @@
 <template>
-  <section class="section section--padding section--shade">
+  <section class="section locations">
     <div class="inner">
       <div class="flex-container">
         <h2 class="section__title font-medium">{{ title }}</h2>
@@ -65,6 +65,10 @@
 </script>
 
 <style scoped lang="scss">
+  .locations {
+    background-color: $clr-white;
+    padding: 4rem 0;
+  }
   .grid-container {
     display: grid;
     gap: 2rem;

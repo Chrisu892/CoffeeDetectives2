@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ 'header--absolute': isHome }">
     <div class="inner header__container">
       <div class="header__logo">
         <AppLogo />
@@ -11,14 +11,29 @@
   </header>
 </template>
 
+<script>
+  export default {
+    computed: {
+      isHome() {
+        return this.$route.path === '/'
+      }
+    }
+  }
+</script>
+
 <style scoped lang="scss">
   .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
+    background-color: $clr-secondary;
     padding: 2rem 0;
+
+    &--absolute {
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
   }
   .header__container {
     display: flex;

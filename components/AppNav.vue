@@ -153,7 +153,7 @@
       left: 4rem;
       width: 1rem;
       height: 1rem;
-      background-color: $clr-secondary;
+      background-color: $clr-white;
       transform: rotate(45deg);
     }
   }
@@ -163,9 +163,8 @@
     transform: translateY(0);
   }
   .nav__group {
-    background-color: $clr-secondary;
+    background-color: $clr-white;
     border-radius: $border-radius;
-    color: $clr-white;
     min-width: 660px;
     padding: 1rem 1.5rem 1.5rem;
 

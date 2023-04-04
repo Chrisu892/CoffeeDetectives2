@@ -1,7 +1,7 @@
 <template>
-  <section class="section section--padding section--shade">
+  <section class="section blog">
     <div class="inner">
-      <div class="flex-container">
+      <div class="section__container">
         <h2 class="section__title font-medium">{{ title }}</h2>
         <div class="section__action">
           <NuxtLink to="/blog/">View All</NuxtLink>
@@ -28,3 +28,10 @@
     }
   }
 </script>
+
+<style scoped lang="scss">
+  .blog {
+    background-color: $clr-white;
+    padding: 4rem 0;
+  }
+</style>
