@@ -2,6 +2,7 @@
 title: 'Cafes with Books & Magazines'
 altTitle: 'Books & Magazines'
 url: '/amenities/books-magazines/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

@@ -268,3 +268,13 @@ h3, .font-large {
 .flex-container--space-between {
   justify-content: space-between;
 }
+
+/*-------------------------*\
+    #GRID CONTAINER
+\*-------------------------*/
+
+.grid-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}

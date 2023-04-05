@@ -2,6 +2,7 @@
 title: 'Cafes with Free Wi-Fi'
 altTitle: 'Free Wi-Fi'
 url: '/amenities/free-wifi/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

@@ -7,7 +7,7 @@
       <h3 class="article__title font-medium">
         <NuxtLink :to="article.url" :title="`Read ${article.title}`">{{ article.title }}</NuxtLink>
       </h3>
-      <p class="article__tagline font-regular">{{ article.tagline }}</p>
+      <p class="article__tagline font-regular">{{ article.abstract }}</p>
     </div>
   </article>
 </template>

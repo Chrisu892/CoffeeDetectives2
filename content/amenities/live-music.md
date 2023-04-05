@@ -2,6 +2,7 @@
 title: 'Cafes with Live Music'
 altTitle: 'Live Music'
 url: '/amenities/live-music/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

@@ -2,6 +2,7 @@
 title: 'Cafes with Unique Decor'
 altTitle: 'Unique Decor'
 url: '/amenities/unique-decor/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

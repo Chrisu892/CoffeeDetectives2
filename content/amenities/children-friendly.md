@@ -2,6 +2,7 @@
 title: 'Children-friendly Cafes'
 altTitle: 'Children-friendly'
 url: '/amenities/children-friendly/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

@@ -2,6 +2,7 @@
 title: 'Cafes with Loyalty Programs'
 altTitle: 'Loyalty Programs'
 url: '/amenities/loyalty-programs/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

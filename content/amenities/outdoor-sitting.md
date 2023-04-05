@@ -2,6 +2,7 @@
 title: 'Cafes with Outdoor Sittng'
 altTitle: 'Outdoor Sitting'
 url: '/amenities/outdoor-sitting/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

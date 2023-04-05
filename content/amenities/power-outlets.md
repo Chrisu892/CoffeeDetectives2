@@ -2,6 +2,7 @@
 title: 'Cafes with Power Outlets'
 altTitle: 'Power Outlets'
 url: '/amenities/power-outlets/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

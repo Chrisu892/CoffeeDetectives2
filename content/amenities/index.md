@@ -1,6 +1,7 @@
 ---
 title: 'Amenities'
 url: '/amenities/'
+type: 'page'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

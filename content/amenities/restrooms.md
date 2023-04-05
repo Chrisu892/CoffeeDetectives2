@@ -2,6 +2,7 @@
 title: 'Cafes with Restrooms'
 altTitle: 'Restrooms'
 url: '/amenities/restrooms/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

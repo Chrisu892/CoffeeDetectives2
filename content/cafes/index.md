@@ -1,5 +1,6 @@
 ---
 title: 'Cafes : Explore Cafes and Coffee Blends Across Tyne & Wear'
+altTitle: 'Cafes'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

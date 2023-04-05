@@ -1,7 +1,12 @@
 <template>
   <main id="main">
     <AppPlainMasthead :title="page.title" />
-    <AppFeaturedCafes v-for="amenity, key in amenities" :key="key" :title="amenity.title" :cafes="cafes" />
+
+    <AppSection v-for="amenity, key in amenities" :key="key" :class="key % 2 != 0 ? 'section--shade' : ''" :title="amenity.altTitle" :url="amenity.url">
+      <div class="flex-container flex-container--gutter">
+
+      </div>
+    </AppSection>
   </main>
 </template>
 
@@ -9,25 +14,6 @@
   export default {
     data() {
       return {
-        amenities: [
-          { title: 'Cafes with Free Wi-Fi', url: '/amenities/cafes-with-free-wifi/' },
-          { title: 'Cafes with Outdoor Sitting', url: '/amenities/cafes-with-outdoor-sitting/' },
-          { title: 'Cafes with Power Outlets', url: '/amenities/cafes-with-power-outlets/' },
-          { title: 'Cafes with Restrooms', url: '/amenities/cafes-with-restrooms/' },
-          { title: 'Cafes with Books & Magazines', url: '/amenities/cafes-with-books-magazines/' },
-          { title: 'Cafes with Live Music', url: '/amenities/cafes-with-live-music/' },
-          { title: 'Cafes with Live Events', url: '/amenities/cafes-with-live-events/' },
-          { title: 'Cafes with Loyality Programs', url: '/amenities/cafes-with-loyality-programs/' },
-          { title: 'Cafes with Catering', url: '/amenities/cafes-with-catering/' },
-          { title: 'Cafes with Elevator', url: '/amenities/cafes-with-elevator/' },
-          { title: 'Wheelchair Accessible Cafes', url: '/amenities/cafes-wheelchair-accessible/' },
-          { title: 'Pet-friendly Cafes', url: '/amenities/pet-friendly-cafes/' },
-          { title: 'Children-friendly Cafes', url: '/amenities/children-friendly-cafes/' },
-          { title: 'Cafes with Unique Decor', url: '/amenities/cafes-with-unique-decor/' },
-          { title: 'Cafes with Unique View', url: '/amenities/cafes-with-unique-view/' },
-          { title: 'Cafes with Catering', url: '/amenities/cafes-with-catering/' },
-          { title: 'Cafes with Hot Food', url: '/amenities/cafes-with-hot-food/' }
-        ],
         cafes: [
           { 
             title: 'Flat Caps Cafe',
@@ -154,8 +140,9 @@
 
 <script setup lang="ts">
   const { page } = useContent()
-
   useContentHead(page)
+
+  const amenities = await queryContent('amenities').where({ title: { $ne: 'Amenities' } }).find()
 </script>
 
 <style scoped lang="scss">

@@ -3,9 +3,9 @@
     <div class="inner">
       <div class="section__title">
         <div class="section__container">
-          <h2 class="section__title font-medium">{{ title }}</h2>
+          <h2 v-if="title" class="section__title font-medium">{{ title }}</h2>
           <div v-if="url" class="section__action">
-            <NuxtLink to="/amenities/">View All</NuxtLink>
+            <NuxtLink :to="url">View All</NuxtLink>
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
     props: {
       title: {
         type: String,
-        required: true
+        default: null
       },
       url: {
         type: String,

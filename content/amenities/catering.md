@@ -2,6 +2,7 @@
 title: 'Cafes with Catering'
 altTitle: 'Catering'
 url: '/amenities/catering/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

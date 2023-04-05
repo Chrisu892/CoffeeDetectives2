@@ -69,17 +69,4 @@
     background-color: $clr-white;
     padding: 4rem 0;
   }
-  .grid-container {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .location {
-    padding-top: 50%;
-
-    &:nth-child(1) {
-      grid-column: 1/2;
-      grid-row: 1/3;
-    }
-  }
 </style>

@@ -2,6 +2,7 @@
 title: 'Wheelchair Accessible Cafes'
 altTitle: 'Wheelchair Accessible'
 url: '/amenities/wheelchair-accessible/'
+type: 'amenity'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

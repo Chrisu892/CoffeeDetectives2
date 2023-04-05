@@ -6,20 +6,23 @@
       <div class="inner masthead__inner">
         <div class="flex-container flex-container--gutter flex-container--align-center">
           <div class="masthead__content">
-            <h1 class="masthead__title font-xl">{{ cafe.title }}</h1>
-            <p class="masthead__location font-regular">{{ cafe.address }}</p>
-            <p class="masthead__tagline font-regular">{{ cafe.abstract }}</p>
+            <h1 class="masthead__title font-xl">{{ page.title }}</h1>
+            <p class="masthead__location font-regular">{{ page.address }}</p>
+            <p class="masthead__tagline font-regular">{{ page.abstract }}</p>
             <div class="masthead__action">
               <AppButton to="#reviews" title="Read Reviews" />
-              <AppButton v-if="!cafe.owner" to="/get-listed?cafe=1" title="Claim Yours" class="button--outlined" />
+              <AppButton v-if="!page.owner" to="/get-listed?cafe=1" title="Claim Yours" class="button--outlined" />
             </div>
           </div>
           <div class="masthead__gallery">
-            <Splide :options="options">
-              <SplideSlide v-for="image, key in cafe.images.gallery" :key="key">
-                  <img class="masthead__gallery-image" :src="image" :title="`${cafe.title} gallery image`" />
+            <Splide v-if="page.images.gallery" :options="options">
+              <SplideSlide v-for="image, key in page.images.gallery" :key="key">
+                  <img class="masthead__gallery-image" :src="image" :title="`${page.title} gallery image`" />
               </SplideSlide>
             </Splide>
+            <div v-else>
+              <img class="masthead__gallery-image" :src="page.images.thumbnail" :title="`${page.title} gallery image`" />
+            </div>
           </div>
         </div>
       </div>
@@ -27,7 +30,7 @@
 
     <section id="reviews" class="section section--padding">
       <div class="inner">
-        <h2 class="section__title font-medium">About {{ cafe.title }}</h2>
+        <h2 class="section__title font-medium">About {{ page.title }}</h2>
         <div class="page-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
       </div>
     </section>
@@ -35,7 +38,7 @@
     <section id="features" class="section section--padding">
       <div class="inner">
         <div class="flex-container">
-          <h2 class="section__title font-medium">{{ cafe.title }} at Glance</h2>
+          <h2 class="section__title font-medium">{{ page.title }} at Glance</h2>
         </div>
         <div class="page-content">Amenities, Coffee Blends, Cuisine, etc.</div>
       </div>
@@ -44,7 +47,7 @@
     <section id="evens" class="section section--padding">
       <div class="inner">
         <div class="flex-container">
-          <h2 class="section__title font-medium">Events at {{ cafe.title }}</h2>
+          <h2 class="section__title font-medium">Events at {{ page.title }}</h2>
         </div>
       </div>
     </section>
@@ -52,174 +55,45 @@
     <section id="map" class="section section--padding">
       <div class="inner">
         <div class="flex-container">
-          <h2 class="section__title font-medium">How to get to {{ cafe.title }}</h2>
+          <h2 class="section__title font-medium">How to get to {{ page.title }}</h2>
         </div>
         <AppMap />
       </div>
     </section>
 
-    <AppFeaturedCafes :title="`Similar Cafes in ${cafe.location}`" :cafes="cafes" />
+    <AppSection class="section--shade" title="Popular Cafes" url="/cafes/">
+      <Splide :options="cafeSliderOptions">
+        <SplideSlide v-for="cafe, key in cafes" :key="key">
+          <AppCafeListing :cafe="cafe" view="grid" />
+        </SplideSlide>
+      </Splide>
+    </AppSection>
   </main>
 </template>
 
-<script>
+<script lang="ts">
   import { Splide, SplideSlide } from '@splidejs/vue-splide'
   import '@splidejs/vue-splide/css'
-
-  export default {
-    data() {
-      return {
-        cafe: {
-          title: 'Flat Caps Cafe',
-          abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-          rating: 4.91, 
-          owner: false, // @todo: create an object containing details about cafe owner
-          amenities: [
-            { title: 'Speciality Coffee', unique: true }, 
-            { title: 'Unique Decor', unique: true }, 
-            { title: 'Hot Food' }
-          ], 
-          location: 'Newcastle upon Tyne',
-          address: 'Example Street, Newcastle upon Tyne, NE1 2LA',
-          images: { 
-            thumbnail: '/images/cafes/fallback.jpeg',
-            gallery: [
-              '/images/cafes/gallery-fallback-1.jpeg',
-              '/images/cafes/gallery-fallback-2.jpeg',
-              '/images/cafes/gallery-fallback-3.jpeg'
-            ]
-          }
-        },
-        cafes: [
-          { 
-            title: 'Flat Caps Cafe',
-            url: '/cafes/flat-caps-cafe/',
-            abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-            rating: 4.91, 
-            amenities: [
-              { title: 'Speciality Coffee', unique: true }, 
-              { title: 'Unique Decor', unique: true }, 
-              { title: 'Hot Food' }
-            ], 
-            address: 'Example Street, Newcastle upon Tyne, NE1 2LA', 
-            images: { 
-              thumbnail: '/images/cafes/fallback.jpeg'
-            }
-          },
-          { 
-            title: 'Cafe Nero', 
-            url: '/cafes/cafe-nero-eldon-sq/',
-            abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-            rating: 3.8, 
-            amenities: [
-              { title: 'Unique Decor', unique: true },
-              { title: 'Power Outlets' },
-              { title: 'Free Wi-Fi' }
-            ], 
-            address: 'Northumberland Street, Eldon Square, Newcastle upon Tyne, NE1 2LA',
-            images: { 
-              thumbnail: '/images/cafes/fallback.jpeg' 
-            } 
-          },
-          { 
-            title: 'Waterstones Cafe', 
-            url: '/cafes/waterstones-newcastle/', 
-            abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-            rating: 4.82, 
-            amenities: [
-              { title: 'Books & Magazines', unique: true },
-              { title: 'Unique Decor', unique: true },
-              { title: 'Loyality Programs' }
-            ],
-            address: 'Example Street, Newcastle upon Tyne, NE1 2LA',
-            images: { 
-              thumbnail: '/images/cafes/fallback.jpeg' 
-            } 
-          },
-          { 
-            title: 'Luther\'s NSU Bar', 
-            url: '/cafes/luthers-newcastle-university/', 
-            abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-            rating: 4.44, 
-            amenities: [
-              { title: 'Free Wi-Fi' },
-              { title: 'Outdoor Sitting' }
-            ],
-            address: 'Newcastle University Student Union, Newcastle upon Tyne, NE1 0DU',
-            images: { 
-              thumbnail: '/images/cafes/fallback.jpeg' 
-            } 
-          },
-          { 
-            title: 'Habita NUSU Bar', 
-            url: '/cafes/habita-northumbria-university/', 
-            abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-            rating: 4.41, 
-            amenities: [
-              { title: 'Free Wi-Fi' },
-              { title: 'Outdoor Sitting' },
-              { title: 'Power Outlets' }
-            ],
-            address: 'Northumbria University Student Union, Ellison Square, Newcastle upon Tyne, NE1 0LA',
-            images: { 
-              thumbnail: '/images/cafes/fallback.jpeg' 
-            } 
-          },
-          { 
-            title: 'Vicolo', 
-            url: '/cafes/vicolo-tyneside-cinema/', 
-            abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-            rating: 4.72, 
-            amenities: [
-              { title: 'Outdoor Sitting', unique: true },
-              { title: 'Books and Magazines' }
-            ],
-            address: 'Tyneside Cinema, Northumberland Street, Newcastle upon Tyne, NE1 2SA',
-            images: { 
-              thumbnail: '/images/cafes/fallback.jpeg' 
-            } 
-          },
-          { 
-            title: 'The Hooch', 
-            url: '/cafes/the-hooch/', 
-            abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-            rating: 2.82, 
-            amenities: [
-              { title: 'Unique Decor', unique: true },
-              { title: 'Unique View', unique: true },
-              { title: 'Outdoor Sitting' }
-            ],
-            address: 'Newcastle Quaside, Newcastle upon Tyne, NE1 0AB',
-            images: { 
-              thumbnail: '/images/cafes/fallback.jpeg' 
-            } 
-          },
-          { 
-            title: 'The Black Sheep Coffee', 
-            url: '/cafes/the-black-sheep-coffee/', 
-            abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.',
-            rating: 4.38, 
-            amenities: [
-              { title: 'Outdoor Sitting' },
-              { title: 'Power Outlets' }
-            ],
-            address: 'Grainger Street, Newcastle upon Tyne, NE1 0AL',
-            images: { 
-              thumbnail: '/images/cafes/fallback.jpeg' 
-            } 
-          }
-        ],
-      }
-    }
-  }
 </script>
 
-<script setup>
+<script setup lang="ts">
+  const { page } = useContent()
+  useContentHead(page)
+
+  const cafes = await queryContent('cafes').where({ altTitle: { $ne: 'Cafes' } }).limit(6).find()
+
   const options = {
     rewind: false,
     gap: '1rem',
     perMove: 1,
     perPage: 1
+  }
+
+  const cafeSliderOptions = {
+    rewind: false,
+    gap: '2rem',
+    perMove: 3,
+    perPage: 3
   }
 </script>
 
