@@ -3,68 +3,32 @@
   <main id="main">
     <HomeHero :title="page.title" :tagline="page.tagline" />
     <HomeIntro />
-    <HomeAmenities :amenities="amenities" />
+
+    <AppSection class="section--shade" title="Amenities" url="/amenities/">
+      <div class="flex-container flex-container--gutter">
+        <AppAmenityListing v-for="amenity, key in amenities" :key="key" :amenity="amenity" />
+      </div>
+    </AppSection>
+
     <HomeFeaturedLocations :locations="locations" />
 
     <AppFeaturedCafes :cafes="cafes" />
     <AppFeaturedBlog :articles="articles" />
+    <AppSocialMedia />
   </main>
 </template>
+
+<script setup lang="ts">
+  const { page } = useContent()
+  useContentHead(page)
+
+  const amenities = await queryContent('amenities').where({ title: { $ne: 'Amenities' } }).find()
+</script>
 
 <script lang="ts">
   export default {
     data() {
       return {
-        amenities: [
-          { 
-            title: 'Free Wi-Fi', 
-            url: '/amenities/free-wifi/',
-            description: '',
-            icon: ''
-          },
-          { 
-            title: 'Outdoor Sitting', 
-            url: '/amenities/outdoor-sitting/',
-            description: '',
-            icon: ''
-          },
-          { 
-            title: 'Power Outlets', 
-            url: '/amenities/power-outlets/',
-            description: '',
-            icon: ''
-          },
-          { 
-            title: 'Restrooms', 
-            url: '/amenities/restrooms/',
-            description: '',
-            icon: ''
-          },
-          { 
-            title: 'Books & Magazines', 
-            url: '/amenities/books-magazines/',
-            description: '',
-            icon: ''
-          },
-          { 
-            title: 'Live Events', 
-            url: '/amenities/live-events/',
-            description: '',
-            icon: ''
-          },
-          { 
-            title: 'Loyalty Programs', 
-            url: '/amenities/loyalty-programs/',
-            description: '',
-            icon: ''
-          },
-          { 
-            title: 'Unique Decor',
-            url: '/amenities/unique-decor/',
-            description: '',
-            icon: ''
-          }
-        ],
         locations: [
           { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
           { title: 'Gateshead', url: '/locations/gateshead', images: { thumbnail: '/images/locations/fallback.jpeg' } },
@@ -219,10 +183,4 @@
       }
     }
   }
-</script>
-
-<script setup lang="ts">
-  const { page } = useContent()
-
-  useContentHead(page)
 </script>

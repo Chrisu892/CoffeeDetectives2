@@ -1,13 +1,14 @@
 ---
-title: 'Amenities'
-url: '/amenities/'
+title: 'Pet-friendly Cafes'
+altTitle: 'Pet-friendly'
+url: '/amenities/pet-friendly/'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'
   width: 400
   height: 300
 head:
-  title: 'Amenities : Explore Cafes and Coffee Blends Across Tyne & Wear'
+  title: 'Pet-friendly Cafes : Explore Cafes and Coffee Blends Across Tyne & Wear'
   meta:
     - name: 'keywords'
       content: 'cafe finder, coffee shop locator, cafe reviews, cafe events, cafe news, speciality coffee, cafe blog, coffee culture'

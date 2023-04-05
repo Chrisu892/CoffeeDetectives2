@@ -10,7 +10,7 @@
   </main>
 </template>
 
-<script>
+<script lang="ts">
   export default {
     data() {
       return {
@@ -406,4 +406,10 @@
       }
     }
   }
+</script>
+
+<script setup lang="ts">
+  const { page } = useContent()
+
+  useContentHead(page)
 </script>
