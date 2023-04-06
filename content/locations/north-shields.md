@@ -3,6 +3,7 @@ title: 'Cafes in North Shields'
 altTitle: 'North Shields'
 url: '/locations/north-shields/'
 type: 'location'
+id: 'north-shields'
 geolocation:
   lat: 54.9783
   long: 1.6178

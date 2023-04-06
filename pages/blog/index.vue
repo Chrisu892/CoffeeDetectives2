@@ -2,7 +2,11 @@
   <main id="main" class="main">
     <AppPlainMasthead title="Latest news and updates from our Coffee Detectives" />
 
-    <AppSection>
+    <AppSection class="padding">
+      <ContentDoc />
+    </AppSection>
+
+    <AppSection class="padding shade">
       <div class="flex-container flex-container--gutter">
         <AppArticleListing v-for="article, key in articles" :key="key" :article="article" />
       </div>

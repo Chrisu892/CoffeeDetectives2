@@ -10,9 +10,12 @@
     </div>
 
     <div class="content__main">
-      <div class="content__container">
+      <div v-if="content.length > 0" class="content__container">
         <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="listing, key in content" :key="key" :cafe="listing" :view="view" />
         <LocationMapView v-if="view == 'map'" />
+      </div>
+      <div v-else>
+        Sorry, we couldn't find any cafe in this location.
       </div>
     </div>
 

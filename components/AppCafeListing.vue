@@ -1,7 +1,7 @@
 <template>
   <article class="cafe" :class="`cafe--${view}`">
     <div class="cafe__thumbnail">
-      <NuxtLink class="cafe__thumbnail-link" :to="cafe.url" :title="`Read more about ${cafe.title}`">
+      <NuxtLink class="cafe__thumbnail-link" :to="cafe._path" :title="`Read more about ${cafe.title}`">
         <img class="cafe__thumbnail-image" :src="cafe.images.thumbnail" :alt="cafe.title" />
       </NuxtLink>
       <div class="cafe__thumbnail-logo"></div>
@@ -10,7 +10,7 @@
     <div class="cafe__content">
       <div class="cafe__section cafe__section--flex">
         <h3 class="cafe__title font-medium">
-          <NuxtLink :to="cafe.url" :title="`Read more about ${cafe.title}`">{{ cafe.title }}</NuxtLink>
+          <NuxtLink :to="cafe._path" :title="`Read more about ${cafe.title}`">{{ cafe.title }}</NuxtLink>
         </h3>
         <button v-if="cafe.rating" class="cafe__rating font-small">
           <PhStar /> <span class="cafe__rating-score">{{ cafe.rating }}</span>

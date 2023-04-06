@@ -25,6 +25,8 @@
   .header {
     background-color: $clr-secondary;
     padding: 2rem 0;
+    position: relative;
+    z-index: 100;
 
     &--absolute {
       background-color: transparent;

@@ -1,6 +1,6 @@
 <template>
   <article class="article">
-    <NuxtLink class="article__thumbnail" :to="article.url" :title="`Read more about ${article.title}`">
+    <NuxtLink class="article__thumbnail" :to="article._path" :title="`Read more about ${article.title}`">
       <img class="article__thumbnail-image" :src="article.images.thumbnail" :alt="article.title" />
     </NuxtLink>
     <div class="article__details">

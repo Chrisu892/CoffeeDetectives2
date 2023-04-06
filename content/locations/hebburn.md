@@ -3,6 +3,7 @@ title: 'Cafes in Hebburn'
 altTitle: 'Hebburn'
 url: '/locations/hebburn/'
 type: 'location'
+id: 'hebburn'
 geolocation:
   lat: 54.9783
   long: 1.6178

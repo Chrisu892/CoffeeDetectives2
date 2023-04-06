@@ -3,6 +3,7 @@ title: 'Cafes in Newburn'
 altTitle: 'Newburn'
 url: '/locations/newburn/'
 type: 'location'
+id: 'newburn'
 geolocation:
   lat: 54.9783
   long: 1.6178

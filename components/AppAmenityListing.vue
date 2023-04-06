@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink class="amenity" :to="amenity.url" :title="amenity.title">
+  <NuxtLink class="amenity" :to="amenity._path" :title="amenity.title">
     <div class="amenity__content">
       <ph-wifi-high v-if="amenity.altTitle == 'Free Wi-Fi'" />
       <ph-cloud-sun v-if="amenity.altTitle == 'Outdoor Sitting'" />

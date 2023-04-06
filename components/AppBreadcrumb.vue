@@ -44,7 +44,8 @@
 
 <style scoped lang="scss">
   .breadcrumb {
-    display: flex;
+    @include flex-row;
+    margin-bottom: 0;
   }
   .breadcrumb__item {
     margin: 0;

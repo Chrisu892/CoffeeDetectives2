@@ -66,18 +66,19 @@
     }
   }
   .range__toggle {
+    @include flex-row;
     align-items: center;
     background-color: $clr-white;
     border-radius: $border-radius;
     cursor: pointer;
-    display: flex;
-    flex-flow: row wrap;
+    margin-bottom: 0;
     padding: 0.5rem 0.75rem;
     width: 100%;
     text-align: left;
   }
   .range__title {
     flex: 1;
+    margin-bottom: 0;
   }
   .range__icon {
     color: $clr-primary;

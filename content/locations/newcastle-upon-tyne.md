@@ -3,6 +3,7 @@ title: 'Cafes in Newcastle upon Tyne'
 altTitle: 'Newcastle upon Tyne'
 url: '/locations/newcastle-upon-tyne/'
 type: 'location'
+id: 'newcastle-upon-tyne'
 geolocation:
   lat: 54.9783
   long: 1.6178

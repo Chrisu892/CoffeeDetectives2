@@ -7,13 +7,13 @@
 
     <HomeIntro />
 
-    <AppSection class="section--shade" title="Amenities" url="/amenities/">
+    <AppSection class="padding shade" title="Amenities" url="/amenities/">
       <div class="flex-container flex-container--gutter">
         <AppAmenityListing v-for="amenity, key in amenities" :key="key" :amenity="amenity" />
       </div>
     </AppSection>
 
-    <AppSection title="Popular Locations" url="/locations/">
+    <AppSection class="padding" title="Popular Locations" url="/locations/">
       <Splide :options="locationsSliderOptions">
         <SplideSlide v-for="chunk, key in locationChunks" :key="key">
           <div class="grid-container">
@@ -23,7 +23,7 @@
       </Splide>
     </AppSection>
 
-    <AppSection class="section--shade" title="Popular Cafes" url="/cafes/">
+    <AppSection class="padding shade" title="Popular Cafes" url="/cafes/">
       <Splide :options="sliderOptions">
         <SplideSlide v-for="cafe, key in cafes" :key="key">
           <AppCafeListing :cafe="cafe" view="grid" />
@@ -31,7 +31,7 @@
       </Splide>
     </AppSection>
 
-    <AppSection title="Latest News" url="/blog/">
+    <AppSection class="padding" title="Latest News" url="/blog/">
       <div class="flex-container flex-container--gutter">
         <AppArticleListing v-for="article, key in articles" :key="key" :article="article" />
       </div>

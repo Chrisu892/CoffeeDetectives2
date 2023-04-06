@@ -5,6 +5,7 @@ url: '/cafes/backyard-bike-shop/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.89
 type: 'cafe'
+locationId: 'gateshead'
 amenities:
   - title: 'Speciality Coffee'
     unique: true
@@ -36,4 +37,15 @@ openingsTimes:
 address: 'Gateshead Quayside, Gateshead, NE10 0DU'
 images:
   thumbnail: '/images/cafes/fallback.jpeg'
+head:
+  title: 'Backyard Bike Shop : Cafés : Explore Cafes and Coffee Blends Across Tyne & Wear'
+  meta:
+    - name: 'keywords'
+      content: 'café finder, coffee shop locator, café reviews, café events, café news, speciality coffee, café blog, coffee culture'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'Chris Prusakiewicz with ChatGPT'
+    - name: 'copyright'
+      content: '© 2023 The Coffee Detectives'
 ---

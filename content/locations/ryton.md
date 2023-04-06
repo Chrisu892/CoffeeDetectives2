@@ -3,6 +3,7 @@ title: 'Cafes in Ryton'
 altTitle: 'Ryton'
 url: '/locations/ryton/'
 type: 'location'
+id: 'ryton'
 geolocation:
   lat: 54.9783
   long: 1.6178

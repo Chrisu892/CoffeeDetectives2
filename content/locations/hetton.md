@@ -3,6 +3,7 @@ title: 'Cafes in Hetton'
 altTitle: 'Hetton'
 url: '/locations/hetton/'
 type: 'location'
+id: 'hetton'
 geolocation:
   lat: 54.9783
   long: 1.6178

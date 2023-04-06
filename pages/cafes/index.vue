@@ -83,5 +83,5 @@
   const { page } = useContent()
   useContentHead(page)
 
-  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(12).find()
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).find()
 </script>

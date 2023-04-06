@@ -17,7 +17,7 @@
           <div class="masthead__gallery">
             <Splide v-if="page.images.gallery" :options="options">
               <SplideSlide v-for="image, key in page.images.gallery" :key="key">
-                  <img class="masthead__gallery-image" :src="image" :title="`${page.title} gallery image`" />
+                <img class="masthead__gallery-image" :src="image" :title="`${page.title} gallery image`" />
               </SplideSlide>
             </Splide>
             <div v-else>
@@ -30,34 +30,36 @@
 
     <section id="reviews" class="section section--padding">
       <div class="inner">
-        <h2 class="section__title font-medium">About {{ page.title }}</h2>
-        <div class="page-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
-      </div>
-    </section>
-
-    <section id="features" class="section section--padding">
-      <div class="inner">
-        <div class="flex-container">
-          <h2 class="section__title font-medium">{{ page.title }} at Glance</h2>
+        <div class="large-card">
+          <div class="large-card__main">
+            <h2 class="section__title font-medium">About {{ page.title }}</h2>
+            <div class="page-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
+          </div>
+          <div class="large-card__aside">
+            Amenities
+          </div>
         </div>
-        <div class="page-content">Amenities, Coffee Blends, Cuisine, etc.</div>
       </div>
     </section>
 
-    <section id="evens" class="section section--padding">
+    <section id="evens" class="section section--padding section--shade">
       <div class="inner">
-        <div class="flex-container">
-          <h2 class="section__title font-medium">Events at {{ page.title }}</h2>
+        <div class="large-card">
+          <div class="flex-container">
+            <h2 class="section__title font-medium">Events at {{ page.title }}</h2>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="map" class="section section--padding">
       <div class="inner">
-        <div class="flex-container">
-          <h2 class="section__title font-medium">How to get to {{ page.title }}</h2>
+        <div class="large-card">
+          <div class="flex-container">
+            <h2 class="section__title font-medium">How to get to {{ page.title }}</h2>
+          </div>
+          <AppMap />
         </div>
-        <AppMap />
       </div>
     </section>
 
@@ -71,12 +73,10 @@
   </main>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
   import { Splide, SplideSlide } from '@splidejs/vue-splide'
   import '@splidejs/vue-splide/css'
-</script>
 
-<script setup lang="ts">
   const { page } = useContent()
   useContentHead(page)
 
@@ -121,14 +121,6 @@
   .masthead__content {
     flex: 1 0;
   }
-  .masthead__breadcrumbs {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .masthead__breadcrumb-item a {
-    padding-right: 0.5rem;
-  }
   .masthead__title {
     margin-top: 1.5rem;
   }
@@ -146,7 +138,6 @@
       margin-left: 1rem;
     }
   }
-
   .masthead__gallery {
     border-radius: $border-radius;
     flex: 1 0;
@@ -158,5 +149,11 @@
     height: 100%;
     max-height: 400px;
     object-fit: cover;
+  }
+
+  .large-card {
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
+    padding: 2rem;
   }
 </style>

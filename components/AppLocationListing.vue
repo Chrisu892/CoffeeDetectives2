@@ -1,6 +1,6 @@
 <template>
-  <NuxtLink class="location" :class="{ 'location--slider': slider }" :to="location.url" :title="location.title">
-    <img class="location__image" :src="location.image.url" :alt="`Image of ${location.altTitle}`" />
+  <NuxtLink class="location" :class="{ 'location--slider': slider }" :to="location._path" :title="location.title">
+    <img class="location__image" :src="location.image._path" :alt="`Image of ${location.altTitle}`" />
     <div class="location__overlay">
       <div class="location__content">
         <div class="location__caption font-regular">Explore</div>

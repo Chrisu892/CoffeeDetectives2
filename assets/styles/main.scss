@@ -59,6 +59,7 @@ select {
 h1, h2, h3, h4, h5, h6 {
   font: $font-header;
   font-weight: $bold-weight;
+  margin: 0.425rem 0 0.625rem;
 }
 h1, .font-xxl {
   font-size: $font-xxl;
@@ -67,24 +68,40 @@ h1, .font-xxl {
 h2, .font-xl {
   font-size: $font-xl;
   line-height: 1.2;
+  margin-bottom: 0.625rem;
 }
 h3, .font-large {
   font-size: $font-large;
   line-height: 1.3;
+  margin-bottom: 0.425rem;
 }
 .h4, .font-medium {
   font-size: $font-medium;
   line-height: 1.4;
+  margin-bottom: 0.425rem;
 }
 .h5, p, .font-regular {
   font-size: $font-regular;
   line-height: 1.6;
+  margin-bottom: 0.425rem;
 }
 .font-small {
   font-size: $font-small;
 }
 .font-xs {
   font-size: $font-xs;
+}
+p {
+  margin-bottom: 0.625rem;
+}
+b, strong {
+  font-weight: $bold-weight;
+}
+ul, ol {
+  margin-bottom: 0.625rem;
+}
+li {
+  margin-bottom: 0.425rem;
 }
 
 /*-------------------------*\
@@ -127,115 +144,6 @@ h3, .font-large {
 
   &.is-active {
     background: $clr-secondary !important;
-  }
-}
-
-// SECTION
-
-.section {
-  background-color: $clr-white;
-
-  &--padding {
-    padding: 3rem 0;
-  }
-  &--shade {
-    background-color: $clr-shade;
-  }
-  &--primary {
-    background-color: $clr-primary;
-    color: $clr-white;
-  }
-  &--secondary {
-    background-color: $clr-secondary;
-  }
-}
-.section__container {
-  @include flex-grid;
-}
-.section__title {
-  flex: 1;
-  margin-bottom: 1.5rem;
-}
-.section__action {
-  text-align: right;
-}
-
-// FEATURE
-
-.feature {
-
-  &--margin {
-    margin-bottom: 4rem;
-  }
-
-  &--center {
-    text-align: center;
-  }
-}
-.feature__title {
-  color: $clr-primary;
-  display: inline-block;
-  font-weight: $bold-weight;
-
-  @supports (background-clip: text) or (-webkit-background-clip: text) {
-    background: $clr-primary;
-    background: linear-gradient(90deg, $clr-primary 0%, $clr-primary 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-}
-.feature__text {
-  margin-top: 1.5rem;
-}
-.feature__action {
-  margin-top: 2.5rem;
-}
-.feature__signature {
-  margin-top: 2.25rem;
-}
-.feature__content {
-  flex: 1 0;
-}
-
-// PAGE TEMPLATE
-
-.page-action {
-  margin-top: 4rem;
-
-  &--center {
-    text-align: center;
-  }
-}
-
-.page-content {
-
-  p:not(:last-child), li:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-  
-  b, strong {
-    font-weight: $bold-weight;
-  }
-
-  i, em {
-    font-style: italic;
-  }
-
-  li {
-    padding-left: 2rem;
-    position: relative;
-  
-    &::before {
-      content: '';
-      top: 13px;
-      left: 0;
-      height: 14px;
-      width: 14px;
-      background-color: $clr-primary;
-      border-radius: 5px 10px;
-      position: absolute;
-    }
   }
 }
 

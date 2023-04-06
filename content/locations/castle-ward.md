@@ -3,6 +3,7 @@ title: 'Cafes in Castle Ward'
 altTitle: 'Castle Ward'
 url: '/locations/castle-ward/'
 type: 'location'
+id: 'castle-ward'
 geolocation:
   lat: 54.9783
   long: 1.6178

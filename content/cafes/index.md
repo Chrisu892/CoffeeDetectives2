@@ -9,6 +9,7 @@ image:
   width: 400
   height: 300
 head:
+  title: 'Cafés : Explore Cafes and Coffee Blends Across Tyne & Wear'
   meta:
     - name: 'keywords'
       content: 'café finder, coffee shop locator, café reviews, café events, café news, speciality coffee, café blog, coffee culture'

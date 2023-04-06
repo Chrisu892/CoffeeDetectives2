@@ -1,14 +1,7 @@
 <template>
-  <section class="section section--padding">
+  <section class="section">
     <div class="inner">
-      <div class="section__title">
-        <div class="section__container">
-          <h2 v-if="title" class="section__title font-medium">{{ title }}</h2>
-          <div v-if="url" class="section__action">
-            <NuxtLink :to="url">View All</NuxtLink>
-          </div>
-        </div>
-      </div>
+      <AppFeature :title="title" :url="url" />
       <div class="section__content">
         <slot />
       </div>
@@ -30,3 +23,31 @@
     }
   }
 </script>
+
+<style scoped lang="scss">
+  .section {
+    background-color: $clr-white;
+
+    &.shade {
+      background-color: $clr-shade;
+    }
+
+    &.padding {
+      padding: 3rem 0;
+    }
+    &.padding-top {
+      padding-top: 3rem;
+    }
+    &.padding-bottom {
+      padding-bottom: 3rem;
+    }
+  }
+  .section__content {
+    h2, h3, h4, h5, h6 {
+      margin-bottom: 1rem;
+    }
+  }
+  .section.narrow .inner {
+    max-width: 1024px;
+  }
+</style>

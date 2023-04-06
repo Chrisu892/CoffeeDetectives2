@@ -3,6 +3,7 @@ title: 'Cafes in Washington'
 altTitle: 'Washington'
 url: '/locations/washington/'
 type: 'location'
+id: 'washington'
 geolocation:
   lat: 54.9783
   long: 1.6178

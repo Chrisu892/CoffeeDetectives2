@@ -2,7 +2,11 @@
   <main id="main" class="main">
     <AppPlainMasthead :title="page.title" />
 
-    <AppSection v-for="amenity, key in amenities" :key="key" :class="key % 2 != 0 ? 'section--shade' : ''" :title="amenity.altTitle" :url="amenity.url">
+    <AppSection class="padding">
+      <ContentDoc />
+    </AppSection>
+
+    <AppSection v-for="amenity, key in amenities" :key="key" class="padding" :class="key % 2 === 0 ? 'shade' : ''" :title="amenity.altTitle" :url="amenity.url">
       <div class="flex-container flex-container--gutter">
 
       </div>

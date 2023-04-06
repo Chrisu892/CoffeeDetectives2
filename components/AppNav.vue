@@ -121,15 +121,18 @@
 <style scoped lang="scss">
   .nav {
     @include flex-row;
+    align-items: center;
   }
   .nav__list {
     @include flex-row;
+    margin-bottom: 0;
 
     &--primary {
       flex: 1;
     }
   }
   .nav__item {
+    margin-bottom: 0;
     position: relative;
 
     &:not(:first-child) {
@@ -141,6 +144,7 @@
     display: inline-block;
     font-weight: $bold-weight;
     letter-spacing: 0.5px;
+    margin-bottom: 0;
     padding: 0.475rem 1.725rem;
     text-decoration-color: $clr-text;
     transition: opacity 350ms ease-in-out;

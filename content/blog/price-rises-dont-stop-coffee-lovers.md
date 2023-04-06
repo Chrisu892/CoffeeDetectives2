@@ -1,19 +1,19 @@
 ---
-title: 'Opening of a Café in Tynemouth Is a Great Success'
-url: '/blog/opening-of-a-cafe-in-tynemouth-is-a-great-success/'
+title: 'Price Increases at the Backyard Bike Shop Complemented by Brand New Coffee Flavours'
+url: '/blog/price-increases-at-the-backyard-bike-shop-complemented-by-brand-new-coffee-flavours/'
 author: 'Anonymous'
-date: '04 April 2023'
+date: '03 April 2023'
 category: 'news'
 tags: [gateshead, cafe, prices]
-abstract: "A new place to enjoy fresh coffee and pastries is now open in Tynemouth. Located conviniently on Front Street, Toast enjoys positive reviews on Google."
+abstract: "With the rising cost of living, independent coffee shops like the Backyard Bike Shop look for ways to compensate the price increases with brand new coffee flavours."
+content: null
 images:
   thumbnail: '/images/blog/fallback.jpeg'
 relatedArticles: null
-relatedCafes: [Toast Café]
 comments: null
 type: 'article'
 head:
-  title: 'Opening of a Café in Tynemouth a Great Success : Blog : Explore Cafés and Coffee Blends Across Tyne & Wear'
+  title: "Price Rises Don't Stop Coffee Lovers : Blog :  Explore cafés and Coffee Blends Across Tyne & Wear"
   meta:
     - name: 'keywords'
       content: 'café finder, coffee shop locator, café reviews, café events, café news, speciality coffee, café blog, coffee culture'

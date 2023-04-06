@@ -3,6 +3,7 @@ title: 'Cafes in Longbenton'
 altTitle: 'Longbenton'
 url: '/locations/longbenton/'
 type: 'location'
+id: 'longbenton'
 geolocation:
   lat: 54.9783
   long: 1.6178

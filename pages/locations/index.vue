@@ -1,8 +1,12 @@
 <template>
   <main id="main" class="main">
     <AppPlainMasthead title="Cafes" />
+
+    <AppSection class="padding">
+      <ContentDoc />
+    </AppSection>
     
-    <AppSection>
+    <AppSection class="padding shade">
       <div class="flex-container flex-container--gutter">
         <AppLocationListing v-for="location, key in locations" :key="key" :location="location" />
       </div>
