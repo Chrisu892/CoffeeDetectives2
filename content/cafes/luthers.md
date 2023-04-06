@@ -1,6 +1,6 @@
 ---
-title: 'Luthers'
-altTitle: 'Luthers'
+title: "Luther's"
+altTitle: "Luther's"
 url: '/cafes/luthers/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.44

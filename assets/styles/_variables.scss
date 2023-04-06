@@ -12,10 +12,15 @@
   font-display: swap;
   src: url('/fonts/louis_george_caf/Louis George Cafe Bold.ttf') format('truetype')
 }
+@font-face {
+  font-family: 'Ravise';
+  font-display: swap;
+  src: url('/fonts/ravise/Ravise-Regular.ttf') format('truetype')
+}
 
 $font-header: normal 18px/1.4 'Louis George Cafe Bold', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
 $font-body: normal 18px/1.4 'Louis George Cafe', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
-$font-cursive: 'DM Serif Display', serif;
+$font-cursive: 'Ravise', serif;
 
 $font-xxl: 3em;
 $font-xl: 2.225em;

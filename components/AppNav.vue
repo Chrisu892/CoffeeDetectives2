@@ -22,7 +22,7 @@
       </ul>
       <ul class="nav__list">
         <li class="nav__item">
-          <AppButton to="/get-listed/" title="Get Listed" class="button--outlined-rev" />
+          <NuxtLink class="nav__link font-regular" to="get-listed">Get Listed</NuxtLink>
         </li>
       </ul>
     </nav>
@@ -201,7 +201,7 @@
     padding: 1rem 1.5rem 1.5rem;
   }
   .nav__group__item {
-    padding-top: 0.5rem;
+    margin: 0;
   }
   .nav__group__link {
     color: inherit;

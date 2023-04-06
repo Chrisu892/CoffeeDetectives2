@@ -7,8 +7,8 @@
             <PhNewspaper />
           </div>
           <div class="newsletter__content__text">
-            <h3 class="newsletter__title font-medium">Sign up to our Newsletter</h3>
-            <p class="newsletter__tagline font-regular">And never miss an offer, review, and updates</p>
+            <h3 class="newsletter__title font-medium font-cursive">Sign up to our Newsletter</h3>
+            <p class="newsletter__tagline font-regular">And stay up-to-date with news and updates from Tyne & Wear</p>
           </div>
         </div>
         <form class="newsletter__action">
@@ -42,25 +42,35 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: $clr-primary;
+      background-color: $clr-secondary;
       opacity: 0.8;
     }
   }
   .newsletter__container {
-    display: flex;
-    flex-flow: row wrap;
+    @include flex-row;
+    align-items: center;
     position: relative;
     z-index: 1;
   }
   .newsletter__content {
-    color: $clr-white;
-    display: flex;
+    @include flex-row;
     align-items: center;
+    color: $clr-white;
     flex: 1;
   }
   .newsletter__content__icon {
-    display: flex;
+    @include flex-row;
+    background-color: $clr-primary;
+    border-radius: 100%;
+    color: $clr-secondary;
     font-size: $font-xl;
     margin-right: 1.5rem;
+    padding: 0.75rem;
+  }
+  .newsletter__title {
+    margin: 0;
+  }
+  .newsletter__tagline {
+    margin: 0;
   }
 </style>

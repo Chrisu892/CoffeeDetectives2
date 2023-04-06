@@ -4,6 +4,9 @@
         <div class="hero__content">
           <h1 class="hero__title font-regular">{{ title }}</h1>
           <p class="hero__tagline font-xl">{{ tagline }}</p>
+          <div class="hero__action">
+            <AppButton class="button--outlined" to="#search" title="Start Exploring" />
+          </div>
         </div>
         <div class="hero__search">
           <slot />
@@ -47,7 +50,7 @@
     color: $clr-white;
     margin: 0 auto;
     max-width: 900px;
-    padding: 8rem 0 2rem;
+    padding: 6rem 0 1rem;
     position: relative;
     text-align: center;
     z-index: 1;
@@ -58,7 +61,7 @@
   .hero__tagline {
     margin-top: 1.25rem;
   }
-  .hero__actions {
+  .hero__action {
     margin-top: 2.25rem;
   }
 </style>

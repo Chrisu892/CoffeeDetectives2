@@ -1,5 +1,5 @@
 <template>
-  <form class="search" method="post">
+  <form id="search" class="search" method="post">
     <p v-if="title" class="search__title font-medium"><strong>{{ title }}</strong></p>
     
     <div class="search__container">

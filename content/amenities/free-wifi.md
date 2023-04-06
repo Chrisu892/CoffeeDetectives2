@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Stay connected while you relax and enjoy a delicious cup of coffee at our cafes with free Wi-Fi. Our high-speed internet is available to all customers, allowing you to catch up on work, browse your favorite websites, or simply stay in touch with friends and family. With comfortable seating and a welcoming atmosphere, our cafes are the perfect place to take a break and recharge your batteries. So why not come on in, connect to our free Wi-Fi, and stay awhile?</p>

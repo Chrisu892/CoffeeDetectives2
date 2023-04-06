@@ -65,9 +65,9 @@
 
 <style scoped lang="scss">
   .cafe {
+    @include flex-row;
+    background-color: $clr-white;
     border-radius: $border-radius;
-    display: flex;
-    flex-flow: row wrap;
 
     &--list {
       flex: 100% 0;
@@ -124,15 +124,12 @@
   }
 
   .cafe__content {
-    background-color: $clr-white;
-    border-radius: $border-radius;
-    padding-top: 1rem;
+    padding: 1rem;
     position: relative;
   }
   .cafe--list .cafe__content {
     flex: 1 0;
     margin-top: 0;
-    padding: 1rem;
   }
 
   .cafe__section--flex {
@@ -143,6 +140,7 @@
 
   .cafe__title {
     flex: 1 0;
+    margin: 0;
   }
 
   .cafe__rating {
@@ -159,7 +157,7 @@
   }
 
   .cafe__abstract {
-    margin: 0.75rem 0;
+    margin: 0.5rem 0;
     max-height: 76px;
     overflow: hidden;
   }

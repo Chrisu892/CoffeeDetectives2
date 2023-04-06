@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Step into a world of imagination and inspiration with our collection of cafes that offer books and magazines for your reading pleasure. Whether you're looking for the latest bestseller or a classic novel, our cafes have something for everyone. Take a break from the hustle and bustle of everyday life, grab a cup of coffee, and lose yourself in a good book.</p>

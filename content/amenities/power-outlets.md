@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Need to recharge your batteries, both literally and figuratively? Our cafes with power outlets have got you covered. Our cozy seating areas and tables feature convenient power outlets, so you can recharge your devices while you recharge your energy levels with a delicious coffee and snack. Whether you're catching up on work, browsing the web, or simply unwinding with friends, our cafes offer a warm and inviting atmosphere that's perfect for both productivity and relaxation. So come on in, grab a seat, and plug in to our power outlets - you'll be recharged in no time!</p>

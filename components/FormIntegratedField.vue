@@ -22,16 +22,15 @@
 
 <style scoped lang="scss">
   .input {
-    background-color: $clr-white;
+    @include flex-row;
+    background-color: $clr-secondary;
+    border: solid 1px $clr-secondary;
     border-radius: 50px;
-    display: flex;
-    flex-flow: row;
     overflow: hidden;
   }
   .input__field {
     border: 0;
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
+    border-radius: 50px 0 0 50px;
     font-size: $font-regular;
     min-width: 300px;
     padding: 0.875rem 1.125rem;
@@ -39,8 +38,7 @@
   .input__button {
     background-color: $clr-secondary;
     border: 0;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-radius: 0 50px 50px 0;
     color: $clr-white;
     cursor: pointer;
     font-size: $font-regular;

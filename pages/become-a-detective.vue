@@ -2,7 +2,7 @@
   <main id="main" class="main">
     <AppMasthead title="Become a Dedective" tagline="Let's build a network of cafes in Tyne and Wear together" />
 
-    <AppSection class="padding">
+    <AppSection class="narrow padding">
       <ContentDoc />
     </AppSection>
   </main>

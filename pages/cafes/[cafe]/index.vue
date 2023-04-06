@@ -7,7 +7,7 @@
         <div class="flex-container flex-container--gutter flex-container--align-center">
           <div class="masthead__content">
             <h1 class="masthead__title font-xl">{{ page.title }}</h1>
-            <p class="masthead__location font-regular">{{ page.address }}</p>
+            <p class="masthead__location font-regular"><ph-map-pin /> {{ page.address }}</p>
             <p class="masthead__tagline font-regular">{{ page.abstract }}</p>
             <div class="masthead__action">
               <AppButton to="#reviews" title="Read Reviews" />
@@ -28,42 +28,36 @@
       </div>
     </section>
 
-    <section id="reviews" class="section section--padding">
-      <div class="inner">
-        <div class="large-card">
-          <div class="large-card__main">
-            <h2 class="section__title font-medium">About {{ page.title }}</h2>
-            <div class="page-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
-          </div>
-          <div class="large-card__aside">
-            Amenities
-          </div>
+    <AppSection class="padding">
+      <div class="large-card">
+        <div class="large-card__main">
+          <h2 class="large-card__title font-medium">About {{ page.title }}</h2>
+          <div class="large-card__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
+        </div>
+        <div class="large-card__aside">
+          Amenities
         </div>
       </div>
-    </section>
+    </AppSection>
 
-    <section id="evens" class="section section--padding section--shade">
-      <div class="inner">
-        <div class="large-card">
-          <div class="flex-container">
-            <h2 class="section__title font-medium">Events at {{ page.title }}</h2>
-          </div>
+    <AppSection class="padding shade">
+      <div class="large-card">
+        <h2 class="large-card__title font-medium">Events at {{ page.title }}</h2>
+        <div v-if="events.length > 0" class="flex-container"></div>
+        <div v-else>
+          Sorry, there are no events at {{ page.title }} at the moment. Please check again soon.
         </div>
       </div>
-    </section>
+    </AppSection>
 
-    <section id="map" class="section section--padding">
-      <div class="inner">
-        <div class="large-card">
-          <div class="flex-container">
-            <h2 class="section__title font-medium">How to get to {{ page.title }}</h2>
-          </div>
-          <AppMap />
-        </div>
+    <AppSection class="padding">
+      <div class="large-card">
+        <h2 class="large-card__title font-medium">Directions to {{ page.title }}</h2>
+        <AppMap />
       </div>
-    </section>
+    </AppSection>
 
-    <AppSection class="section--shade" title="Popular Cafes" url="/cafes/">
+    <AppSection class="padding shade" title="Similar Cafés" url="cafes">
       <Splide :options="cafeSliderOptions">
         <SplideSlide v-for="cafe, key in cafes" :key="key">
           <AppCafeListing :cafe="cafe" view="grid" />
@@ -81,6 +75,7 @@
   useContentHead(page)
 
   const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(6).find()
+  const events = []
 
   const options = {
     rewind: false,
@@ -94,6 +89,16 @@
     gap: '2rem',
     perMove: 3,
     perPage: 3
+  }
+</script>
+
+<script lang="ts">
+  import { PhMapPin } from 'phosphor-vue';
+
+  export default {
+    components: {
+      PhMapPin
+    }
   }
 </script>
 
@@ -125,7 +130,13 @@
     margin-top: 1.5rem;
   }
   .masthead__location {
+    @include flex-row;
+    align-items: center;
     margin-top: 1rem;
+
+    svg {
+      margin-right: 0.5rem;
+    }
   }
   .masthead__tagline {
     font-weight: $bold-weight;
@@ -139,6 +150,8 @@
     }
   }
   .masthead__gallery {
+    background-color: $clr-white;
+    border: solid 0.5rem $clr-white;
     border-radius: $border-radius;
     flex: 1 0;
     overflow: hidden;
@@ -155,5 +168,8 @@
     border: solid 1px $clr-shade;
     border-radius: $border-radius;
     padding: 2rem;
+  }
+  .large-card__title {
+    margin: 0 0 1.25rem 0;
   }
 </style>

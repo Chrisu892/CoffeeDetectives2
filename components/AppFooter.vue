@@ -41,8 +41,8 @@
     </div>
     <div class="copyright">
       <div class="inner flex-container">
-        <p class="copyright__text font-small">&copy; Copyright 2023 <NuxtLink to="/" title="Go to Homepage">{{ settings.site_name }}</NuxtLink></p>
-        <p class="copyright__text font-small">Read our <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink>. Website by <a href="https://www.chrisprusakiewicz.com/" title="Visit Chris Prusakiewicz's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a></p>
+        <p class="copyright__text font-small">&copy; Copyright 2023 <NuxtLink to="/" title="Go to Homepage">{{ settings.site_name }}</NuxtLink>. Read our <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink>.</p>
+        <p class="copyright__text font-small">Website by <a href="https://www.chrisprusakiewicz.com/" title="Visit Chris Prusakiewicz's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a></p>
       </div>
     </div>
   </footer>

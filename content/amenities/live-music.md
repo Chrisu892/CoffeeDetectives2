@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Experience the sweet sounds of live music at our cafes that feature live performances. From jazz and blues to indie and rock, we offer a diverse range of musical genres that are sure to get your toes tapping. Relax and unwind with friends, or make new ones, as you savor the delicious coffee and snacks that we have on offer. With a warm and inviting atmosphere, our cafes provide the perfect setting to enjoy an intimate concert experience. Come and join us for a night of music, laughter, and good times that you won't soon forget!</p>

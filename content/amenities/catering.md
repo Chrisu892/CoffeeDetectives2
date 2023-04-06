@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Whether you're hosting a special event or simply looking to indulge in some delicious food, our cafes with catering have got you covered. With a range of tempting menu options and personalized service, we'll help you create a memorable experience that's sure to delight your taste buds. From savory bites to sweet treats, let us elevate your next visit to our cafe to a whole new level.</p>

@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Discover the best cafes and coffee blends across Tyne & Wear. Whether you're a local looking for a new favorite spot or a visitor exploring the area, our locations page is the ultimate guide to the best cafes in the area. From charming cafes nestled in historic neighborhoods to modern coffee shops in bustling city centers, we've got you covered. Our website features detailed information on each location, including amenities, ratings, and independent reviews, so you can find the perfect spot to suit your needs. So why wait? Start exploring and discover your new favorite cafe today!</p>

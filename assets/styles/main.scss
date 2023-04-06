@@ -28,6 +28,7 @@ a:hover, a:focus {
   }
 }
 
+input[type="email"],
 input[type="text"],
 input[type="number"] {
   border: solid 2px $clr-white;
@@ -35,7 +36,6 @@ input[type="number"] {
   font-size: $font-regular;
   font: $font-body;
   padding: 0.675rem;
-  width: 100%;
 }
 
 button {
@@ -91,6 +91,10 @@ h3, .font-large {
 .font-xs {
   font-size: $font-xs;
 }
+.font-cursive {
+  font-family: $font-cursive;
+  letter-spacing: 1px;
+}
 p {
   margin-bottom: 0.625rem;
 }
@@ -105,13 +109,14 @@ li {
 }
 
 /*-------------------------*\
-    #TEMPLATE
+    #SPLIDE
 \*-------------------------*/
-
-// SPLIDE
 
 .splide {
   padding-bottom: 4rem;
+}
+.splide__track {
+  border-radius: $border-radius;
 }
 .splide__arrows {
   bottom: 0;

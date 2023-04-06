@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Take a break from the hustle and bustle of the city and relax in the fresh air at our cafes with outdoor seating. Our outdoor seating areas provide the perfect spot to enjoy a cup of coffee or a delicious meal while basking in the warm sun or enjoying the cool breeze. Whether you're looking for a quiet spot to read a book or a lively place to meet friends, our outdoor seating areas offer a serene and inviting atmosphere. So why not take advantage of our beautiful outdoor space and soak up the ambiance while you savor our delicious coffee and treats?</p>

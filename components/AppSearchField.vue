@@ -63,6 +63,9 @@
     display: block;
     margin-bottom: 0.25rem;
   }
+  .search-field__input {
+    width: 100%;
+  }
   .search-field--active .search-field__input {
     border-radius: $border-radius $border-radius 0 0;
   }

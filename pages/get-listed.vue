@@ -2,7 +2,7 @@
   <main id="main" class="main">
     <AppMasthead title="Get Listed" tagline="Connect with your customers and get authentic reviews" />
 
-    <AppSection class="padding">
+    <AppSection class="narrow padding">
       <ContentDoc />
     </AppSection>
   </main>

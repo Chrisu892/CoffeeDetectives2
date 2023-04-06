@@ -15,7 +15,7 @@
         <LocationMapView v-if="view == 'map'" />
       </div>
       <div v-else>
-        Sorry, we couldn't find any cafe in this location.
+        Sorry, we couldn't find any cafe in this location. Did you find a cafe that you think should be listed here? <NuxtLink to="/contact">Get in touch</NuxtLink>.
       </div>
     </div>
 

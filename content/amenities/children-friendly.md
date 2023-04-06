@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Bring the whole family to our children-friendly cafes, where there's something for everyone. We offer a range of tasty treats and wholesome meals that both kids and adults will love. With play areas, activities, and child-friendly menus, our cafes provide a welcoming environment where kids can let their imaginations run wild while parents relax and unwind. Whether you're looking for a quick snack or a leisurely meal, we've got you covered. Come join us and experience a family-friendly atmosphere that's sure to put a smile on everyone's face.</p>

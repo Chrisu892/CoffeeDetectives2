@@ -20,3 +20,5 @@ head:
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
 ---
+
+<p>Stay comfortable during your visit to our cafes with clean and convenient restrooms. Our restrooms are designed with your comfort in mind, offering clean facilities and ample space for you to freshen up and take a break. Whether you're on the go or taking your time, our restrooms provide a private and welcoming environment that's perfect for a quick touch-up or a moment of relaxation. So come and enjoy our delicious coffee, snacks, and amenities, knowing that we've got your needs covered - even when nature calls!</p>
