@@ -1,6 +1,10 @@
 ---
-title: 'Explore Cafes and Coffee Blends Across Tyne & Wear'
+title: 'Home'
+longTitle: 'Explore Cafes and Coffee Blends Across Tyne & Wear'
 tagline: 'Discover the Perfect Cafe for Every Occassion'
+displayOrder: 1
+navigation: false
+type: 'page'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

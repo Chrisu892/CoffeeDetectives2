@@ -1,7 +1,10 @@
 
 <template>
-  <main id="main">
-    <HomeHero :title="page.title" :tagline="page.tagline" />
+  <main id="main" class="main">
+    <HomeHero :title="page.longTitle" :tagline="page.tagline">
+      <AppSearch :locations="locations" />
+    </HomeHero>
+
     <HomeIntro />
 
     <AppSection class="section--shade" title="Amenities" url="/amenities/">
@@ -39,24 +42,40 @@
 </template>
 
 <script setup lang="ts">
+  /**
+   * Import required dependencies
+   */
   import { Splide, SplideSlide } from '@splidejs/vue-splide'
   import '@splidejs/vue-splide/css'
 
+  /**
+   * Use page content in the head
+   */
   const { page } = useContent()
   useContentHead(page)
 
+  /**
+   * Fetch data required for the homepage
+   */
   const amenities = await queryContent('amenities').where({ type: { $eq: 'amenity' } }).limit(14).find()
-  const locations = await queryContent('locations').where({ altTitle: { $ne: 'Locations' } }).limit(20).find()
-  const cafes = await queryContent('cafes').where({ altTitle: { $ne: 'Cafes' } }).limit(12).find()
+  const locations = await queryContent('locations').where({ title: { $ne: 'Locations' } }).limit(20).find()
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(12).find()
   const articles = await queryContent('blog').where({ type: { $eq: 'article' } }).limit(3).find()
-  
-  const chunkSize = 5
-  const locationChunks = []
 
-   for (let i = 0; i < locations.length; i += chunkSize) {
+  /**
+   * Split the locations into 5 chunks
+   */
+  interface LocationChunks {}
+  const chunkSize = 5
+  const locationChunks: LocationChunks[] = []
+
+  for (let i = 0; i < locations.length; i += chunkSize) {
     locationChunks.push(locations.slice(i, i + chunkSize))
   }
 
+  /**
+   * Locations slider options
+   */
   const locationsSliderOptions = {
     rewind: false,
     gap: '2rem',
@@ -64,6 +83,9 @@
     perPage: 1
   }
 
+  /**
+   * General slider options
+   */
   const sliderOptions = {
     rewind: false,
     gap: '2rem',

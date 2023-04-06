@@ -1,9 +1,10 @@
 ---
-title: 'Waterstones Cafe'
-altTitle: 'Waterstones Cafe'
+title: 'Waterstones Café'
+altTitle: 'Waterstones Café'
 url: '/cafes/waterstones-cafe/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.82
+type: 'cafe'
 amenities:
   - title: 'Speciality Coffee'
     unique: true

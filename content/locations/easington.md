@@ -2,6 +2,7 @@
 title: 'Cafes in Easington'
 altTitle: 'Easington'
 url: '/locations/easington/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

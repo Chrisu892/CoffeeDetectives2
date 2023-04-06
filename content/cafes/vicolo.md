@@ -4,6 +4,7 @@ altTitle: 'Vicolo'
 url: '/cafes/vicolo/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.72
+type: 'cafe'
 amenities:
   - title: 'Speciality Coffee'
     unique: true

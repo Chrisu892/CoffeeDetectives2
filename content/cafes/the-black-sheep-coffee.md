@@ -4,6 +4,7 @@ altTitle: 'The Black Sheep Coffee'
 url: '/cafes/the-black-sheep-coffee/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.38
+type: 'cafe'
 amenities:
   - title: 'Speciality Coffee'
     unique: true

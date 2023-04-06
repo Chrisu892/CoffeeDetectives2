@@ -1,6 +1,8 @@
 ---
-title: 'Locations : Explore Cafes and Coffee Blends Across Tyne & Wear'
-altTitle: 'Locations'
+title: 'Locations'
+longTitle: 'Locations : Explore Cafes and Coffee Blends Across Tyne & Wear'
+displayOrder: 3
+type: 'page'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

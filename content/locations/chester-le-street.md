@@ -2,6 +2,7 @@
 title: 'Cafes in Chester-le-Street'
 altTitle: 'Chester-le-Street'
 url: '/locations/chester-le-street/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

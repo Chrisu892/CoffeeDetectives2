@@ -1,7 +1,9 @@
 ---
 title: 'Blog'
+longTitle: null
 url: '/blog/'
 type: 'page'
+displayOrder: 4
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

@@ -1,6 +1,8 @@
 ---
-title: 'Cafes : Explore Cafes and Coffee Blends Across Tyne & Wear'
-altTitle: 'Cafes'
+title: 'Cafés'
+longTitle: 'Cafés : Explore Cafés and Coffee Blends Across Tyne & Wear'
+displayOrder: 2
+type: 'page'
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'
@@ -9,7 +11,7 @@ image:
 head:
   meta:
     - name: 'keywords'
-      content: 'cafe finder, coffee shop locator, cafe reviews, cafe events, cafe news, speciality coffee, cafe blog, coffee culture'
+      content: 'café finder, coffee shop locator, café reviews, café events, café news, speciality coffee, café blog, coffee culture'
     - name: 'robots'
       content: 'index, follow'
     - name: 'author'

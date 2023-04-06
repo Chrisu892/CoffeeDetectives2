@@ -1,5 +1,5 @@
 <template>
-  <section class="plain-masthead">
+  <section v-if="crumbs.length > 0" class="plain-masthead">
     <div class="plain-masthead__breadcrumb">
       <div class="inner">
         <AppBreadcrumb v-if="crumbs.length > 0" :crumbs="crumbs" />
@@ -13,7 +13,7 @@
     props: {
       title: {
         type: String,
-        required: true
+        default: ''
       },
       showTitle: {
         type: Boolean,

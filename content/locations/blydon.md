@@ -2,6 +2,7 @@
 title: 'Cafes in Blydon'
 altTitle: 'Blydon'
 url: '/locations/blydon/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

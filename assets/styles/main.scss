@@ -4,9 +4,6 @@
     #GLOBAL
 \*-------------------------*/
 
-// html, body {
-//   overflow-x: hidden;
-// }
 body {
   background-color: $clr-white;
   font: $font-body;
@@ -61,7 +58,7 @@ select {
 
 h1, h2, h3, h4, h5, h6 {
   font: $font-header;
-  font-weight: $medium-weight;
+  font-weight: $bold-weight;
 }
 h1, .font-xxl {
   font-size: $font-xxl;

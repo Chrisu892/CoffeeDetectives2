@@ -2,6 +2,7 @@
 title: 'Cafes in Haughton-le-Spring'
 altTitle: 'Haughton-le-Spring'
 url: '/locations/haughton-le-spring/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

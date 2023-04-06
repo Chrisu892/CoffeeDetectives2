@@ -2,6 +2,7 @@
 title: 'Cafes in Tynemouth'
 altTitle: 'Tynemouth'
 url: '/locations/tynemouth/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

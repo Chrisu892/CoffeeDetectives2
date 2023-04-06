@@ -2,6 +2,7 @@
 title: 'Cafes in Gosforth'
 altTitle: 'Gosforth'
 url: '/locations/gosforth/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

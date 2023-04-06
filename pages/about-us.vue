@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main id="main" class="main">
     <AppMasthead title="About Us" tagline="About the Coffee Detectives and our mission" />
 
     <section class="section section--padding">

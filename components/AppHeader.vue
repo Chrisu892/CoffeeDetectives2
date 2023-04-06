@@ -1,11 +1,11 @@
 <template>
-  <header class="header" :class="{ 'header--absolute': isHome }">
+  <header class="header">
     <div class="inner header__container">
       <div class="header__logo">
         <AppLogo />
       </div>
       <div class="header__nav">
-        <AppNav />
+        <slot />
       </div>
     </div>
   </header>
@@ -32,7 +32,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 10;
+      z-index: 100;
     }
   }
   .header__container {

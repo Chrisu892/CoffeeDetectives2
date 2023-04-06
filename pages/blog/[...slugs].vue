@@ -36,7 +36,7 @@
     const { page } = useContent()
     useContentHead(page)
 
-    const articles = await queryContent('blog').where({ type: { $eq: 'article' }, title: { $ne: page.title } }).limit(3).find()
+    const articles = await queryContent('blog').where({ type: { $eq: 'article' } }).limit(3).find()
 </script>
 
 <style scoped lang="scss">

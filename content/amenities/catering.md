@@ -1,5 +1,5 @@
 ---
-title: 'Cafes with Catering'
+title: 'Cafés with Catering'
 altTitle: 'Catering'
 url: '/amenities/catering/'
 type: 'amenity'
@@ -9,10 +9,10 @@ image:
   width: 400
   height: 300
 head:
-  title: 'Cafes with Catering : Explore Cafes and Coffee Blends Across Tyne & Wear'
+  title: 'Cafés with Catering : Explore Cafés and Coffee Blends Across Tyne & Wear'
   meta:
     - name: 'keywords'
-      content: 'cafe finder, coffee shop locator, cafe reviews, cafe events, cafe news, speciality coffee, cafe blog, coffee culture'
+      content: 'café finder, coffee shop locator, café reviews, café events, café news, speciality coffee, café blog, coffee culture'
     - name: 'robots'
       content: 'index, follow'
     - name: 'author'

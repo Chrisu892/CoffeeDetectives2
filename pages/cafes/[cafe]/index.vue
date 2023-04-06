@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main id="main" class="main">
     <AppPlainMasthead />
 
     <section id="masthead" class="masthead">
@@ -80,7 +80,7 @@
   const { page } = useContent()
   useContentHead(page)
 
-  const cafes = await queryContent('cafes').where({ altTitle: { $ne: 'Cafes' } }).limit(6).find()
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(6).find()
 
   const options = {
     rewind: false,

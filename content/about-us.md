@@ -1,6 +1,8 @@
 ---
-title: 'About Us : Explore Cafes and Coffee Blends Across Tyne & Wear'
+title: 'Abous Us'
+longTitle: 'About Us : Explore Cafes and Coffee Blends Across Tyne & Wear'
 tagline: 'About the Coffee Detectives and our mission'
+displayOrder: 5
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

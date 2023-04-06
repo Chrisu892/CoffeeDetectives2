@@ -1,5 +1,7 @@
 ---
-title: 'Become a Detective : Explore Cafes and Coffee Blends Across Tyne & Wear'
+title: 'Become a Detective'
+longTitle: 'Become a Detective : Explore Cafes and Coffee Blends Across Tyne & Wear'
+navigation: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

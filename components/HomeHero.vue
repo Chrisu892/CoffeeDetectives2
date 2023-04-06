@@ -6,7 +6,7 @@
           <p class="hero__tagline font-xl">{{ tagline }}</p>
         </div>
         <div class="hero__search">
-          <AppSearch title="Browse over [x] cafes in Tyne & Wear" />
+          <slot />
         </div>
       </div>
     </section>
@@ -47,7 +47,7 @@
     color: $clr-white;
     margin: 0 auto;
     max-width: 900px;
-    padding: 12rem 0 2rem;
+    padding: 8rem 0 2rem;
     position: relative;
     text-align: center;
     z-index: 1;

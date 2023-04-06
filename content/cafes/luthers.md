@@ -4,6 +4,7 @@ altTitle: 'Luthers'
 url: '/cafes/luthers/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.44
+type: 'cafe'
 amenities:
   - title: 'Speciality Coffee'
     unique: true

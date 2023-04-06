@@ -4,6 +4,7 @@ altTitle: 'Backyard Bike Shop'
 url: '/cafes/backyard-bike-shop/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.89
+type: 'cafe'
 amenities:
   - title: 'Speciality Coffee'
     unique: true

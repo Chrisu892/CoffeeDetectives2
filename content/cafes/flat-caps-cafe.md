@@ -1,9 +1,10 @@
 ---
-title: 'Flat Caps Cafe'
-altTitle: 'Flat Caps Cafe'
+title: 'Flat Caps Café'
+altTitle: 'Flat Caps Café'
 url: '/cafes/flat-caps-cafe/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.91
+type: 'cafe'
 amenities:
   - title: 'Speciality Coffee'
     unique: true

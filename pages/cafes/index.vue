@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main id="main" class="main">
     <AppPlainMasthead :title="page.title" />
 
     <div class="section">
@@ -83,5 +83,5 @@
   const { page } = useContent()
   useContentHead(page)
 
-  const cafes = await queryContent('cafes').where({ altTitle: { $ne: 'Cafes' } }).limit(12).find()
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(12).find()
 </script>

@@ -14,7 +14,7 @@
       <ph-ticket v-if="amenity.altTitle == 'Live Events'" />
       <ph-leaf v-if="amenity.altTitle == 'Plant-based'" />
       <ph-lamp v-if="amenity.altTitle == 'Unique Decor'" />
-      <ph-wheelchair v-if="amenity.altTitle == 'Wheelchair Accessible'" />
+      <ph-wheelchair v-if="amenity.altTitle == 'Accessible'" />
       <div class="font-xs">{{ amenity.altTitle }}</div>
     </div>
   </NuxtLink>

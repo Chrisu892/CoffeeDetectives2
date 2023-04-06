@@ -2,6 +2,7 @@
 title: 'Cafes in Gateshead'
 altTitle: 'Gateshead'
 url: '/locations/gateshead/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

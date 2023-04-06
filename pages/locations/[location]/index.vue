@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main id="main" class="main">
     <AppPlainMasthead title="Cafes" />
 
     <div class="section">

@@ -2,6 +2,7 @@
 title: 'Cafes in South Shields'
 altTitle: 'South Shields'
 url: '/locations/south-shields/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

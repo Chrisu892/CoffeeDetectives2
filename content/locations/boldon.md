@@ -2,6 +2,7 @@
 title: 'Cafes in Boldon'
 altTitle: 'Boldon'
 url: '/locations/boldon/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

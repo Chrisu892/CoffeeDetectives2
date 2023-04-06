@@ -1,9 +1,10 @@
 ---
-title: 'Cafe Nero'
-altTitle: 'Cafe Nero'
+title: 'Café Nero'
+altTitle: 'Café Nero'
 url: '/cafes/cafe-nero/'
 abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.4
+type: 'cafe'
 amenities:
   - title: 'Speciality Coffee'
     unique: true

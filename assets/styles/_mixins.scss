@@ -7,3 +7,8 @@
     flex: calc(50% - 1rem) 0;
   }
 }
+
+@mixin flex-row {
+  display: flex;
+  flex-flow: row wrap;
+}

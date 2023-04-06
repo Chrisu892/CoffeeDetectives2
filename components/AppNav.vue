@@ -1,29 +1,29 @@
 <template>
   <div>
     <AppNavToggle />
-    
-    <nav class="flex-container flex-container--space-between flex-container--align-center nav">
-      <ul class="flex-container nav__list">
-        <li v-for="page, key in pages.primary" :key="key" class="nav__list-item">
-          <NuxtLink class="nav__list-link font-regular" :to="page.url" :title="`Go to ${page.title} page`">
+
+    <nav class="nav">
+      <ul class="nav__list nav__list--primary">
+        <li v-for="page, key in nav" :key="key" class="nav__item">
+          <NuxtLink class="nav__link font-regular" :to="page._path" :title="`Go to ${page.title}`">
             {{ page.title }}
-            <ph-caret-down v-if="page.children" />
+            <template v-if="page.title !== 'Blog' && page.title !== 'Cafés'">
+              <ph-caret-down v-if="page.children" />
+            </template>
           </NuxtLink>
-          <div v-if="page.children" class="__nav__group">
-            <ul class="nav__group" :class="`nav__group--${page.columnCount}`">
+          <div v-if="page.title !== 'Blog' && page.title !== 'Cafés' && page.children" class="__nav__group">
+            <ul class="nav__group">
               <li v-for="page, key in page.children" :key="key" class="nav__group__item">
-                <NuxtLink class="nav__group__link font-small" :to="page.url">{{ page.title }}</NuxtLink>
+                <NuxtLink class="nav__group__link font-small" :to="page._path">{{ page.title }}</NuxtLink>
               </li>
             </ul>
           </div>
         </li>
       </ul>
-      <ul class="flex-container flex-container--just-right nav__list">
-        <template v-for="page, key in pages.secondary">
-          <li v-if="page.status == 'live'" :key="key" class="nav__list-item">
-            <AppButton :to="page.url" :title="page.title" class="button--outlined-rev" />
-          </li>
-        </template>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <AppButton to="/get-listed/" title="Get Listed" class="button--outlined-rev" />
+        </li>
       </ul>
     </nav>
   </div>
@@ -108,19 +108,35 @@
           }]
         }
       }
+    },
+    props: {
+      nav: {
+        type: Array,
+        default: () => []
+      }
     }
   }
 </script>
 
 <style scoped lang="scss">
-  .nav__list-item {
+  .nav {
+    @include flex-row;
+  }
+  .nav__list {
+    @include flex-row;
+
+    &--primary {
+      flex: 1;
+    }
+  }
+  .nav__item {
     position: relative;
 
     &:not(:first-child) {
       margin-left: 0.5rem;
     }
   }
-  .nav__list-link {
+  .nav__link {
     color: $clr-white;
     display: inline-block;
     font-weight: $bold-weight;
@@ -129,7 +145,7 @@
     text-decoration-color: $clr-text;
     transition: opacity 350ms ease-in-out;
   }
-  .nav__list-link:hover {
+  .nav__item:hover .nav__link {
     text-decoration-color: $clr-text;
   }
 
@@ -138,7 +154,7 @@
     position: absolute;
     left: 0;
     top: auto;
-    z-index: 100;
+    z-index: 10;
     opacity: 0;
     visibility: hidden;
     transform: translateY(1rem);
@@ -157,7 +173,17 @@
       transform: rotate(45deg);
     }
   }
-  .nav__list-item:hover .__nav__group {
+  .nav__item:nth-last-child(1) .__nav__group,
+  .nav__item:nth-last-child(2) .__nav__group {
+    left: initial;
+    right: 0;
+
+    &::before {
+      left: initial;
+      right: 4rem;
+    }
+  }
+  .nav__item:hover .__nav__group {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -165,17 +191,10 @@
   .nav__group {
     background-color: $clr-white;
     border-radius: $border-radius;
+    column-count: 2;
+    column-gap: 2rem;
     min-width: 660px;
     padding: 1rem 1.5rem 1.5rem;
-
-    &--2 {
-      column-count: 2;
-      column-gap: 2rem;
-    }
-    &--3 {
-      column-count: 3;
-      column-gap: 2rem;
-    }
   }
   .nav__group__item {
     padding-top: 0.5rem;

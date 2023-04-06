@@ -1,5 +1,7 @@
 ---
-title: 'Get Listed : Explore Cafes and Coffee Blends Across Tyne & Wear'
+title: 'Get Listed'
+longTitle: 'Get Listed : Explore Cafes and Coffee Blends Across Tyne & Wear'
+navigation: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

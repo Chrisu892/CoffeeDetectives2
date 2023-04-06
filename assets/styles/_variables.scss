@@ -2,8 +2,19 @@
     #FONTS
 \*-------------------------*/
 
-$font-header: normal 18px/1.4 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
-$font-body: normal 18px/1.4 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
+@font-face {
+  font-family: 'Louis George Cafe';
+  font-display: swap;
+  src: url('/fonts/louis_george_caf/Louis George Cafe.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'Louis George Cafe Bold';
+  font-display: swap;
+  src: url('/fonts/louis_george_caf/Louis George Cafe Bold.ttf') format('truetype')
+}
+
+$font-header: normal 18px/1.4 'Louis George Cafe Bold', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
+$font-body: normal 18px/1.4 'Louis George Cafe', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
 $font-cursive: 'DM Serif Display', serif;
 
 $font-xxl: 3em;
@@ -29,6 +40,5 @@ $clr-shade: #efefef;
     #MISC.
 \*-------------------------*/
 
-$bold-weight: 700;
-$medium-weight: 500;
-$border-radius: 5px;
+$bold-weight: bold;
+$border-radius: 6px;

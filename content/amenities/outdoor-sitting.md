@@ -1,5 +1,5 @@
 ---
-title: 'Cafes with Outdoor Sittng'
+title: 'Cafés with Outdoor Sittng'
 altTitle: 'Outdoor Sitting'
 url: '/amenities/outdoor-sitting/'
 type: 'amenity'
@@ -9,10 +9,10 @@ image:
   width: 400
   height: 300
 head:
-  title: 'Cafes with Outdoor Sitting : Explore Cafes and Coffee Blends Across Tyne & Wear'
+  title: 'Cafés with Outdoor Sitting : Explore cafés and Coffee Blends Across Tyne & Wear'
   meta:
     - name: 'keywords'
-      content: 'cafe finder, coffee shop locator, cafe reviews, cafe events, cafe news, speciality coffee, cafe blog, coffee culture'
+      content: 'café finder, coffee shop locator, café reviews, café events, café news, speciality coffee, café blog, coffee culture'
     - name: 'robots'
       content: 'index, follow'
     - name: 'author'

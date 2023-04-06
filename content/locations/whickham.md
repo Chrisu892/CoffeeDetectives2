@@ -2,6 +2,7 @@
 title: 'Cafes in Whickham'
 altTitle: 'Whickham'
 url: '/locations/whickham/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178

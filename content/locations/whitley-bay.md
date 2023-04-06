@@ -2,6 +2,7 @@
 title: 'Cafes in Whitley Bay'
 altTitle: 'Whitley Bay'
 url: '/locations/whitley-bay/'
+type: 'location'
 geolocation:
   lat: 54.9783
   long: 1.6178
