@@ -48,6 +48,7 @@
   .amenity {
     align-items: center;
     background-color: $clr-white;
+    border: solid 1px $clr-white;
     border-radius: $border-radius;
     display: flex;
     flex: 14.28% 0;
@@ -55,15 +56,23 @@
     justify-content: center;
     padding: 2rem 1rem;
     text-align: center;
+    transition: border-color 350ms ease-in-out;
+    will-change: border-color;
 
     svg {
       font-size: $font-large;
+      transition: transform 350ms ease-in-out;
+      will-change: transform;
     }
-  }
-  .amenity__icon {
-    font-size: $font-xl;
-    display: flex;
-    align-items: center;
+
+    &:hover {
+      border: solid 1px $clr-secondary;
+      color: $clr-secondary;
+
+      svg {
+        transform: scale(1.1);
+      }
+    }
   }
   .amenity__title {
     margin: 1rem 0;
