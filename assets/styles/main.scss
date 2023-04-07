@@ -30,7 +30,10 @@ a:hover, a:focus {
 
 input[type="email"],
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="password"],
+input[type="url"],
+textarea {
   border: solid 2px $clr-white;
   border-radius: $border-radius;
   font-size: $font-regular;

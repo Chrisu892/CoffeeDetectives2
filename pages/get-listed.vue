@@ -4,6 +4,7 @@
 
     <AppSection class="narrow padding">
       <ContentDoc />
+      <AppButton to="/sign-up/" title="Create a Free Account" />
     </AppSection>
   </main>
 </template>

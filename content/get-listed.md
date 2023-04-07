@@ -8,6 +8,7 @@ image:
   width: 400
   height: 300
 head:
+  title: 'Get Listed : Explore Cafes and Coffee Blends Across Tyne & Wear'
   meta:
     - name: 'keywords'
       content: 'cafe finder, coffee shop locator, cafe reviews, cafe events, cafe news, speciality coffee, cafe blog, coffee culture'

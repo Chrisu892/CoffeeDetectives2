@@ -41,6 +41,9 @@
     &.padding-bottom {
       padding-bottom: 3rem;
     }
+    &.center {
+      text-align: center;
+    }
   }
   .section__content {
     h2, h3, h4, h5, h6 {

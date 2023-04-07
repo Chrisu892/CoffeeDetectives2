@@ -22,7 +22,7 @@
       </ul>
       <ul class="nav__list">
         <li class="nav__item">
-          <NuxtLink class="nav__link font-regular" to="get-listed">Get Listed</NuxtLink>
+          <NuxtLink class="nav__link font-regular" to="/get-listed">Get Listed</NuxtLink>
         </li>
       </ul>
     </nav>
