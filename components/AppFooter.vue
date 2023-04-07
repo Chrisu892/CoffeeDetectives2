@@ -3,7 +3,7 @@
     <div class="inner">
       <div class="flex-container flex-container--gutter footer__container">
         <div class="footer__col footer__col--first">
-          <AppLogo />
+          <AppLogo class="rev" />
           <div class="footer__detail footer__detail--first">
             We are independent reviewers of cafes, helping the citizens of Tyne and Wear find a place for a coffee break and help local businesses connect with their customers.
           </div>

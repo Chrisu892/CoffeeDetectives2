@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ 'home': isHome }">
     <div class="inner header__container">
       <div class="header__logo">
         <AppLogo />
@@ -23,18 +23,13 @@
 
 <style scoped lang="scss">
   .header {
-    background-color: $clr-secondary;
+    background-color: $clr-white;
     padding: 2rem 0;
     position: relative;
     z-index: 100;
 
-    &--absolute {
-      background-color: transparent;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
+    &.home {
+      background-color: $clr-secondary;
     }
   }
   .header__container {

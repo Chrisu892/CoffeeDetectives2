@@ -14,8 +14,9 @@
         <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="listing, key in content" :key="key" :cafe="listing" :view="view" />
         <LocationMapView v-if="view == 'map'" />
       </div>
-      <div v-else>
-        Sorry, we couldn't find any cafe in this location. Did you find a cafe that you think should be listed here? <NuxtLink to="/contact">Get in touch</NuxtLink>.
+      <div v-else class="content__empty">
+        <ph-smiley-sad />
+        <p class="content__empty__message">Sorry, we couldn't find any cafe in this location. Did you find a cafe that you think should be listed here? <NuxtLink to="/contact">Get in touch</NuxtLink>.</p>
       </div>
     </div>
 
@@ -31,11 +32,16 @@
 </template>
 
 <script>
-  import { PhSquaresFour, PhRows, PhMapPin } from 'phosphor-vue'
+  import { 
+    PhSquaresFour, 
+    PhRows, 
+    PhMapPin,
+    PhSmileySad
+  } from 'phosphor-vue'
 
   export default {
     components: {
-      PhSquaresFour, PhRows, PhMapPin
+      PhSquaresFour, PhRows, PhMapPin, PhSmileySad
     },
     props: {
       content: {
@@ -87,5 +93,20 @@
     flex-flow: row wrap;
     gap: 2rem;
     padding-bottom: 2rem;
+  }
+  .content__empty {
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
+    padding: 2rem;
+    text-align: center;
+
+    svg {
+      color: $clr-primary;
+      font-size: $font-xl;
+      margin-bottom: 0.75rem;
+    }
+  }
+  .content__empty__message {
+    margin: 0;
   }
 </style>

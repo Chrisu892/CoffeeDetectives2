@@ -48,6 +48,6 @@
     }
   }
   .section.narrow .inner {
-    max-width: 1024px;
+    max-width: 1120px;
   }
 </style>

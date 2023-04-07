@@ -2,7 +2,7 @@
   <main id="main" class="main">
     <AppPlainMasthead title="Cafes" />
 
-    <AppSection class="padding">
+    <AppSection class="padding-bottom">
       <AppListings :filters="filters" :listings="cafes" />
     </AppSection>
   </main>

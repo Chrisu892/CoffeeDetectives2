@@ -1,18 +1,35 @@
 <template>
-  <div class="range" :class="{ 'range--active': active }">
+  <div class="range" :class="{ 'active': active }">
     <button class="range__toggle" @click="toggle()">
       <div class="range__title font-regular">{{ title }}</div>
-      <div class="range__icon"><ph-caret-down /></div>
+      <div class="range__icon"><PhPlus /></div>
     </button>
-    <div class="__range__group">
+
+    <div class="__range__group" :class="{ 'active': active }">
       <div class="range__group">
-        <div class="range__field">
-          <label class="range__label font-small" for="min_price">From:</label>
-          <input class="range__input" id="min_price" type="number" :value="range.min" />
+        <div class="range__title">{{ title }}</div>
+        <div class="range__row">
+
+          <div class="range__input">
+            <label class="range__input__label" for="min_price">From:</label>
+            <div class="range__input__group">
+              <div class="range__input__symbol">&pound;</div>
+              <input class="range__input__field min" id="min_price" type="number" :value="range.min" />
+            </div>
+          </div>
+
+          <div class="range__input">
+            <label class="range__input__label" for="max_price">To:</label>
+            <div class="range__input__group">
+              <div class="range__input__symbol">&pound;</div>
+              <input class="range__input__field max" id="max_price" type="number" :value="range.max" />
+            </div>
+          </div>
+
         </div>
-        <div class="range__field">
-          <label class="range__label font-small" for="max_price">To:</label>
-          <input class="range__input font-small" id="max_price" type="number" :value="range.max" />
+        <div class="range__row">
+          <button class="range__input__button" @click="apply()">Apply</button>
+          <button class="range__input__button" @click="cancel()">Cancel</button>
         </div>
       </div>
     </div>
@@ -20,11 +37,11 @@
 </template>
 
 <script>
-  import { PhCaretDown } from 'phosphor-vue'
+  import { PhPlus } from 'phosphor-vue'
 
   export default {
     components: {
-      PhCaretDown
+      PhPlus
     },
     data() {
       return {
@@ -44,6 +61,13 @@
     methods: {
       toggle() {
         this.active = !this.active
+      },
+      apply() {
+        console.log('apply filter')
+      },
+      cancel() {
+        console.log('hide filter')
+        this.active = !this.active
       }
     }
   }
@@ -53,7 +77,6 @@
   .range {
     border: solid 1px $clr-shade;
     border-radius: $border-radius;
-    position: relative;
 
     &--active {
       border-color: $clr-shade;
@@ -85,34 +108,69 @@
     margin-left: 0.5rem;
     transform: translateY(2px) scale(1);
   }
-  .range--active .range__icon {
+  .range.active .range__icon {
     transform: translateY(-3px) scale(-1);
   }
 
   .__range__group {
-    display: none;
-    position: absolute;
-    top: auto;
-    left: -1px;
-    right: -1px;
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba($clr-text, 0.3);
+    visibility: hidden;
+    opacity: 0;
   }
-  .range--active .__range__group {
-    display: block;
+  .range.active .__range__group {
+    opacity: 1;
+    visibility: visible;
   }
   .range__group {
     background-color: $clr-white;
     border: solid 1px $clr-shade;
     border-top: 0;
-    border-radius: 0 0 $border-radius $border-radius;
+    border-radius: $border-radius;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 360px;
+    max-height: 420px;
+  }
+  .range__row {
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;
-    padding: 0 0.5rem 0.5rem;
-  }
-  .range__field {
-    flex: 1 0;
+    margin-top: 1rem;
   }
   .range__input {
-    padding: 0.5rem;
+    flex: 1 0;
+  }
+  .range__input__label {
+    display: block;
+  }
+  .range__input__group {
+    @include flex-row;
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
+    width: 100%;
+  }
+  .range__input__symbol {
+    background-color: $clr-shade;
+    padding: 0.75em;
+  }
+  .range__input__field {
+    flex: 1 0;
+    width: 100%;
+  }
+  .range__input__button {
+    background-color: $clr-primary;
+    border-radius: $border-radius;
+    cursor: pointer;
+    padding: 0.5em;
   }
 </style>

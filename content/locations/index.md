@@ -3,11 +3,12 @@ title: 'Locations'
 longTitle: 'Locations : Explore Cafes and Coffee Blends Across Tyne & Wear'
 displayOrder: 3
 type: 'page'
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/locations/fallback.jpeg'
+    alt: 'An image showcasing My Page.'
+    width: 400
+    height: 300
 head:
   title: 'Locations : Explore Cafes and Coffee Blends Across Tytne & Wear'
   meta:

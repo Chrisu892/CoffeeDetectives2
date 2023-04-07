@@ -1,6 +1,6 @@
 <template>
   <NuxtLink class="location" :class="{ 'location--slider': slider }" :to="location._path" :title="location.title">
-    <img class="location__image" :src="location.image._path" :alt="`Image of ${location.altTitle}`" />
+    <img class="location__image" :src="location.images.thumbnail.src" :alt="`Image of ${location.altTitle}`" />
     <div class="location__overlay">
       <div class="location__content">
         <div class="location__caption font-regular">Explore</div>
@@ -53,9 +53,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(1.05);
+    transition: transform 350ms ease-in-out;
+    will-change: transform;
+  }
+  .location:hover .location__image {
+    transform: scale(1);
   }
   .location__overlay {
-    background-color: $clr-secondary;
+    background-color: rgba($clr-secondary, 0.8);
     position: absolute;
     top: 0;
     left: 0;
@@ -67,9 +73,10 @@
     align-items: center;
     justify-content: center;
     transition: background-color 350ms ease-in-out;
+    will-change: background-color;
   }
   .location:hover .location__overlay {
-    background-color: $clr-secondary;
+    background-color: rgba($clr-secondary, 0.6);
   }
   .location__content {
     max-width: 300px;

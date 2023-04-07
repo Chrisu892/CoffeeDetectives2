@@ -3,8 +3,8 @@
     <label class="search-field__label" :for="title">{{ title }}</label>
     <input class="search-field__input" :id="title" type="text" :placeholder="placeholder" v-model="term" autocomplete="off" required />
     <ul class="search-field__autocomplete" v-show="active">
-      <li v-for="item, key in simpleSearch" :key="key" @click="toggle(item.title)" class="search-field__autocomplete__item">
-        {{ item.title }}
+      <li v-for="item, key in simpleSearch" :key="key" @click="toggle(item.altTitle)" class="search-field__autocomplete__item">
+        {{ item.altTitle }}
       </li>
     </ul>
   </div>
@@ -34,7 +34,7 @@
     },
     computed: {
       simpleSearch() {
-        if (this.term.trim().length > 2) {
+        if (this.term.trim().length > 0) {
           this.active = true
 
           const items = this.search.filter(item => {
@@ -43,13 +43,15 @@
 
           return items
         }
+        else {
+          this.active = false
+        }
       }
     },
     methods: {
       toggle(value) {
         this.term = value
         this.active = false
-        console.log(this.active)
       }
     }
   }

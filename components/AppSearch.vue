@@ -29,27 +29,22 @@
       locations: {
         type: Array,
         default: () => []
+      },
+      amenities: {
+        type: Array,
+        default: () => []
       }
     },
     data() {
       return {
         coffeeBlends: [
-          { title: 'Arabica', slug: 'arabica' },
-          { title: 'Robusta', slug: 'robusta' },
-          { title: 'Espresso', slug: 'espresso' },
-          { title: 'Mocha', slug: 'mocha' },
-          { title: 'Colombian', slug: 'colombian' },
-          { title: 'Ethiopian', slug: 'speciality' }
+          { title: 'Arabica', altTitle: 'Arabica', slug: 'arabica' },
+          { title: 'Robusta', altTitle: 'Robusta', slug: 'robusta' },
+          { title: 'Espresso', altTitle: 'Espresso', slug: 'espresso' },
+          { title: 'Mocha', altTitle: 'Mocha', slug: 'mocha' },
+          { title: 'Colombian', altTitle: 'Colombian', slug: 'colombian' },
+          { title: 'Ethiopian', altTitle: 'Ethiopian', slug: 'ethiopian' }
         ],
-        amenities: [
-          { title: 'Free Wi-Fi', slug: 'free-wifi' },
-          { title: 'Outdoor Sitting', slug: 'outdoor-sitting' },
-          { title: 'Power Outlets', slug: 'power-outlets' },
-          { title: 'Restrooms', slug: 'restrooms' },
-          { title: 'Books & Magazines', slug: 'books-magazines' },
-          { title: 'Live Music & Entertainment', slug: 'live-music-entertainment' },
-          { title: 'Loyalty Programs', slug: 'loyalty-programs' }
-        ]
       }
     }
   }
@@ -57,8 +52,8 @@
 
 <style scoped lang="scss">
   .search {
-    background-color: $clr-third;
-    border-radius: 40px;
+    @include formal-invitation-pattern;
+    border-radius: $border-radius;
     box-shadow: 0 0 15px 5px rgba($clr-text, 0.3);
     color: $clr-white;
     padding: 2rem;

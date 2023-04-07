@@ -13,11 +13,12 @@ history: null
 landmarks: null
 climate: null
 economy: null
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/locations/fallback.jpeg'
+    alt: 'An image showcasing My Page.'
+    width: 400
+    height: 300
 head:
   title: 'Cafes in Hebburn : Explore Cafes and Coffee Blends Across Tyne & Wear'
   meta:

@@ -2,7 +2,7 @@
   <div class="filter" :class="{ 'filter--active': active }">
     <button class="filter__toggle font-regular" @click="toggle()">
       <div class="filter__title">{{ title }}</div>
-      <div class="filter__icon"><ph-caret-down /></div>
+      <div class="filter__icon"><PhPlus /></div>
     </button>
     <div class="__filter__group">
       <ul class="filter__group">
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-  import { PhCaretDown } from 'phosphor-vue'
+  import { PhPlus } from 'phosphor-vue'
 
   export default {
     components: {
-      PhCaretDown,
+      PhPlus
     },
     data() {
       return {

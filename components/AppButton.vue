@@ -14,8 +14,13 @@
         type: String,
         required: true
       },
-      to: String,
-      btnType: String,
+      to: {
+        type: String,
+        default: ''
+      },
+      btnType: {
+        type: String
+      }
     }
   }
 </script>
@@ -39,6 +44,15 @@
     &--outlined {
       background-color: transparent;
       color: $clr-primary;
+    }
+
+    &.plain {
+      background: none;
+      border: none;
+
+      &:hover {
+        background-color: $clr-shade;
+      }
     }
   }
 </style>

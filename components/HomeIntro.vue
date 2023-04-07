@@ -1,40 +1,46 @@
 <template>
-  <section class="section intro">
-    <div class="intro__background">
-      <div class="inner inner--narrow">
-        <div class="intro__container">
-          <div class="intro__col">
-            <div class="intro__picture">
-              <picture>
-                <img class="intro__picture__image" src="/images/coffee-and-cookies.png" alt="" />
-              </picture>
-            </div>
+  <AppSection class="padding">
+    <div class="intro">
+      <div class="intro__container">
+        <div class="intro__col">
+          <div class="intro__picture">
+            <picture>
+              <img class="intro__picture__image" src="/images/coffee-and-cookies.png" alt="" />
+            </picture>
           </div>
-          <div class="intro__col">
-            <h2 class="intro__title font-large">Tyne & Wear Coffee Detectives</h2>
-            <p class="intro__text font-regular">We are independent reviewers of cafes in Tyne & Wear, who love to explore and find new places for a perfect coffee break.</p>
-            <p class="intro__text font-regular">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus, hic consequatur pariatur ipsum maxime!</p>
-            <div class="intro__action">
-              <AppButton to="/cafes/" title="Find a Cafe" />
-            </div>
+        </div>
+        <div class="intro__col">
+          <h2 class="intro__title font-large">Tyne & Wear Coffee Detectives</h2>
+          <p class="intro__text font-regular">We are independent reviewers of cafes in Tyne & Wear, who love to explore and find new places for a perfect coffee break.</p>
+          <p class="intro__text font-regular">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus, hic consequatur pariatur ipsum maxime!</p>
+          <div class="intro__action">
+            <AppButton to="/cafes/" title="Find a Cafe" />
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </AppSection>
 </template>
 
 <style scoped lang="scss">
   .intro {
-    background: linear-gradient(180deg, $clr-white 50%, $clr-shade 50%);
-  }
-  .intro__background {
-    background-color: $clr-white;
-    padding: 9rem 0 4rem;
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
+    margin-top: 5rem;
+    padding: 2rem;
   }
   .intro__container {
-    @include flex-grid;
+    @include flex-row;
     align-items: center;
+    gap: $gutter;
+  }
+  .intro__col {
+    flex: 1 0;
+
+    &:first-child {
+      border-radius: $border-radius;
+      padding: $gutter;
+    }
   }
   .intro__text {
     margin-top: 1rem;
@@ -47,9 +53,9 @@
     background-color: $clr-secondary;
     border-radius: 35% 100%;
     margin: 0 auto;
-    padding-top: 70%;
+    padding-top: 60%;
     position: relative;
-    width: 70%;
+    width: 60%;
   }
   .intro__picture__image {
     position: absolute;

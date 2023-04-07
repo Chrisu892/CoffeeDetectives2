@@ -1,22 +1,29 @@
 <template>
-  <NuxtLink to="/" title="Go to homepage" class="logo">
+  <NuxtLink to="/" title="Go to homepage" class="logo" :class="{ 'rev': isHome }">
     The Coffee Detectives
   </NuxtLink>
 </template>
 
+<script lang="ts">
+  export default {
+    computed: {
+      isHome() {
+        return this.$route.path === '/'
+      }
+    }
+  }
+</script>
+
 <style scoped lang="scss">
   .logo {
-    align-items: center;
-    color: $clr-white;
-    display: inline-flex;
+    @include flex-row;
     font-family: $font-cursive;
     font-size: 1.75rem;
     letter-spacing: 0.5px;
     line-height: 1;
-    text-decoration: none;
 
-    &--rev {
-      color: $clr-text;
+    &.rev {
+      color: $clr-white;
     }
   }
   .logo__graphic {

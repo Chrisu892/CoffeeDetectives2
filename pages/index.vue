@@ -2,12 +2,12 @@
 <template>
   <main id="main" class="main">
     <HomeHero :title="page.longTitle" :tagline="page.tagline">
-      <AppSearch :locations="locations" />
+      <AppSearch :locations="locations" :amenities="amenities" />
     </HomeHero>
 
     <HomeIntro />
 
-    <AppSection class="padding shade" title="Amenities" url="/amenities/">
+    <AppSection class="padding shade" title="Browse by Amenity" url="/amenities/">
       <div class="flex-container flex-container--gutter">
         <AppAmenityListing v-for="amenity, key in amenities" :key="key" :amenity="amenity" />
       </div>

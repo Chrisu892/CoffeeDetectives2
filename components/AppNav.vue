@@ -2,7 +2,7 @@
   <div>
     <AppNavToggle />
 
-    <nav class="nav">
+    <nav class="nav" :class="{ 'home': isHome }">
       <ul class="nav__list nav__list--primary">
         <li v-for="page, key in nav" :key="key" class="nav__item">
           <NuxtLink class="nav__link font-regular" :to="page._path" :title="`Go to ${page.title}`">
@@ -114,6 +114,11 @@
         type: Array,
         default: () => []
       }
+    },
+    computed: {
+      isHome() {
+        return this.$route.path === '/'
+      }
     }
   }
 </script>
@@ -140,7 +145,7 @@
     }
   }
   .nav__link {
-    color: $clr-white;
+    color: $clr-text;
     display: inline-block;
     font-weight: $bold-weight;
     letter-spacing: 0.5px;
@@ -148,6 +153,9 @@
     padding: 0.475rem 1.725rem;
     text-decoration-color: $clr-text;
     transition: opacity 350ms ease-in-out;
+  }
+  .nav.home .nav__link {
+    color: $clr-white;
   }
   .nav__item:hover .nav__link {
     text-decoration-color: $clr-text;
@@ -173,7 +181,7 @@
       left: 4rem;
       width: 1rem;
       height: 1rem;
-      background-color: $clr-white;
+      background-color: $clr-secondary;
       transform: rotate(45deg);
     }
   }
@@ -193,18 +201,17 @@
     transform: translateY(0);
   }
   .nav__group {
-    background-color: $clr-white;
+    background-color: $clr-secondary;
     border-radius: $border-radius;
     column-count: 2;
     column-gap: 2rem;
     min-width: 660px;
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
   .nav__group__item {
     margin: 0;
   }
   .nav__group__link {
-    color: inherit;
-    text-decoration-color: inherit;
+    color: $clr-white;
   }
 </style>
