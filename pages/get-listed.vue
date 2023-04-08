@@ -13,7 +13,7 @@
 
     <AppSection class="narrow padding">
       <ContentDoc />
-      <AppButton to="/sign-up" title="Create a Free Account" />
+      <AppButton to="/sign-up" btnType="link" title="Create a Free Account" />
     </AppSection>
   </main>
 </template>

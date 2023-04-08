@@ -1,5 +1,5 @@
 <template>
-  <button v-if="btnType == 'button'" class="button" :title="title">
+  <button v-if="['button', 'submit'].includes(btnType)" class="button" :type="btnType" :title="title">
     <span class="button__inner">{{ title }}</span>
   </button>
   <NuxtLink v-else class="button" :to="to" :title="`Go to ${title} page`">
@@ -19,7 +19,8 @@
         default: ''
       },
       btnType: {
-        type: String
+        type: String,
+        default: 'button'
       }
     }
   }

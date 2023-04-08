@@ -1,9 +1,21 @@
 <script>
-  import { PhGauge, PhChartBar, PhWrench, PhSignOut } from 'phosphor-vue'
+  import { PhGauge, PhChartBar, PhWrench, PhSignOut, PhImage, PhTicket } from 'phosphor-vue'
 
   export default {
     components: {
-      PhGauge, PhChartBar, PhWrench, PhSignOut
+      PhGauge, PhChartBar, PhWrench, PhSignOut, PhImage, PhTicket
+    },
+    data() {
+      return {
+        nav: [
+          { title: 'Dashboard', tagline: 'The overview of your café', url: '/account', icon: 'PhGauge' },
+          { title: 'Analytics', tagline: 'Track the performance of your café', url: '/account/analytics', icon: 'PhChartBar' },
+          { title: 'Gallery', tagline: 'Add or update images shown on your café', url: '/account/gallery', icon: 'PhImage' },
+          { title: 'Promotions', tagline: 'Add or manage existing promotions', url: '/account/promotions', icon: 'PhTicket' },
+          { title: 'Settings', tagline: 'Update your account or café details', url: '/account/settings', icon: 'PhWrench' },
+          { title: 'Sign Out', tagline: 'Securely sign out from your account', url: '/sign-out', icon: 'PhSignOut' }
+        ]
+      }
     }
   }
 </script>
@@ -14,45 +26,23 @@
       <AppLogo class="rev" />
     </div>
     <ul class="nav__list">
-      <li class="nav__item">
-        <NuxtLink class="nav__link" to="/account">
-          <PhGauge />
+      <li v-for="link, key in nav" :key="key" class="nav__item">
+        <NuxtLink class="nav__link" :to="link.url">
+          <PhGauge v-if="link.icon == 'PhGauge'" />
+          <PhChartBar v-if="link.icon == 'PhChartBar'" />
+          <PhImage v-if="link.icon == 'PhImage'" />
+          <PhWrench v-if="link.icon == 'PhWrench'" />
+          <PhSignOut v-if="link.icon == 'PhSignOut'" />
+          <PhTicket v-if="link.icon == 'PhTicket'" />
           <span class="nav__link__content">
-            <span class="nav__link__title">Dashboard</span>
-            <span class="nav__link__text font-xs">The overview of your cafe</span>
-          </span>
-        </NuxtLink>
-      </li>
-      <li class="nav__item">
-        <NuxtLink class="nav__link" to="/account/analytics">
-          <PhChartBar />
-          <span class="nav__link__content">
-            <span class="nav__link__title">Analytics</span>
-            <span class="nav__link__text font-xs">Track the performance of your cafe</span>
-          </span>
-        </NuxtLink>
-      </li>
-      <li class="nav__item">
-        <NuxtLink class="nav__link" to="/account/settings">
-          <PhWrench />
-          <span class="nav__link__content">
-            <span class="nav__link__title">Settings</span>
-            <span class="nav__link__text font-xs">Update account or cafe details</span>
-          </span>
-        </NuxtLink>
-      </li>
-      <li class="nav__item">
-        <NuxtLink class="nav__link" to="/sign-out">
-          <PhSignOut />
-          <span class="nav__link__content">
-            <span class="nav__link__title">Sign Out</span>
-            <span class="nav__link__text font-xs">Securely sign out from your account</span>
+            <span class="nav__link__title">{{ link.title }}</span>
+            <span class="nav__link__text font-xs">{{ link.tagline }}</span>
           </span>
         </NuxtLink>
       </li>
     </ul>
     <div class="nav__version font-xs">
-      <div>Version 0.0.1</div>
+      <div>Coffee Maker v.0.0.2</div>
     </div>
   </nav>
 </template>

@@ -10,12 +10,22 @@
 </template>
 
 <style scoped lang="scss">
+  html, body {
+    overflow: hidden;
+  }
   .dashboard {
     @include flex-row;
     background-color: $clr-shade;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .dashboard__aside {
+    height: 100vh;
+    overflow-y: auto;
   }
   .dashboard__main {
     flex: 1 0;
-    padding: 1.25rem;
+    height: 100vh;
+    overflow-y: scroll;
   }
 </style>
