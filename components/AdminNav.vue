@@ -51,7 +51,7 @@
   .nav {
     display: flex;
     flex-flow: column;
-    background-color: $clr-dark;
+    background-color: $clr-secondary;
     height: 100vh;
     min-width: 300px;
   }
@@ -80,7 +80,7 @@
     }
 
     &:hover {
-      background-color: lighten($clr-dark, 3%);
+      background-color: lighten($clr-secondary, 3%);
     }
   }
   .nav__link__content {

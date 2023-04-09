@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  definePageMeta({
-    layout: "account"
-  })
+  const { page } = useContent()
+  useContentHead(page)
+  definePageMeta({ layout: "account" })
 </script>
 
 <script lang="ts">
@@ -42,7 +42,7 @@
 
 <template>
   <main id="main" class="main">
-    <AdminHeader title="Analytics" />
+    <AdminHeader title="Analytics" icon="PhChartBar" />
 
     <AdminCard v-for="card, key in cards" :key="key" :title="card.title" :help="card.help">
       {{ card.content }}

@@ -1,6 +1,8 @@
 <script setup lang="ts">
-  definePageMeta({ layout: "account" })
+  const { page } = useContent()
   const amenities = await queryContent('amenities').where({ type: { $eq: 'amenity' } }).find()
+  useContentHead(page)
+  definePageMeta({ layout: "account" })
 </script>
 
 <script lang="ts">
@@ -42,7 +44,7 @@
 
 <template>
   <main id="main" class="main">
-    <AdminHeader title="Settings" />
+    <AdminHeader title="Settings" icon="PhWrench" />
 
     <form method="post" action="">
       <AdminCard v-for="form, key in forms" :key="key" :title="form.title">
@@ -55,7 +57,8 @@
       </AdminCard>
 
       <AdminCard title="Danger Zone" type="danger">
-        Do you really want to delete your account? This action is irreversible!
+        <p>Do you really want to delete your account? This action is irreversible!</p>
+        <AppButton type="submit" name="delete" title="Yes, delete my account" class="button--outlined" />
       </AdminCard>
 
       <AdminAction>

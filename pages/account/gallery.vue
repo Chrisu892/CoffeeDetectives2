@@ -1,19 +1,21 @@
 <script setup lang="ts">
-  definePageMeta({
-    layout: "account"
-  })
+  const { page } = useContent()
+  useContentHead(page)
+  definePageMeta({ layout: "account" })
 </script>
 
 <template>
   <main id="main" class="main">
-    <AdminHeader title="Gallery" />
+    <AdminHeader title="Gallery" icon="PhImage" />
 
     <AdminCard title="Thumbnail Image">
-
+      <AdminImage />
     </AdminCard>
 
     <AdminCard title="Gallery Images">
-
+      <AdminImage size="small" />
+      <AdminImage size="small" />
+      <AdminImage size="small" />
     </AdminCard>
 
     <AdminAction>

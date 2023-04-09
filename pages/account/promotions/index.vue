@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  definePageMeta({
-    layout: "account"
-  })
+  const { page } = useContent()
+  useContentHead(page)
+  definePageMeta({ layout: "account" })
 </script>
 
 <script lang="ts">
@@ -53,7 +53,7 @@
 
 <template>
   <main id="main" class="main">
-    <AdminHeader title="Promotions" :create="create" />
+    <AdminHeader title="Promotions" icon="PhTicket" :create="create" />
 
     <AdminRow v-for="row, key in rows" :key="key" :row="row" />
   </main>

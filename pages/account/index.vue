@@ -1,12 +1,12 @@
 <script setup lang="ts">
-  definePageMeta({
-    layout: "account"
-  })
+  const { page } = useContent()
+  useContentHead(page)
+  definePageMeta({ layout: "account" })
 </script>
 
 <template>
   <main id="main" class="main">
-    <AdminHeader title="Dashboard" />
+    <AdminHeader title="Dashboard" icon="PhGauge" />
     <AdminCard title="Recent Activity">
       
     </AdminCard>
