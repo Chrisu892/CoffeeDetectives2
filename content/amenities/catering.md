@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Catering'
-altTitle: 'Catering'
+title: 'Catering'
+altTitle: 'Cafés with Catering'
 url: '/amenities/catering/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

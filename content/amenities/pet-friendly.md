@@ -1,8 +1,9 @@
 ---
-title: 'Pet-friendly Cafés'
-altTitle: 'Pet-friendly'
+title: 'Pet-friendly'
+altTitle: 'Pet-friendly Cafés'
 url: '/amenities/pet-friendly/'
 type: 'amenity'
+show: true
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

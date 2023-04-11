@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Outdoor Sittng'
-altTitle: 'Outdoor Sitting'
+title: 'Outdoor Sitting'
+altTitle: 'Cafés with Outdoor Sittng'
 url: '/amenities/outdoor-sitting/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

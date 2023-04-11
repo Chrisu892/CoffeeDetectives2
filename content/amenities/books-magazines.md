@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Books & Magazines'
-altTitle: 'Books & Magazines'
+title: 'Books & Magazines'
+altTitle: 'Cafés with Books & Magazines'
 url: '/amenities/books-magazines/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

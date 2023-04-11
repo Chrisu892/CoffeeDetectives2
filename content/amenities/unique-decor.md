@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Unique Decor'
-altTitle: 'Unique Decor'
+title: 'Unique Decor'
+altTitle: 'Cafés with Unique Decor'
 url: '/amenities/unique-decor/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

@@ -1,24 +1,3 @@
-<template>
-  <form id="search" class="search" method="post">
-    <p v-if="title" class="search__title font-medium"><strong>{{ title }}</strong></p>
-    
-    <div class="search__container">
-      <div class="search__field">
-        <AppSearchField title="Place or Location" :search="locations" placeholder="Where are you going?" />
-      </div>
-      <div class="search__field">
-        <AppSearchField title="Coffee Blend" :search="coffeeBlends" />
-      </div>
-      <div class="search__field">
-        <AppSearchField title="Amenities" :search="amenities" />
-      </div>
-      <div class="search__action">
-        <AppButton btnType="button" title="Search" />
-      </div>
-    </div>
-  </form>
-</template>
-
 <script>
   export default {
     props: {
@@ -37,18 +16,46 @@
     },
     data() {
       return {
+        location: {
+          type: 'text',
+          id: 'location',
+          required: true,
+          title: 'Place or Location',
+          placeholder: 'Where are you going?'
+        },
         coffeeBlends: [
-          { title: 'Arabica', altTitle: 'Arabica', slug: 'arabica' },
-          { title: 'Robusta', altTitle: 'Robusta', slug: 'robusta' },
-          { title: 'Espresso', altTitle: 'Espresso', slug: 'espresso' },
-          { title: 'Mocha', altTitle: 'Mocha', slug: 'mocha' },
-          { title: 'Colombian', altTitle: 'Colombian', slug: 'colombian' },
-          { title: 'Ethiopian', altTitle: 'Ethiopian', slug: 'ethiopian' }
+          { id: 'arabica', title: 'Arabica', altTitle: 'Arabica', slug: 'arabica', show: true },
+          { id: 'robusta', title: 'Robusta', altTitle: 'Robusta', slug: 'robusta', show: true },
+          { id: 'espresso', title: 'Espresso', altTitle: 'Espresso', slug: 'espresso', show: true },
+          { id: 'mocha', title: 'Mocha', altTitle: 'Mocha', slug: 'mocha', show: false },
+          { id: 'colombian', title: 'Colombian', altTitle: 'Colombian', slug: 'colombian', show: false },
+          { id: 'ethiopian', title: 'Ethiopian', altTitle: 'Ethiopian', slug: 'ethiopian', show: false }
         ],
       }
     }
   }
 </script>
+
+<template>
+  <form id="search" class="search" method="post">
+    <p v-if="title" class="search__title font-medium"><strong>{{ title }}</strong></p>
+    
+    <div class="search__container">
+      <div class="search__field">
+        <FormField :field="location" />
+      </div>
+      <div class="search__field">
+        <FormOpenSelect title="Coffee Blends" :options="coffeeBlends" />
+      </div>
+      <div class="search__field">
+        <FormOpenSelect title="Amenities" :options="amenities" />
+      </div>
+      <div class="search__action">
+        <AppButton btnType="button" title="Search" />
+      </div>
+    </div>
+  </form>
+</template>
 
 <style scoped lang="scss">
   .search {

@@ -1,21 +1,21 @@
 <template>
   <NuxtLink class="amenity" :to="amenity._path" :title="amenity.title">
     <div class="amenity__content">
-      <ph-wifi-high v-if="amenity.altTitle == 'Free Wi-Fi'" />
-      <ph-cloud-sun v-if="amenity.altTitle == 'Outdoor Sitting'" />
-      <ph-plug v-if="amenity.altTitle == 'Power Outlets'" />
-      <ph-toilet v-if="amenity.altTitle == 'Restrooms'" />
-      <ph-book-open v-if="amenity.altTitle == 'Books & Magazines'" />
-      <ph-microphone-stage v-if="amenity.altTitle == 'Live Music'" />
-      <ph-sparkle v-if="amenity.altTitle == 'Loyalty Programs'" />
-      <ph-paw-print v-if="amenity.altTitle == 'Pet-friendly'" />
-      <ph-baby v-if="amenity.altTitle == 'Children-friendly'" />
-      <ph-pizza v-if="amenity.altTitle == 'Catering'" />
-      <ph-ticket v-if="amenity.altTitle == 'Live Events'" />
-      <ph-leaf v-if="amenity.altTitle == 'Vegan'" />
-      <ph-lamp v-if="amenity.altTitle == 'Unique Decor'" />
-      <ph-wheelchair v-if="amenity.altTitle == 'Accessible'" />
-      <div class="font-xs">{{ amenity.altTitle }}</div>
+      <ph-wifi-high v-if="amenity.title == 'Free Wi-Fi'" />
+      <ph-cloud-sun v-if="amenity.title == 'Outdoor Sitting'" />
+      <ph-plug v-if="amenity.title == 'Power Outlets'" />
+      <ph-toilet v-if="amenity.title == 'Restrooms'" />
+      <ph-book-open v-if="amenity.title == 'Books & Magazines'" />
+      <ph-microphone-stage v-if="amenity.title == 'Live Music'" />
+      <ph-sparkle v-if="amenity.title == 'Loyalty Programs'" />
+      <ph-paw-print v-if="amenity.title == 'Pet-friendly'" />
+      <ph-baby v-if="amenity.title == 'Children-friendly'" />
+      <ph-pizza v-if="amenity.title == 'Catering'" />
+      <ph-ticket v-if="amenity.title == 'Live Events'" />
+      <ph-leaf v-if="amenity.title == 'Vegan'" />
+      <ph-lamp v-if="amenity.title == 'Unique Decor'" />
+      <ph-wheelchair v-if="amenity.title == 'Accessible'" />
+      <div class="font-xs">{{ amenity.title }}</div>
     </div>
   </NuxtLink>
 </template>

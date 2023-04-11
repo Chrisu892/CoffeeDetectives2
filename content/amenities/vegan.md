@@ -1,8 +1,9 @@
 ---
-title: 'Vegan Cafés'
-altTitle: 'Vegan'
+title: 'Vegan'
+altTitle: 'Vegan Cafés'
 url: '/amenities/vegan/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

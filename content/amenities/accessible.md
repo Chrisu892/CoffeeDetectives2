@@ -1,8 +1,9 @@
 ---
-title: 'Accessible Cafés'
-altTitle: 'Accessible'
+title: 'Accessible'
+altTitle: 'Accessible Cafés'
 url: '/amenities/accessible/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

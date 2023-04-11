@@ -36,7 +36,7 @@
   }
   .social__link {
     align-items: center;
-    background-color: $clr-secondary;
+    background-color: darken($clr-secondary, 3%);
     border-radius: 30px 20px;
     color: $clr-white;
     display: inline-flex;

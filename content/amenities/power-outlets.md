@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Power Outlets'
-altTitle: 'Power Outlets'
+title: 'Power Outlets'
+altTitle: 'Cafés with Power Outlets'
 url: '/amenities/power-outlets/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

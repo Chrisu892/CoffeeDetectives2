@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Free Wi-Fi'
-altTitle: 'Free Wi-Fi'
+title: 'Free Wi-Fi'
+altTitle: 'Cafés with Free Wi-Fi'
 url: '/amenities/free-wifi/'
 type: 'amenity'
+show: true
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

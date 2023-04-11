@@ -22,15 +22,15 @@
           </ul>
         </div>
         <div class="footer__col footer__col--align-right">
-          <h2 class="footer__title font-regular">New Reviews</h2>
+          <h2 class="footer__title font-regular">New Cafes</h2>
           <ul class="footer__list">
-            <li v-for="page, key in reviews" :key="key" class="footer__list-item">
+            <li v-for="page, key in cafes" :key="key" class="footer__list-item">
               <NuxtLink class="footer__list-link" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
             </li>
           </ul>
         </div>
         <div class="footer__col footer__col--align-right">
-          <h2 class="footer__title font-regular">Locations</h2>
+          <h2 class="footer__title font-regular">Popular Locations</h2>
           <ul class="footer__list">
             <li v-for="page, key in destinations" :key="key" class="footer__list-item">
               <NuxtLink class="footer__list-link" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>
@@ -58,30 +58,28 @@
     data() {
       return {
         pages: [
-          { title: 'Reviews', url: '/reviews/' },
-          { title: 'Locations', url: '/locations/' },
-          { title: 'Blog', url: '/blog/' },
-          { title: 'About', url: '/about-us/' },
-          { title: 'Get Listed', url: '/get-listed/' },
-          { title: 'Become a Detective', url: '/become-a-detective/' },
-          { title: 'Contact', url: '/contact/' }
+          { title: 'Become a Detective', url: '/become-a-detective' },
+          { title: 'Get Listed', url: '/get-listed' },
+          { title: 'Your Account', url: '/account' },
+          { title: 'Contact', url: '/contact' },
+          { title: 'About', url: '/about-us' },
+          { title: 'Blog', url: '/blog' }
         ],
-        reviews: [
-          { title: 'Flat Caps Cafe', url: '/reviews/flat-caps-cafe/' },
-          { title: 'Cafe Nero', url: '/reviews/cafe-nero-eldon-sq/' },
-          { title: 'Waterstones Cafe', url: '/reviews/waterstones-newcastle/' },
-          { title: 'Luther\'s NSU Bar', url: '/reviews/luthers-newcastle-university/' },
-          { title: 'Habita NUSU Bar', url: '/reviews/habita-northumbria-university/' },
-          { title: 'Vicolo', url: '/reviews/vicolo-tyneside-cinema/' },
-          { title: 'View all', url: '/reviews/' }
+        cafes: [
+          { title: 'Flat Caps Café', url: '/cafes/flat-caps-cafe' },
+          { title: 'Café Nero', url: '/cafes/cafe-nero' },
+          { title: 'Waterstones Café', url: '/cafes/waterstones-cafe' },
+          { title: 'Luther\'s NSU Bar', url: '/cafes/luthers' },
+          { title: 'Vicolo', url: '/cafes/vicolo' },
+          { title: 'View all', url: '/cafes/' }
         ],
         destinations: [
-          { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/' },
-          { title: 'Tynemouth', url: '/locations/tynemouth/' },
-          { title: 'Whitley Bay', url: '/locations/whitley-bay/' },
-          { title: 'South Shields', url: '/locations/south-shields/' },
-          { title: 'Gateshead', url: '/locations/gateshead/' },
-          { title: 'View all', url: '/locations/' }
+          { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne' },
+          { title: 'Tynemouth', url: '/locations/tynemouth' },
+          { title: 'Whitley Bay', url: '/locations/whitley-bay' },
+          { title: 'South Shields', url: '/locations/south-shields' },
+          { title: 'Gateshead', url: '/locations/gateshead' },
+          { title: 'View all', url: '/locations' }
         ],
         settings: {
           site_name: 'The Coffee Detectives',
@@ -171,7 +169,11 @@
       }
     }
   }
-  .copyright__text:nth-child(1) {
-    flex: 1 0;
+  .copyright__text {
+    margin: 0;
+
+    &:nth-child(1) {
+      flex: 1 0;
+    }
   }
 </style>

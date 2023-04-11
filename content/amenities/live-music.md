@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Live Music'
-altTitle: 'Live Music'
+title: 'Live Music'
+altTitle: 'Cafés with Live Music'
 url: '/amenities/live-music/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

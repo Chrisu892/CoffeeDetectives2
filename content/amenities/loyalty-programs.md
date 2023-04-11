@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Loyalty Programs'
-altTitle: 'Loyalty Programs'
+title: 'Loyalty Programs'
+altTitle: 'Cafés with Loyalty Programs'
 url: '/amenities/loyalty-programs/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

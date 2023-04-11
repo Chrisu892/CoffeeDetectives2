@@ -1,8 +1,9 @@
 ---
-title: 'Cafés with Restrooms'
-altTitle: 'Restrooms'
+title: 'Restrooms'
+altTitle: 'Cafés with Restrooms'
 url: '/amenities/restrooms/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

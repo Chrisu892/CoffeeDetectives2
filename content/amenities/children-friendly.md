@@ -1,8 +1,9 @@
 ---
-title: 'Children-friendly Cafés'
-altTitle: 'Children-friendly'
+title: 'Children-friendly'
+altTitle: 'Children-friendly Cafés'
 url: '/amenities/children-friendly/'
 type: 'amenity'
+show: false
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'
