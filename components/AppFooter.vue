@@ -22,7 +22,7 @@
           </ul>
         </div>
         <div class="footer__col footer__col--align-right">
-          <h2 class="footer__title font-regular">New Cafes</h2>
+          <h2 class="footer__title font-regular">New Cafés</h2>
           <ul class="footer__list">
             <li v-for="page, key in cafes" :key="key" class="footer__list-item">
               <NuxtLink class="footer__list-link" :to="page.url" :title="`Go to ${page.title} page`">{{ page.title }}</NuxtLink>

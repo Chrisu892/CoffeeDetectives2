@@ -5,7 +5,7 @@
           <h1 class="hero__title font-regular">{{ title }}</h1>
           <p class="hero__tagline font-xl">{{ tagline }}</p>
           <div class="hero__action">
-            <AppButton class="button--outlined" to="#search" title="Start Exploring" />
+            <AppButton class="rev animate" to="#search" title="Start Exploring" />
           </div>
         </div>
         <div class="hero__search">

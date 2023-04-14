@@ -1,17 +1,3 @@
-<template>
-  <article class="article">
-    <NuxtLink class="article__thumbnail" :to="article._path" :title="`Read more about ${article.title}`">
-      <img class="article__thumbnail-image" :src="article.images.thumbnail" :alt="article.title" />
-    </NuxtLink>
-    <div class="article__details">
-      <h3 class="article__title font-medium">
-        <NuxtLink :to="article._path" :title="`Read ${article.title}`">{{ article.title }}</NuxtLink>
-      </h3>
-      <p class="article__tagline font-regular">{{ article.abstract }}</p>
-    </div>
-  </article>
-</template>
-
 <script>
   export default {
     props: {
@@ -22,6 +8,22 @@
     }
   }
 </script>
+
+
+<template>
+  <article class="article">
+    <NuxtLink class="article__thumbnail" :to="article._path" :title="`Read more about ${article.title}`">
+      <img class="article__thumbnail-image" :src="article.images.thumbnail" :alt="article.title" />
+    </NuxtLink>
+    <div class="article__details">
+      <h3 class="article__title font-medium">
+        <NuxtLink :to="article._path" :title="`Read ${article.title}`">{{ article.title }}</NuxtLink>
+      </h3>
+      <p class="article__tagline font-regular">{{ article.abstract }}</p>
+      <NuxtLink class="article__link font-regular" :to="article._path" title="Read a full story">Read full story</NuxtLink>
+    </div>
+  </article>
+</template>
 
 <style scoped lang="scss">
   .article {
@@ -49,5 +51,17 @@
   }
   .article__tagline {
     margin-top: 1rem;
+  }
+  .article__link {
+    display: inline-block;
+    font-weight: $bold-weight;
+    margin-top: 0.75rem;
+    text-decoration: underline dashed $clr-secondary 2px;
+    text-decoration-color: rgba($clr-secondary, 0.3);
+    text-underline-offset: 7px;
+
+    &:hover {
+      text-decoration: underline dashed $clr-secondary 2px;
+    }
   }
 </style>

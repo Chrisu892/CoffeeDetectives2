@@ -40,24 +40,24 @@
 <template>
   <div class="select" :class="{ 'active': dropdown }">
     <div class="select__label">{{ title }}</div>
-  </div>
-  <div class="select__container">
-    <template v-for="option, key in options">
-      <button v-if="option.show" :key="key" class="select__option" :class="{ 'active': selected.has(option.title) }" type="button" @click="toggle(option.title)">
-        <span class="select__option__checkbox"></span> {{ option.title }}
-      </button>
-    </template>
-
-    <button class="select__button" type="button" @click="showDropDown">
-      <PhCaretDown />
-    </button>
-
-    <div v-if="dropdown" class="select__group">
+    <div class="select__container">
       <template v-for="option, key in options">
-        <button v-if="!option.show" :key="key" class="select__group__option font-small" :class="{ 'active': selected.has(option.title) }" type="button" @click="toggle(option.title)">
+        <button v-if="option.show" :key="key" class="select__option" :class="{ 'active': selected.has(option.title) }" type="button" @click="toggle(option.title)">
           <span class="select__option__checkbox"></span> {{ option.title }}
         </button>
       </template>
+
+      <button class="select__button" type="button" @click="showDropDown">
+        <PhCaretDown />
+      </button>
+
+      <div v-show="dropdown" class="select__group">
+        <template v-for="option, key in options">
+          <button v-if="!option.show" :key="key" class="select__group__option font-small" :class="{ 'active': selected.has(option.title) }" type="button" @click="toggle(option.title)">
+            <span class="select__option__checkbox"></span> {{ option.title }}
+          </button>
+        </template>
+      </div>
     </div>
   </div>
 </template>
@@ -111,6 +111,13 @@
 
     &:hover {
       background-color: darken($clr-white, 5%);
+    }
+
+    svg {
+      color: $clr-secondary;
+      display: inline-block;
+      height: 16px;
+      width: 16px;
     }
   }
   .select.active .select__button svg {

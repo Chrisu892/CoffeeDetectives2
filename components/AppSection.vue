@@ -1,14 +1,3 @@
-<template>
-  <section class="section">
-    <div class="inner">
-      <AppFeature :title="title" :url="url" />
-      <div class="section__content">
-        <slot />
-      </div>
-    </div>
-  </section>
-</template>
-
 <script>
   export default {
     props: {
@@ -23,6 +12,17 @@
     }
   }
 </script>
+
+<template>
+  <section class="section">
+    <div class="inner">
+      <AppFeature :title="title" :url="url" />
+      <div class="section__content">
+        <slot />
+      </div>
+    </div>
+  </section>
+</template>
 
 <style scoped lang="scss">
   .section {

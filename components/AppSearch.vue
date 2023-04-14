@@ -3,7 +3,7 @@
     props: {
       title: {
         type: String,
-        default: 'Find a cafe in Tyne & Wear'
+        default: 'Find a café in Tyne & Wear'
       },
       locations: {
         type: Array,
@@ -51,7 +51,7 @@
         <FormOpenSelect title="Amenities" :options="amenities" />
       </div>
       <div class="search__action">
-        <AppButton btnType="button" title="Search" />
+        <AppButton btnType="submit" title="Search" class="primary" icon="magnifying-glass" />
       </div>
     </div>
   </form>

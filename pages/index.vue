@@ -1,46 +1,3 @@
-
-<template>
-  <main id="main" class="main">
-    <HomeHero :title="page.longTitle" :tagline="page.tagline">
-      <AppSearch :locations="locations" :amenities="amenities" />
-    </HomeHero>
-
-    <HomeIntro />
-
-    <AppSection class="padding shade" title="Browse by Amenity" url="/amenities/">
-      <div class="flex-container flex-container--gutter">
-        <AppAmenityListing v-for="amenity, key in amenities" :key="key" :amenity="amenity" />
-      </div>
-    </AppSection>
-
-    <AppSection class="padding" title="Popular Locations" url="/locations/">
-      <Splide :options="locationsSliderOptions">
-        <SplideSlide v-for="chunk, key in locationChunks" :key="key">
-          <div class="grid-container">
-            <AppLocationListing v-for="location, key in chunk" :key="key" :location="location" :slider="true" />
-          </div>
-        </SplideSlide>
-      </Splide>
-    </AppSection>
-
-    <AppSection class="padding shade" title="Popular Cafes" url="/cafes/">
-      <Splide :options="sliderOptions">
-        <SplideSlide v-for="cafe, key in cafes" :key="key">
-          <AppCafeListing :cafe="cafe" view="grid" />
-        </SplideSlide>
-      </Splide>
-    </AppSection>
-
-    <AppSection class="padding" title="Latest News" url="/blog/">
-      <div class="flex-container flex-container--gutter">
-        <AppArticleListing v-for="article, key in articles" :key="key" :article="article" />
-      </div>
-    </AppSection>
-
-    <AppSocialMedia />
-  </main>
-</template>
-
 <script setup lang="ts">
   /**
    * Import required dependencies
@@ -93,3 +50,45 @@
     perPage: 3
   }
 </script>
+
+<template>
+  <main id="main" class="main">
+    <HomeHero :title="page.longTitle" :tagline="page.tagline">
+      <AppSearch :locations="locations" :amenities="amenities" />
+    </HomeHero>
+
+    <HomeIntro />
+
+    <AppSection class="padding shade" title="Browse by Amenity" url="/amenities/">
+      <div class="flex-container flex-container--gutter">
+        <AppAmenityListing v-for="amenity, key in amenities" :key="key" :amenity="amenity" />
+      </div>
+    </AppSection>
+
+    <AppSection class="padding" title="Popular Locations" url="/locations/">
+      <Splide :options="locationsSliderOptions">
+        <SplideSlide v-for="chunk, key in locationChunks" :key="key">
+          <div class="grid-container">
+            <AppLocationListing v-for="location, key in chunk" :key="key" :location="location" :slider="true" />
+          </div>
+        </SplideSlide>
+      </Splide>
+    </AppSection>
+
+    <AppSection class="padding shade" title="Popular Cafés" url="/cafes/">
+      <Splide :options="sliderOptions">
+        <SplideSlide v-for="cafe, key in cafes" :key="key">
+          <AppCafeListing :cafe="cafe" view="grid" />
+        </SplideSlide>
+      </Splide>
+    </AppSection>
+
+    <AppSection class="padding" title="Latest News" url="/blog/">
+      <div class="flex-container flex-container--gutter">
+        <AppArticleListing v-for="article, key in articles" :key="key" :article="article" />
+      </div>
+    </AppSection>
+
+    <AppSocialMedia />
+  </main>
+</template>

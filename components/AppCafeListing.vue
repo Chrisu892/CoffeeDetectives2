@@ -1,10 +1,32 @@
+<script>
+  import { PhStar, PhMapPinLine, PhPhone, PhClock } from 'phosphor-vue'
+
+  export default {
+    components: {
+      PhStar,
+      PhMapPinLine,
+      PhPhone,
+      PhClock,
+    },
+    props: {
+      cafe: {
+        type: Object,
+        required: true
+      },
+      view: {
+        type: String,
+        default: 'list'
+      }
+    }
+  }
+</script>
+
 <template>
   <article class="cafe" :class="`cafe--${view}`">
     <div class="cafe__thumbnail">
       <NuxtLink class="cafe__thumbnail-link" :to="cafe._path" :title="`Read more about ${cafe.title}`">
         <img class="cafe__thumbnail-image" :src="cafe.images.thumbnail" :alt="cafe.title" />
       </NuxtLink>
-      <div class="cafe__thumbnail-logo"></div>
     </div>
 
     <div class="cafe__content">
@@ -35,33 +57,14 @@
           <div class="cafe__detail-icon"><PhClock /></div>
           <div class="font-small">Open now, closes at 7:30pm</div>
         </div>
+
+        <div class="cafe__action">
+          <AppButton btnType="link" :to="cafe._path" title="View Café" class="animate" />
+        </div>
       </div>
     </div>
   </article>
 </template>
-
-<script>
-  import { PhStar, PhMapPinLine, PhPhone, PhClock } from 'phosphor-vue'
-
-  export default {
-    components: {
-      PhStar,
-      PhMapPinLine,
-      PhPhone,
-      PhClock,
-    },
-    props: {
-      cafe: {
-        type: Object,
-        required: true
-      },
-      view: {
-        type: String,
-        default: 'list'
-      }
-    }
-  }
-</script>
 
 <style scoped lang="scss">
   .cafe {
@@ -112,15 +115,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .cafe__thumbnail-logo {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    width: 22%;
-    padding-top: 22%;
-    background-color: $clr-shade;
-    border-radius: 100%;
   }
 
   .cafe__content {
@@ -233,6 +227,6 @@
   }
 
   .cafe__action {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 </style>

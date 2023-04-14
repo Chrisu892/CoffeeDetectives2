@@ -1,34 +1,3 @@
-<template>
-  <div>
-    <AppNavToggle />
-
-    <nav class="nav" :class="{ 'home': isHome }">
-      <ul class="nav__list nav__list--primary">
-        <li v-for="page, key in nav" :key="key" class="nav__item">
-          <NuxtLink class="nav__link font-regular" :to="page._path" :title="`Go to ${page.title}`">
-            {{ page.title }}
-            <template v-if="page.title !== 'Blog' && page.title !== 'Cafés'">
-              <ph-caret-down v-if="page.children" />
-            </template>
-          </NuxtLink>
-          <div v-if="page.title !== 'Blog' && page.title !== 'Cafés' && page.children" class="__nav__group">
-            <ul class="nav__group">
-              <li v-for="page, key in page.children" :key="key" class="nav__group__item">
-                <NuxtLink class="nav__group__link font-small" :to="page._path">{{ page.title }}</NuxtLink>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <NuxtLink class="nav__link font-regular" to="/get-listed">Get Listed</NuxtLink>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</template>
-
 <script>
   import { PhCaretDown } from 'phosphor-vue';
 
@@ -123,6 +92,37 @@
   }
 </script>
 
+<template>
+  <div>
+    <AppNavToggle />
+
+    <nav class="nav" :class="{ 'home': isHome }">
+      <ul class="nav__list nav__list--primary">
+        <li v-for="page, key in nav" :key="key" class="nav__item">
+          <NuxtLink class="nav__link font-regular" :to="page._path" :title="`Go to ${page.title}`">
+            {{ page.title }}
+            <template v-if="page.title !== 'Blog' && page.title !== 'Cafés'">
+              <ph-caret-down v-if="page.children" />
+            </template>
+          </NuxtLink>
+          <div v-if="page.title !== 'Blog' && page.title !== 'Cafés' && page.children" class="__nav__group">
+            <ul class="nav__group">
+              <li v-for="page, key in page.children" :key="key" class="nav__group__item">
+                <NuxtLink class="nav__group__link font-small" :to="page._path">{{ page.title }}</NuxtLink>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <NuxtLink class="nav__link font-regular" to="/get-listed">Get Listed</NuxtLink>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
 <style scoped lang="scss">
   .nav {
     @include flex-row;
@@ -153,6 +153,13 @@
     padding: 0.475rem 1.725rem;
     text-decoration-color: $clr-text;
     transition: opacity 350ms ease-in-out;
+
+    svg {
+      color: $clr-primary;
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+    }
   }
   .nav.home .nav__link {
     color: $clr-white;

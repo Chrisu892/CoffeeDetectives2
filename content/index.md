@@ -1,7 +1,7 @@
 ---
 title: 'Home'
-longTitle: 'Explore Cafes and Coffee Blends Across Tyne & Wear'
-tagline: 'Discover the Perfect Cafe for Every Occassion'
+longTitle: 'Explore Cafés and Coffee Blends Across Tyne & Wear'
+tagline: 'Discover the Perfect Café for Every Occassion'
 displayOrder: 1
 navigation: false
 type: 'page'
@@ -11,10 +11,10 @@ image:
   width: 400
   height: 300
 head:
-  title: 'Explore Cafes and Coffee Blends Across Tytne & Wear'
+  title: 'Explore Cafés and Coffee Blends Across Tytne & Wear'
   meta:
     - name: 'keywords'
-      content: 'cafe finder, coffee shop locator, cafe reviews, cafe events, cafe news, speciality coffee, cafe blog, coffee culture'
+      content: 'café finder, coffee shop locator, café reviews, cafe events, café news, speciality coffee, café blog, coffee culture'
     - name: 'robots'
       content: 'index, follow'
     - name: 'author'

@@ -1,15 +1,3 @@
-<template>
-  <div class="search-field" :class="{ 'search-field--active': active }">
-    <label class="search-field__label" :for="title">{{ title }}</label>
-    <input class="search-field__input" :id="title" type="text" :placeholder="placeholder" v-model="term" autocomplete="off" required />
-    <ul class="search-field__autocomplete" v-show="active">
-      <li v-for="item, key in simpleSearch" :key="key" @click="toggle(item.altTitle)" class="search-field__autocomplete__item">
-        {{ item.altTitle }}
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script>
   export default {
     props: {
@@ -56,6 +44,18 @@
     }
   }
 </script>
+
+<template>
+  <div class="search-field" :class="{ 'search-field--active': active }">
+    <label class="search-field__label" :for="title">{{ title }}</label>
+    <input class="search-field__input" :id="title" type="text" :placeholder="placeholder" v-model="term" autocomplete="off" required />
+    <ul class="search-field__autocomplete" v-show="active">
+      <li v-for="item, key in simpleSearch" :key="key" @click="toggle(item.altTitle)" class="search-field__autocomplete__item">
+        {{ item.altTitle }}
+      </li>
+    </ul>
+  </div>
+</template>
 
 <style scoped lang="scss">
   .search-field {

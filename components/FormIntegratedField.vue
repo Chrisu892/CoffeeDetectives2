@@ -1,7 +1,7 @@
 <template>
   <div class="input">
-    <input class="input__field" :type="type" :placeholder="placeholder" />
-    <button class="input__button" type="button">Sign Up</button>
+    <input class="input__field" :type="type" required :placeholder="placeholder" />
+    <button class="input__button" type="submit">Sign Up</button>
   </div>
 </template>
 

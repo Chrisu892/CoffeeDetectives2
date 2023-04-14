@@ -14,7 +14,7 @@
           <p class="intro__text font-regular">We are independent reviewers of cafes in Tyne & Wear, who love to explore and find new places for a perfect coffee break.</p>
           <p class="intro__text font-regular">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus, hic consequatur pariatur ipsum maxime!</p>
           <div class="intro__action">
-            <AppButton to="/cafes/" title="Find a Cafe" />
+            <AppButton to="/cafes" title="Find a Café" class="animate" />
           </div>
         </div>
       </div>
@@ -24,6 +24,7 @@
 
 <style scoped lang="scss">
   .intro {
+    @include subtle-formal-invitation-pattern;
     border: solid 1px $clr-shade;
     border-radius: $border-radius;
     margin-top: 5rem;

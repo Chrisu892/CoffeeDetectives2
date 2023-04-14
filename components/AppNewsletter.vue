@@ -11,7 +11,7 @@
             <p class="newsletter__tagline font-regular">And stay up-to-date with news and updates from Tyne & Wear</p>
           </div>
         </div>
-        <form class="newsletter__action">
+        <form method="post" action="" class="newsletter__action">
           <FormIntegratedField type="email" placeholder="Type your email address..." />
         </form>
       </div>
