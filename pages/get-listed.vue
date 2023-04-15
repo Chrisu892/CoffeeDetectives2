@@ -11,9 +11,9 @@
   <main id="main" class="main">
     <AppMasthead title="Get Listed" tagline="Connect with your customers and get authentic reviews" />
 
-    <AppSection class="narrow padding">
+    <AppSection class="padding">
       <ContentDoc />
-      <AppButton to="/sign-up" btnType="link" title="Create a Free Account" />
+      <AppButton to="/sign-up" title="Create a Free Account" class="animate" />
     </AppSection>
   </main>
 </template>

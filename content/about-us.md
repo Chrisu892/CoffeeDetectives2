@@ -1,15 +1,16 @@
 ---
 title: 'Abous Us'
-longTitle: 'About Us : Explore Cafes and Coffee Blends Across Tyne & Wear'
-tagline: 'About the Coffee Detectives and our mission'
+longTitle: 'About Us : Explore Cafés and Coffee Blends Across Tyne & Wear'
+tagline: 'Who we are, our mission and values'
 displayOrder: 5
+toc: true
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'
   width: 400
   height: 300
 head:
-  title: 'About Us : Explore Cafes and Coffee Blends Across Tytne & Wear'
+  title: 'About Us : Explore Cafés and Coffee Blends Across Tytne & Wear'
   meta:
     - name: 'keywords'
       content: 'cafe finder, coffee shop locator, cafe reviews, cafe events, cafe news, speciality coffee, cafe blog, coffee culture'
@@ -21,7 +22,7 @@ head:
       content: '© 2023 The Coffee Detectives'
 ---
 
-## We are independent reviewers of cafes
+## Independent reviewers of cafés
 <p>Our reviewers are people like you, the coffee lovers who explore new places and try different coffee roasts. We love finding new places and write reviews about our experiences to help other people find the a place to enjoy a cup of coffee while reading a book, studying, working or catching up with friends and family. So far, we have listed 34 cafes in 12 locations across Tyne and Wear.</p>
 
 ### How it works?

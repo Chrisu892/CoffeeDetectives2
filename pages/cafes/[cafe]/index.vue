@@ -10,8 +10,8 @@
             <p class="masthead__location font-regular"><ph-map-pin /> {{ page.address }}</p>
             <p class="masthead__tagline font-regular">{{ page.abstract }}</p>
             <div class="masthead__action">
-              <AppButton to="#reviews" title="Read Reviews" />
-              <AppButton v-if="!page.owner" to="/get-listed?cafe=1" title="Claim Yours" class="button--outlined" />
+              <AppButton to="#reviews" title="Read Reviews" class="solid animate" />
+              <AppButton v-if="!page.owner" to="/get-listed?cafe=1" title="Claim Yours" class="animate" />
             </div>
           </div>
           <div class="masthead__gallery">

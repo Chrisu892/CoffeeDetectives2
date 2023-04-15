@@ -21,8 +21,8 @@
         <p class="image__info">Format: jpeg, Dimensions: 600px by 400px, File Size: 145kb</p>
       </div>
       <div class="image__actions">
-        <AppButton btnType="button" title="Replace Image" />
-        <AppButton class="button--outlined" btnType="button" title="Delete Image" />
+        <AppButton btnType="button" title="Replace Image" class="animate" />
+        <AppButton btnType="button" title="Delete Image" class="animate" />
       </div>
     </div>
   </article>

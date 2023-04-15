@@ -1,43 +1,59 @@
+<script>
+  export default {
+    props: {
+      title: { 
+        type: String, 
+        required: true 
+      },
+      tagline: { 
+        type: String, 
+        required: true 
+      }
+    }
+  }
+</script>
+
 <template>
   <section id="masthead" class="masthead">
-    <div class="masthead__overlay">
-      <div class="inner">
-        <div class="masthead__content">
-          <h1 class="masthead__title font-large">{{ title }}</h1>
-          <p class="masthead__tagline font-regular">{{ tagline }}</p>
+    <div class="inner">
+      <div class="masthead__container">
+        <div class="masthead__col masthead__content">
+          <h1 class="masthead__title font-xl">{{ title }}</h1>
+          <p class="masthead__tagline font-medium">{{ tagline }}</p>
+        </div>
+        <div class="masthead__col masthead__header">
+          <img class="masthead__header-image" src="/images/about-us.png" alt="" />
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-  export default {
-    props: {
-      title: { type: String, required: true },
-      tagline: { type: String, required: true }
-    }
-  }
-</script>
-
 <style scoped lang="scss">
   .masthead {
-    background: url('/images/newcastle-gateshead.jpeg') center center/cover no-repeat;
+    @include subtle-formal-invitation-pattern;
+    overflow: hidden;
   }
-  .masthead__overlay {
-    background-color: $clr-secondary;
-    padding: 6rem 0;
+  .masthead__container {
+    @include flex-row;
   }
-  .masthead--homepage .masthead__overlay {
-    padding: 6.5rem 0 9rem;
+  .masthead__col {
+    flex: 1 0;
   }
   .masthead__content {
-    color: $clr-white;
-    margin: 0 auto;
-    max-width: 1024px;
-    text-align: center;
+    padding: 7rem 0;
   }
   .masthead__tagline {
-    margin-top: 0.75rem;
+    margin: 0;
+  }
+  .masthead__header {
+    position: relative;
+  }
+  .masthead__header-image {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 60%;
+    height: auto;
   }
 </style>

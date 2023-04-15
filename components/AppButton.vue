@@ -42,6 +42,7 @@
   .button {
     appearance: none;
     align-items: center;
+    background-color: transparent;
     border: solid 1px $clr-secondary;
     border-radius: $border-radius;
     color: $clr-secondary;

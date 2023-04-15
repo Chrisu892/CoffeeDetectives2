@@ -17,6 +17,11 @@
         type: String,
         default: 'list'
       }
+    },
+    computed: {
+      newTab() {
+        return this.cafe.newTab ? true : false
+      }
     }
   }
 </script>
@@ -32,7 +37,7 @@
     <div class="cafe__content">
       <div class="cafe__section cafe__section--flex">
         <h3 class="cafe__title font-medium">
-          <NuxtLink :to="cafe._path" :title="`Read more about ${cafe.title}`">{{ cafe.title }}</NuxtLink>
+          <NuxtLink :to="cafe._path" :title="`Read more about ${cafe.title}`" :target="newTab">{{ cafe.title }}</NuxtLink>
         </h3>
         <button v-if="cafe.rating" class="cafe__rating font-small">
           <PhStar /> <span class="cafe__rating-score">{{ cafe.rating }}</span>
@@ -59,7 +64,7 @@
         </div>
 
         <div class="cafe__action">
-          <AppButton btnType="link" :to="cafe._path" title="View Café" class="animate" />
+          <AppButton btnType="link" :to="cafe._path" title="View Café" :target="newTab" class="animate" />
         </div>
       </div>
     </div>

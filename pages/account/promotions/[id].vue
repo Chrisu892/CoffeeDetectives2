@@ -21,7 +21,8 @@
           {
             title: 'Settings',
             fields: [
-            { title: 'Status', type: 'select', id: 'status', required: true, selected: 'active', options: ['live', 'private', 'draft'] }
+              { title: 'Status', type: 'select', id: 'status', required: true, selected: 'active', options: ['live', 'private', 'draft'] },
+              { title: 'Display Order', type: 'number', id: 'displayOrder', required: true, default: 0 }
             ]
           },
           {
@@ -46,11 +47,12 @@
       </AdminCard>
 
       <AdminCard title="Danger Zone" type="danger">
-        Do you really want to delete this offer? This action is irreversible!
+        <p>Do you really want to delete this promotion? This action is irreversible!</p>
+        <AppButton btnType="button" title="Delete [promotion]" class="animate" />
       </AdminCard>
 
       <AdminAction>
-        <AppButton btnType="submit" title="Save Offer" />
+        <AppButton btnType="submit" title="Save Promotion" class="animate" />
       </AdminAction>
     </form>
   </main>

@@ -1,14 +1,3 @@
-<template>
-  <ul class="flex-container socials">
-    <li v-for="social, key in socials" class="social__item">
-      <a class="social__link" :href="social.url" :title="`View ${social.title} (opens in a new tab)`" target="_blank" rel="nofollow noopener">
-        <PhTwitterLogo v-if="social.title == 'Twitter'" />
-        <PhInstagramLogo v-if="social.title == 'Instagram'" />
-      </a>
-    </li>
-  </ul>
-</template>
-
 <script>
   import { PhLinkedinLogo, PhTwitterLogo, PhBehanceLogo, PhInstagramLogo } from 'phosphor-vue'
 
@@ -27,12 +16,28 @@
   }
 </script>
 
+<template>
+  <ul class="flex-container socials">
+    <li v-for="social, key in socials" class="social__item">
+      <a class="social__link" :href="social.url" :title="`View ${social.title} (opens in a new tab)`" target="_blank" rel="nofollow noopener">
+        <PhTwitterLogo v-if="social.title == 'Twitter'" />
+        <PhInstagramLogo v-if="social.title == 'Instagram'" />
+      </a>
+    </li>
+  </ul>
+</template>
+
 <style scoped lang="scss">
   .socials {
     margin-top: 2rem;
   }
-  .social__item:not(:first-child) {
-    margin-left: 1rem;
+  .social__item {
+    margin: 0;
+    padding: 0;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
   }
   .social__link {
     align-items: center;

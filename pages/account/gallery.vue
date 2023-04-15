@@ -12,14 +12,14 @@
       <AdminImage />
     </AdminCard>
 
-    <AdminCard title="Gallery Images">
+    <AdminCard title="Image Gallery">
       <AdminImage size="small" />
       <AdminImage size="small" />
       <AdminImage size="small" />
     </AdminCard>
 
     <AdminAction>
-      <AppButton type="submit" title="Update Gallery" />
+      <AppButton type="submit" title="Update Gallery" class="animate" />
     </AdminAction>
   </main>
 </template>

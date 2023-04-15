@@ -15,8 +15,8 @@
         </ol>
 
         <div class="form__action">
-          <AppButton v-if="(key + 1) < steps.length" btnType="link" :to="step.action.url" :title="`${step.action.title}: ${steps[key + 1].title}`" :icon="step.action.icon" />
-          <AppButton v-else :to="step.action.url" btnType="link" :title="step.action.title" :icon="step.action.icon" />
+          <AppButton v-if="(key + 1) < steps.length" :to="step.action.url" :title="`${step.action.title}: ${steps[key + 1].title}`" :icon="step.action.icon" class="animate" />
+          <AppButton v-else :to="step.action.url" :title="step.action.title" :icon="step.action.icon" class="animate" />
         </div>
       </div>
     </AppSection>

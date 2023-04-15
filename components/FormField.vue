@@ -19,14 +19,18 @@
       {{ field.title }}
       <span v-if="!field.required" class="form-field__optional">Optional</span>
     </label>
-    <input v-if="['text', 'email', 'url', 'password', 'date'].includes(field.type)" class="form-field__input" :id="field.id" :type="field.type" :required="field.required" :value="field.default ?? ''" :placeholder="field.placeholder ?? ''" />
+
+    <input v-if="['text', 'email', 'url', 'password', 'date', 'number'].includes(field.type)" class="form-field__input" :id="field.id" :type="field.type" :required="field.required" :value="field.default ?? ''" :placeholder="field.placeholder ?? ''" />
+    
     <textarea v-if="field.type == 'textarea'" class="form-field__input" :id="field.id" :required="field.required" :placeholder="field.placeholder ?? ''"></textarea>
+    
     <div v-if="options.length > 0 && field.type == 'multiselect'" class="form-field__multiselect">
       <label v-for="option, key in options" :key="key" class="form-field__multiselect__label" :for="option._id">
         <input class="form-field__multiselect__input" type="checkbox" :id="option._id" /> {{ option.altTitle }}
       </label>
       <input class="form-field__multiselect__other" type="text" :id="`${field.type}_other`" required="false" placeholder="Other, please specify..." />
     </div>
+    
     <select v-if="field.type == 'select'" class="form-field__select" :id="field.id" :required="field.required">
       <option value="" disabled>Please select...</option>
       <option value="" disabled></option>

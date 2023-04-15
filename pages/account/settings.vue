@@ -58,12 +58,22 @@
 
       <AdminCard title="Danger Zone" type="danger">
         <p>Do you really want to delete your account? This action is irreversible!</p>
-        <AppButton type="submit" name="delete" title="Yes, delete my account" class="button--outlined" />
+        <AppButton btnType="button" name="delete" title="Delete your account" class="animate" />
       </AdminCard>
 
       <AdminAction>
-        <AppButton btnType="submit" title="Save Settings" />
+        <AppButton btnType="submit" title="Save Settings" class="animate" />
       </AdminAction>
     </form>
   </main>
 </template>
+
+<style scoped lang="scss">
+  .form-row {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+</style>

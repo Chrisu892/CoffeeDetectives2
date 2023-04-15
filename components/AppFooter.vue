@@ -1,3 +1,45 @@
+<script>
+  import { PhPhone, PhEnvelope } from 'phosphor-vue'
+
+  export default {
+    components: {
+      PhPhone, PhEnvelope
+    },
+    data() {
+      return {
+        pages: [
+          { title: 'Become a Detective', url: '/become-a-detective' },
+          { title: 'Get Listed', url: '/get-listed' },
+          { title: 'Your Account', url: '/account' },
+          { title: 'Contact', url: '/contact' },
+          { title: 'About', url: '/about-us' },
+          { title: 'Blog', url: '/blog' }
+        ],
+        cafes: [
+          { title: 'Flat Caps Café', url: '/cafes/flat-caps-cafe' },
+          { title: 'Café Nero', url: '/cafes/cafe-nero' },
+          { title: 'Waterstones Café', url: '/cafes/waterstones-cafe' },
+          { title: 'Luther\'s NSU Bar', url: '/cafes/luthers' },
+          { title: 'Vicolo', url: '/cafes/vicolo' },
+          { title: 'View all', url: '/cafes/' }
+        ],
+        destinations: [
+          { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne' },
+          { title: 'Tynemouth', url: '/locations/tynemouth' },
+          { title: 'Whitley Bay', url: '/locations/whitley-bay' },
+          { title: 'South Shields', url: '/locations/south-shields' },
+          { title: 'Gateshead', url: '/locations/gateshead' },
+          { title: 'View all', url: '/locations' }
+        ],
+        settings: {
+          site_name: 'The Coffee Detectives',
+          site_email: 'hello@thecoffeedetectives.co.uk'
+        }
+      }
+    }
+  }
+</script>
+
 <template>
   <footer class="footer">
     <div class="inner">
@@ -48,52 +90,11 @@
   </footer>
 </template>
 
-<script>
-  import { PhPhone, PhEnvelope } from 'phosphor-vue'
-
-  export default {
-    components: {
-      PhPhone, PhEnvelope
-    },
-    data() {
-      return {
-        pages: [
-          { title: 'Become a Detective', url: '/become-a-detective' },
-          { title: 'Get Listed', url: '/get-listed' },
-          { title: 'Your Account', url: '/account' },
-          { title: 'Contact', url: '/contact' },
-          { title: 'About', url: '/about-us' },
-          { title: 'Blog', url: '/blog' }
-        ],
-        cafes: [
-          { title: 'Flat Caps Café', url: '/cafes/flat-caps-cafe' },
-          { title: 'Café Nero', url: '/cafes/cafe-nero' },
-          { title: 'Waterstones Café', url: '/cafes/waterstones-cafe' },
-          { title: 'Luther\'s NSU Bar', url: '/cafes/luthers' },
-          { title: 'Vicolo', url: '/cafes/vicolo' },
-          { title: 'View all', url: '/cafes/' }
-        ],
-        destinations: [
-          { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne' },
-          { title: 'Tynemouth', url: '/locations/tynemouth' },
-          { title: 'Whitley Bay', url: '/locations/whitley-bay' },
-          { title: 'South Shields', url: '/locations/south-shields' },
-          { title: 'Gateshead', url: '/locations/gateshead' },
-          { title: 'View all', url: '/locations' }
-        ],
-        settings: {
-          site_name: 'The Coffee Detectives',
-          site_email: 'hello@thecoffeedetectives.co.uk'
-        }
-      }
-    }
-  }
-</script>
-
 <style scoped lang="scss">
   .footer {
     background-color: $clr-secondary;
     color: $clr-white;
+    color: rgba($clr-white, 0.5);
     padding-top: 5rem;
   }
   .footer__container {
@@ -119,6 +120,9 @@
       width: 100%;
       border-bottom: solid 2px $clr-secondary;
     }
+  }
+  .footer__list-item {
+    padding: 0;
   }
   .footer__list-link {
     color: $clr-white;

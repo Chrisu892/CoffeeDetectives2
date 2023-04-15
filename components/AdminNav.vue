@@ -66,6 +66,7 @@
   .nav__item {
     border-bottom: solid 1px rgba($clr-white, 0.15);
     margin: 0;
+    padding: 0;
   }
   .nav__link {
     @include flex-row;

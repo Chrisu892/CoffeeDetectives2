@@ -137,11 +137,13 @@
     }
   }
   .nav__item {
+    line-height: 1;
     margin-bottom: 0;
+    padding-left: 0;
     position: relative;
 
-    &:not(:first-child) {
-      margin-left: 0.5rem;
+    &::before {
+      display: none;
     }
   }
   .nav__link {

@@ -18,6 +18,7 @@
     right: 0;
     padding: 1.25rem;
     margin-top: 1.25rem;
+    z-index: 100;
   }
   .action__message {
     color: darken($clr-shade, 20%);

@@ -31,7 +31,7 @@
     <PhWrench v-if="icon === 'PhWrench'" />
     <h1 v-if="title" class="header__title font-xl">{{ title }}</h1>
     <div v-if="create" class="header__actions">
-      <AppButton btnType="link" :to="create.url" :title="create.title" />
+      <AppButton :to="create.url" :title="create.title" class="animate" />
     </div>
   </header>
 </template>
@@ -46,6 +46,7 @@
     padding: 1rem 1.25rem;
     position: sticky;
     top: 0;
+    z-index: 100;
 
     svg {
       color: $clr-primary;
