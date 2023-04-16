@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Tynemouth'
-altTitle: 'Tynemouth'
+title: 'Tynemouth'
+altTitle: 'Cafes in Tynemouth'
 url: '/locations/tynemouth/'
 type: 'location'
 id: 'tynemouth'

@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Whitley Bay'
-altTitle: 'Whitley Bay'
+title: 'Whitley Bay'
+altTitle: 'Cafes in Whitley Bay'
 url: '/locations/whitley-bay/'
 type: 'location'
 id: 'whitley-bay'

@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Gosforth'
-altTitle: 'Gosforth'
+title: 'Gosforth'
+altTitle: 'Cafes in Gosforth'
 url: '/locations/gosforth/'
 type: 'location'
 id: 'gosforth'

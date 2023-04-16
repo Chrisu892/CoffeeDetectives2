@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Chester-le-Street'
-altTitle: 'Chester-le-Street'
+title: 'Chester-le-Street'
+altTitle: 'Cafes in Chester-le-Street'
 url: '/locations/chester-le-street/'
 type: 'location'
 id: 'chester-le-street'

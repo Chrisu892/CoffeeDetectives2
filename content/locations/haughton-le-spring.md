@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Haughton-le-Spring'
-altTitle: 'Haughton-le-Spring'
+title: 'Haughton-le-Spring'
+altTitle: 'Cafes in Haughton-le-Spring'
 url: '/locations/haughton-le-spring/'
 type: 'location'
 id: 'haughton-le-spring'

@@ -1,35 +1,3 @@
-<template>
-  <div class="filters">
-    <div class="filters__group">
-      <FilterMultiSelectList title="Location" :list="locations" />
-    </div>
-
-    <div class="filters__group">
-      <FilterRangeInput title="Price Range" :range="priceRange.range" />
-    </div>
-
-    <div class="filters__group">
-      <FilterRangeInput title="Opening Hours" :range="openingHours.range" />
-    </div>
-
-    <div class="filters__group">
-      <FilterMultiSelectList title="Coffee Blends" :list="blends" />
-    </div>
-
-    <div class="filters__group">
-      <FilterMultiSelectList title="Cuisine" :list="cuisine" />
-    </div>
-
-    <div class="filters__group">
-      <FilterMultiSelectList title="Dietary Requirements" :list="dietaryRequirements" />
-    </div>
-
-    <div class="filters__group">
-      <FilterMultiSelectList title="Amenities" :list="amenities" />
-    </div>
-  </div>
-</template>
-
 <script>
   export default {
     data() {
@@ -125,6 +93,38 @@
     }
   }
 </script>
+
+<template>
+  <div class="filters">
+    <div class="filters__group">
+      <FilterMultiSelectList title="Location" :list="locations" />
+    </div>
+
+    <div class="filters__group">
+      <FilterRangeInput title="Price Range" :range="priceRange.range" />
+    </div>
+
+    <div class="filters__group">
+      <FilterRangeInput title="Opening Hours" :range="openingHours.range" />
+    </div>
+
+    <div class="filters__group">
+      <FilterMultiSelectList title="Coffee Blends" :list="blends" />
+    </div>
+
+    <div class="filters__group">
+      <FilterMultiSelectList title="Cuisine" :list="cuisine" />
+    </div>
+
+    <div class="filters__group">
+      <FilterMultiSelectList title="Dietary Requirements" :list="dietaryRequirements" />
+    </div>
+
+    <div class="filters__group">
+      <FilterMultiSelectList title="Amenities" :list="amenities" />
+    </div>
+  </div>
+</template>
 
 <style scoped lang="scss">
   .filters {

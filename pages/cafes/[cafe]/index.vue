@@ -1,3 +1,39 @@
+<script setup lang="ts">
+  import { Splide, SplideSlide } from '@splidejs/vue-splide'
+  import '@splidejs/vue-splide/css'
+
+  const { page } = useContent()
+  useContentHead(page)
+
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(6).find()
+  const events = []
+
+  const options = {
+    rewind: false,
+    gap: '1rem',
+    perMove: 1,
+    perPage: 1
+  }
+
+  const cafeSliderOptions = {
+    rewind: false,
+    gap: '2rem',
+    perMove: 3,
+    perPage: 3
+  }
+</script>
+
+<script lang="ts">
+  import { PhMapPin, PhShieldCheck } from 'phosphor-vue';
+
+  export default {
+    components: {
+      PhMapPin,
+      PhShieldCheck,
+    }
+  }
+</script>
+
 <template>
   <main id="main" class="main">
     <AppPlainMasthead />
@@ -35,25 +71,41 @@
           <div class="large-card__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
         </div>
         <div class="large-card__aside">
-          Amenities
+          <h3 class="large-card__title font-medium">Amenities</h3>
+          <ul v-if="page.amenities" class="large-card__amenities">
+            <li v-for="amenity of page.amenities" :key="amenity.title" class="large-card__amenity">{{ amenity.title }}</li>
+          </ul>
+        </div>
+        <div class="large-card__thumbnail">
+          <img class="large-card__thumbnail-image" src="/images/cafe-page-image-1.png" alt="" />
+
+          <div class="large-card__verdict">
+            <PhShieldCheck />
+            <div class="large-card__verdict__content">
+              <div class="large-card__verdict__title font-small">Our Verdict</div>
+              <div class="large-card__verdict__message font-regular">Student-friendly café</div>
+            </div>
+          </div>
         </div>
       </div>
     </AppSection>
 
     <AppSection class="padding shade">
       <div class="large-card">
-        <h2 class="large-card__title font-medium">Events at {{ page.title }}</h2>
-        <div v-if="events.length > 0" class="flex-container"></div>
-        <div v-else>
-          Sorry, there are no events at {{ page.title }} at the moment. Please check again soon.
+        <div class="large__card__main">
+          <h2 class="large-card__title font-medium">Events at {{ page.title }}</h2>
+          <div v-if="events.length > 0" class="flex-container"></div>
+          <div v-else>Sorry, there are no events at {{ page.title }} at the moment. Please check again soon.</div>
         </div>
       </div>
     </AppSection>
 
     <AppSection class="padding">
       <div class="large-card">
-        <h2 class="large-card__title font-medium">Directions to {{ page.title }}</h2>
-        <AppMap />
+        <div class="large-card__main">
+          <h2 class="large-card__title font-medium">Directions to {{ page.title }}</h2>
+          <AppMap />
+        </div>
       </div>
     </AppSection>
 
@@ -66,41 +118,6 @@
     </AppSection>
   </main>
 </template>
-
-<script setup lang="ts">
-  import { Splide, SplideSlide } from '@splidejs/vue-splide'
-  import '@splidejs/vue-splide/css'
-
-  const { page } = useContent()
-  useContentHead(page)
-
-  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(6).find()
-  const events = []
-
-  const options = {
-    rewind: false,
-    gap: '1rem',
-    perMove: 1,
-    perPage: 1
-  }
-
-  const cafeSliderOptions = {
-    rewind: false,
-    gap: '2rem',
-    perMove: 3,
-    perPage: 3
-  }
-</script>
-
-<script lang="ts">
-  import { PhMapPin } from 'phosphor-vue';
-
-  export default {
-    components: {
-      PhMapPin
-    }
-  }
-</script>
 
 <style scoped lang="scss">
   .masthead {
@@ -165,11 +182,64 @@
   }
 
   .large-card {
+    @include flex-row;
     border: solid 1px $clr-shade;
     border-radius: $border-radius;
+  }
+  .large-card__main {
+    flex: 3 0;
     padding: 2rem;
+  }
+  .large-card__aside {
+    background-color: $clr-shade;
+    flex: 1 0;
+    padding: 2rem;
+  }
+  .large-card__thumbnail {
+    background-color: $clr-shade;
+    @include flex-row;
+    align-items: flex-end;
+    flex: 1 0;
   }
   .large-card__title {
     margin: 0 0 1.25rem 0;
+  }
+  .large-card__thumbnail {
+    position: relative;
+  }
+  .large-card__thumbnail-image {
+    transform-origin: bottom left;
+    transform: scale(1.1);
+  }
+
+  .large-card__verdict {
+    @include flex-row;
+    align-items: center;
+    background-color: $clr-primary;
+    border-radius: $border-radius;
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    left: 0;
+
+    svg {
+      fill: $clr-secondary;
+      display: inline-block;
+      height: 34px;
+      width: 34px;
+    }
+  }
+  .large-card__verdict__content {
+    flex: 1 0;
+  }
+  .large-card__verdict__title {
+    line-height: 1;
+    margin-bottom: 0.125rem;
+  }
+  .large-card__verdict__message {
+    font-weight: $bold-weight;
+    line-height: 1;
   }
 </style>

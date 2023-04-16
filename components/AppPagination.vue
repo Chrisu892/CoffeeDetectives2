@@ -24,8 +24,13 @@
     flex-flow: row;
     justify-content: flex-end;
   }
-  .pagination__item:not(:first-child) {
-    margin-left: 0.5rem;
+  .pagination__item {
+    margin-left: 0.75rem;
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
   }
   .pagination__link {
     align-items: center;
@@ -36,5 +41,9 @@
     height: 44px;
     justify-content: center;
     width: 44px;
+
+    &:hover {
+      border-color: darken($clr-shade, 10%);
+    }
   }
 </style>

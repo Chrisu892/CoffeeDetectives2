@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Hetton'
-altTitle: 'Hetton'
+title: 'Hetton'
+altTitle: 'Cafes in Hetton'
 url: '/locations/hetton/'
 type: 'location'
 id: 'hetton'

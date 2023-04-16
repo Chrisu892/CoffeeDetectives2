@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Felling'
-altTitle: 'Felling'
+title: 'Felling'
+altTitle: 'Cafes in Felling'
 url: '/locations/felling/'
 type: 'location'
 id: 'felling'

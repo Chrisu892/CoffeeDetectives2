@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Longbenton'
-altTitle: 'Longbenton'
+title: 'Longbenton'
+altTitle: 'Cafes in Longbenton'
 url: '/locations/longbenton/'
 type: 'location'
 id: 'longbenton'

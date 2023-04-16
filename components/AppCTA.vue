@@ -3,7 +3,7 @@
     <div class="inner">
       <AppFeature 
         title="Join the Community of Coffee Lovers" 
-        tagline="Together we can make it easier to find a perfect cafe, connect with other coffee lovers and support local businesses that make sure there is always enough coffee to keep us going." 
+        tagline="Together we can make it easier to find a perfect café, connect with other coffee lovers and support local businesses that make sure there is always enough coffee to keep us going." 
         class="center"
       />
       
@@ -15,7 +15,7 @@
             </div>
             <div class="cta__card__content">
               <h3 class="cta__card__title">Become a coffee detective</h3>
-              <p class="cta__card__text">Get access to all the tools and guidance on to how become a coffee detective. Start writing reviews, blog articles and build your audience.</p>
+              <p class="cta__card__text">Get access to our guidance and tools and start contributing by writing reviews, blog articles and building your audience.</p>
               <AppButton to="/become-a-detective/" title="Become a Detective" class="animate" />
             </div>
           </article>
@@ -26,8 +26,8 @@
               <div class="cta__card__thumbnail-image"></div>
             </div>
             <div class="cta__card__content">
-              <h3 class="cta__card__title">Get your cafe listed</h3>
-              <p class="cta__card__text">Register your cafe with us to start building your audience, track the cafe listing performance, and promote your business.</p>
+              <h3 class="cta__card__title">Get your café listed</h3>
+              <p class="cta__card__text">Register with us to start managing customer relations, track the popularity of your café on our platform, and promote your business.</p>
               <AppButton to="/get-listed/" title="Get Listed" class="animate" />
             </div>
           </article>
@@ -88,5 +88,8 @@
     flex: 1 0;
     position: relative;
     z-index: 1;
+  }
+  .cta__card__text {
+    margin-bottom: 1.25rem;
   }
 </style>

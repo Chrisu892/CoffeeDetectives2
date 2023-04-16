@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in North Shields'
-altTitle: 'North Shields'
+title: 'North Shields'
+altTitle: 'Cafes in North Shields'
 url: '/locations/north-shields/'
 type: 'location'
 id: 'north-shields'

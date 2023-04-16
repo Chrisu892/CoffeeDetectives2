@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Easington'
-altTitle: 'Easington'
+title: 'Easington'
+altTitle: 'Cafes in Easington'
 url: '/locations/easington/'
 type: 'location'
 id: 'easington'

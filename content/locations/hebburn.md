@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Hebburn'
-altTitle: 'Hebburn'
+title: 'Heeburn'
+altTitle: 'Cafes in Hebburn'
 url: '/locations/hebburn/'
 type: 'location'
 id: 'hebburn'

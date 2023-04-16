@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Whickham'
-altTitle: 'Whickham'
+title: 'Whickham'
+altTitle: 'Cafes in Whickham'
 url: '/locations/whickham/'
 type: 'location'
 id: 'whickham'

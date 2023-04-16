@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Blydon'
-altTitle: 'Blydon'
+title: 'Blydon'
+altTitle: 'Cafes in Blydon'
 url: '/locations/blydon/'
 type: 'location'
 id: 'blydon'

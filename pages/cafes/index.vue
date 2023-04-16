@@ -1,14 +1,9 @@
-<template>
-  <main id="main" class="main">
-    <AppPlainMasthead :title="page.title" />
+<script setup lang="ts">
+  const { page } = useContent()
+  useContentHead(page)
 
-    <div class="section">
-      <div class="inner">
-        <AppListings :filters="filters" :listings="cafes" />
-      </div>
-    </div>
-  </main>
-</template>
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).find()
+</script>
 
 <script lang="ts">
   export default {
@@ -17,6 +12,7 @@
         filters: [{
           title: 'Price Range',
           type: 'range',
+          symbol: 'currency',
           range: {
             min: 1,
             max: 5
@@ -24,6 +20,7 @@
         }, {
           title: 'Opening Times',
           type: 'range',
+          symbol: 'clock',
           range: {
             min: 8,
             max: 20
@@ -79,9 +76,14 @@
   }
 </script>
 
-<script setup lang="ts">
-  const { page } = useContent()
-  useContentHead(page)
+<template>
+  <main id="main" class="main">
+    <AppPlainMasthead :title="page.title" />
 
-  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).find()
-</script>
+    <div class="section">
+      <div class="inner">
+        <AppListings :filters="filters" :listings="cafes" />
+      </div>
+    </div>
+  </main>
+</template>

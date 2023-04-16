@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Boldon'
-altTitle: 'Boldon'
+title: 'Boldon'
+altTitle: 'Cafes in Boldon'
 url: '/locations/boldon/'
 type: 'location'
 id: 'boldon'

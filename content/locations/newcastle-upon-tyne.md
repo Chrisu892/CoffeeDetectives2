@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Newcastle upon Tyne'
-altTitle: 'Newcastle upon Tyne'
+title: 'Newcastle upon Tyne'
+altTitle: 'Cafes in Newcastle upon Tyne'
 url: '/locations/newcastle-upon-tyne/'
 type: 'location'
 id: 'newcastle-upon-tyne'

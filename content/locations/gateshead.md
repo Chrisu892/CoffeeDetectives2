@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Gateshead'
-altTitle: 'Gateshead'
+title: 'Gateshead'
+altTitle: 'Cafes in Gateshead'
 url: '/locations/gateshead/'
 type: 'location'
 id: 'gateshead'

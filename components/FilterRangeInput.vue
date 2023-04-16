@@ -1,47 +1,10 @@
-<template>
-  <div class="range" :class="{ 'active': active }">
-    <button class="range__toggle" @click="toggle()">
-      <div class="range__title font-regular">{{ title }}</div>
-      <div class="range__icon"><PhPlus /></div>
-    </button>
-
-    <div class="__range__group" :class="{ 'active': active }">
-      <div class="range__group">
-        <div class="range__title">{{ title }}</div>
-        <div class="range__row">
-
-          <div class="range__input">
-            <label class="range__input__label" for="min_price">From:</label>
-            <div class="range__input__group">
-              <div class="range__input__symbol">&pound;</div>
-              <input class="range__input__field min" id="min_price" type="number" :value="range.min" />
-            </div>
-          </div>
-
-          <div class="range__input">
-            <label class="range__input__label" for="max_price">To:</label>
-            <div class="range__input__group">
-              <div class="range__input__symbol">&pound;</div>
-              <input class="range__input__field max" id="max_price" type="number" :value="range.max" />
-            </div>
-          </div>
-
-        </div>
-        <div class="range__row">
-          <button class="range__input__button" @click="apply()">Apply</button>
-          <button class="range__input__button" @click="cancel()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
-  import { PhPlus } from 'phosphor-vue'
+  import { PhCaretDown, PhClock } from 'phosphor-vue'
 
   export default {
     components: {
-      PhPlus
+      PhCaretDown,
+      PhClock,
     },
     data() {
       return {
@@ -56,6 +19,10 @@
       range: {
         type: Object,
         required: true
+      },
+      symbol: {
+        type: String,
+        default: null
       }
     },
     methods: {
@@ -73,22 +40,63 @@
   }
 </script>
 
+<template>
+  <div class="filter" :class="{ 'active': active }">
+    <button class="filter__toggle" @click="toggle()">
+      <div class="filter__title font-regular">{{ title }}</div>
+      <div class="filter__icon"><PhCaretDown /></div>
+    </button>
+
+    <div class="__filter__group" :class="{ 'active': active }">
+      <div class="filter__group">
+        <div class="filter__field">
+          <label class="filter__field__label font-small" for="from">From:</label>
+          <div class="filter__field__wrap">
+            <div v-if="symbol" class="filter__field__symbol font-small">
+              <template v-if="symbol === 'currency'">&pound;</template>
+              <template v-if="symbol === 'clock'"><PhClock /></template>
+            </div>
+            <input class="filter__field__input font-small" id="from" type="number" :value="range.min" />
+          </div>
+        </div>
+
+        <div class="filter__field">
+          <label class="filter__field__label font-small" for="to">To:</label>
+          <div class="filter__field__wrap">
+            <div v-if="symbol" class="filter__field__symbol font-small">
+              <template v-if="symbol === 'currency'">&pound;</template>
+              <template v-if="symbol === 'clock'"><PhClock /></template>
+            </div>
+            <input class="filter__field__input font-small" id="to" type="number" :value="range.max" />
+          </div>
+        </div>
+
+        <div class="filter__action">
+          <AppButton btnType="submit" class="primary animate font-small" title="Apply" />
+          <AppButton btnType="button" class="animate font-small" title="Clear" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <style scoped lang="scss">
-  .range {
+  .filter {
     border: solid 1px $clr-shade;
     border-radius: $border-radius;
+    position: relative;
 
-    &--active {
+    &.active {
       border-color: $clr-shade;
       border-bottom: 0;
       border-radius: $border-radius $border-radius 0 0;
     }
 
     &:hover {
-      border-color: $clr-shade;
+      border-color: darken($clr-shade, 10%);
     }
   }
-  .range__toggle {
+  .filter__toggle {
     @include flex-row;
     align-items: center;
     background-color: $clr-white;
@@ -99,78 +107,82 @@
     width: 100%;
     text-align: left;
   }
-  .range__title {
+  .filter__title {
     flex: 1;
-    margin-bottom: 0;
   }
-  .range__icon {
+  .filter__icon {
     color: $clr-primary;
     margin-left: 0.5rem;
     transform: translateY(2px) scale(1);
   }
-  .range.active .range__icon {
+  .filter.active .filter__icon {
     transform: translateY(-3px) scale(-1);
   }
 
-  .__range__group {
-    @include flex-row;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    background-color: rgba($clr-text, 0.3);
-    visibility: hidden;
-    opacity: 0;
+  .__filter__group {
+    display: none;
+    position: absolute;
+    top: auto;
+    left: -1px;
+    right: -1px;
+    display: none;
+    overflow: hidden;
   }
-  .range.active .__range__group {
-    opacity: 1;
-    visibility: visible;
+  .filter.active .__filter__group {
+    display: block;
   }
-  .range__group {
+  .filter__group {
     background-color: $clr-white;
     border: solid 1px $clr-shade;
     border-top: 0;
-    border-radius: $border-radius;
-    gap: 1rem;
-    padding: 1rem;
-    width: 100%;
-    max-width: 360px;
-    max-height: 420px;
+    border-radius: 0 0 $border-radius $border-radius;
+    margin-bottom: 0;
+    max-height: 240px;
+    overflow-y: auto;
+    padding: 0 0.8rem 1rem 0.8rem;
   }
-  .range__row {
-    display: flex;
-    flex-flow: row wrap;
+  .filter:hover .filter__group {
+    border-color: darken($clr-shade, 10%);
+  }
+
+  .filter__field:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+  .filter__field__label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  .filter__field__wrap {
+    @include flex-row;
+    align-items: center;
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
+  }
+  .filter__field__symbol {
+    flex: 20px 0;
+    padding: 5px;
+
+    svg {
+      display: inline-block;
+      height: 16px;
+      position: relative;
+      top: 2px;
+      width: 16px;
+    }
+  }
+  .filter__field__input {
+    font-size: $font-small;
+    flex: 1 0;
+    width: 10%;
+    padding: 0.25em;
+  }
+
+  .filter__action {
+    @include flex-row;
     gap: 1rem;
     margin-top: 1rem;
   }
-  .range__input {
+  .filter__action .button {
     flex: 1 0;
-  }
-  .range__input__label {
-    display: block;
-  }
-  .range__input__group {
-    @include flex-row;
-    border: solid 1px $clr-shade;
-    border-radius: $border-radius;
-    width: 100%;
-  }
-  .range__input__symbol {
-    background-color: $clr-shade;
-    padding: 0.75em;
-  }
-  .range__input__field {
-    flex: 1 0;
-    width: 100%;
-  }
-  .range__input__button {
-    background-color: $clr-primary;
-    border-radius: $border-radius;
-    cursor: pointer;
-    padding: 0.5em;
   }
 </style>

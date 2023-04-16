@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Washington'
-altTitle: 'Washington'
+title: 'Washington'
+altTitle: 'Cafes in Washington'
 url: '/locations/washington/'
 type: 'location'
 id: 'washington'

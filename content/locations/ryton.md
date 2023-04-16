@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Ryton'
-altTitle: 'Ryton'
+title: 'Ryton'
+altTitle: 'Cafes in Ryton'
 url: '/locations/ryton/'
 type: 'location'
 id: 'ryton'

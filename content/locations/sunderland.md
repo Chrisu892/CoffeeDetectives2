@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Sunderland'
-altTitle: 'Sunderland'
+title: 'Sunderland'
+altTitle: 'Cafes in Sunderland'
 url: '/locations/sunderland/'
 type: 'location'
 id: 'sunderland'

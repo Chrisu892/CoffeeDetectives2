@@ -20,14 +20,14 @@
     },
     computed: {
       newTab() {
-        return this.cafe.newTab ? true : false
+        return this.cafe.newTab ? '_blank' : false
       }
     }
   }
 </script>
 
 <template>
-  <article class="cafe" :class="`cafe--${view}`">
+  <article class="cafe" :class="view">
     <div class="cafe__thumbnail">
       <NuxtLink class="cafe__thumbnail-link" :to="cafe._path" :title="`Read more about ${cafe.title}`">
         <img class="cafe__thumbnail-image" :src="cafe.images.thumbnail" :alt="cafe.title" />
@@ -35,9 +35,9 @@
     </div>
 
     <div class="cafe__content">
-      <div class="cafe__section cafe__section--flex">
+      <div class="cafe__section flex">
         <h3 class="cafe__title font-medium">
-          <NuxtLink :to="cafe._path" :title="`Read more about ${cafe.title}`" :target="newTab">{{ cafe.title }}</NuxtLink>
+          <NuxtLink :to="cafe._path" :title="`Read more about ${cafe.title}`">{{ cafe.title }}</NuxtLink>
         </h3>
         <button v-if="cafe.rating" class="cafe__rating font-small">
           <PhStar /> <span class="cafe__rating-score">{{ cafe.rating }}</span>
@@ -47,7 +47,7 @@
       <div class="cafe__section">
         <p class="cafe__abstract font-small">{{ cafe.abstract }}</p>
         <div class="cafe__amenities font-xs">
-          <div v-for="amenity, key in cafe.amenities" :key="key" class="cafe__amenity" :class="{ 'cafe__amenity--unique': amenity.unique }">
+          <div v-for="amenity, key in cafe.amenities" :key="key" class="cafe__amenity" :class="{ 'unique': amenity.unique }">
             <PhStar v-if="amenity.unique" /> {{ amenity.title }}
           </div>
           <div class="cafe__amenity">+ 4 more</div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="cafe__action">
-          <AppButton btnType="link" :to="cafe._path" title="View Café" :target="newTab" class="animate" />
+          <AppButton btnType="link" :to="cafe._path" title="View Café" class="animate" />
         </div>
       </div>
     </div>
@@ -77,10 +77,10 @@
     background-color: $clr-white;
     border-radius: $border-radius;
 
-    &--list {
+    &.list {
       flex: 100% 0;
     }
-    &--grid {
+    &.grid {
       flex: 33.333% 0;
       flex: calc(33.333% - 1.35rem) 0;
       flex-flow: column;
@@ -88,7 +88,7 @@
       min-width: calc(33.333% - 1.35rem);
     }
 
-    &--extra-margin {
+    &.extra-margin {
       margin: 0.25rem 0.125rem;
     }
   }
@@ -97,7 +97,7 @@
     border-radius: $border-radius;
     position: relative;
   }
-  .cafe--list .cafe__thumbnail {
+  .cafe.list .cafe__thumbnail {
     flex: 31.5% 0;
   }
   .cafe__thumbnail-link {
@@ -108,7 +108,7 @@
     padding-top: 75%;
     position: relative;
   }
-  .cafe--list .cafe__thumbnail-link {
+  .cafe.list .cafe__thumbnail-link {
     border-radius: $border-radius;
     height: 100%;
     margin-bottom: 0;
@@ -126,12 +126,12 @@
     padding: 1rem;
     position: relative;
   }
-  .cafe--list .cafe__content {
+  .cafe.list .cafe__content {
     flex: 1 0;
     margin-top: 0;
   }
 
-  .cafe__section--flex {
+  .cafe__section.flex {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -193,7 +193,7 @@
       margin-right: 0.3rem;
     }
 
-    &--unique {
+    &.unique {
       background-color: $clr-shade;
     }
   }

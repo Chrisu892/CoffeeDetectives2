@@ -73,6 +73,7 @@
     &:hover {
       color: $clr-primary;
     }
+
     &.animate::before {
       content: '';
       position: absolute;
@@ -105,6 +106,9 @@
       background-color: $clr-primary;
       border-color: $clr-primary;
       color: $clr-secondary;
+    }
+    &.primary::before {
+      background-color: darken($clr-primary, 10%);
     }
   }
 </style>

@@ -1,6 +1,6 @@
 ---
-title: 'Cafes in Castle Ward'
-altTitle: 'Castle Ward'
+title: 'Castle Ward'
+altTitle: 'Cafes in Castle Ward'
 url: '/locations/castle-ward/'
 type: 'location'
 id: 'castle-ward'

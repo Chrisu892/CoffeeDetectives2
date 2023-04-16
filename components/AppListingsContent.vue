@@ -1,37 +1,8 @@
-<template>
-  <div class="content">
-    <div class="content__header">
-      <div class="content__count font-small">Found [x] cafes in [location name].</div>
-      <div class="content__actions">
-        <NuxtLink class="content__toggle" to="?view=list"><PhRows />List</NuxtLink>
-        <NuxtLink class="content__toggle" to="?view=grid"><PhSquaresFour />Grid</NuxtLink>
-        <NuxtLink class="content__toggle" to="?view=map"><PhMapPin />Map</NuxtLink>
-      </div>
-    </div>
+<script setup lang="ts">
+  const { page } = useContent()
+</script>
 
-    <div class="content__main">
-      <div v-if="content.length > 0" class="content__container">
-        <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="listing, key in content" :key="key" :cafe="listing" :view="view" />
-        <LocationMapView v-if="view == 'map'" />
-      </div>
-      <div v-else class="content__empty">
-        <ph-smiley-sad />
-        <p class="content__empty__message">Sorry, we couldn't find any cafe in this location. Did you find a cafe that you think should be listed here? <NuxtLink to="/contact">Get in touch</NuxtLink>.</p>
-      </div>
-    </div>
-
-    <!-- <div class="content__footer">
-      <div class="content__summary">
-        Showing [x] cafes in [location/amenities/etc].
-      </div>
-      <div class="content__actions">
-        <AppPagination />
-      </div>
-    </div> -->
-  </div>
-</template>
-
-<script>
+<script lang="ts">
   import { 
     PhSquaresFour, 
     PhRows, 
@@ -57,10 +28,47 @@
   }
 </script>
 
+
+<template>
+  <div class="content">
+    <div class="content__header">
+      <div class="content__count font-small">
+        <template v-if="page.type === 'amenity'">Found {{ content.length }} {{ page.title.toLowerCase() }} cafés.</template>
+        <template v-else>Found {{ content.length }} cafes in {{ page.title.toLowerCase() }}.</template>
+      </div>
+      <div class="content__actions">
+        <NuxtLink class="content__toggle" to="?view=list"><PhRows />List</NuxtLink>
+        <NuxtLink class="content__toggle" to="?view=grid"><PhSquaresFour />Grid</NuxtLink>
+        <NuxtLink class="content__toggle" to="?view=map"><PhMapPin />Map</NuxtLink>
+      </div>
+    </div>
+
+    <div class="content__main">
+      <div v-if="content.length > 0" class="content__container">
+        <AppCafeListing v-if="view == 'list' || view == 'grid'" v-for="listing, key in content" :key="key" :cafe="listing" :view="view" />
+        <LocationMapView v-if="view == 'map'" />
+      </div>
+      <div v-else class="content__empty">
+        <ph-smiley-sad />
+        <p class="content__empty__message">Sorry, we couldn't find any cafe in this location. Did you find a cafe that you think should be listed here? <NuxtLink to="/contact">Get in touch</NuxtLink>.</p>
+      </div>
+    </div>
+
+    <div class="content__footer">
+      <div class="content__summary">
+        <template v-if="page.type === 'amenity'">Showing {{ content.length }} {{ page.title.toLowerCase() }} cafés.</template>
+        <template v-else>Showing {{ content.length }} cafes in {{ page.title.toLowerCase() }}.</template>
+      </div>
+      <div class="content__actions">
+        <AppPagination />
+      </div>
+    </div>
+  </div>
+</template>
+
 <style scoped lang="scss">
   .content__header {
     align-items: center;
-    color: $clr-shade;
     display: flex;
     padding: 0.125rem 0;
   }

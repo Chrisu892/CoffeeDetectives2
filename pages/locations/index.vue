@@ -1,3 +1,10 @@
+<script setup lang="ts">
+  const { page } = useContent()
+  useContentHead(page)
+
+  const locations = await queryContent('locations').where({ type: { $eq: 'location'} }).find()
+</script>
+
 <template>
   <main id="main" class="main">
     <AppPlainMasthead title="Cafes" />
@@ -13,10 +20,3 @@
     </AppSection>
   </main>
 </template>
-
-<script setup lang="ts">
-  const { page } = useContent()
-  useContentHead(page)
-
-  const locations = await queryContent('locations').where({ type: { $eq: 'location'} }).find()
-</script>

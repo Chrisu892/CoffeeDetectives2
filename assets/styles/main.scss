@@ -97,6 +97,10 @@ h3, .font-large {
 }
 p {
   margin-bottom: 1.25em;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 b, strong {
   font-weight: $bold-weight;
@@ -163,6 +167,15 @@ li {
 .splide__pagination {
   justify-content: flex-end !important;
   padding: 0 !important;
+
+  li {
+    margin-left: 0.25rem !important;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 .splide__pagination__page {
   background: $clr-primary !important;

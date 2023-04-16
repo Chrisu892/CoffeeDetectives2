@@ -52,6 +52,10 @@
     padding: 0 3rem 0 0;
     position: relative;
 
+    &::before {
+      display: none;
+    }
+
     svg {
       position: absolute;
       top: 50%;
