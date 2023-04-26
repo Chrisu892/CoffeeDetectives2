@@ -23,26 +23,23 @@
 
 <style scoped lang="scss">
   .header {
-    background-color: $clr-white;
+    left: 0;
     padding: 2rem 0;
-    position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: 100;
-
-    &.home {
-      background-color: $clr-secondary;
-    }
   }
   .header__container {
-    display: flex;
-    flex-flow: row;
+    @include flex-row;
     align-items: center;
   }
   .header__logo {
-    display: flex;
+    @include flex-row;
     align-items: center;
   }
   .header__nav {
-    flex: 1;
-    margin-left: 4rem;
+    flex: 1 0;
+    margin-left: 10%;
   }
 </style>

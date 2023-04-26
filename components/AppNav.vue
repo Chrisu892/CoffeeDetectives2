@@ -5,79 +5,6 @@
     components: {
       PhCaretDown
     },
-    data() {
-      return {
-        pages: {
-          primary: [{
-            title: 'Cafes',
-            altTitle: 'Cafes',
-            url: '/cafes/',
-            columnCount: 2,
-            children: [
-              { title: 'Cafes with Free Wi-Fi', url: '/amenities/cafes-with-free-wifi/' },
-              { title: 'Cafes with Outdoor Sitting', url: '/amenities/cafes-with-outdoor-sitting/' },
-              { title: 'Cafes with Power Outlets', url: '/amenities/cafes-with-power-outlets/' },
-              { title: 'Cafes with Restrooms', url: '/amenities/cafes-with-restrooms/' },
-              { title: 'Cafes with Books & Magazines', url: '/amenities/cafes-with-books-magazines' },
-              { title: 'Cafes with Live Music', url: '/amenities/cafes-with-live-music/' },
-              { title: 'Cafes with Loyalty Programs', url: '/amenities/cafes-with-loyalty-programs/' }
-            ]
-          },{ 
-            title: 'Locations',
-            altTitle: 'Locations',
-            url: '/locations/',
-            columnCount: 3,
-            children: [
-              { title: 'Newcastle upon Tyne', url: '/locations/newcastle-upon-tyne/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Gateshead', url: '/locations/gateshead', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Sunderland', url: '/locations/sunderland/', images: { thumbnail: '/images/locations/fallback.jpeg'} },
-              { title: 'Tynemouth', url: '/locations/tynemouth/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'South Shields', url: '/locations/south-shields/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Whitley Bay', url: '/locations/whitley-bay/', images: { thumbnail: '/images/locations/whitley-bay-promenade-in-england-north-east.jpeg' } },
-              { title: 'North Shields', url: '/locations/north-shields/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Gosforth', url: '/locations/gosforth/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Newburn', url: '/locations/newburn/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Longbenton', url: '/locations/seaton-valley/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Boldon', url: '/locations/boldon/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Hebburn', url: '/locations/hebburn/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Felling', url: '/locations/felling/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Whickham', url: '/locations/whickham/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Blydon', url: '/locations/blydon/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Ryton', url: '/locations/ryton/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Washington', url: '/locations/washington/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Haughton-le-Spring', url: '/locations/haughton-le-spring/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Hetton', url: '/locations/hetton/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Castle Ward', url: '/locations/castle-ward', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Chester-le-Street', url: '/locations/chester-le-street', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-              { title: 'Easington', url: '/locations/easington/', images: { thumbnail: '/images/locations/fallback.jpeg' } },
-            ]
-          }, {
-            title: 'Blog',
-            altTitle: 'Blog', 
-            url: '/blog/',
-            columnCount: 1
-          },{ 
-            title: 'About Us', 
-            altTitle: 'About Us', 
-            url: '/about-us/',
-            columnCount: 1
-          }],
-          secondary: [{
-            title: 'Nominate',
-            altTitle: 'Nominate',
-            url: '/nominate/',
-            columnCount: 1,
-            status: 'draft'
-          }, {
-            title: 'Get Listed',
-            altTitle: 'Get Listed',
-            url: '/get-listed/',
-            columnCount: 1,
-            status: 'live'
-          }]
-        }
-      }
-    },
     props: {
       nav: {
         type: Array,
@@ -116,7 +43,8 @@
       </ul>
       <ul class="nav__list">
         <li class="nav__item">
-          <NuxtLink class="nav__link font-regular" to="/get-listed">Get Listed</NuxtLink>
+          <!-- <NuxtLink class="nav__link font-regular" to="/get-listed">Get Listed</NuxtLink> -->
+          <AppButton btnType="link" to="/get-listed" class="primary animate" title="Get Listed" />
         </li>
       </ul>
     </nav>
@@ -232,5 +160,19 @@
   }
   .nav__group__link {
     color: $clr-secondary;
+  }
+
+  @media screen and (max-width: 1210px) {
+
+    .nav__link {
+      padding: 0.475rem 1.325rem;
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+
+    .nav__link {
+      padding: 0.375rem 0.925rem;
+    }
   }
 </style>

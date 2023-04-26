@@ -40,9 +40,9 @@
 </template>
 
 <style scoped lang="scss">
-  .form-field {
-    margin-top: 1rem;
-  }
+  // .form-field {
+  //   margin-top: 1rem;
+  // }
   .form-field__label {
     display: block;
     margin-bottom: 0.25rem;
@@ -97,5 +97,12 @@
     padding: 0.75rem;
     font: $font-body;
     font-size: $font-regular;
+  }
+
+  @media screen and (max-width: 1320px) {
+
+    .form-field__input {
+      padding: 0.6rem 0.3rem;
+    }
   }
 </style>

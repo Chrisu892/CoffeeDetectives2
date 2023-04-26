@@ -49,12 +49,29 @@
     perMove: 3,
     perPage: 3
   }
+
+  /**
+   * Hero slider options
+   */
+  const heroSliderOptions = {
+    perMove: 1,
+    perPage: 1,
+    pagination: false,
+    arrows: false,
+    rewind: true,
+    autoplay: true,
+    type: 'fade'
+  }
 </script>
 
 <template>
   <main id="main" class="main">
-    <HomeHero :title="page.longTitle" :tagline="page.tagline">
-      <AppSearch :locations="locations" :amenities="amenities" />
+    <HomeHero :title="page.longTitle" :tagline="page.tagline" :locations="locations" :amenities="amenities">
+      <Splide :options="heroSliderOptions">
+        <SplideSlide v-for="cafe, key in cafes" :key="key">
+          <AppSlide />
+        </SplideSlide>
+      </Splide>
     </HomeHero>
 
     <HomeIntro />
@@ -89,6 +106,6 @@
       </div>
     </AppSection>
 
-    <AppSocialMedia />
+    <!-- <AppSocialMedia /> -->
   </main>
 </template>

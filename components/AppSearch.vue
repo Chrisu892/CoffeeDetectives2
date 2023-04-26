@@ -38,8 +38,6 @@
 
 <template>
   <form id="search" class="search" method="post">
-    <p v-if="title" class="search__title font-medium"><strong>{{ title }}</strong></p>
-    
     <div class="search__container">
       <div class="search__field">
         <FormField :field="location" />
@@ -64,20 +62,13 @@
     box-shadow: 0 0 15px 5px rgba($clr-text, 0.3);
     color: $clr-white;
     padding: 2rem;
-    position: relative;
-    transform: translateY(5rem);
-    z-index: 10;
-  }
-  .search__title {
-    margin-bottom: 1.5rem;
-    text-align: center;
+    z-index: 2;
   }
   .search__container {
     align-items: flex-end;
     display: flex;
     flex-flow: row;
     gap: 1rem;
-    margin-top: 0.75rem;
   }
   .search__field {
     flex: 1 0;

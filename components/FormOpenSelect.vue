@@ -74,7 +74,8 @@
     position: relative;
   }
   .select__option {
-    @include flex-row;
+    display: flex;
+    flex-flow: row;
     align-items: center;
     background-color: $clr-white;
     border-right: solid 1px darken($clr-shade, 10%);
@@ -180,5 +181,11 @@
   .select__option.active .select__option__checkbox::before,
   .select__group__option.active .select__option__checkbox::before {
     display: block;
+  }
+
+  @media screen and (max-width: 1320px) {
+    .select__option {
+      padding: 0.9rem 0.5rem;
+    }
   }
 </style>

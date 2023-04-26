@@ -27,7 +27,6 @@
     @include subtle-formal-invitation-pattern;
     border: solid 1px $clr-shade;
     border-radius: $border-radius;
-    margin-top: 5rem;
     padding: 2rem;
   }
   .intro__container {

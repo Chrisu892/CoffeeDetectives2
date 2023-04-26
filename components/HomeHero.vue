@@ -1,20 +1,3 @@
-<template>
-  <section class="hero">
-      <div class="inner">
-        <div class="hero__content">
-          <h1 class="hero__title font-regular">{{ title }}</h1>
-          <p class="hero__tagline font-xl">{{ tagline }}</p>
-          <div class="hero__action">
-            <AppButton class="rev animate" to="#search" title="Start Exploring" />
-          </div>
-        </div>
-        <div class="hero__search">
-          <slot />
-        </div>
-      </div>
-    </section>
-</template>
-
 <script>
   export default {
     props: {
@@ -25,43 +8,57 @@
       tagline: {
         type: String,
         default: 'Find a cafe for your relaxing coffee break, study session or place to catch up'
+      },
+      locations: {
+        type: Array,
+        required: true
+      },
+      amenities: {
+        type: Array,
+        required: true
       }
     }
   }
 </script>
 
+<template>
+  <section class="hero">
+    <slot />
+    <div class="hero__overlay">
+      <div class="inner">
+        <div class="hero__content">
+          <h1 class="hero__title font-regular">{{ title }}</h1>
+          <p class="hero__tagline font-xxl">{{ tagline }}</p>
+        </div>
+        <AppSearch :locations="locations" :amenities="amenities" />
+      </div>
+    </div>
+  </section>
+</template>
+
 <style scoped lang="scss">
   .hero {
-    background: url('/images/homepage-hero.jpeg') center center/cover no-repeat;
     position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $clr-secondary;
-      opacity: 0.9;
-    }
+  }
+  .hero__overlay {
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    right: 0;
   }
   .hero__content {
     color: $clr-white;
-    margin: 0 auto;
-    max-width: 900px;
-    padding: 6rem 0 1rem;
-    position: relative;
-    text-align: center;
-    z-index: 1;
+    margin-bottom: 5rem;
+    max-width: 768px;
   }
   .hero__title {
-    opacity: 0.725;
+    opacity: 0.75;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
   }
   .hero__tagline {
-    margin-top: 1.25rem;
-  }
-  .hero__action {
-    margin-top: 2.25rem;
+    font-weight: bold;
+    line-height: 1.2;
   }
 </style>

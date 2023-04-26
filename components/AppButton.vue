@@ -119,4 +119,10 @@
       margin-top: 2rem;
     }
   }
+
+  @media screen and (max-width: 1320px) {
+    .button {
+      padding: 0.8rem 1.4rem;
+    }
+  }
 </style>
