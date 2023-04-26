@@ -37,20 +37,3 @@
     }
   }
 </script>
-
-<style scoped lang="scss">
-  .form__card {
-    border: solid 1px $clr-shade;
-    border-radius: $border-radius;
-    padding: 2rem;
-  }
-  .form__text {
-    margin-top: 1rem;
-  }
-  .form__fields {
-    margin-top: 2rem;
-  }
-  .form__action {
-    margin-top: 2rem;
-  }
-</style>

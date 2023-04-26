@@ -13,7 +13,7 @@
 
     <AppSection class="padding">
       <ContentDoc />
-      <AppButton to="/sign-up" title="Create a Free Account" class="animate" />
+      <AppButton to="/register-your-interest" title="Register Your Interest" class="animate margin-top" />
     </AppSection>
   </main>
 </template>

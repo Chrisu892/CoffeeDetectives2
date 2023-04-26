@@ -223,3 +223,29 @@ li {
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
 }
+
+/*-------------------------*\
+    #FORM
+\*-------------------------*/
+
+.form__card {
+  border: solid 1px $clr-shade;
+  border-radius: $border-radius;
+  padding: 2rem;
+}
+.form__text {
+  margin-top: 1rem;
+}
+.form__fields {
+  margin-top: 2rem;
+}
+.form__action {
+  margin-top: 2rem;
+}
+.form__row {
+  padding-left: 0;
+  
+  &::before {
+    display: none;
+  }
+}

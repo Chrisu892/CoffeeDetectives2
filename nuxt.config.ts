@@ -15,9 +15,17 @@ export default defineNuxtConfig({
     // layoutTransition: { name: 'slide', mode: 'out-in'}
   },
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/strapi'
   ],
   content: {
     documentDriven: true
+  },
+  strapi: {
+    url: process.env.STRAPI_URL || 'http://localhost:1337',
+    prefix: '/api',
+    version: 'v4',
+    cookie: {},
+    cookieName: 'strapi_jwt'
   }
 })

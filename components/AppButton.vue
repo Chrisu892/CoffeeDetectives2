@@ -1,10 +1,11 @@
 <script>
-  import { PhMagnifyingGlass, PhArrowRight } from 'phosphor-vue';
+  import { PhMagnifyingGlass, PhArrowRight, PhEnvelope } from 'phosphor-vue';
 
   export default {
     components: {
       PhMagnifyingGlass,
       PhArrowRight,
+      PhEnvelope,
     },
     props: {
       title: {
@@ -30,6 +31,7 @@
 <template>
   <button v-if="['button', 'submit'].includes(btnType)" class="button" :type="btnType" :title="title">
     <PhMagnifyingGlass v-if="icon === 'magnifying-glass'" />
+    <PhEnvelope v-if="icon === 'envelope'" />
     <span class="button__inner">{{ title }}</span>
   </button>
   <NuxtLink v-else class="button" :to="to" :title="`Go to ${title} page`">
@@ -67,7 +69,9 @@
     svg {
       display: inline-block;
       height: 20px;
+      position: relative;
       width: 20px;
+      z-index: 1;
     }
 
     &:hover {
@@ -109,6 +113,10 @@
     }
     &.primary::before {
       background-color: darken($clr-primary, 10%);
+    }
+
+    &.margin-top {
+      margin-top: 2rem;
     }
   }
 </style>
