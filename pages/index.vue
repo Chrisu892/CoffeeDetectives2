@@ -16,7 +16,7 @@
    */
   const amenities = await queryContent('amenities').where({ type: { $eq: 'amenity' } }).limit(14).find()
   const locations = await queryContent('locations').where({ title: { $ne: 'Locations' } }).limit(20).find()
-  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(12).find()
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(6).find()
   const articles = await queryContent('blog').where({ type: { $eq: 'article' } }).limit(3).find()
 
   /**
@@ -76,36 +76,35 @@
 
     <HomeIntro />
 
-    <AppSection class="padding shade" title="Browse by Amenity" url="/amenities/">
+    <AppSection class="padding shade">
+      <AppTabs>
+        <template #amenities>
+          <div class="flex-container flex-container--gutter">
+            <AppAmenityListing v-for="amenity, key in amenities" :key="key" :amenity="amenity" />
+          </div>
+        </template>
+        <template #locations>
+          <Splide :options="locationsSliderOptions">
+            <SplideSlide v-for="chunk, key in locationChunks" :key="key">
+              <div class="grid-container">
+                <AppLocationListing v-for="location, key in chunk" :key="key" :location="location" :slider="true" />
+              </div>
+            </SplideSlide>
+          </Splide>
+        </template>
+      </AppTabs>
+    </AppSection>
+
+    <AppSection class="padding" title="Popular Cafés in Tyne and Wear" url="/cafes/">
       <div class="flex-container flex-container--gutter">
-        <AppAmenityListing v-for="amenity, key in amenities" :key="key" :amenity="amenity" />
+        <AppCafeListing v-for="cafe, key in cafes" :key="key" :cafe="cafe" view="grid" />
       </div>
     </AppSection>
 
-    <AppSection class="padding" title="Popular Locations" url="/locations/">
-      <Splide :options="locationsSliderOptions">
-        <SplideSlide v-for="chunk, key in locationChunks" :key="key">
-          <div class="grid-container">
-            <AppLocationListing v-for="location, key in chunk" :key="key" :location="location" :slider="true" />
-          </div>
-        </SplideSlide>
-      </Splide>
-    </AppSection>
-
-    <AppSection class="padding shade" title="Popular Cafés" url="/cafes/">
-      <Splide :options="sliderOptions">
-        <SplideSlide v-for="cafe, key in cafes" :key="key">
-          <AppCafeListing :cafe="cafe" view="grid" />
-        </SplideSlide>
-      </Splide>
-    </AppSection>
-
-    <AppSection class="padding" title="Latest News" url="/blog/">
+    <AppSection class="padding shade" title="Latest News" url="/blog/">
       <div class="flex-container flex-container--gutter">
         <AppArticleListing v-for="article, key in articles" :key="key" :article="article" />
       </div>
     </AppSection>
-
-    <!-- <AppSocialMedia /> -->
   </main>
 </template>

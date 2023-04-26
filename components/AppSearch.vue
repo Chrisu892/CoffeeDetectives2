@@ -57,6 +57,7 @@
 
 <style scoped lang="scss">
   .search {
+    background-color: $clr-secondary;
     @include formal-invitation-pattern;
     border-radius: $border-radius;
     box-shadow: 0 0 15px 5px rgba($clr-text, 0.3);
