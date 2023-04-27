@@ -4,17 +4,26 @@
   export default {
     components: {
       PhCamera
+    },
+    props: {
+      slide: {
+        type: Object,
+        required: true
+      }
     }
   }
 </script>
 
 <template>
   <div class="slide">
+    <picture>
+      <img class="slide__image" :src="slide.images.header.src" :alt="slide.images.header.alt" />
+    </picture>
     
     <div class="slide__credit">
       <div class="inner">
-        <NuxtLink to="/cafes" title="Visit ..." class="slide__credit-text">
-          <PhCamera /> Cafe / Location Name
+        <NuxtLink :to="slide._path" title="Visit ..." class="slide__credit-text">
+          <PhCamera /> {{ slide.title }}
         </NuxtLink>
       </div>
     </div>
@@ -25,17 +34,29 @@
   .slide {
     @include flex-row;
     align-items: flex-end;
-    background: url('/images/homepage-hero.jpeg') center center/cover no-repeat;
     height: 90vh;
+  }
+  .slide__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
   .slide__credit {
     padding-bottom: 1.5rem;
+    position: relative;
     width: 100%;
+    z-index: 2;
   }
   .slide__credit-text {
     @include flex-row;
     align-items: center;
-    color: $clr-secondary;
+    color: $clr-white;
     line-height: 1;
   }
   .slide__credit-text svg {

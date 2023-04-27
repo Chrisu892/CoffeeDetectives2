@@ -14,6 +14,11 @@ landmarks: null
 climate: null
 economy: null
 images:
+  header:
+    src: '/images/locations/blydon-countryside-england-north-east.jpeg'
+    alt: 'An image of Blydon countryside'
+    width: 1920
+    height: 1024
   thumbnail:
     src: '/images/locations/fallback.jpeg'
     alt: 'An image showcasing My Page.'

@@ -50,6 +50,7 @@
     color: $clr-white;
     margin-bottom: 5rem;
     max-width: 768px;
+    text-shadow: 0 0 10px rgba($clr-dark, 0.2);
   }
   .hero__title {
     opacity: 0.75;

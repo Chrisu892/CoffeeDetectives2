@@ -68,9 +68,11 @@
   <main id="main" class="main">
     <HomeHero :title="page.longTitle" :tagline="page.tagline" :locations="locations" :amenities="amenities">
       <Splide :options="heroSliderOptions">
-        <SplideSlide v-for="cafe, key in cafes" :key="key">
-          <AppSlide />
-        </SplideSlide>
+        <template v-for="location, key in locations">
+          <SplideSlide v-if="location.images.header" :key="key">
+            <AppSlide :slide="location" />
+          </SplideSlide>
+        </template>
       </Splide>
     </HomeHero>
 

@@ -7,7 +7,7 @@
           <p class="intro__text font-regular">We are independent reviewers of cafes in Tyne & Wear, who love to explore and find new places for a perfect coffee break.</p>
           <p class="intro__text font-regular">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus, hic consequatur pariatur ipsum maxime!</p>
           <div class="intro__action">
-            <AppButton to="/cafes" title="Find a Café" class="animate" />
+            <AppButton to="/cafes" title="Start Exploring" class="animate" />
           </div>
         </div>
         <div class="intro__col">

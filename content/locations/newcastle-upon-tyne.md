@@ -14,6 +14,11 @@ landmarks: null
 climate: null
 economy: null
 images:
+  header:
+    src: '/images/locations/newcastle-upon-tyne-england-north-east.jpeg'
+    alt: 'An image of Newcastle upon Tyne'
+    width: 1920
+    height: 1024
   thumbnail:
     src: '/images/locations/fallback.jpeg'
     alt: 'An image showcasing My Page.'
