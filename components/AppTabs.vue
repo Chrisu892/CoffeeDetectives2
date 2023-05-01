@@ -2,7 +2,7 @@
   export default {
     data() {
       return {
-        active: 'amenities'
+        active: 'locations'
       }
     },
     methods: {
@@ -16,14 +16,14 @@
 <template>
   <div class="tabs">
     <div class="tabs__controls" :class="active">
-      <button class="tabs__button font-medium active" type="button" @click="toggle('amenities')">Browse by Amenity</button>
       <button class="tabs__button font-medium" type="button" @click="toggle('locations')">Browse by Location</button>
-    </div>
-    <div class="tabs__content" :class="{ 'active': active == 'amenities' }">
-      <slot name="amenities" />
+      <button class="tabs__button font-medium" type="button" @click="toggle('amenities')">Browse by Amenity</button>
     </div>
     <div class="tabs__content" :class="{ 'active': active == 'locations' }">
       <slot name="locations" />
+    </div>
+    <div class="tabs__content" :class="{ 'active': active == 'amenities' }">
+      <slot name="amenities" />
     </div>
   </div>
 </template>
@@ -49,10 +49,10 @@
       transition: transform 350ms ease-in-out;
     }
 
-    &.amenities::before {
+    &.locations::before {
       transform: translateX(0%);
     }
-    &.locations::before {
+    &.amenities::before {
       transform: translateX(100%);
     }
   }

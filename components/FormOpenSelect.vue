@@ -135,6 +135,7 @@
     top: 100%;
     left: 0;
     width: 100%;
+    z-index: 10;
   }
   .select__group__option {
     @include flex-row;

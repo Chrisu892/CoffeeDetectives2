@@ -33,6 +33,7 @@
   .masthead {
     @include subtle-formal-invitation-pattern;
     overflow: hidden;
+    padding-top: 77px;
   }
   .masthead__container {
     @include flex-row;

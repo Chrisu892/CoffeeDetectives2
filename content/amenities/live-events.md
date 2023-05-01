@@ -4,11 +4,12 @@ altTitle: 'Cafés with Live Events'
 url: '/amenities/live-events/'
 type: 'amenity'
 show: false
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/amenities/light-decoration-event-festival-outdoor-party-holiday-background-102533504.jpeg'
+    alt: 'An image of an outdoor light decoration for an event.'
+    width: 400
+    height: 600
 head:
   title: 'Cafés with Live Events : Explore cafés and Coffee Blends Across Tyne & Wear'
   meta:

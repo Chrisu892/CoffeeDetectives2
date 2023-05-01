@@ -4,11 +4,12 @@ altTitle: 'Cafés with Loyalty Programs'
 url: '/amenities/loyalty-programs/'
 type: 'amenity'
 show: false
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/amenities/stylish-hipster-girl-beautiful-hair-holding-coffee-cup-c-city-street-background-flowers-gorgeous-happy-young-woman-130017816.jpeg'
+    alt: 'An image of a styling girl holding a disposable coffee cup.'
+    width: 400
+    height: 600
 head:
   title: 'Cafés with Loyalty Programs : Explore cafés and Coffee Blends Across Tyne & Wear'
   meta:

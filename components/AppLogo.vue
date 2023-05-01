@@ -1,6 +1,6 @@
 <template>
   <NuxtLink to="/" title="Go to homepage" class="logo" :class="{ 'rev': isHome }">
-    The Coffee Detectives
+    Coffee Detktives
   </NuxtLink>
 </template>
 

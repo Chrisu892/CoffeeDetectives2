@@ -62,29 +62,46 @@
     autoplay: true,
     type: 'fade'
   }
+
+  /**
+   * Intro slides
+   */
+  const introSlides = [
+    { src: '/images/confident-cafe-owner.jpeg', alt: 'Confident Male Cafe Owner' },
+    { src: '/images/confident-cafe-owner-2.jpeg', alt: 'Confident Female Cafe Owner' }
+  ]
 </script>
 
 <template>
   <main id="main" class="main">
-    <HomeHero :title="page.longTitle" :tagline="page.tagline" :locations="locations" :amenities="amenities">
-      <Splide :options="heroSliderOptions">
-        <template v-for="location, key in locations">
-          <SplideSlide v-if="location.images.header" :key="key">
-            <AppSlide :slide="location" />
-          </SplideSlide>
-        </template>
-      </Splide>
+
+    <HomeHero :title="page.longTitle" :tagline="page.tagline">
+      <template #heroSlider>
+        <Splide :options="heroSliderOptions">
+          <template v-for="location, key in locations">
+            <SplideSlide v-if="location.images.header && location.settings.slider" :key="key">
+              <AppSlide :title="location.title" :path="location._path" :image="location.images.header" />
+            </SplideSlide>
+          </template>
+        </Splide>
+      </template>
+      <template #heroSearch>
+        <AppSearch :locations="locations" :amenities="amenities" />
+      </template>
     </HomeHero>
 
-    <HomeIntro />
+    <HomeIntro>
+      <template #carousel>
+        <Splide :options="heroSliderOptions">
+          <SplideSlide v-for="slide, key in introSlides">
+            <AppSlide :image="slide" class="rounded" />
+          </SplideSlide>
+        </Splide>
+      </template>
+    </HomeIntro>
 
     <AppSection class="padding shade">
       <AppTabs>
-        <template #amenities>
-          <div class="flex-container flex-container--gutter">
-            <AppAmenityListing v-for="amenity, key in amenities" :key="key" :amenity="amenity" />
-          </div>
-        </template>
         <template #locations>
           <Splide :options="locationsSliderOptions">
             <SplideSlide v-for="chunk, key in locationChunks" :key="key">
@@ -93,6 +110,9 @@
               </div>
             </SplideSlide>
           </Splide>
+        </template>
+        <template #amenities>
+          <AppAmenitiesFilter :amenities="amenities" />
         </template>
       </AppTabs>
     </AppSection>

@@ -1,6 +1,7 @@
 ---
 title: 'Amenities'
 longTitle: null
+tagline: 'Find Your Perfect Cafe Experience - Explore Our Amenities'
 url: '/amenities/'
 type: 'page'
 navigation: false

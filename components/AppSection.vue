@@ -44,6 +44,9 @@
     &.center {
       text-align: center;
     }
+    &.typography {
+      @include topography;
+    }
   }
   .section__content {
     h2, h3, h4, h5, h6 {

@@ -6,7 +6,15 @@
       PhCamera
     },
     props: {
-      slide: {
+      title: {
+        type: String,
+        default: null
+      },
+      path: {
+        type: String,
+        default: null
+      },
+      image: {
         type: Object,
         required: true
       }
@@ -17,13 +25,13 @@
 <template>
   <div class="slide">
     <picture>
-      <img class="slide__image" :src="slide.images.header.src" :alt="slide.images.header.alt" />
+      <img class="slide__image" :src="image.src" :alt="image.alt" />
     </picture>
     
-    <div class="slide__credit">
+    <div v-if="title" class="slide__credit">
       <div class="inner">
-        <NuxtLink :to="slide._path" title="Visit ..." class="slide__credit-text">
-          <PhCamera /> {{ slide.title }}
+        <NuxtLink :to="path" title="Visit ..." class="slide__credit-text">
+          <PhCamera /> {{ title }}
         </NuxtLink>
       </div>
     </div>
@@ -34,7 +42,37 @@
   .slide {
     @include flex-row;
     align-items: flex-end;
-    height: 90vh;
+    height: 92vh;
+    max-height: 860px;
+    min-height: 718px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba($clr-dark, 0.45) 0%, transparent 50%, rgba($clr-dark, 0.3) 100%);
+      z-index: 2;
+    }
+
+    &.rounded {
+      border: solid 0.75rem $clr-shade;
+      border-radius: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      padding-top: calc(65% - 1.5rem);
+      position: relative;
+      width: 65%;
+      max-height: initial;
+      min-height: initial;
+      height: initial;
+    }
+    &.rounded::before {
+      display: none;
+    }
   }
   .slide__image {
     object-fit: cover;
@@ -43,21 +81,22 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 1;
   }
   .slide__credit {
     padding-bottom: 1.5rem;
     position: relative;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
   }
   .slide__credit-text {
-    @include flex-row;
     align-items: center;
+    background-color: rgba($clr-white, 0.15);
+    border-radius: 50px;
     color: $clr-white;
+    display: inline-flex;
     line-height: 1;
+    padding: 0.375rem 0.75rem;
   }
   .slide__credit-text svg {
     display: inline-block;

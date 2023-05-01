@@ -80,10 +80,8 @@
   <main id="main" class="main">
     <AppPlainMasthead :title="page.title" />
 
-    <div class="section">
-      <div class="inner">
-        <AppListings :filters="filters" :listings="cafes" />
-      </div>
-    </div>
+    <AppSection>
+      <AppListings :filters="filters" :listings="cafes" />
+    </AppSection>
   </main>
 </template>

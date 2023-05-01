@@ -14,9 +14,14 @@ landmarks: null
 climate: null
 economy: null
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:
@@ -30,4 +35,6 @@ head:
       content: 'Chris Prusakiewicz with ChatGPT'
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
+settings:
+  slider: true
 ---

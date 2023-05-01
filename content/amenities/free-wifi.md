@@ -4,11 +4,12 @@ altTitle: 'Cafés with Free Wi-Fi'
 url: '/amenities/free-wifi/'
 type: 'amenity'
 show: true
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/amenities/young-woman-working-computer-cafe-concept-anywhere-work-40512548.jpeg'
+    alt: 'An image of a young woman working on her computer in a cafe.'
+    width: 400
+    height: 600
 head:
   title: 'Cafés with Free Wi-Fi : Explore Cafés and Coffee Blends Across Tyne & Wear'
   meta:

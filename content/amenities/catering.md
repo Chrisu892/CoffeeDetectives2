@@ -4,11 +4,12 @@ altTitle: 'Cafés with Catering'
 url: '/amenities/catering/'
 type: 'amenity'
 show: false
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/amenities/woman-enjoying-eating-burger-restaurant-african-women-eating-stack-burger-restaurant-friends-happy-young-women-having-116198128.jpeg'
+    alt: 'An image of a young woman enjoying eating a burger at a cafe.'
+    width: 400
+    height: 600
 head:
   title: 'Cafés with Catering : Explore Cafés and Coffee Blends Across Tyne & Wear'
   meta:

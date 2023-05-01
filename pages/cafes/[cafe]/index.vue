@@ -75,6 +75,8 @@
           <ul v-if="page.amenities" class="large-card__amenities">
             <li v-for="amenity of page.amenities" :key="amenity.title" class="large-card__amenity">{{ amenity.title }}</li>
           </ul>
+          <p>Todo:</p>
+          <p>Live capacity</p> 
         </div>
         <div class="large-card__thumbnail">
           <img class="large-card__thumbnail-image" src="/images/cafe-page-image-1.png" alt="" />

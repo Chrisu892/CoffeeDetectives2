@@ -17,7 +17,6 @@
         ],
         cafes: [
           { title: 'Flat Caps Café', url: '/cafes/flat-caps-cafe' },
-          { title: 'Café Nero', url: '/cafes/cafe-nero' },
           { title: 'Waterstones Café', url: '/cafes/waterstones-cafe' },
           { title: 'Luther\'s NSU Bar', url: '/cafes/luthers' },
           { title: 'Vicolo', url: '/cafes/vicolo' },
@@ -32,8 +31,8 @@
           { title: 'View all', url: '/locations' }
         ],
         settings: {
-          site_name: 'The Coffee Detectives',
-          site_email: 'hello@thecoffeedetectives.co.uk'
+          site_name: 'Coffee Detktives',
+          site_email: 'hello@coffeedetktives.co.uk'
         }
       }
     }
@@ -83,8 +82,8 @@
     </div>
     <div class="copyright">
       <div class="inner flex-container">
-        <p class="copyright__text font-small">&copy; Copyright 2023 <NuxtLink to="/" title="Go to Homepage">{{ settings.site_name }}</NuxtLink>. Read our <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink>.</p>
-        <p class="copyright__text font-small">Website by <a href="https://www.chrisprusakiewicz.com/" title="Visit Chris Prusakiewicz's website (opens in new tab)" target="_blank">Chris Prusakiewicz</a></p>
+        <p class="copyright__text font-small">&copy; 2023 <NuxtLink to="/" title="Go to Homepage">{{ settings.site_name }}</NuxtLink>. Read our <NuxtLink to="/privacy-policy/" title="Read privacy policy">privacy policy</NuxtLink> and <NuxtLink to="/terms-and-conditions/" title="Read terms and conditions">terms and conditions</NuxtLink></p>
+        <p class="copyright__text font-small">Challenging the status quo of monopoly chains since 2023</p>
       </div>
     </div>
   </footer>

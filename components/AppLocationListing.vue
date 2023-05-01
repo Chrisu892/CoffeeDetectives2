@@ -1,15 +1,3 @@
-<template>
-  <NuxtLink class="location" :class="{ 'location--slider': slider }" :to="location._path" :title="location.title">
-    <img class="location__image" :src="location.images.thumbnail.src" :alt="`Image of ${location.altTitle}`" />
-    <div class="location__overlay">
-      <div class="location__content">
-        <div class="location__caption font-regular">Explore</div>
-        <h3 class="location__title font-medium">{{ location.altTitle }}</h3>
-      </div>
-    </div>
-  </NuxtLink>
-</template>
-
 <script>
   export default {
     props: {
@@ -24,6 +12,18 @@
     }
   }
 </script>
+
+<template>
+  <NuxtLink class="location" :class="{ 'location--slider': slider }" :to="location._path" :title="location.title">
+    <img class="location__image" :src="location.images.thumbnail.src" :alt="`Image of ${location.altTitle}`" />
+    <div class="location__overlay">
+      <div class="location__content">
+        <div class="location__caption font-regular">Explore</div>
+        <h3 class="location__title font-medium">{{ location.altTitle }}</h3>
+      </div>
+    </div>
+  </NuxtLink>
+</template>
 
 <style scoped lang="scss">
   .location {

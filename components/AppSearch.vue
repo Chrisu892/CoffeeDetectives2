@@ -63,7 +63,7 @@
     box-shadow: 0 0 15px 5px rgba($clr-text, 0.3);
     color: $clr-white;
     padding: 2rem;
-    z-index: 2;
+    z-index: 10;
   }
   .search__container {
     align-items: flex-end;

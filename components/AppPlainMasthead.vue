@@ -1,23 +1,9 @@
-<template>
-  <section v-if="crumbs.length > 0" class="plain-masthead">
-    <div class="plain-masthead__breadcrumb">
-      <div class="inner">
-        <AppBreadcrumb v-if="crumbs.length > 0" :crumbs="crumbs" />
-      </div>
-    </div>
-  </section>
-</template>
-
 <script>
   export default {
     props: {
       title: {
         type: String,
         default: ''
-      },
-      showTitle: {
-        type: Boolean,
-        default: true
       }
     },
     computed: {
@@ -46,12 +32,32 @@
   }
 </script>
 
+
+<template>
+  <section class="plain-masthead">
+    <div class="inner">
+      <div class="plain-masthead__content">
+        <h1 v-if="title" class="plain-masthead__title font-xl">{{ title }}</h1>
+        <p v-if="tagline" class="plain-masthead__tagline font-medium">{{ tagline }}</p>
+      </div>
+    </div>
+  </section>
+</template>
+
 <style scoped lang="scss">
-  .plain-masthead__breadcrumb {
-    background-color: $clr-shade;
-    padding: 0.5rem 0;
+  .plain-masthead {
+    background: linear-gradient(180deg, $clr-shade 0%, $clr-white 100%);
+    padding: 7.25rem 0 calc(5rem - 24px);
   }
-  .plain-masthead__text {
-    padding-top: 1rem;
+  .plain-masthead__content {
+    background-color: $clr-white;
+    border-radius: $border-radius;
+    padding: 12rem 3rem 3rem 3rem;
+  }
+  .plain-masthead__title {
+    margin: 0;
+  }
+  .plain-masthead__tagline {
+    margin: 1.5rem 0 0 0;
   }
 </style>

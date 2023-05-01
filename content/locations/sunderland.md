@@ -14,9 +14,14 @@ landmarks: null
 climate: null
 economy: null
 images:
+  header:
+    src: '/images/locations/bridges-over-river-wear-in-sunderland-north-east-england.jpg'
+    alt: 'Bridges over River Wear in Sunderland, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/bridges-over-river-wear-in-sunderland-north-east-england.jpg'
+    alt: 'Bridges over River Wear in Sunderland, North East England'
     width: 400
     height: 300
 head:
@@ -30,4 +35,6 @@ head:
       content: 'Chris Prusakiewicz with ChatGPT'
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
+settings:
+  slider: true
 ---

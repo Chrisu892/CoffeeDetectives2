@@ -30,4 +30,6 @@ head:
       content: 'Chris Prusakiewicz with ChatGPT'
     - name: 'copyright'
       content: '© 2023 The Coffee Detectives'
+settings:
+  slider: true
 ---

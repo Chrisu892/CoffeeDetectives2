@@ -46,7 +46,7 @@
     align-items: center;
     background-color: transparent;
     border: solid 1px $clr-secondary;
-    border-radius: $border-radius;
+    border-radius: 50px;
     color: $clr-secondary;
     cursor: pointer;
     display: inline-flex;

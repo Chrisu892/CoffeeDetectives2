@@ -4,11 +4,12 @@ altTitle: 'Cafés with Books & Magazines'
 url: '/amenities/books-magazines/'
 type: 'amenity'
 show: false
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/amenities/friends-cafe-girls-time-funny-day-cafe-students-enjoying-books-119775135.jpeg'
+    alt: 'An image of female friends having fun time at a cafe.'
+    width: 400
+    height: 600
 head:
   title: 'Cafés with Books & Magazines : Explore cafés and Coffee Blends Across Tyne & Wear'
   meta:

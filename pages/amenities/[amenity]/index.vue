@@ -2,11 +2,15 @@
   <main id="main" class="main">
     <AppPlainMasthead :title="page.title" />
 
-    <div class="section">
+    <AppSection>
+      <AppListings :filters="filters" :listings="cafes" />
+    </AppSection>
+
+    <!-- <div class="section">
       <div class="inner">
         <AppListings :filters="filters" :listings="cafes" />
       </div>
-    </div>
+    </div> -->
   </main>
 </template>
 

@@ -1,21 +1,31 @@
+<script>
+  import { PhMapPin, PhStorefront } from 'phosphor-vue'
+
+  export default {
+    components: {
+      PhMapPin,
+      PhStorefront,
+    }
+  }
+</script>
+
 <template>
-  <AppSection class="padding">
+  <AppSection class="padding typography">
     <div class="intro">
-      <div class="intro__container">
-        <div class="intro__col">
-          <h2 class="intro__title font-xl">Tyne & Wear Coffee Detectives</h2>
-          <p class="intro__text font-regular">We are independent reviewers of cafes in Tyne & Wear, who love to explore and find new places for a perfect coffee break.</p>
-          <p class="intro__text font-regular">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias delectus, hic consequatur pariatur ipsum maxime!</p>
+      <div class="intro__border">
+        <div class="intro__col intro__content">
+          <PhStorefront />
+          <h2 class="intro__title font-xl">We help to put local independent cafés on the map</h2>
+          <p class="intro__tagline font-regular">Discover the best local independent cafes with us. At Coffee Detktives, we're passionate about promoting and supporting independent cafes. Our platform features independent reviews written by coffee hobbyists who explore and try different places, so you can trust that you're getting an authentic perspective. Join us on our mission to celebrate and support local independent cafes!</p>
           <div class="intro__action">
             <AppButton to="/cafes" title="Start Exploring" class="animate" />
           </div>
         </div>
-        <div class="intro__col">
-          <div class="intro__picture">
-            <picture>
-              <img class="intro__picture__image" src="/images/coffee-and-cookies.png" alt="" />
-            </picture>
-          </div>
+        <div class="intro__col intro__carousel">
+          <slot name="carousel" />
+          <picture>
+            <img class="intro__image" src="/images/green-cup-of-coffee.png" alt="" />
+          </picture>
         </div>
       </div>
     </div>
@@ -23,37 +33,56 @@
 </template>
 
 <style scoped lang="scss">
-  .intro__container {
+  .intro {
+    background-color: $clr-white;
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
+    box-shadow: 0 0 0 15px rgba($clr-white, 0.5);
+  }
+  .intro__border {
     @include flex-row;
     align-items: center;
-    gap: $gutter;
+    gap: 3rem;
+    padding: 3rem;
   }
   .intro__col {
     flex: 1 0;
+    position: relative;
   }
-  .intro__text {
-    margin-top: 1rem;
+  .intro__content {
 
-    &:first-child {
-      font-weight: $bold-weight;
+    svg {
+      color: $clr-primary;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+      height: 3rem;
+      width: 3rem;
     }
   }
-  .intro__picture {
-    background-color: $clr-secondary;
-    border-radius: 35% 100%;
-    margin: 0 auto;
-    padding-top: 60%;
-    position: relative;
-    width: 60%;
-  }
-  .intro__picture__image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 85%;
+  .intro__tagline {
+    margin-top: 1rem;
   }
   .intro__action {
     margin-top: 1.5rem;
+  }
+  .intro__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 40%;
+  }
+  .intro__carousel {
+
+    &::before {
+      @include subtle-formal-invitation-pattern;
+      content: '';
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      left: 0;
+      width: 40%;
+      padding-top: 25%;
+      border-radius: $border-radius;
+    }
   }
 </style>

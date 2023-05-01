@@ -4,11 +4,12 @@ altTitle: 'Cafés with Live Music'
 url: '/amenities/live-music/'
 type: 'amenity'
 show: false
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/amenities/guitar-25279757.jpeg'
+    alt: 'An image of a guitar.'
+    width: 400
+    height: 600
 head:
   title: 'Cafés with Live Music : Explore Cafés and Coffee Blends Across Tyne & Wear'
   meta:

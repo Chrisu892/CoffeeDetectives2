@@ -4,11 +4,12 @@ altTitle: 'Children-friendly Cafés'
 url: '/amenities/children-friendly/'
 type: 'amenity'
 show: false
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/amenities/father-son-together-cafe-family-father-s-day-indoor-portrait-54971431.jpeg'
+    alt: 'An image of a father and his son together at a cafe.'
+    width: 400
+    height: 600
 head:
   title:  'Children-friendly Cafés : Explore Cafés and Coffee Blends Across Tyne & Wear'
   meta:

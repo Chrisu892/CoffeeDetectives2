@@ -4,11 +4,12 @@ altTitle: 'Accessible Cafés'
 url: '/amenities/accessible/'
 type: 'amenity'
 show: false
-image:
-  src: '/assets/image.jpg'
-  alt: 'An image showcasing My Page.'
-  width: 400
-  height: 300
+images:
+  thumbnail:
+    src: '/images/amenities/adult-disabled-man-wheelchair-queue-cafe-disability-cafeteria-interior-background-handicapped-older-male-person-231228303.jpeg'
+    alt: 'An image of adult man in a wheelchair queuing at the cafe.'
+    width: 400
+    height: 600
 head:
   title: 'Accessible Cafés : Explore cafés and Coffee Blends Across Tyne & Wear'
   meta:
