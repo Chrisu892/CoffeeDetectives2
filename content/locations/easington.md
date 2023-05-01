@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Easington is a charming town located on the east coast of England, and it has a lot to offer when it comes to cafes. Visitors can enjoy a warm cup of coffee or tea at the local cafes, which offer a range of delicious treats and pastries. Some of the cafes in Easington also feature outdoor seating areas, perfect for enjoying the fresh sea air while sipping a beverage. Whether you're looking for a place to relax with friends, catch up on work, or simply enjoy a good cup of coffee, Easington's cafes are sure to satisfy."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

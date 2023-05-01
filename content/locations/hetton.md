@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Hetton-le-Hole is a small town in the North East of England with a rich industrial heritage. Despite its size, it has a number of great independent cafes that are worth checking out. Whether you're looking for a cozy spot to read a book or a lively atmosphere to catch up with friends, there's something for everyone. One popular option is Hetton Coffee Company, which offers a range of specialty coffees and freshly baked pastries. Another great choice is The Cafe on the Front, which has a lovely outdoor seating area and serves up delicious breakfast and lunch options. Finally, The Hetton Social Club is a great spot to enjoy a drink and socialize with the locals."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

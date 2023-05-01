@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Castle Ward is an area in Newcastle upon Tyne that's home to a vibrant cafe scene. From cozy independent coffee shops to trendy hangouts, there's something for everyone in this area. One of the popular cafes in Castle Ward is Cafe Royal, a stylish and contemporary spot with a great selection of coffee and light bites. Another great option is The Journey, a charming cafe with a friendly atmosphere and delicious homemade cakes. And for those who love vegan treats, Pink Lane Coffee is a must-visit destination, known for its plant-based menu and delicious coffee. With plenty of cafes to choose from, Castle Ward is a fantastic destination for coffee lovers in Newcastle upon Tyne."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

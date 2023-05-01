@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Tynemouth is a coastal town in Tyne and Wear, and a popular spot for locals and visitors to enjoy a relaxing day by the sea. With its beautiful beaches and charming town center, Tynemouth also boasts a vibrant cafe scene, with plenty of independent coffee shops and eateries to explore. Whether you're in the mood for a cup of artisanal coffee or a delicious baked good, there's sure to be a cafe in Tynemouth that fits the bill. So why not take a stroll along the seafront and see what this charming town has to offer?"
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

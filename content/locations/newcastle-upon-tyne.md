@@ -13,6 +13,7 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Newcastle upon Tyne is a vibrant city with a thriving coffee scene. From trendy independent coffee shops to well-established chains, there's no shortage of places to grab a cup of joe in this city. You can enjoy a quality coffee with unique decor and friendly atmosphere in cafes like The Laneway & Co, Pink Lane Coffee, and Ouseburn Coffee Co. These cafes offer a diverse range of coffee blends, freshly baked pastries, and healthy breakfast options. Whether you're looking for a place to catch up with friends, work remotely, or simply relax and unwind, Newcastle upon Tyne has plenty of fantastic cafes to choose from."
 images:
   header:
     src: '/images/locations/newcastle-upon-tyne-england-north-east.jpeg'

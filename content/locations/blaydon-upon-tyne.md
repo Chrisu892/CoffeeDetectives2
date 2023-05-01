@@ -1,9 +1,9 @@
 ---
-title: 'Blydon'
-altTitle: 'Cafes in Blydon'
-url: '/locations/blydon/'
+title: 'Blaydon upon Tyne'
+altTitle: 'Cafes in Blaydon upon Tyne'
+url: '/locations/blaydon-upon-tyne/'
 type: 'location'
-id: 'blydon'
+id: 'blaydon-upon-tyne'
 geolocation:
   lat: 54.9783
   long: 1.6178
@@ -13,6 +13,7 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Blaydon-on-Tyne is a town in the Metropolitan Borough of Gateshead, located on the southern bank of the River Tyne in North East England. The town has a variety of cafes, each with their unique atmosphere and offerings. Whether you're looking for a cozy spot to catch up with friends or a quiet place to work, there's a cafe for everyone. Some of the local favorites include The Coffee Bank, which offers artisan coffee and homemade cakes, and Cafe D'Vine, which serves up a range of hot and cold drinks as well as hearty breakfast and lunch options. Another great option is The Attic, a cafe located on the second floor of a building, offering a peaceful atmosphere and scenic views of the town."
 images:
   header:
     src: '/images/locations/blydon-countryside-england-north-east.jpeg'

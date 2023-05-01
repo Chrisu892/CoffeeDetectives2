@@ -79,7 +79,7 @@
   <main id="main" class="main">
     <AppMasthead :title="page.longTitle" :tagline="page.tagline" />
 
-    <AppSection>
+    <AppSection class="padding">
       <AppListings :filters="filters" :listings="cafes" />
     </AppSection>
   </main>

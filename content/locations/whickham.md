@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Whickham has several charming cafes for visitors to enjoy. There are plenty of independent cafes that offer an inviting atmosphere for those who want to enjoy a cup of coffee, read a book, or catch up with friends. Some cafes also offer light bites and sweet treats to complement the hot and cold drinks on the menu. Whether you're looking for a cozy spot to relax or a place to work, Whickham's cafes offer something for everyone. With friendly service, tasty treats, and a relaxing ambiance, these cafes are a must-visit for coffee lovers in the area."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

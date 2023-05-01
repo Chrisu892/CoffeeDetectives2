@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Whitley Bay is a coastal town in North Tyneside, known for its sandy beaches and stunning views. The town has a vibrant coffee culture, with plenty of independent cafes offering a range of specialty coffee blends and freshly baked pastries. Whether you're looking for a cozy corner to curl up with a good book or a place to catch up with friends over a cappuccino, Whitley Bay has something to offer. Some of the most popular cafes in the area include Jam Jar, a quirky and creative space with a welcoming atmosphere, and Beaches and Cream, which boasts a beautiful seaside location and a delicious selection of homemade cakes and treats."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

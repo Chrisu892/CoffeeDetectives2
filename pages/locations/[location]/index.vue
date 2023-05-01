@@ -100,8 +100,10 @@
   <main id="main" class="main">
     <AppMasthead :title="page.title" :tagline="page.tagline" />
 
-    <AppSection class="padding-bottom">
+    <AppSection class="padding">
       <AppListings :filters="filters" :listings="cafes" />
     </AppSection>
+
+    <AppLocationStrip :location="page" />
   </main>
 </template>

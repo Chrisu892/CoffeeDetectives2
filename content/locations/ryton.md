@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Ryton is a beautiful village located on the outskirts of Newcastle upon Tyne, and it offers a selection of cozy and welcoming cafes. Whether you're in the mood for a hot cup of coffee or a delicious breakfast, you can find a spot that suits your needs. One of the cafes worth checking out is the popular Cafe Ryton, which offers a range of homemade sandwiches, cakes, and pastries, as well as gluten-free and vegetarian options. The Corner House Cafe is another great option that offers a variety of breakfast items, sandwiches, and hot drinks, all served in a friendly and relaxed atmosphere. If you're in Ryton, be sure to stop by one of these local cafes and enjoy a delicious cup of coffee or a tasty treat."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

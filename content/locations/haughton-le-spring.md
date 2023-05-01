@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Haughton-le-Spring, a town in the County Durham region, has a variety of cozy cafes where you can enjoy a hot cup of coffee or a delicious snack. Whether you're in the mood for a simple drip coffee or a fancy latte, you're sure to find a cafe that suits your taste. Some cafes in Haughton-le-Spring offer freshly baked pastries and cakes to accompany your coffee, while others have more substantial food options. With a friendly and inviting atmosphere, Haughton-le-Spring's cafes are the perfect place to meet up with friends or catch up on some work while enjoying a delicious cup of coffee."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

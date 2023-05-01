@@ -80,7 +80,7 @@
 
     <AppSection class="padding shade">
       <div class="large-card">
-        <div class="large__card__main">
+        <div class="large-card__description">
           <h2 class="large-card__title font-medium">Events at {{ page.title }}</h2>
           <div v-if="events.length > 0" class="flex-container"></div>
           <div v-else>Sorry, there are no events at {{ page.title }} at the moment. Please check again soon.</div>
@@ -90,14 +90,14 @@
 
     <AppSection class="padding">
       <div class="large-card">
-        <div class="large-card__main">
+        <div class="large-card__description">
           <h2 class="large-card__title font-medium">Directions to {{ page.title }}</h2>
           <AppMap />
         </div>
       </div>
     </AppSection>
 
-    <AppSection class="padding shade" title="You might also like" url="cafes">
+    <AppSection class="padding shade" title="You might also like" url="/cafes">
       <Splide :options="cafeSliderOptions">
         <SplideSlide v-for="cafe, key in cafes" :key="key">
           <AppCafeListing :cafe="cafe" view="grid" />
@@ -187,36 +187,5 @@
   .large-card__thumbnail-image {
     transform-origin: bottom left;
     transform: scale(1.1);
-  }
-
-  .large-card__verdict {
-    @include flex-row;
-    align-items: center;
-    background-color: $clr-primary;
-    border-radius: $border-radius;
-    gap: 0.5rem;
-    padding: 0.75rem 0.5rem;
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    left: 0;
-
-    svg {
-      fill: $clr-secondary;
-      display: inline-block;
-      height: 34px;
-      width: 34px;
-    }
-  }
-  .large-card__verdict__content {
-    flex: 1 0;
-  }
-  .large-card__verdict__title {
-    line-height: 1;
-    margin-bottom: 0.125rem;
-  }
-  .large-card__verdict__message {
-    font-weight: $bold-weight;
-    line-height: 1;
   }
 </style>

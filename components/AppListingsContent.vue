@@ -32,7 +32,7 @@
 <template>
   <div class="content">
     <div class="content__header">
-      <div class="content__count font-small">
+      <div class="content__count font-regular">
         <template v-if="page.type === 'amenity'">Found {{ content.length }} {{ page.title.toLowerCase() }} cafés.</template>
         <template v-else>Found {{ content.length }} cafes in {{ page.title.toLowerCase() }}.</template>
       </div>
@@ -57,7 +57,7 @@
     <div class="content__footer">
       <div class="content__summary">
         <template v-if="page.type === 'amenity'">Showing {{ content.length }} {{ page.title.toLowerCase() }} cafés.</template>
-        <template v-else>Showing {{ content.length }} cafes in {{ page.title.toLowerCase() }}.</template>
+        <template v-else>Showing 1 - {{ content.length }} out of {{ content.length }} cafes<template v-if="page.title != 'Cafés'"> in {{ page.title.toLowerCase() }}</template>.</template>
       </div>
       <div class="content__actions">
         <AppPagination />
@@ -116,5 +116,12 @@
   }
   .content__empty__message {
     margin: 0;
+  }
+  .content__footer {
+    @include flex-row;
+    align-items: center;
+  }
+  .content__summary {
+    flex: 1 0;
   }
 </style>

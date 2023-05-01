@@ -1,5 +1,5 @@
 ---
-title: 'Heeburn'
+title: 'Hebburn'
 altTitle: 'Cafes in Hebburn'
 url: '/locations/hebburn/'
 type: 'location'
@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Hebburn is a small town in Tyne and Wear with a growing coffee culture. Visitors can enjoy a variety of cafes with unique decor, comfortable seating, and friendly atmosphere. Many of the cafes in Hebburn offer free Wi-Fi, power outlets, and outdoor seating options. Visitors can find a range of coffee blends and food options, including fresh pastries and sandwiches. Some cafes also offer catering services for events or parties. Whether you're looking for a place to catch up with friends, study, or relax, Hebburn has something for everyone."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

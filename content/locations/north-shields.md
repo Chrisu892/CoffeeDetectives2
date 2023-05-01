@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "North Shields, located on the north bank of the River Tyne, is a great place to explore local cafes with stunning views of the river. Whether you are in the mood for a cozy coffee shop or a trendy café with live music, North Shields has plenty to offer. Some of the top spots to check out include Crusoe's, a café with a bohemian feel and a menu featuring fresh homemade food, and The Old Low Light, a café housed in a restored lighthouse with spectacular views of the river. Another popular spot is the Low Lights Tavern, a traditional English pub with a cozy café attached, perfect for a coffee break during your visit."
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

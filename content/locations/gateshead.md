@@ -13,6 +13,7 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Gateshead offers a unique blend of contemporary and historic culture, and its cafe scene reflects that. From cozy cafes tucked away in hidden corners to vibrant establishments in the heart of the city, Gateshead has something for everyone. Cafes like The Staiths Cafe, The Nest Coffee House, and The Central Bean Coffee House are popular choices among locals and visitors alike, offering an inviting atmosphere and high-quality coffee. Whether you're looking for a quick caffeine fix or a relaxing spot to catch up with friends, Gateshead's cafes won't disappoint."
 images:
   header:
     src: '/images/locations/gateshead-quayside-north-east-england.jpeg'

@@ -13,10 +13,16 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Chester-le-Street is a charming town that's home to a range of cozy cafes, perfect for a relaxing break. Whether you're in the mood for a steaming cup of coffee or a delicious pastry, Chester-le-Street's cafes have got you covered. You'll find plenty of options that cater to all tastes, from trendy coffee shops to traditional tea rooms. Many of the cafes here offer a warm and welcoming atmosphere, making them great spots to catch up with friends or even hold business meetings. So why not take a break from exploring the town's historic sites and pop into one of Chester-le-Street's inviting cafes?"
 images:
+  header:
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
+    width: 1920
+    height: 1024
   thumbnail:
-    src: '/images/locations/fallback.jpeg'
-    alt: 'An image showcasing My Page.'
+    src: '/images/locations/gateshead-quayside-north-east-england.jpeg'
+    alt: 'Gateshead Quayside, North East England'
     width: 400
     height: 300
 head:

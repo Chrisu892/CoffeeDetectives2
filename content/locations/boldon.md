@@ -13,6 +13,7 @@ history: null
 landmarks: null
 climate: null
 economy: null
+content: "Boldon is a small town in the northeast of England, and it's home to several cozy and unique cafes. The cafes in Boldon offer a variety of options, including handcrafted coffee, tea, and homemade pastries. Many of these cafes also offer free Wi-Fi, making them the perfect spot for catching up on work or meeting with friends. For those looking for a bite to eat, some cafes also offer sandwiches, soups, and other light fare. Some popular cafes in Boldon include The Caffeine Club, Boldon Coffee Shop, and The Little Cake Shop. With its charming cafes and friendly atmosphere, Boldon is a great destination for coffee lovers and foodies alike."
 images:
   header:
     src: '/images/locations/boldon-england-north-east.jpeg'
