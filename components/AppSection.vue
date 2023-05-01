@@ -16,7 +16,7 @@
 <template>
   <section class="section">
     <div class="inner">
-      <AppFeature :title="title" :url="url" />
+      <AppFeature v-if="title" :title="title" :url="url" />
       <div class="section__content">
         <slot />
       </div>

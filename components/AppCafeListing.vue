@@ -30,7 +30,7 @@
   <article class="cafe" :class="view">
     <div class="cafe__thumbnail">
       <NuxtLink class="cafe__thumbnail-link" :to="cafe._path" :title="`Read more about ${cafe.title}`">
-        <img class="cafe__thumbnail-image" :src="cafe.images.thumbnail" :alt="cafe.title" />
+        <img v-if="cafe.images.thumbnail.src" class="cafe__thumbnail-image" :src="cafe.images.thumbnail.src" :alt="cafe.title" />
       </NuxtLink>
     </div>
 
@@ -75,9 +75,8 @@
   .cafe {
     @include flex-row;
     background-color: $clr-white;
+    border: solid 1px $clr-shade;
     border-radius: $border-radius;
-    box-shadow: 0 5px 10px -5px rgba($clr-dark, 0.2);
-
     &.list {
       flex: 100% 0;
     }
@@ -88,7 +87,6 @@
       min-width: 33.333%;
       min-width: calc(33.333% - 1.35rem);
     }
-
     &.extra-margin {
       margin: 0.25rem 0.125rem;
     }
@@ -122,7 +120,6 @@
     height: 100%;
     object-fit: cover;
   }
-
   .cafe__content {
     padding: 1rem;
     position: relative;
@@ -131,18 +128,15 @@
     flex: 1 0;
     margin-top: 0;
   }
-
   .cafe__section.flex {
     display: flex;
     flex-flow: row;
     align-items: center;
   }
-
   .cafe__title {
     flex: 1 0;
     margin: 0;
   }
-
   .cafe__rating {
     align-items: center;
     border: 0;
@@ -155,7 +149,6 @@
   .cafe__rating-score {
     margin-left: 0.225rem;
   }
-
   .cafe__abstract {
     margin: 0.5rem 0;
     max-height: 76px;
@@ -231,7 +224,6 @@
     height: 1.65rem;
     width: 1.65rem;
   }
-
   .cafe__action {
     margin-top: 2rem;
   }

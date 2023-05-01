@@ -12,8 +12,8 @@
       }
     },
     computed: {
-      isHome() {
-        return this.$route.path === '/'
+      isRev() {
+        return this.$route.path.includes('/cafes/') || this.$route.path.includes('/blog/')
       }
     }
   }
@@ -23,7 +23,7 @@
   <div>
     <AppNavToggle />
 
-    <nav class="nav" :class="{ 'home': isHome }">
+    <nav class="nav" :class="{ 'rev': isRev }">
       <ul class="nav__list nav__list--primary">
         <li v-for="page, key in nav" :key="key" class="nav__item">
           <NuxtLink class="nav__link font-regular" :to="page._path" :title="`Go to ${page.title}`">
@@ -43,7 +43,6 @@
       </ul>
       <ul class="nav__list">
         <li class="nav__item">
-          <!-- <NuxtLink class="nav__link font-regular" to="/get-listed">Get Listed</NuxtLink> -->
           <AppButton btnType="link" to="/get-listed" class="primary animate" title="Get Listed" />
         </li>
       </ul>
@@ -75,7 +74,7 @@
     }
   }
   .nav__link {
-    color: $clr-text;
+    color: $clr-white;
     display: inline-block;
     font-weight: $bold-weight;
     letter-spacing: 0.5px;
@@ -91,8 +90,8 @@
       width: 16px;
     }
   }
-  .nav.home .nav__link {
-    color: $clr-white;
+  .nav.rev .nav__link {
+    color: $clr-secondary;
   }
   .nav__item:hover .nav__link {
     text-decoration-color: $clr-text;
@@ -160,19 +159,5 @@
   }
   .nav__group__link {
     color: $clr-secondary;
-  }
-
-  @media screen and (max-width: 1210px) {
-
-    .nav__link {
-      padding: 0.475rem 1.325rem;
-    }
-  }
-
-  @media screen and (max-width: 1140px) {
-
-    .nav__link {
-      padding: 0.375rem 0.925rem;
-    }
   }
 </style>

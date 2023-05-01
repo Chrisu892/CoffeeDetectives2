@@ -7,7 +7,7 @@
 
 <template>
   <main id="main" class="main">
-    <AppPlainMasthead title="Cafes" />
+    <AppMasthead :title="page.title" :tagline="page.tagline" />
 
     <AppSection class="padding">
       <ContentDoc />

@@ -1,6 +1,6 @@
 ---
 title: 'Cafés'
-longTitle: 'Cafés : Explore Cafés and Coffee Blends Across Tyne & Wear'
+longTitle: 'Find the perfect café for every occassion'
 displayOrder: 2
 type: 'page'
 image:

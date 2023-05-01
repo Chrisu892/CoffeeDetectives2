@@ -36,7 +36,30 @@ openingsTimes:
     to: '16:00'
 address: 'Grainger Street, Newcastle upon Tyne, NE1 0AL'
 images:
-  thumbnail: '/images/cafes/fallback.jpeg'
+  thumbnail: 
+    src: '/images/cafes/fallback.jpeg'
+    alt: 'Cafe Fallback Image'
+  gallery:
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
 head:
   title: "The Black Sheep Coffee : Cafés : Explore Cafes and Coffee Blends Across Tyne & Wear"
   meta:

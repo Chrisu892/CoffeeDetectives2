@@ -1,6 +1,7 @@
 <template>
   <main id="main" class="main">
     <AppMasthead :title="title" :tagline="tagline" />
+    
     <section class="section">
       <div class="inner">
         <div class="page-content">

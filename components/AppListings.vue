@@ -1,10 +1,3 @@
-<template>
-  <div class="listings">
-    <AppListingsFilters :filters="filters" />
-    <AppListingsContent :content="listings" />
-  </div>
-</template>
-
 <script>
   export default {
     props: {
@@ -19,3 +12,10 @@
     }
   }
 </script>
+
+<template>
+  <div>
+    <AppListingsFilters :filters="filters" />
+    <AppListingsContent :content="listings" />
+  </div>
+</template>

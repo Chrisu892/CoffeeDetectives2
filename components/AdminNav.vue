@@ -23,7 +23,7 @@
 <template>
   <nav id="nav" class="nav">
     <div class="nav__logo">
-      <AppLogo class="rev" />
+      <AppLogo />
     </div>
     <ul class="nav__list">
       <li v-for="link, key in nav" :key="key" class="nav__item">

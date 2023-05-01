@@ -131,11 +131,8 @@ li {
     #SPLIDE
 \*-------------------------*/
 
-.splide {
-  // padding-bottom: 4rem;
-}
 .splide__track {
-  // border-radius: $border-radius;
+  border-radius: $border-radius;
 }
 .splide__slide {
   padding: 0;
@@ -145,11 +142,11 @@ li {
   }
 }
 .splide__arrows {
-  bottom: 0;
+  bottom: 1.125rem;
   display: flex;
   flex-flow: row wrap;
-  gap: 1rem;
-  left: 0;
+  gap: 0.5rem;
+  left: 1.125rem;
   position: absolute;
 }
 .splide__arrow {
@@ -165,8 +162,12 @@ li {
   }
 }
 .splide__pagination {
+  display: inline-flex !important;
   justify-content: flex-end !important;
   padding: 0 !important;
+  right: 1.125rem !important;
+  bottom: 1.625rem !important;
+  left: initial !important;
 
   li {
     margin-left: 0.25rem !important;

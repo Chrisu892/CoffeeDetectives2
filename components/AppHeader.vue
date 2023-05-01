@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ 'home': isHome }">
+  <header class="header">
     <div class="inner header__container">
       <div class="header__logo">
         <AppLogo />
@@ -10,16 +10,6 @@
     </div>
   </header>
 </template>
-
-<script>
-  export default {
-    computed: {
-      isHome() {
-        return this.$route.path === '/'
-      }
-    }
-  }
-</script>
 
 <style scoped lang="scss">
   .header {

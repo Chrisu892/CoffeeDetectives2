@@ -36,7 +36,30 @@ openingsTimes:
     to: '16:00'
 address: 'Example Street, Newcastle upon Tyne, NE1 2LA'
 images:
-  thumbnail: '/images/cafes/fallback.jpeg'
+  thumbnail: 
+    src: '/images/cafes/fallback.jpeg'
+    alt: 'Cafe Fallback Image'
+  gallery:
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
 head:
   title: 'Flat Caps Café : Cafés : Explore Cafes and Coffee Blends Across Tyne & Wear'
   meta:

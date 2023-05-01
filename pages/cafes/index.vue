@@ -1,8 +1,7 @@
 <script setup lang="ts">
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).find()
   const { page } = useContent()
   useContentHead(page)
-
-  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).find()
 </script>
 
 <script lang="ts">
@@ -78,7 +77,7 @@
 
 <template>
   <main id="main" class="main">
-    <AppPlainMasthead :title="page.title" />
+    <AppMasthead :title="page.longTitle" :tagline="page.tagline" />
 
     <AppSection>
       <AppListings :filters="filters" :listings="cafes" />

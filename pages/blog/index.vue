@@ -1,6 +1,13 @@
+<script setup>
+  const { page } = useContent()
+  useContentHead(page)
+
+  const articles = await queryContent('blog').where({ type: { $eq: 'article' } }).limit(12).find()
+</script>
+
 <template>
   <main id="main" class="main">
-    <AppPlainMasthead title="Latest news and updates from our Coffee Detectives" />
+    <AppMasthead :title="page.title" :tagline="page.tagline" />
 
     <AppSection class="padding">
       <ContentDoc />
@@ -13,10 +20,3 @@
     </AppSection>
   </main>
 </template>
-
-<script setup lang="ts">
-  const { page } = useContent()
-  useContentHead(page)
-
-  const articles = await queryContent('blog').where({ type: { $eq: 'article' } }).limit(12).find()
-</script>

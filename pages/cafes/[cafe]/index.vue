@@ -1,20 +1,25 @@
 <script setup lang="ts">
+  /**
+   * Import required dependencies
+   */
   import { Splide, SplideSlide } from '@splidejs/vue-splide'
   import '@splidejs/vue-splide/css'
 
+  /**
+   * Use page content in the head
+   */
   const { page } = useContent()
   useContentHead(page)
 
+  /**
+   * Fetch data required for the cafe page
+   */
   const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(6).find()
-  const events = []
+  const events: Array<any> = []
 
-  const options = {
-    rewind: false,
-    gap: '1rem',
-    perMove: 1,
-    perPage: 1
-  }
-
+  /**
+   * Cafe listings carousel options
+   */
   const cafeSliderOptions = {
     rewind: false,
     gap: '2rem',
@@ -24,70 +29,51 @@
 </script>
 
 <script lang="ts">
-  import { PhMapPin, PhShieldCheck } from 'phosphor-vue';
+  import { PhMapPin, PhShieldCheck, PhHeart, PhShare } from 'phosphor-vue';
 
   export default {
     components: {
       PhMapPin,
       PhShieldCheck,
+      PhHeart,
+      PhShare
     }
   }
 </script>
 
 <template>
   <main id="main" class="main">
-    <AppPlainMasthead />
 
     <section id="masthead" class="masthead">
       <div class="inner masthead__inner">
-        <div class="flex-container flex-container--gutter flex-container--align-center">
+        <div class="masthead__container">
           <div class="masthead__content">
             <h1 class="masthead__title font-xl">{{ page.title }}</h1>
-            <p class="masthead__location font-regular"><ph-map-pin /> {{ page.address }}</p>
-            <p class="masthead__tagline font-regular">{{ page.abstract }}</p>
-            <div class="masthead__action">
-              <AppButton to="#reviews" title="Read Reviews" class="solid animate" />
-              <AppButton v-if="!page.owner" to="/get-listed?cafe=1" title="Claim Yours" class="animate" />
-            </div>
+            <p class="masthead__location font-regular"><PhMapPin /> {{ page.address }}</p>
           </div>
-          <div class="masthead__gallery">
-            <Splide v-if="page.images.gallery" :options="options">
-              <SplideSlide v-for="image, key in page.images.gallery" :key="key">
-                <img class="masthead__gallery-image" :src="image" :title="`${page.title} gallery image`" />
-              </SplideSlide>
-            </Splide>
-            <div v-else>
-              <img class="masthead__gallery-image" :src="page.images.thumbnail" :title="`${page.title} gallery image`" />
-            </div>
+          <div class="masthead__actions">
+            <button type="button" class="masthead__action"><PhHeart /></button>
+            <button type="button" class="masthead__action"><PhShare /></button>
           </div>
+        </div>
+        <div class="masthead__gallery">
+          <AppLocationGallery v-if="page.images.gallery" :images="page.images.gallery" />
+          <img v-else class="masthead__gallery-image" :src="page.images.thumbnail" :title="`${page.title} gallery image`" />
         </div>
       </div>
     </section>
 
     <AppSection class="padding">
       <div class="large-card">
-        <div class="large-card__main">
+        <div class="large-card__description">
           <h2 class="large-card__title font-medium">About {{ page.title }}</h2>
-          <div class="large-card__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum libero placeat debitis doloremque labore autem qui voluptates natus distinctio dignissimos nesciunt in quisquam et id magnam suscipit excepturi adipisci, quidem pariatur praesentium. Officia laudantium obcaecati exercitationem! Velit optio minus alias dolorum odit sequi delectus officiis consequuntur maxime quibusdam veniam neque animi est, nisi sit aliquam natus harum tenetur rem temporibus voluptate ea saepe ullam! Maxime quis voluptate omnis, nulla reprehenderit magni ratione amet adipisci pariatur harum. Quidem animi corrupti reiciendis, error debitis cupiditate, quas ullam deleniti, inventore ratione minima consequuntur quo molestiae velit aperiam deserunt aliquam! Tenetur, dolor. In, nihil?</div>
+          <div class="large-card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde tempora ad rerum exercitationem, alias nostrum eum minima, saepe voluptate, quasi magni? Numquam, aliquid! Commodi voluptates reiciendis, et incidunt laborum rem consequuntur quaerat dignissimos ad natus earum quos est aliquid quod ducimus ipsa a laudantium ipsam voluptatibus ab aspernatur, repudiandae eveniet molestias expedita. Iure cum nobis voluptatem libero vel. Nisi quisquam ipsum aut voluptates ab eligendi repudiandae cupiditate vel, facere saepe est sit natus consectetur, aliquid expedita debitis inventore doloremque ducimus. Corrupti ut quisquam dolorem maxime totam illo, porro enim sed in accusamus, quaerat laboriosam, unde optio. Velit ipsum quam possimus.</div>
         </div>
-        <div class="large-card__aside">
-          <h3 class="large-card__title font-medium">Amenities</h3>
-          <ul v-if="page.amenities" class="large-card__amenities">
-            <li v-for="amenity of page.amenities" :key="amenity.title" class="large-card__amenity">{{ amenity.title }}</li>
+        <div class="large-card__amenities">
+          <h2 class="large-card__title font-medium">Amenities</h2>
+          <ul class="large-card__list font-regular">
+            <li class="large-card__amenity" v-for="amenity, key in page.amenities" :key="key">{{ amenity.title }}</li>
           </ul>
-          <p>Todo:</p>
-          <p>Live capacity</p> 
-        </div>
-        <div class="large-card__thumbnail">
-          <img class="large-card__thumbnail-image" src="/images/cafe-page-image-1.png" alt="" />
-
-          <div class="large-card__verdict">
-            <PhShieldCheck />
-            <div class="large-card__verdict__content">
-              <div class="large-card__verdict__title font-small">Our Verdict</div>
-              <div class="large-card__verdict__message font-regular">Student-friendly café</div>
-            </div>
-          </div>
         </div>
       </div>
     </AppSection>
@@ -111,7 +97,7 @@
       </div>
     </AppSection>
 
-    <AppSection class="padding shade" title="Similar Cafés" url="cafes">
+    <AppSection class="padding shade" title="You might also like" url="cafes">
       <Splide :options="cafeSliderOptions">
         <SplideSlide v-for="cafe, key in cafes" :key="key">
           <AppCafeListing :cafe="cafe" view="grid" />
@@ -123,9 +109,8 @@
 
 <style scoped lang="scss">
   .masthead {
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23915c4c' fill-opacity='0.14' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
-    padding: 3rem 0;
+    @include subtle-formal-invitation-pattern;
+    padding: calc(80px + 6rem) 0 2rem;
     position: relative;
 
     &::before {
@@ -142,60 +127,50 @@
     position: relative;
     z-index: 1;
   }
+  .masthead__container {
+    @include flex-row;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+  }
   .masthead__content {
     flex: 1 0;
   }
   .masthead__title {
-    margin-top: 1.5rem;
+    margin: 0;
   }
   .masthead__location {
     @include flex-row;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
 
     svg {
-      margin-right: 0.5rem;
+      margin-right: 0.25rem;
     }
   }
-  .masthead__tagline {
-    font-weight: $bold-weight;
-    margin-top: 1.5rem;
+  .masthead__actions {
+    @include flex-row;
+    gap: 0.75rem;
   }
   .masthead__action {
-    margin-top: 2rem;
-
-    .button:not(:first-child) {
-      margin-left: 1rem;
-    }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    cursor: pointer;
   }
-  .masthead__gallery {
-    background-color: $clr-white;
-    border: solid 0.5rem $clr-white;
-    border-radius: $border-radius;
-    flex: 1 0;
-    overflow: hidden;
-  }
-  .masthead__gallery-image {
-    border-radius: $border-radius;
-    width: 100%;
-    height: 100%;
-    max-height: 400px;
-    object-fit: cover;
-  }
+  
 
   .large-card {
     @include flex-row;
-    border: solid 1px $clr-shade;
-    border-radius: $border-radius;
+    gap: 3rem;
   }
-  .large-card__main {
+  .large-card__description {
     flex: 3 0;
-    padding: 2rem;
   }
-  .large-card__aside {
-    background-color: $clr-shade;
+  .large-card__amenities {
     flex: 1 0;
-    padding: 2rem;
   }
   .large-card__thumbnail {
     background-color: $clr-shade;

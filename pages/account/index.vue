@@ -13,7 +13,10 @@
           _path: '/cafes/backyard-bike-shop',
           newTab: true,
           images: {
-            thumbnail: '/images/newcastle-gateshead.jpeg'
+            thumbnail: {
+              src: '/images/newcastle-gateshead.jpeg',
+              alt: 'Fallback image'
+            }
           },
           rating: 4.83,
           abstract: 'This is a preview of your cafe listing. You can edit your listing in the admin area.',

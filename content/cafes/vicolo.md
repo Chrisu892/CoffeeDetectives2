@@ -36,7 +36,30 @@ openingsTimes:
     to: '16:00'
 address: 'Tyneside Cinema, Northumberland Street, Newcastle upon Tyne, NE1 2SA'
 images:
-  thumbnail: '/images/cafes/fallback.jpeg'
+  thumbnail: 
+    src: '/images/cafes/fallback.jpeg'
+    alt: 'Cafe Fallback Image'
+  gallery:
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
 head:
   title: "Vicolo : Cafés : Explore Cafes and Coffee Blends Across Tyne & Wear"
   meta:

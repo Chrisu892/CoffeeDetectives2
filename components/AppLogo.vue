@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/" title="Go to homepage" class="logo" :class="{ 'rev': isHome }">
+  <NuxtLink to="/" title="Go to homepage" class="logo" :class="{ 'rev': isRev }">
     Coffee Detktives
   </NuxtLink>
 </template>
@@ -7,8 +7,8 @@
 <script lang="ts">
   export default {
     computed: {
-      isHome() {
-        return this.$route.path === '/'
+      isRev() {
+        return this.$route.path.includes('/cafes/') || this.$route.path.includes('/blog/')
       }
     }
   }
@@ -17,13 +17,14 @@
 <style scoped lang="scss">
   .logo {
     @include flex-row;
+    color: $clr-white;
     font-family: $font-cursive;
     font-size: 1.75rem;
     letter-spacing: 0.5px;
     line-height: 1;
 
     &.rev {
-      color: $clr-white;
+      color: $clr-secondary;
     }
   }
   .logo__graphic {

@@ -1,33 +1,3 @@
-<template>
-  <main id="main" class="main">
-    <AppPlainMasthead :title="page.title" :showTitle="false" />
-
-    <AppSection class="narrow padding">
-      <article class="article">
-        <header class="article__header">
-          <h1 class="article__title font-xl">{{ page.title }}</h1>
-          <p class="article__details font-regular">Posted on {{ page.date }} by {{ page.author }}</p>
-        </header>
-
-        <main class="article__main">
-          <div class="article__image">
-            <img class="article__image__source" :src="page.images.thumbnail" :alt="page.title" />
-          </div>
-          <div class="article__content">
-            <ContentDoc />
-          </div>
-        </main>
-      </article>
-    </AppSection>
-
-    <AppSection class="padding shade" title="More Stories" url="/blog/">
-      <div class="flex-container flex-container--gutter">
-        <AppArticleListing v-for="article, key in articles" :key="key" :article="article" />
-      </div>
-    </AppSection>
-  </main>
-</template>
-
 <script setup lang="ts">
     const { page } = useContent()
     useContentHead(page)
@@ -35,24 +5,57 @@
     const articles = await queryContent('blog').where({ type: { $eq: 'article' } }).limit(3).find()
 </script>
 
+<template>
+  <main id="main" class="main">
+    <section class="main-article">
+      <header class="main-article__header">
+        <div class="inner inner--narrow">
+          <h1 class="main-article__title font-xl">{{ page.title }}</h1>
+          <p class="main-article__details font-regular">Posted on {{ page.date }} by {{ page.author }}</p>
+          <div class="main-article__image">
+            <img class="main-article__image__source" :src="page.images.thumbnail" :alt="page.title" />
+          </div>
+        </div>
+      </header>
+      <main class="main-article__main">
+        <div class="inner inner--narrow">
+          <div class="main-article__content">
+            <ContentDoc />
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <AppSection class="padding shade" title="You may also like" url="/blog/">
+      <div class="flex-container flex-container--gutter">
+        <AppArticleListing v-for="article, key in articles" :key="key" :article="article" />
+      </div>
+    </AppSection>
+  </main>
+</template>
+
 <style scoped lang="scss">
-  .article__header {
-    padding: 2.5rem 0;
+  .main-article {
+    padding-bottom: 3rem;
+  }
+  .main-article__header {
+    @include subtle-formal-invitation-pattern;
+    padding: calc(5rem + 80px) 0 0;
     text-align: center;
   }
-  .article__title {
+  .main-article__title {
     margin: 0 auto;
   }
-  .article__details {
-    margin: 1.25rem 0 0;
+  .main-article__details {
+    margin: 1.5rem 0 2rem;
   }
-  .article__image {
+  .main-article__image {
     border-radius: $border-radius;
     overflow: hidden;
     padding-top: 50%;
     position: relative;
   }
-  .article__image__source {
+  .main-article__image__source {
     position: absolute;
     top: 0;
     left: 0;
@@ -60,7 +63,7 @@
     height: 100%;
     object-fit: cover;
   }
-  .article__content {
+  .main-article__content {
     margin-top: 2rem;
   }
 </style>

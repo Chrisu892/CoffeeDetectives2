@@ -36,7 +36,30 @@ openingsTimes:
     to: '16:00'
 address: '81 Quayside, Newcastle upon Tyne NE1 3DE'
 images:
-  thumbnail: '/images/cafes/fallback.jpeg'
+  thumbnail: 
+    src: '/images/cafes/fallback.jpeg'
+    alt: 'Cafe Fallback Image'
+  gallery:
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
+    - src: '/images/cafes/fallback.jpeg'
+      alt: 'Cafe Fallback Image'
 head:
   title: "The Hooch : Cafés : Explore Cafes and Coffee Blends Across Tyne & Wear"
   meta:

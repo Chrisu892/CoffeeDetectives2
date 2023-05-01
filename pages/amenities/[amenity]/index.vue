@@ -1,18 +1,9 @@
-<template>
-  <main id="main" class="main">
-    <AppPlainMasthead :title="page.title" />
+<script setup lang="ts">
+  const { page } = useContent()
+  useContentHead(page)
 
-    <AppSection>
-      <AppListings :filters="filters" :listings="cafes" />
-    </AppSection>
-
-    <!-- <div class="section">
-      <div class="inner">
-        <AppListings :filters="filters" :listings="cafes" />
-      </div>
-    </div> -->
-  </main>
-</template>
+  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(12).find()
+</script>
 
 <script lang="ts">
   export default {
@@ -207,9 +198,12 @@
   }
 </script>
 
-<script setup lang="ts">
-  const { page } = useContent()
-  useContentHead(page)
+<template>
+  <main id="main" class="main">
+    <AppMasthead :title="page.title" :tagline="page.tagline" />
 
-  const cafes = await queryContent('cafes').where({ type: { $eq: 'cafe' } }).limit(12).find()
-</script>
+    <AppSection>
+      <AppListings :filters="filters" :listings="cafes" />
+    </AppSection>
+  </main>
+</template>
