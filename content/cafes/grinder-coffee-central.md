@@ -1,13 +1,12 @@
 ---
-title: 'Grinder Coffee Co'
-altTitle: 'Grinder Coffee Co'
-url: '/cafes/grinder-coffee-co/'
-rating: 4.84
+title: 'Grinder Coffee Central'
+altTitle: 'Grinder Coffee Centra'
+rating: 4.94
 type: 'cafe'
 locationId: 'sunderland'
 geolocation:
-  latitude: 54.90237088204588
-  longitude: -1.391655328781593
+  latitude: 54.90490896788659
+  longitude: -1.3825868355467623
 amenities:
   - title: 'Speciality Coffee'
     unique: true
@@ -16,23 +15,23 @@ amenities:
   - title: 'Catering'
 openingsTimes:
   - day: 'Monday'
-    from: '08:00'
+    from: '09:00'
     to: '16:00'
   - day: 'Tuesday'
-    from: '8:00'
+    from: '09:00'
     to: '16:00'
   - day: 'Wednesday'
-    from: '8:00'
+    from: '09:00'
     to: '16:00'
   - day: 'Thursday'
-    from: '8:00'
+    from: '09:00'
     to: '16:00'
   - day: 'Friday'
-    from: '8:00'
+    from: '09:00'
     to: '16:00'
   - day: 'Saturday'
-    from: '9:00'
-    to: '15:00'
+    from: '09:00'
+    to: '16:00'
 content:
   abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde tempora ad rerum exercitationem, alias nostrum eum minima, saepe voluptate, quasi magni? Numquam, aliquid! Commodi voluptates reiciendis, et incidunt laborum rem consequuntur quaerat dignissimos ad natus earum quos est aliquid quod ducimus ipsa a laudantium ipsam voluptatibus ab aspernatur, repudiandae eveniet molestias expedita. Iure cum nobis voluptatem libero vel. Nisi quisquam ipsum aut voluptates ab eligendi repudiandae cupiditate vel, facere saepe est sit natus consectetur, aliquid expedita debitis inventore doloremque ducimus. Corrupti ut quisquam dolorem maxime totam illo, porro enim sed in accusamus, quaerat laboriosam, unde optio. Velit ipsum quam possimus.'
@@ -40,7 +39,7 @@ content:
 contact:
   emailAddress: 'dm@grindercoffee.co'
   website: 'http://www.grindercoffee.co/'
-address: '24A New Durham Rd, Sunderland SR2 7AA'
+address: 'Hills Arts Centre, 17-18 Waterloo Pl, Sunderland SR1 3HT'
 images:
   thumbnail: 
     src: '/images/cafes/fallback.jpeg'

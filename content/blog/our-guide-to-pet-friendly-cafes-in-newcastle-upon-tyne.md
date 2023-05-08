@@ -1,5 +1,5 @@
 ---
-title: 'Our Thoughts About Cat and Dog Cafes in Newcastle upon Tyne'
+title: 'Our Guide to Pet Friendly Cafés in Newcastle upon Tyne'
 url: '/blog/our-thoughts-about-cat-and-dog-cafes-in-newcastle-upon-tyne/'
 author: 'Anonymous'
 date: '11 April 2023'

@@ -2,39 +2,42 @@
 title: 'The Good Apple Cafe'
 altTitle: 'The Good Apple Cafe'
 url: '/cafes/the-good-apple-cafe/'
-abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
+content:
+  abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
 rating: 4.74
 type: 'cafe'
 locationId: 'sunderland'
+geolocation:
+  latitude: 54.90367302715552
+  longitude: -1.3860602289261919
 amenities:
   - title: 'Speciality Coffee'
     unique: true
   - title: 'Unique Decor'
     unique: true
   - title: 'Catering'
+  - title: 'Family-friendly'
+  - title: 'Restrooms'
 openingsTimes:
-  - day: 'Monday'
-    from: '9:00'
-    to: '16:00'
   - day: 'Tuesday'
-    from: '9:00'
-    to: '16:00'
+    from: '10:00'
+    to: '15:00'
   - day: 'Wednesday'
-    from: '9:00'
-    to: '16:00'
+    from: '10:00'
+    to: '15:00'
   - day: 'Thursday'
-    from: '9:00'
-    to: '16:00'
+    from: '10:00'
+    to: '15:00'
   - day: 'Friday'
-    from: '9:00'
-    to: '16:00'
+    from: '10:00'
+    to: '15:00'
   - day: 'Saturday'
-    from: '9:00'
-    to: '16:00'
-  - day: 'Sunday'
-    from: '9:00'
-    to: '16:00'
+    from: '10:00'
+    to: '15:30'
 address: '18 Derwent St, Sunderland SR1 3NU'
+contact:
+  telephone: 01915641763
+  website: "https://m.facebook.com/TheGoodAppleCafe"
 images:
   thumbnail: 
     src: '/images/cafes/fallback.jpeg'

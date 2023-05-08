@@ -2,39 +2,44 @@
 title: 'The Hooch'
 altTitle: 'The Hooch'
 url: '/cafes/the-hooch/'
-abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
+content:
+  abstract: "A chilled-out, funky wee Bar & Cafe with the best views in town of our beautiful Quayside."
 rating: 3.78
 type: 'cafe'
 locationId: 'newcastle-upon-tyne'
+geolocation:
+  latitude: 54.96953546709207
+  longitude: -1.603864131004978
 amenities:
-  - title: 'Speciality Coffee'
+  - title: "Unique Decor"
     unique: true
-  - title: 'Unique Decor'
-    unique: true
-  - title: 'Catering'
+  - title: "Speciality Coffee"
+  - title: "Indoor Sitting"
+  - title: "Outdoor Sitting"
+  - title: "Dine-in"
+  - title: "Live Music"
 openingsTimes:
-  - day: 'Monday'
-    from: '9:00'
-    to: '20:00'
   - day: 'Tuesday'
-    from: '9:00'
+    from: '10:00'
     to: '20:00'
   - day: 'Wednesday'
-    from: '9:00'
+    from: '10:00'
     to: '20:00'
   - day: 'Thursday'
-    from: '9:00'
-    to: '20:00'
+    from: '10:00'
+    to: '23:00'
   - day: 'Friday'
-    from: '9:00'
-    to: '20:00'
+    from: '10:00'
+    to: '00:00'
   - day: 'Saturday'
-    from: '9:00'
-    to: '20:00'
+    from: '10:00'
+    to: '00:00'
   - day: 'Sunday'
-    from: '9:00'
-    to: '16:00'
+    from: '10:00'
+    to: '20:00'
 address: '81 Quayside, Newcastle upon Tyne NE1 3DE'
+contact:
+  website: "http://www.facebook.com/thehoochnewcastle"
 images:
   thumbnail: 
     src: '/images/cafes/fallback.jpeg'

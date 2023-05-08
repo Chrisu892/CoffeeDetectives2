@@ -2,39 +2,39 @@
 title: 'The Peacock'
 altTitle: 'The Peacock'
 url: '/cafes/the-peacock/'
-abstract: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo necessitatibus exercitationem totam.'
+content:
+  abstract: "A stunning family run Edwardian public house and events space in the heart of Sunderland."
 rating: 4.74
 type: 'cafe'
 locationId: 'sunderland'
+geolocation:
+  latitude: 54.906666399016835
+  longitude: -1.3870399021727056
 amenities:
-  - title: 'Speciality Coffee'
-    unique: true
-  - title: 'Unique Decor'
-    unique: true
-  - title: 'Catering'
+  - title: "Dine-in"
+  - title: "Catering"
+  - title: "Indoor Sitting"
+  - title: "Outdoor Sitting"
 openingsTimes:
-  - day: 'Monday'
-    from: '9:00'
-    to: '16:00'
-  - day: 'Tuesday'
-    from: '9:00'
-    to: '16:00'
   - day: 'Wednesday'
-    from: '9:00'
-    to: '16:00'
+    from: '12:00'
+    to: '20:00'
   - day: 'Thursday'
-    from: '9:00'
-    to: '16:00'
+    from: '12:00'
+    to: '23:00'
   - day: 'Friday'
-    from: '9:00'
-    to: '16:00'
+    from: '12:00'
+    to: '23:00'
   - day: 'Saturday'
-    from: '9:00'
-    to: '16:00'
+    from: '12:00'
+    to: '00:00'
   - day: 'Sunday'
-    from: '9:00'
-    to: '16:00'
+    from: '15:00'
+    to: '20:00'
 address: '287 High St W, Sunderland SR1 3ES'
+contact:
+  telephone: "01915143494"
+  website: "https://www.facebook.com/ThePeacockSun/"
 images:
   thumbnail: 
     src: '/images/cafes/fallback.jpeg'

@@ -45,7 +45,7 @@
       </div>
 
       <div class="cafe__section">
-        <p class="cafe__abstract font-small">{{ cafe.abstract }}</p>
+        <p class="cafe__abstract font-small">{{ cafe.content.abstract }}</p>
         <div class="cafe__amenities font-xs">
           <div v-for="amenity, key in cafe.amenities" :key="key" class="cafe__amenity" :class="{ 'unique': amenity.unique }">
             <PhStar v-if="amenity.unique" /> {{ amenity.title }}
@@ -158,6 +158,7 @@
     display: flex;
     flex-flow: row;
     margin: 0.75rem 0 1rem;
+    max-width: 400px;
     overflow: hidden;
     position: relative;
 

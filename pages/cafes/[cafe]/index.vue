@@ -29,14 +29,23 @@
 </script>
 
 <script lang="ts">
-  import { PhMapPin, PhShieldCheck, PhHeart, PhShare } from 'phosphor-vue';
+  import { 
+    PhMapPin, PhHeart, PhShare, 
+    PhClock, PhStar, PhCoffee, 
+    PhPhone, PhEnvelope, PhDesktop
+  } from 'phosphor-vue';
 
   export default {
     components: {
       PhMapPin,
-      PhShieldCheck,
       PhHeart,
-      PhShare
+      PhShare,
+      PhClock,
+      PhStar,
+      PhCoffee,
+      PhPhone,
+      PhEnvelope,
+      PhDesktop
     }
   }
 </script>
@@ -48,8 +57,8 @@
       <div class="inner masthead__inner">
         <div class="masthead__container">
           <div class="masthead__content">
-            <h1 class="masthead__title font-xl">{{ page.title }}</h1>
-            <p class="masthead__location font-regular"><PhMapPin /> {{ page.address }}</p>
+            <h1 v-if="page.title" class="masthead__title font-xl">{{ page.title }}</h1>
+            <p v-if="page.address" class="masthead__location font-regular"><PhMapPin /> {{ page.address }}</p>
           </div>
           <div class="masthead__actions">
             <button type="button" class="masthead__action"><PhHeart /></button>
@@ -63,17 +72,56 @@
       </div>
     </section>
 
-    <AppSection class="padding">
-      <div class="large-card">
-        <div class="large-card__description">
-          <h2 class="large-card__title font-medium">About {{ page.title }}</h2>
-          <div class="large-card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde tempora ad rerum exercitationem, alias nostrum eum minima, saepe voluptate, quasi magni? Numquam, aliquid! Commodi voluptates reiciendis, et incidunt laborum rem consequuntur quaerat dignissimos ad natus earum quos est aliquid quod ducimus ipsa a laudantium ipsam voluptatibus ab aspernatur, repudiandae eveniet molestias expedita. Iure cum nobis voluptatem libero vel. Nisi quisquam ipsum aut voluptates ab eligendi repudiandae cupiditate vel, facere saepe est sit natus consectetur, aliquid expedita debitis inventore doloremque ducimus. Corrupti ut quisquam dolorem maxime totam illo, porro enim sed in accusamus, quaerat laboriosam, unde optio. Velit ipsum quam possimus.</div>
+    <AppSection class="padding-bottom">
+      <div class="card">
+        <div class="card__content">
+          <h3 class="card__title font-medium"><PhCoffee /> About {{ page.title }}</h3>
+          <div class="card__container">
+            <div class="card__text">
+              <p class="font-regular">{{ page.content.description }}</p>
+            </div>
+            <div class="card__contact">
+              <h4 class="font-regular">Contact Information</h4>
+              <div v-if="page.contact.telephone" class="card__external-link">
+                <PhPhone /> <a :href="`tel:${page.contact.telephone}`" :title="`Call ${page.contact.telephone}`">{{ page.contact.telephone }}</a>
+              </div>
+              <div v-if="page.contact.emailAddress" class="card__external-link">
+                <PhEnvelope /> <a :href="`mailto:${page.contact.emailAddress}`" :title="`Send email to ${page.contact.emailAddress}`">{{ page.contact.emailAddress }}</a>
+              </div>
+              <div v-if="page.contact.website" class="card__external-link">
+                <PhDesktop /> <a :href="page.contact.website" :title="`Visit ${page.title} website (opens in new tab)`" target="_blank">Website</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="large-card__amenities">
-          <h2 class="large-card__title font-medium">Amenities</h2>
-          <ul class="large-card__list font-regular">
-            <li class="large-card__amenity" v-for="amenity, key in page.amenities" :key="key">{{ amenity.title }}</li>
-          </ul>
+      </div>
+
+      <div class="card">
+        <div class="card__content">
+          <h3 class="card__title font-medium"><PhStar /> Amenities</h3>
+          <div class="card__text">
+            <p>{{ page.title }} has the following amenities:</p>
+            <ul class="card__amenities">
+              <li v-for="amenity, key in page.amenities" :key="key">{{ amenity.title }}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card__content">
+          <h3 class="card__title font-medium"><PhClock /> Opening Times</h3>
+          <div class="card__text">
+            <ul class="card__opening-times">
+              <li v-for="opening, key in page.openingsTimes" :key="key">{{ opening.day }}: {{ opening.from }} - {{ opening.to }}</li>
+            </ul>
+            <p class="card__note">The opening times at {{ page.title }} may be subject to change.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__content">
+          <h3 class="card__title font-medium"><PhMapPin /> Directions to {{ page.title }}</h3>
+          <div class="card__text font-regular">{{ page.content.directions }}</div>
+          <AppMap :lat="page.geolocation.latitude" :lng="page.geolocation.longitude" />
         </div>
       </div>
     </AppSection>
@@ -88,16 +136,7 @@
       </div>
     </AppSection>
 
-    <AppSection class="padding">
-      <div class="large-card">
-        <div class="large-card__description">
-          <h2 class="large-card__title font-medium">Directions to {{ page.title }}</h2>
-          <AppMap />
-        </div>
-      </div>
-    </AppSection>
-
-    <AppSection class="padding shade" title="You might also like" url="/cafes">
+    <AppSection class="padding" title="You might also like" url="/cafes">
       <Splide :options="cafeSliderOptions">
         <SplideSlide v-for="cafe, key in cafes" :key="key">
           <AppCafeListing :cafe="cafe" view="grid" />
@@ -160,32 +199,67 @@
     border-radius: 100%;
     cursor: pointer;
   }
-  
 
-  .large-card {
+  .card {
     @include flex-row;
     gap: 3rem;
+    margin-top: 3rem;
   }
-  .large-card__description {
-    flex: 3 0;
-  }
-  .large-card__amenities {
+  .card__content {
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
     flex: 1 0;
+    overflow: hidden;
   }
-  .large-card__thumbnail {
-    background-color: $clr-shade;
+  .card__title {
+    align-items: center;
+    background: linear-gradient(0deg, $clr-shade 0%, #fff 100%);
+    border-bottom: solid 1px $clr-shade;
+    border-radius: $border-radius $border-radius 0 0;
+    display: flex;
+    margin: 0;
+    padding: 0.875rem 1rem;
+
+    svg {
+      color: $clr-primary;
+      margin-right: 0.5rem;
+    }
+  }
+  .card__container {
     @include flex-row;
-    align-items: flex-end;
-    flex: 1 0;
+    gap: 2rem;
   }
-  .large-card__title {
-    margin: 0 0 1.25rem 0;
+  .card__text {
+    flex: 3 0;
+    padding: 0.875rem 1rem;
   }
-  .large-card__thumbnail {
-    position: relative;
+  .card__amenities {
+    column-count: 3;
+    column-gap: 1rem;
+    margin-top: 1rem;
   }
-  .large-card__thumbnail-image {
-    transform-origin: bottom left;
-    transform: scale(1.1);
+  .card__opening-times {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+  .card__note {
+    font-style: italic;
+    color: darken($clr-shade, 25%);
+  }
+  .card__contact {
+    flex: 1.5 0;
+    padding: 0.875rem 1rem;
+  }
+  .card__external-link {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-top: 0.5rem;
+    }
+
+    svg {
+      margin-right: 0.5rem;
+    }
   }
 </style>

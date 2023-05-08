@@ -16,8 +16,12 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/content',
-    '@nuxtjs/strapi'
+    '@nuxtjs/strapi',
+    'nuxt-mapbox'
   ],
+  mapbox: {
+    accessToken: 'pk.eyJ1IjoiY2hyaXNwcnVzYWtpZXdpY3oiLCJhIjoiY2xoYzNrNTE5MHNqNTNmcGN3bjJmM21rZSJ9.UG-xMOInvNTFt7LRyb0JVw'
+  },
   content: {
     documentDriven: true
   },

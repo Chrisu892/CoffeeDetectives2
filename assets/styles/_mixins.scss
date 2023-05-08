@@ -13,6 +13,11 @@
   flex-flow: row wrap;
 }
 
+@mixin flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
 @mixin vertical-center {
   display: inline-flex;
   align-items: center;

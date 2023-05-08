@@ -67,12 +67,6 @@
     justify-content: center;
     background: linear-gradient(180deg, transparent 50%, $clr-dark 100%);
   }
-  // .amenity__content {
-  //   transition: transform 350ms ease-in-out;
-  // }
-  // .amenity:hover .amenity__content {
-  //   transform: scale(1);
-  // }
   .amenity__caption {
     color: $clr-primary;
     font-family: $font-cursive;
