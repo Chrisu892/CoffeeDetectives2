@@ -22,6 +22,8 @@
     font-size: 1.75rem;
     letter-spacing: 0.5px;
     line-height: 1;
+    position: relative;
+    z-index: 100;
 
     &.rev {
       color: $clr-secondary;

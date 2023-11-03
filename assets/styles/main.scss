@@ -9,6 +9,9 @@ body {
   font: $font-body;
   height: 100%;
 }
+html.locked, body.locked {
+  overflow: hidden;
+}
 
 a {
   color: $clr-secondary;
@@ -242,5 +245,15 @@ li {
   
   &::before {
     display: none;
+  }
+}
+
+/*-------------------------*\
+    #MEDIA QUERIES
+\*-------------------------*/
+
+@media (max-width: 1320px) {
+  .inner {
+    padding: 0 2rem;
   }
 }

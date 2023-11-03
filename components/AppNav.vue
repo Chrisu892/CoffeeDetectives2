@@ -5,6 +5,11 @@
     components: {
       PhCaretDown
     },
+    data() {
+      return {
+        isActive: false
+      }
+    },
     props: {
       nav: {
         type: Array,
@@ -15,45 +20,67 @@
       isRev() {
         return this.$route.path.includes('/cafes/') || this.$route.path.includes('/blog/')
       }
+    },
+    methods: {
+      toggleNav() {
+        this.isActive = !this.isActive
+
+        document.querySelectorAll('html, body').forEach((elem) => {
+          elem.classList.toggle('locked', this.isActive)
+        }, 350)
+      },
+      removeActive() {
+        setTimeout(() => {
+          this.isActive = false
+
+          document.querySelectorAll('html', 'body').forEach((elem, _) => {
+            elem.classList.toggle('locked', this.isActive)
+          })
+        }, 350)
+      }
     }
   }
 </script>
 
 <template>
-  <div>
-    <AppNavToggle />
+  <nav class="nav" :class="{ 'rev': isRev }">
+    <ul class="nav__list nav__list--primary" :class="{ 'nav__list--active': isActive }">
+      <li v-for="page, key in nav" :key="key" class="nav__item">
+        <NuxtLink class="nav__link font-regular" :to="page._path" :title="`Go to ${page.title}`" @click="removeActive">
+          {{ page.title }}
+          <template v-if="page.title !== 'Blog' && page.title !== 'Cafés'">
+            <ph-caret-down v-if="page.children" />
+          </template>
+        </NuxtLink>
+        <div v-if="page.title !== 'Blog' && page.title !== 'Cafés' && page.children" class="__nav__group">
+          <ul class="nav__group">
+            <li v-for="page, key in page.children" :key="key" class="nav__group__item">
+              <NuxtLink class="nav__group__link font-small" :to="page._path" @click="removeActive">{{ page.title }}</NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
 
-    <nav class="nav" :class="{ 'rev': isRev }">
-      <ul class="nav__list nav__list--primary">
-        <li v-for="page, key in nav" :key="key" class="nav__item">
-          <NuxtLink class="nav__link font-regular" :to="page._path" :title="`Go to ${page.title}`">
-            {{ page.title }}
-            <template v-if="page.title !== 'Blog' && page.title !== 'Cafés'">
-              <ph-caret-down v-if="page.children" />
-            </template>
-          </NuxtLink>
-          <div v-if="page.title !== 'Blog' && page.title !== 'Cafés' && page.children" class="__nav__group">
-            <ul class="nav__group">
-              <li v-for="page, key in page.children" :key="key" class="nav__group__item">
-                <NuxtLink class="nav__group__link font-small" :to="page._path">{{ page.title }}</NuxtLink>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <AppButton btnType="link" to="/get-listed" class="primary animate" title="Get Listed" />
-        </li>
-      </ul>
-    </nav>
-  </div>
+    <button type="button" class="nav-toggle" :class="{ 'nav-toggle--active': isActive }" @click="toggleNav">
+      <span />
+      <span />
+      <span />
+    </button>
+
+    <ul class="nav__list">
+      <li class="nav__item">
+        <AppButton btnType="link" to="/get-listed" class="primary animate" title="Get Listed" @click="removeActive" />
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <style scoped lang="scss">
   .nav {
     @include flex-row;
     align-items: center;
+    justify-content: flex-end;
   }
   .nav__list {
     @include flex-row;
@@ -78,8 +105,9 @@
     display: inline-block;
     font-weight: $bold-weight;
     letter-spacing: 0.5px;
+    line-height: 1;
     margin-bottom: 0;
-    padding: 0.475rem 1.725rem;
+    padding: 0.575rem 1.725rem;
     text-decoration-color: $clr-text;
     transition: opacity 350ms ease-in-out;
 
@@ -159,5 +187,149 @@
   }
   .nav__group__link {
     color: $clr-secondary;
+  }
+  .nav-toggle {
+    display: none;
+  }
+
+  /*-------------------------*\
+      #MEDIA QUERIES
+  \*-------------------------*/
+
+  @media (max-width: 1160px) {
+    .nav__link {
+      padding: 0.475rem 1.225rem;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .nav__link {
+      padding: 0.475rem 1rem;
+    }
+  }
+
+  @media (max-width: 1030px) {
+    .nav__list {
+      &--primary {
+        display: block;
+        padding: 1rem;
+        padding-top: 110px;
+        opacity: 0;
+        overflow-y: auto;
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $clr-secondary;
+        transition: visibility 350ms ease-in-out,
+          opacity 350ms ease-in-out;
+      }
+
+      &--active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .nav__item:not(:first-child) {
+      margin-top: 0.5rem;
+    }
+    .nav__link {
+      align-items: center;
+      background-color: darken($clr-secondary, 3%);
+      border-radius: $border-radius;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.875rem;
+    }
+    .__nav__group {
+      opacity: 1;
+      position: relative;
+      visibility: visible;
+      transform: initial;
+
+      &::before {
+        display: none;
+      }
+    }
+    .nav__group {
+      background-color: darken($clr-secondary, 3%);
+      border: 0;
+      column-count: 3;
+      column-gap: 1rem;
+      padding: 0.5rem;
+      min-width: 100%;
+    }
+    .nav__group__link {
+      border-radius: $border-radius;
+      color: $clr-white;
+      display: block;
+      padding: 0.5rem 0.75rem;
+      transition: background-color 350ms ease-in-out;
+
+      &:hover {
+        background-color: darken($clr-secondary, 5%);
+      }
+    }
+
+    .nav-toggle {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      height: 44px;
+      width: 44px;
+      padding: 0;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 1.25rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      span {
+        border-bottom: solid 3px $clr-white;
+        border-radius: $border-radius;
+        display: block;
+        margin: 4px 0;
+        width: 100%;
+        transition: transform 350ms ease-in-out,
+          opacity 350ms ease-in-out;
+      }
+
+      &--active {
+        span:nth-child(1) {
+          transform: translateY(11px) rotate(45deg);
+        }
+        span:nth-child(2) {
+          transform: scale(0);
+          opacity: 0;
+        }
+        span:nth-child(3) {
+          transform: translateY(-11px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 590px) {
+    .nav__group {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .nav__group {
+      column-count: 1;
+    }
   }
 </style>
