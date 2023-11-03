@@ -31,8 +31,8 @@
           { title: 'View all', url: '/locations' }
         ],
         settings: {
-          site_name: 'Coffee Detktives',
-          site_email: 'hello@coffeedetktives.co.uk'
+          site_name: 'Coffee Detectives',
+          site_email: 'hello@coffeedetectives.co.uk'
         }
       }
     }
@@ -44,7 +44,7 @@
     <div class="inner">
       <div class="flex-container flex-container--gutter footer__container">
         <div class="footer__col footer__col--first">
-          <AppLogo class="rev" />
+          <AppLogo />
           <div class="footer__detail footer__detail--first">
             We are independent reviewers of cafes, helping the citizens of Tyne and Wear find a place for a coffee break and help local businesses connect with their customers.
           </div>

@@ -1,3 +1,27 @@
+@mixin font-xxxl {
+  font-size: clamp(2.33rem, calc(1.44rem + 4.44vw), 5.00rem);
+  line-height: 1.1;
+}
+@mixin font-xxl {
+  font-size: clamp(1.94rem, calc(1.41rem + 2.65vw), 3.53rem);
+  line-height: 1.1;
+}
+@mixin font-xl {
+  font-size: clamp(1.62rem, calc(1.33rem + 1.47vw), 2.50rem);
+  line-height: 1.2;
+}
+@mixin font-large {
+  font-size: clamp(1.35rem, calc(1.21rem + 0.70vw), 1.77rem);
+  line-height: 1.25;
+}
+@mixin font-medium {
+  font-size: clamp(1.13rem, calc(1.08rem + 0.21vw), 1.25rem);
+  line-height: 1.4;
+}
+@mixin font-small {
+  font-size: clamp(0.88rem, calc(0.96rem + -0.09vw), 0.94rem);
+}
+
 @mixin flex-grid {
   display: flex;
   flex-flow: row wrap;
@@ -7,12 +31,10 @@
     flex: calc(50% - 1rem) 0;
   }
 }
-
 @mixin flex-row {
   display: flex;
   flex-flow: row wrap;
 }
-
 @mixin flex-column {
   display: flex;
   flex-flow: column;

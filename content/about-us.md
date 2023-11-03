@@ -1,5 +1,5 @@
 ---
-title: 'Abous Us'
+title: 'About us'
 longTitle: 'About Us : Explore Cafés and Coffee Blends Across Tyne & Wear'
 tagline: 'Who we are, our mission and values'
 displayOrder: 5

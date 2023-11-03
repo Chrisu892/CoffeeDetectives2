@@ -10,7 +10,7 @@
         nav: [
           { title: 'Dashboard', tagline: 'The overview of your café', url: '/account', icon: 'PhGauge' },
           { title: 'Analytics', tagline: 'Track the performance of your café', url: '/account/analytics', icon: 'PhChartBar' },
-          { title: 'Gallery', tagline: 'Add or update images shown on your café', url: '/account/gallery', icon: 'PhImage' },
+          { title: 'Images', tagline: 'Add or update images shown on your café', url: '/account/images', icon: 'PhImage' },
           { title: 'Promotions', tagline: 'Add or manage existing promotions', url: '/account/promotions', icon: 'PhTicket' },
           { title: 'Settings', tagline: 'Update your account or café details', url: '/account/settings', icon: 'PhWrench' },
           { title: 'Sign Out', tagline: 'Securely sign out from your account', url: '/sign-out', icon: 'PhSignOut' }

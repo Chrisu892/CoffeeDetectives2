@@ -35,7 +35,7 @@
   <main id="main" class="main">
     <AdminHeader title="Dashboard" icon="PhGauge" />
     <AdminCard title="Your Listing">
-      <AppCafeListing :cafe="cafe" />
+      <!-- <AppCafeListing :cafe="cafe" /> -->
     </AdminCard>
     <AdminCard title="Recent Activity">
       
