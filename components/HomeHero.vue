@@ -17,13 +17,10 @@
   <section class="hero">
     <slot name="heroSlider" />
     <div class="hero__overlay">
-      <div class="inner">
         <div class="hero__content">
           <h1 class="hero__title font-regular">{{ title }}</h1>
           <p class="hero__tagline font-xxl">{{ tagline }}</p>
         </div>
-        <slot name="heroSearch" />
-      </div>
     </div>
   </section>
 </template>
@@ -33,15 +30,19 @@
     position: relative;
   }
   .hero__overlay {
-    position: absolute;
+    align-items: center;
+    display: flex;
     left: 0;
-    bottom: 5.5rem;
-    right: 0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    justify-content: center;
   }
   .hero__content {
     color: $clr-white;
-    margin-bottom: 5rem;
-    max-width: 768px;
+    margin: 0 1rem;
+    text-align: center;
   }
   .hero__title {
     opacity: 0.75;

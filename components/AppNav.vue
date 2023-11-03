@@ -62,17 +62,15 @@
       </li>
     </ul>
 
-    <button type="button" class="nav-toggle" :class="{ 'nav-toggle--active': isActive }" @click="toggleNav">
+    <button class="nav-toggle" :class="{ 'nav-toggle--active': isActive }" type="button" @click="toggleNav">
       <span />
       <span />
       <span />
     </button>
 
-    <ul class="nav__list">
-      <li class="nav__item">
-        <AppButton btnType="link" to="/get-listed" class="primary animate" title="Get Listed" @click="removeActive" />
-      </li>
-    </ul>
+    <div class="nav__cta">
+      <AppButton btnType="link" to="/get-listed" class="primary animate" title="Get Listed" @click="removeActive" />
+    </div>
   </nav>
 </template>
 
@@ -211,25 +209,20 @@
   @media (max-width: 1030px) {
     .nav__list {
       &--primary {
-        display: block;
+        display: none;
         padding: 1rem;
         padding-top: 110px;
-        opacity: 0;
         overflow-y: auto;
-        visibility: hidden;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background-color: $clr-secondary;
-        transition: visibility 350ms ease-in-out,
-          opacity 350ms ease-in-out;
       }
 
       &--active {
-        opacity: 1;
-        visibility: visible;
+        display: block;
       }
     }
     .nav__item:not(:first-child) {
@@ -324,6 +317,16 @@
   @media (max-width: 590px) {
     .nav__group {
       column-count: 2;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .nav__cta {
+      display: none;
+    }
+
+    .nav-toggle {
+      margin-right: 0;
     }
   }
 

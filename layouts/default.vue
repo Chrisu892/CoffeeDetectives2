@@ -6,7 +6,7 @@
     <NuxtPage />
     <AppNewsletter />
     <AppFooter />
-    <AppBeta />
+    <!-- <AppBeta /> -->
   </div>
 </template>
 

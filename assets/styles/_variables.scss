@@ -50,4 +50,6 @@ $clr-success: #348e31;
 
 $bold-weight: bold;
 $border-radius: 6px;
-$gutter: 2rem;
+$gutter: clamp(1.5rem, 4.44vw, 3.5rem);
+$gutter-half: clamp(0.75rem, 4.44vw, 1.75rem);
+$gutter-large: clamp(3rem, 4.44vw, 5rem);

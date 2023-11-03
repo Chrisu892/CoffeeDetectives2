@@ -128,9 +128,6 @@ li {
     #SPLIDE
 \*-------------------------*/
 
-.splide__track {
-  border-radius: $border-radius;
-}
 .splide__slide {
   padding: 0;
   
@@ -194,7 +191,7 @@ li {
   flex-flow: row wrap;
 }
 .flex-container--gutter {
-  gap: 2rem;
+  gap: $gutter-half;
 }
 .flex-container--align-center {
   align-items: center;
@@ -218,7 +215,7 @@ li {
 
 .grid-container {
   display: grid;
-  gap: 2rem;
+  gap: $gutter-half;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -255,5 +252,11 @@ li {
 @media (max-width: 1320px) {
   .inner {
     padding: 0 2rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .inner {
+    padding: 0 1rem;
   }
 }

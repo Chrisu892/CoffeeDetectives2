@@ -42,10 +42,9 @@
   .slide {
     @include flex-row;
     align-items: flex-end;
-    height: 92vh;
-    max-height: 860px;
-    min-height: 718px;
     position: relative;
+    height: 80vh;
+    min-height: 600px;
 
     &::before {
       content: '';
@@ -84,10 +83,10 @@
     z-index: 1;
   }
   .slide__credit {
-    padding-bottom: 1.5rem;
+    padding-bottom: 7.5rem;
     position: relative;
     width: 100%;
-    z-index: 3;
+    z-index: 1;
   }
   .slide__credit-text {
     align-items: center;

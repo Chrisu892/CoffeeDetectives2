@@ -184,7 +184,7 @@
     display: block;
   }
 
-  @media screen and (max-width: 1320px) {
+  @media (max-width: 1320px) {
     .select__option {
       padding: 0.9rem 0.5rem;
     }

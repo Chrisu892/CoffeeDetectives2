@@ -10,8 +10,9 @@
 </script>
 
 <template>
-  <AppSection class="padding typography">
+  <AppSection class="padding-bottom typography">
     <div class="intro">
+      <slot name="introSearch" />
       <div class="intro__border">
         <div class="intro__col intro__content">
           <PhStorefront />
@@ -34,16 +35,18 @@
 
 <style scoped lang="scss">
   .intro {
-    background-color: $clr-white;
-    border: solid 1px $clr-shade;
-    border-radius: $border-radius;
-    box-shadow: 0 0 0 15px rgba($clr-white, 0.5);
+    
   }
   .intro__border {
     @include flex-row;
     align-items: center;
+    background-color: $clr-white;
+    border: solid 1px $clr-shade;
+    border-radius: $border-radius;
+    box-shadow: 0 0 0 15px rgba($clr-white, 0.5);
     gap: 3rem;
     padding: 3rem;
+    margin-top: $gutter;
   }
   .intro__col {
     flex: 1 0;
@@ -83,6 +86,20 @@
       width: 40%;
       padding-top: 25%;
       border-radius: $border-radius;
+    }
+  }
+
+  /* ---------------------------- *\
+      MEDIA QUERIES
+  \* ---------------------------- */
+
+  @media (max-width: 1160px) {
+    .intro__col {
+      flex: 100% 0;
+    }
+
+    .intro__carousel {
+      display: none;
     }
   }
 </style>

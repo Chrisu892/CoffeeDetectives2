@@ -30,7 +30,7 @@
 
 <template>
   <div class="filter" :class="{ 'active': active }">
-    <button class="filter__toggle font-regular" @click="toggle()">
+    <button class="filter__toggle font-regular" @click="toggle">
       <div class="filter__title">{{ title }}</div>
       <div class="filter__icon"><PhCaretDown /></div>
     </button>

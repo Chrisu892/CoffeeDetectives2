@@ -85,12 +85,12 @@
           </template>
         </Splide>
       </template>
-      <template #heroSearch>
-        <AppSearch :locations="locations" :amenities="amenities" />
-      </template>
     </HomeHero>
 
     <HomeIntro>
+      <template #introSearch>
+        <AppSearch :locations="locations" :amenities="amenities" />
+      </template>
       <template #carousel>
         <Splide :options="heroSliderOptions">
           <SplideSlide v-for="slide, key in introSlides">

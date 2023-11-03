@@ -26,7 +26,7 @@
         coffeeBlends: [
           { id: 'arabica', title: 'Arabica', altTitle: 'Arabica', slug: 'arabica', show: true },
           { id: 'robusta', title: 'Robusta', altTitle: 'Robusta', slug: 'robusta', show: true },
-          { id: 'espresso', title: 'Espresso', altTitle: 'Espresso', slug: 'espresso', show: true },
+          { id: 'espresso', title: 'Espresso', altTitle: 'Espresso', slug: 'espresso', show: false },
           { id: 'mocha', title: 'Mocha', altTitle: 'Mocha', slug: 'mocha', show: false },
           { id: 'colombian', title: 'Colombian', altTitle: 'Colombian', slug: 'colombian', show: false },
           { id: 'ethiopian', title: 'Ethiopian', altTitle: 'Ethiopian', slug: 'ethiopian', show: false }
@@ -62,8 +62,10 @@
     border-radius: $border-radius;
     box-shadow: 0 0 15px 5px rgba($clr-text, 0.3);
     color: $clr-white;
-    padding: 2rem;
-    z-index: 10;
+    margin-top: -6rem;
+    padding: $gutter;
+    position: relative;
+    z-index: 1;
   }
   .search__container {
     align-items: flex-end;
@@ -73,5 +75,52 @@
   }
   .search__field {
     flex: 1 0;
+  }
+
+  @media (max-width: 1440px) {
+    .search {
+      padding: $gutter-half;
+    }
+  }
+
+  @media (max-width: 1160px) {
+    .search__container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .search__action {
+      grid-column: 1/4;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 1030px) {
+    .search__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .search__action {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      text-align: left;
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .search__container {
+      grid-template-columns: 1fr;
+    }
+    .search__action {
+      grid-column: initial;
+      grid-row: initial;
+
+      .button {
+        margin-top: 1rem;
+      }
+    }
   }
 </style>
