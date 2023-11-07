@@ -18,8 +18,8 @@
     <slot name="heroSlider" />
     <div class="hero__overlay">
         <div class="hero__content">
-          <h1 class="hero__title font-regular">{{ title }}</h1>
-          <p class="hero__tagline font-xxl">{{ tagline }}</p>
+          <h1 class="hero__title font-small">{{ title }}</h1>
+          <p class="hero__tagline font-xl">{{ tagline }}</p>
         </div>
     </div>
   </section>

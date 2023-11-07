@@ -25,7 +25,7 @@ a:hover, a:focus {
 .inner {
   margin: 0 auto;
   max-width: 1420px;
-  padding: 0 1rem;
+  padding: 0 3rem;
 
   &--narrow {
     max-width: 768px;
@@ -69,26 +69,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $bold-weight;
   margin: 0 0 0.45em 0;
 }
-h1, .font-xxl {
-  @include font-xxl;
-}
-h2, .font-xl {
+h1, .font-xl {
   @include font-xl;
 }
-h3, .font-large {
+h2, .font-large {
   @include font-large;
 }
-.h4, .font-medium {
+h3, .font-medium {
   @include font-medium;
 }
-.h5, p, .font-regular {
+.h4, .font-regular {
   @include font-regular;
 }
-.font-small {
-  @include font-small;
+.h5, p {
+  @include font-regular;
 }
-.font-xs {
-  @include font-xs;
+h5, .font-small {
+  @include font-small;
 }
 .font-cursive {
   font-family: $font-cursive;
