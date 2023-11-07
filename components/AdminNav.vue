@@ -77,7 +77,7 @@
     transition: background-color 350ms ease-in-out;
 
     svg {
-      font-size: $font-large;
+      @include font-large;
     }
 
     &:hover {

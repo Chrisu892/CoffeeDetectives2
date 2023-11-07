@@ -74,13 +74,13 @@
     position: relative;
   }
   .select__option {
+    @include font-small;
     display: flex;
     flex-flow: row;
     align-items: center;
     background-color: $clr-white;
     border-right: solid 1px darken($clr-shade, 10%);
     cursor: pointer;
-    font-size: $font-small;
     flex: 1 0;
     line-height: 1;
     padding: 0.96rem 0.65rem;
@@ -98,12 +98,12 @@
     }
   }
   .select__button {
+    @include font-regular;
     @include flex-row;
     align-items: center;
     background-color: $clr-white;
     border-radius: 0 $border-radius $border-radius 0;
     cursor: pointer;
-    font-size: $font-regular;
     flex: 1 0;
     justify-content: center;
     line-height: 1;

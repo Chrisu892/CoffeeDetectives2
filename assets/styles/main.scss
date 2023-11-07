@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'mixins';
 
 /*-------------------------*\
     #GLOBAL
@@ -22,10 +23,12 @@ a:hover, a:focus {
 }
 
 .inner {
-  padding: 0 8vw;
+  margin: 0 auto;
+  max-width: 1420px;
+  padding: 0 1rem;
 
   &--narrow {
-    padding: 0 12vw;
+    max-width: 768px;
   }
 }
 
@@ -36,17 +39,17 @@ input[type="password"],
 input[type="url"],
 input[type="date"],
 textarea {
+  @include font-regular;
   border: solid 2px $clr-white;
   border-radius: $border-radius;
-  font-size: $font-regular;
   font: $font-body;
   padding: 0.675rem;
 }
 
 button {
+  @include font-regular;
   border: 0;
   font: $font-body;
-  font-size: $font-regular;
 }
 
 select {
@@ -79,14 +82,13 @@ h3, .font-large {
   @include font-medium;
 }
 .h5, p, .font-regular {
-  font-size: $font-regular;
-  line-height: 1.6;
+  @include font-regular;
 }
 .font-small {
   @include font-small;
 }
 .font-xs {
-  font-size: $font-xs;
+  @include font-xs;
 }
 .font-cursive {
   font-family: $font-cursive;

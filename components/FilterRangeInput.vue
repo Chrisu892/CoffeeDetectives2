@@ -171,7 +171,7 @@
     }
   }
   .filter__field__input {
-    font-size: $font-small;
+    @include font-small;
     flex: 1 0;
     width: 10%;
     padding: 0.25em;

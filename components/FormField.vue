@@ -84,19 +84,19 @@
     margin-right: 0.75rem;
   }
   .form-field__multiselect__other {
+    @include font-regular;
     border: solid 1px $clr-shade;
     border-radius: $border-radius;
     font: $font-body;
-    font-size: $font-regular;
     flex: 33.333% 0;
     flex: calc(33.333% - 0.335rem) 0;
     padding: 0.5rem;
   }
   .form-field__select {
+    @include font-regular;
     border: solid 1px $clr-shade;
     padding: 0.75rem;
     font: $font-body;
-    font-size: $font-regular;
   }
 
   @media screen and (max-width: 1320px) {

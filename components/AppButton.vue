@@ -42,6 +42,7 @@
 
 <style scoped lang="scss">
   .button {
+    @include font-regular;
     appearance: none;
     align-items: center;
     background-color: transparent;
@@ -50,7 +51,6 @@
     color: $clr-secondary;
     cursor: pointer;
     display: inline-flex;
-    font-size: $font-regular;
     gap: 0.5rem;
     justify-content: center;
     line-height: 1;

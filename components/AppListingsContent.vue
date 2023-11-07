@@ -109,8 +109,8 @@
     text-align: center;
 
     svg {
+      @include font-xl;
       color: $clr-primary;
-      font-size: $font-xl;
       margin-bottom: 0.75rem;
     }
   }

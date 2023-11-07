@@ -16,10 +16,10 @@
 
 <style scoped lang="scss">
   .logo {
+    @include font-medium;
     @include flex-row;
     color: $clr-white;
     font-family: $font-cursive;
-    font-size: 1.75rem;
     letter-spacing: 0.5px;
     line-height: 1;
     position: relative;

@@ -59,11 +59,11 @@
     flex: 1;
   }
   .newsletter__content__icon {
+    @include font-xl;
     @include flex-row;
     background-color: $clr-primary;
     border-radius: 100%;
     color: $clr-secondary;
-    font-size: $font-xl;
     margin-right: 1.5rem;
     padding: 0.75rem;
   }

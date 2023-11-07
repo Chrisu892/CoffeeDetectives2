@@ -29,19 +29,19 @@
     overflow: hidden;
   }
   .input__field {
+    @include font-regular;
     border: 0;
     border-radius: 50px 0 0 50px;
-    font-size: $font-regular;
     min-width: 300px;
     padding: 0.875rem 1.125rem;
   }
   .input__button {
+    @include font-regular;
     background-color: $clr-secondary;
     border: 0;
     border-radius: 0 50px 50px 0;
     color: $clr-white;
     cursor: pointer;
-    font-size: $font-regular;
     min-width: 100px;
     padding: 0.875rem 1rem;
   }

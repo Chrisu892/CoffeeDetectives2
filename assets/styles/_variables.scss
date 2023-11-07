@@ -2,33 +2,9 @@
     #FONTS
 \*-------------------------*/
 
-@font-face {
-  font-family: 'Louis George Cafe';
-  font-display: swap;
-  src: url('/fonts/louis-george-caf/Louis-George-Cafe.ttf') format('truetype')
-}
-@font-face {
-  font-family: 'Louis George Cafe Bold';
-  font-display: swap;
-  src: url('/fonts/louis-george-caf/Louis-George-Cafe-Bold.ttf') format('truetype')
-}
-@font-face {
-  font-family: 'Ravise';
-  font-display: swap;
-  src: url('/fonts/ravise/Ravise-Regular.ttf') format('truetype')
-}
-
-$font-header: normal 18px/1.4 'Louis George Cafe Bold', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
-$font-body: normal 18px/1.4 'Louis George Cafe', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
-$font-cursive: 'Ravise', serif;
-
-$font-xxl: 3em;
-$font-xl: 2.225em;
-$font-large: 1.475em;
-$font-medium: 1.275em;
-$font-regular: 1em;
-$font-small: 0.88em;
-$font-xs: 0.8em;
+$font-header: normal 16px/1.4 ofelia-display, 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
+$font-body: normal 16px/1.4 ofelia-display, 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
+$font-cursive: santelia-rough-two, sans-serif;
 
 /*-------------------------*\
     #COLOURS

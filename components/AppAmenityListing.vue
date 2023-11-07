@@ -74,7 +74,7 @@
     will-change: border-color;
 
     svg {
-      font-size: $font-large;
+      @include font-large;
       transition: transform 350ms ease-in-out;
       will-change: transform;
     }

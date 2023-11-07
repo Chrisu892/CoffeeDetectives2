@@ -11,8 +11,11 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    // pageTransition: { name: 'page', mode: 'out-in' },
-    // layoutTransition: { name: 'slide', mode: 'out-in'}
+    head: {
+      link: [
+        { rel: 'stylesheet', href: 'https://use.typekit.net/dye1syi.css' }
+      ]
+    }
   },
   modules: [
     '@nuxt/content',
