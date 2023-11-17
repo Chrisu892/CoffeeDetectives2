@@ -38,6 +38,10 @@
 
 <template>
   <form id="search" class="search" method="post">
+    <div class="search__content">
+      <div class="search__title font-large">Your coffee break doesn't have to be mainstream</div>
+      <div class="search__tagline font-regular">Browse over 128 independent cafes serving the best coffee in Tyne and Wear</div>
+    </div>
     <div class="search__container">
       <div class="search__field">
         <FormField :field="location" />
@@ -63,9 +67,20 @@
     box-shadow: 0 0 15px 5px rgba($clr-text, 0.3);
     color: $clr-white;
     margin-top: -6rem;
-    padding: $gutter;
+    padding: $gutter-half;
     position: relative;
     z-index: 1;
+  }
+  .search__content {
+    margin-bottom: $gutter-half;
+    text-align: center;
+  }
+  .search__title {
+    @include font-large;
+    font-family: $font-cursive;
+  }
+  .search__tagline {
+    margin-top: 0.5rem;
   }
   .search__container {
     align-items: flex-end;

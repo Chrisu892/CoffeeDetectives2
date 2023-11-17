@@ -38,6 +38,9 @@
     &.center {
       text-align: center
     }
+    &.margin-bottom {
+      margin-bottom: $gutter;
+    }
   }
   .feature__container {
     @include flex-row;

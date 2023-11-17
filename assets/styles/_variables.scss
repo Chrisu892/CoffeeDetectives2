@@ -2,21 +2,24 @@
     #FONTS
 \*-------------------------*/
 
-$font-header: normal 16px/1.4 ofelia-display, 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
-$font-body: normal 16px/1.4 ofelia-display, 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
-$font-cursive: santelia-rough-two, sans-serif;
+// $font-header: normal 18px/1.5 'bigmoore', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
+$font-header: normal 18px/1.5 'arboria', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
+$font-body: normal 18px/1.5 'arboria', 'Red Hat Display', Helvetica Neue, Arial, sans-serif;
+$font-cursive: 'santelia-rough-two', sans-serif;
 
 /*-------------------------*\
     #COLOURS
 \*-------------------------*/
 
-$clr-primary: #eecb99;
-$clr-secondary: #4b3009;
+$clr-primary: #4b3009;
+$clr-secondary: #eecb99;
 $clr-third: #1e5836;
+
 $clr-white: #fff;
-$clr-text: #444;
 $clr-shade: #efefef;
+$clr-text: #444;
 $clr-dark: #010101;
+
 $clr-danger: #dc143c;
 $clr-success: #348e31;
 

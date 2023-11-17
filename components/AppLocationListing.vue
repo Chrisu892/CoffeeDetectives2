@@ -61,7 +61,7 @@
     transform: scale(1);
   }
   .location__overlay {
-    background-color: rgba($clr-secondary, 0.8);
+    background-color: rgba($clr-primary, 0.75);
     position: absolute;
     top: 0;
     left: 0;
@@ -76,7 +76,7 @@
     will-change: background-color;
   }
   .location:hover .location__overlay {
-    background-color: rgba($clr-secondary, 0.6);
+    background-color: rgba($clr-primary, 0.6);
   }
   .location__content {
     max-width: 300px;
@@ -84,7 +84,7 @@
   }
   .location__caption {
     font-family: $font-cursive;
-    color: $clr-primary;
+    color: $clr-secondary;
   }
   .location__title {
     color: $clr-white;

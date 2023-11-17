@@ -4,7 +4,7 @@ longTitle: null
 tagline: 'Find Your Perfect Cafe Experience - Explore Our Amenities'
 url: '/amenities/'
 type: 'page'
-navigation: false
+navigation: true
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

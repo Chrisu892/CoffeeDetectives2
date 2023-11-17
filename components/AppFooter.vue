@@ -91,10 +91,12 @@
 
 <style scoped lang="scss">
   .footer {
-    background-color: $clr-secondary;
+    background-color: $clr-primary;
     color: $clr-white;
     color: rgba($clr-white, 0.5);
     padding-top: 5rem;
+    position: relative;
+    z-index: 1;
   }
   .footer__container {
     padding-bottom: 5rem;

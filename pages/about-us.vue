@@ -5,34 +5,68 @@
 
 <template>
   <main id="main" class="main">
-    <AppMasthead :title="page.title" :tagline="page.tagline" />
 
-    <AppSection class="padding">
-      <div class="section__container">
-        <div class="section__main">
-          <ContentDoc />
-        </div>
-        <div class="section__aside">
-          <AppTOC :page="page" />
-        </div>
-      </div>
-    </AppSection>
+    <div class="video">
+      <video class="video__source" preload="true" muted autoplay loop playisinline>
+        <source src="/video/107566729.mp4" type="video/mp4" />
+      </video>
 
-    <AppCTA />
+      <section class="hero">
+        <div class="hero__overlay">
+          <div class="inner">
+            <div class="hero__content">
+              <h1 class="hero__title">Uncover Hidden Coffee Gems in Your City</h1>
+              <p class="hero__tagline">Navigate the urban coffee scene like never before. Find, rate, and share your favourite local cafe discoveries with fellow aficionados.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 </template>
 
 <style scoped lang="scss">
-  .section__container {
-    @include flex-row;
-    gap: 2.5rem;
+  .video {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
   }
-  .section__main {
-    flex: 1 0;
+  .video__source {
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 2;
   }
-  .section__aside {
-    border-left: solid 1px $clr-shade;
-    flex: 1 0;
-    max-width: 320px;
+  .hero {
+    position: relative;
+    z-index: 3;
+  }
+  .hero__overlay {
+    align-items: center;
+    background: linear-gradient(180deg, rgba($clr-primary,0.5) 50%, rgba($clr-primary, 1) 100%);
+    display: flex;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+  }
+  .hero__content {
+    color: #fff;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding-top: $gutter;
+    text-align: center;
+  }
+  .hero__title {
+    @include font-regular;
+    font: $font-body;
+  }
+  .hero__tagline {
+    font: $font-header;
+    @include font-xxxl;
+    margin: 1.25rem 0 0;
   }
 </style>

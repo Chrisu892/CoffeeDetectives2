@@ -87,10 +87,11 @@
       </template>
     </HomeHero>
 
+    <AppSection class="standard">
+      <AppSearch :locations="locations" :amenities="amenities" />
+    </AppSection>
+
     <HomeIntro>
-      <template #introSearch>
-        <AppSearch :locations="locations" :amenities="amenities" />
-      </template>
       <template #carousel>
         <Splide :options="heroSliderOptions">
           <SplideSlide v-for="slide, key in introSlides">

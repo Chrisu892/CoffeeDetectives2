@@ -3,6 +3,7 @@ title: 'About us'
 longTitle: 'About Us : Explore Cafés and Coffee Blends Across Tyne & Wear'
 tagline: 'Who we are, our mission and values'
 displayOrder: 5
+navigation: false
 toc: true
 image:
   src: '/assets/image.jpg'

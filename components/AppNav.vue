@@ -67,10 +67,6 @@
       <span />
       <span />
     </button>
-
-    <div class="nav__cta">
-      <AppButton btnType="link" to="/get-listed" class="primary animate" title="Get Listed" @click="removeActive" />
-    </div>
   </nav>
 </template>
 
@@ -84,9 +80,6 @@
     @include flex-row;
     margin-bottom: 0;
 
-    &--primary {
-      flex: 1;
-    }
   }
   .nav__item {
     line-height: 1;
@@ -101,7 +94,6 @@
   .nav__link {
     color: $clr-white;
     display: inline-block;
-    font-weight: $bold-weight;
     letter-spacing: 0.5px;
     line-height: 1;
     margin-bottom: 0;
@@ -183,11 +175,51 @@
       display: none;
     }
   }
-  .nav__group__link {
-    color: $clr-secondary;
-  }
   .nav-toggle {
-    display: none;
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1.25rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    span {
+      border-bottom: solid 3px $clr-white;
+      border-radius: $border-radius;
+      display: block;
+      margin: 4px 0;
+      width: 100%;
+      transition: transform 350ms ease-in-out,
+        opacity 350ms ease-in-out;
+    }
+
+    &--active {
+      span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        transform: scale(0);
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+      }
+    }
   }
 
   /*-------------------------*\

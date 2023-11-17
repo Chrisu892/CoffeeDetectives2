@@ -1,6 +1,6 @@
 <template>
   <section class="newsletter">
-    <div class="inner inner--narrow">
+    <div class="inner">
       <div class="newsletter__container">
         <div class="newsletter__content">
           <div class="newsletter__content__icon">
@@ -34,6 +34,7 @@
     background: url('/images/coffee-beans.jpeg') center center/cover no-repeat;
     padding: 1.5rem 0;
     position: relative;
+    z-index: 1;
 
     &::before {
       content: '';
@@ -42,7 +43,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: $clr-secondary;
+      background-color: $clr-primary;
       opacity: 0.8;
     }
   }
@@ -61,9 +62,9 @@
   .newsletter__content__icon {
     @include font-xl;
     @include flex-row;
-    background-color: $clr-primary;
+    background-color: $clr-secondary;
     border-radius: 100%;
-    color: $clr-secondary;
+    color: $clr-primary;
     margin-right: 1.5rem;
     padding: 0.75rem;
   }

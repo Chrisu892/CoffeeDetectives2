@@ -9,17 +9,20 @@ body {
   background-color: $clr-white;
   font: $font-body;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 0.45px rgba(0,0,0,0.1);
 }
 html.locked, body.locked {
   overflow: hidden;
 }
 
 a {
-  color: $clr-secondary;
+  color: $clr-primary;
   text-decoration: none;
 }
 a:hover, a:focus {
-  text-decoration-color: $clr-secondary;
+  text-decoration-color: $clr-primary;
 }
 
 .inner {
@@ -66,25 +69,24 @@ select {
 
 h1, h2, h3, h4, h5, h6 {
   font: $font-header;
-  font-weight: $bold-weight;
   margin: 0 0 0.45em 0;
 }
-h1, .font-xl {
+h1 {
   @include font-xl;
 }
-h2, .font-large {
+h2 {
   @include font-large;
 }
-h3, .font-medium {
+h3 {
   @include font-medium;
 }
-.h4, .font-regular {
+.h4 {
   @include font-regular;
 }
-.h5, p {
+.h5 {
   @include font-regular;
 }
-h5, .font-small {
+h5 {
   @include font-small;
 }
 .font-cursive {
@@ -102,9 +104,10 @@ b, strong {
   font-weight: $bold-weight;
 }
 ul, ol {
-  margin-bottom: 0.75em;
+  margin-bottom: 1.25em;
 }
 li {
+  @include font-regular;
   line-height: 1.5;
   margin-bottom: 0.75em;
   padding-left: 1em;

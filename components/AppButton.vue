@@ -42,87 +42,28 @@
 
 <style scoped lang="scss">
   .button {
-    @include font-regular;
-    appearance: none;
     align-items: center;
-    background-color: transparent;
-    border: solid 1px $clr-secondary;
-    border-radius: 50px;
-    color: $clr-secondary;
+    background-color: $clr-primary;
+    border: 0;
+    border-radius: $border-radius;
+    color: #fff;
     cursor: pointer;
     display: inline-flex;
-    gap: 0.5rem;
-    justify-content: center;
+    font-weight: normal;
+    gap: 0.75rem;
     line-height: 1;
-    overflow: hidden;
-    padding: 0.85rem 1.5rem;
     position: relative;
+    padding: 0.975rem 1.4rem;
     text-align: center;
-    text-decoration: none;
-    transition: color 350ms ease-in-out;
+    overflow: hidden;
+    transition: left ease .375s;
+    outline-color: transparent;
+    text-transform: uppercase;
 
-    span {
-      position: relative;
-      z-index: 1;
-    }
-
-    svg {
-      display: inline-block;
-      height: 20px;
-      position: relative;
-      width: 20px;
-      z-index: 1;
-    }
-
-    &:hover {
-      color: $clr-primary;
-    }
-
-    &.animate::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $clr-secondary;
-      opacity: 0;
-      transform: translateY(100%);
-      transition: opacity 350ms ease-in-out, transform 350ms ease-in-out;
-    }
-    &.animate:hover::before {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-
-    &.rev {
-      border-color: $clr-primary;
-      color: $clr-primary;
-    }
-    &.animate.rev:hover {
-      color: $clr-secondary;
-    }
-    &.animate.rev::before {
-      background-color: $clr-primary;
-    }
-
-    &.primary {
-      background-color: $clr-primary;
-      border-color: $clr-primary;
-      color: $clr-secondary;
-    }
-    &.primary::before {
-      background-color: darken($clr-primary, 10%);
-    }
-
-    &.margin-top {
-      margin-top: 2rem;
-    }
-  }
-
-  @media screen and (max-width: 1320px) {
-    .button {
-      padding: 0.8rem 1.4rem;
+    &--outlined {
+      background: none;
+      border: 1px solid #fff;
+      color: #fff;
     }
   }
 </style>

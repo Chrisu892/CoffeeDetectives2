@@ -27,6 +27,13 @@
 <style scoped lang="scss">
   .section {
     background-color: $clr-white;
+    position: relative;
+    z-index: 1;
+
+    &.standard {
+      position: initial;
+      z-index: initial;
+    }
 
     &.shade {
       background-color: $clr-shade;

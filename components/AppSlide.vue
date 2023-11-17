@@ -83,24 +83,28 @@
     z-index: 1;
   }
   .slide__credit {
+    align-items: center;
+    display: inline-flex;
     padding-bottom: 7.5rem;
     position: relative;
     width: 100%;
     z-index: 1;
   }
   .slide__credit-text {
+    @include font-small;
     align-items: center;
     background-color: rgba($clr-white, 0.15);
     border-radius: 50px;
     color: $clr-white;
     display: inline-flex;
-    line-height: 1;
-    padding: 0.375rem 0.75rem;
+    line-height: 0;
+    padding: 0.375rem 0.75rem 0.475rem;
   }
   .slide__credit-text svg {
     display: inline-block;
-    height: 1.5rem;
+    height: 1.125rem;
     margin-right: 0.5rem;
-    width: 1.5rem;
+    width: 1.125rem;
+    margin-top: 2px;
   }
 </style>

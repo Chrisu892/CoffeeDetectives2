@@ -25,7 +25,7 @@
 
 <style scoped lang="scss">
   .masthead {
-    background-color: $clr-secondary;
+    background-color: $clr-primary;
     color: $clr-white;
     overflow: hidden;
     padding: calc(80px + 5rem) 0 5rem;

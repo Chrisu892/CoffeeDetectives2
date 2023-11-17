@@ -3,6 +3,7 @@ title: 'Cafés'
 longTitle: 'Find the perfect café for every occassion'
 displayOrder: 2
 type: 'page'
+navigation: true
 image:
   src: '/assets/image.jpg'
   alt: 'An image showcasing My Page.'

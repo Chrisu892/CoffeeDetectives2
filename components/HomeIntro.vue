@@ -16,8 +16,8 @@
       <div class="intro__border">
         <div class="intro__col intro__content">
           <PhStorefront />
-          <h2 class="intro__title font-xl">We help to put local independent cafés on the map</h2>
-          <p class="intro__tagline font-regular">Discover the best local independent cafes with us. At Coffee Detktives, we're passionate about promoting and supporting independent cafes. Our platform features independent reviews written by coffee hobbyists who explore and try different places, so you can trust that you're getting an authentic perspective. Join us on our mission to celebrate and support local independent cafes!</p>
+          <h2 class="intro__title font-xl">We want to put local independent cafes on the map</h2>
+          <p class="intro__tagline font-regular">Our mission is to put local independent cafes on the map, and challenge the status quo of monopoly chains. By using this platform, you are supporting our mission, and help local businesses get discovered. Thank you.</p>
           <div class="intro__action">
             <AppButton to="/cafes" title="Start Exploring" class="animate" />
           </div>
@@ -34,9 +34,6 @@
 </template>
 
 <style scoped lang="scss">
-  .intro {
-    
-  }
   .intro__border {
     @include flex-row;
     align-items: center;
@@ -61,6 +58,9 @@
       height: 3rem;
       width: 3rem;
     }
+  }
+  .intro__title {
+    font-weight: normal;
   }
   .intro__tagline {
     margin-top: 1rem;

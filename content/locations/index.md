@@ -3,6 +3,7 @@ title: 'Locations'
 longTitle: 'Locations : Explore Cafes and Coffee Blends Across Tyne & Wear'
 displayOrder: 3
 type: 'page'
+navigation: true
 images:
   thumbnail:
     src: '/images/locations/fallback.jpeg'
